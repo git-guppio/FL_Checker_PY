@@ -50,31 +50,34 @@ class SAPDataExtractor:
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
             self.session.findById("wnd[0]").sendVKey(0)
             # avvio la transazione
-            self.session.findById("wnd[0]/tbar[1]/btn[8]").press
+            self.session.findById("wnd[0]").sendVKey(8)
             # Attendi che SAP sia pronto
             if not self.wait_for_sap(30):
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)    
             # esporto i valori nella clipboard
-            self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select
+            self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
             # Attendi che SAP sia pronto
             if not self.wait_for_sap(30):
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)                          
-            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select
-            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus
-            self.session.findById("wnd[1]/tbar[0]/btn[0]").press
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
+            self.session.findById("wnd[1]/tbar[0]/btn[0]").press()
             # Attendi che SAP sia pronto
             if not self.wait_for_sap(30):
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)
             # Attendi che la clipboard sia riempita
-            self.wait_for_clipboard_data(30)
+            if not self.wait_for_clipboard_data(30):
+                # Gestisci il caso in cui non sono stati trovati dati
+                print("Nessun dato trovato nella clipboard")
+                # Eventuali azioni di fallback
             # Leggo il contenuto della clipboard
-            return self.clean_clipboard_data()
+            return self.clipboard_data()
             
         except Exception as e:
             print(f"Errore nell'estrazione dei materiali: {str(e)}")
@@ -107,8 +110,8 @@ class SAPDataExtractor:
         except Exception as e:
             print(f"Errore durante l'attesa: {str(e)}")
             return False
-        
-    def wait_for_clipboard_data(timeout: int = 30) -> bool:
+            
+    def wait_for_clipboard_data(self, timeout: int = 30) -> bool:
         """
         Attende che la clipboard contenga dei dati
         
@@ -119,14 +122,18 @@ class SAPDataExtractor:
             bool: True se sono stati trovati dati, False se è scaduto il timeout
         """
         start_time = time.time()
+        last_print_time = 0  # Per limitare i messaggi di log
+        print_interval = 2   # Intervallo in secondi tra i messaggi di log
         
         while True:
+            current_time = time.time()
+            
+            # Verifica timeout
+            if current_time - start_time > timeout:
+                print(f"Timeout: nessun dato trovato nella clipboard dopo {timeout} secondi")
+                return False
+            
             try:
-                # Verifica timeout
-                if time.time() - start_time > timeout:
-                    print(f"Timeout: nessun dato trovato nella clipboard dopo {timeout} secondi")
-                    return False
-                
                 # Controlla il contenuto della clipboard
                 win32clipboard.OpenClipboard()
                 try:
@@ -139,43 +146,23 @@ class SAPDataExtractor:
                 finally:
                     win32clipboard.CloseClipboard()
                 
-                # Aspetta prima del prossimo controllo
-                time.sleep(0.5)
-                print("In attesa dei dati nella clipboard...")
+                # Stampa il messaggio di attesa solo ogni print_interval secondi
+                if current_time - last_print_time >= print_interval:
+                    print("In attesa dei dati nella clipboard...")
+                    last_print_time = current_time
                 
+                # Aspetta prima del prossimo controllo
+                time.sleep(0.1)  # Ridotto il tempo di attesa per una risposta più veloce
+                
+            except win32clipboard.error as we:
+                print(f"Errore Windows Clipboard: {str(we)}")
+                time.sleep(0.5)  # Attesa più lunga in caso di errore
+                continue
             except Exception as e:
                 print(f"Errore durante il controllo della clipboard: {str(e)}")
-                return False     
+                return False  
 
-
-    def handle_duplicate_headers(headers: List[str]) -> List[str]:
-        """
-        Gestisce le intestazioni duplicate aggiungendo un postfisso numerico
-        
-        Args:
-            headers: Lista delle intestazioni originali
-            
-        Returns:
-            Lista delle intestazioni con postfissi per i duplicati
-        """
-        # Conta le occorrenze di ogni header
-        header_counts = Counter()
-        unique_headers = []
-        
-        for header in headers:
-            # Se l'header è già stato visto
-            if header in header_counts:
-                # Incrementa il contatore e aggiungi il postfisso
-                header_counts[header] += 1
-                unique_headers.append(f"{header}-{header_counts[header]}")
-            else:
-                # Prima occorrenza dell'header
-                header_counts[header] = 0
-                unique_headers.append(header)
-        
-        return unique_headers
-
-    def clean_clipboard_data() -> Optional[pd.DataFrame]:
+    def clipboard_data(self) -> Optional[pd.DataFrame]:
         """
         Legge i dati dalla clipboard, rimuove le righe di separazione e le colonne vuote,
         e gestisce le intestazioni duplicate.
@@ -194,71 +181,12 @@ class SAPDataExtractor:
             if not data:
                 print("Nessun dato trovato nella clipboard")
                 return None
-
-            # Divide in righe
-            lines = data.strip().split('\n')
-            
-            # Filtra le righe, escludendo quelle che contengono solo trattini
-            clean_lines = []
-            for line in lines:
-                # Rimuove spazi bianchi iniziali e finali
-                line = line.strip()
-                # Verifica se la riga è composta solo da trattini
-                if line and not all(c == '-' for c in line.replace(' ', '')):
-                    clean_lines.append(line)
-
-            if not clean_lines:
-                print("Nessuna riga valida trovata dopo la pulizia")
-                return None
-
-            # Dividi le righe in colonne usando il tab come separatore
-            data_rows = [line.split('\t') for line in clean_lines]
-            
-            # Prendi la prima riga come header
-            original_headers = data_rows[0]
-            
-            # Gestisci gli header duplicati
-            unique_headers = handle_duplicate_headers(original_headers)
-            
-            # Se sono stati trovati duplicati, stampalo
-            duplicates = [header for header, count in Counter(original_headers).items() if count > 1]
-            if duplicates:
-                print("\nTrovate colonne con nomi duplicati:")
-                for dup in duplicates:
-                    print(f"- '{dup}' (rinominate con postfissi numerici)")
-
-            # Crea il DataFrame con i nuovi header
-            df = pd.DataFrame(data_rows[1:], columns=unique_headers)
-
-            # Rimuove le colonne completamente vuote
-            df = df.dropna(axis=1, how='all')
-            
-            # Rimuove le colonne dove tutti i valori sono stringhe vuote
-            df = df.loc[:, ~(df == '').all()]
-            
-            # Reset dell'indice
-            df = df.reset_index(drop=True)
-            
-            return df
+            else:
+                 return data
 
         except Exception as e:
-            print(f"Errore durante la pulizia dei dati: {str(e)}")
+            print(f"Errore durante lettura dei dati dalla clipboard: {str(e)}")
             return None
-
-    def analyze_cleaned_data(df: pd.DataFrame) -> None:
-        """
-        Analizza il DataFrame pulito e mostra informazioni utili
-        
-        Args:
-            df: DataFrame da analizzare
-        """
-        print("\nAnalisi del DataFrame pulito:")
-        print(f"Dimensioni: {df.shape}")
-        print("\nColonne presenti:")
-        for col in df.columns:
-            print(f"- {col}")
-        print("\nPrime 5 righe:")
-        print(df.head())
 
 """ 
 def main():
