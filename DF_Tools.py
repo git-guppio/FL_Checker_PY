@@ -9,7 +9,56 @@ class DataFrameTools:
     
     def __init__(self):
         pass
-    
+
+
+    @staticmethod
+    def get_last_char(df, colonna):
+        """
+        Restituisce i primi due caratteri di una colonna contenente dati univoci
+        
+        Args:
+            df: DataFrame da verificare
+            colonna: nome della colonna in cui analizzare il dato
+            
+        Returns:
+            none : se sono presenti solo valori nulli
+            i primi due caratteri della colonna indicata
+        """        
+        try:
+            # Prende il primo valore non nullo
+            primo_valore = df[colonna].dropna().iloc[0]
+            if pd.notna(primo_valore):  # verifica che non sia nullo
+                return primo_valore[2:3]
+            else:
+                return None
+        except Exception as e:
+            print(f"Errore nell'elaborazione della colonna {colonna}: {str(e)}")
+            return None
+
+    @staticmethod
+    def get_first_two_chars(df, colonna):
+        """
+        Restituisce i primi due caratteri di una colonna contenente dati univoci
+        
+        Args:
+            df: DataFrame da verificare
+            colonna: nome della colonna in cui analizzare il dato
+            
+        Returns:
+            none : se sono presenti solo valori nulli
+            i primi due caratteri della colonna indicata
+        """        
+        try:
+            # Prende il primo valore non nullo
+            primo_valore = df[colonna].dropna().iloc[0]
+            if pd.notna(primo_valore):  # verifica che non sia nullo
+                return primo_valore[:2]
+            else:
+                return None
+        except Exception as e:
+            print(f"Errore nell'elaborazione della colonna {colonna}: {str(e)}")
+            return None
+        
     @staticmethod
     def check_dataframe(df, name="DataFrame"):
         """
@@ -170,21 +219,39 @@ class DataFrameTools:
             raise ValueError("Una o più colonne specificate non esistono nel DataFrame")
 
         def create_concatenated_value(row):
-            # Verifica che col4 non sia nullo
-            if (row[col4].strip(' \t\n\r') == ""):
-                return None
+            # Verifico se sto utilizzando il DF delle FL o i DF delle estrazioni da SAP
+            if (col1 == "4"): # DF FL
+                # Verifica che col4 non sia nullo
+                if (str(row[col4]).strip(' \t\n\r') == ""):
+                    return None
 
-            if (row[col3].strip(' \t\n\r') != ""):
-                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(row[col4].strip(' \t\n\r'))}"
-                return result
-            elif (row[col2].strip(' \t\n\r') != ""):
-                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col4].strip(' \t\n\r'))}"
-                return result
-            elif (row[col1].strip(' \t\n\r') != ""):
-                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col4].strip(' \t\n\r'))}"
-                return result
-            else:
-                return None    
+                if (row[col3].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col3].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                elif (row[col2].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                elif (row[col1].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                else:
+                    return None                
+            else: # DF SAP
+                # Verifica che col4 non sia nullo
+                if (str(row[col4]).strip(' \t\n\r') == ""):
+                    return None
+
+                if (row[col3].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                elif (row[col2].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                elif (row[col1].strip(' \t\n\r') != ""):
+                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                    return result
+                else:
+                    return None    
         
         df_copy = df.copy()
         df_copy[new_column_name] = df_copy.apply(create_concatenated_value, axis=1)

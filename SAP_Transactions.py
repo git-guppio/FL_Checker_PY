@@ -19,6 +19,69 @@ class SAPDataExtractor:
         """
         self.session = session
 
+
+    def extract_ZPMR_CTRL_ASS(self, fltechnology: str) -> List[Dict]:
+        """
+        Estrae dati relativi alla tabella ZPMR_CTRL_ASS utilizzando la transazione SE16
+        
+        Args:
+            fltechnology: Tecnologia ricavate dalle FL
+            
+        Returns:
+            True se la transazione va a buon fine, False altrimenti
+        """
+        try:
+            # Svuota la clipboard prima dell'estrazione
+            win32clipboard.OpenClipboard()
+            win32clipboard.EmptyClipboard()
+            win32clipboard.CloseClipboard()
+            # Naviga alla transazione SE16
+            self.session.findById("wnd[0]/tbar[0]/okcd").text = "/nSE16"
+            self.session.findById("wnd[0]").sendVKey(0)
+            self.session.findById("wnd[0]/usr/ctxtDATABROWSE-TABLENAME").text = "ZPMR_CTRL_ASS"
+            self.session.findById("wnd[0]").sendVKey(0)
+            time.sleep(0.5)
+            # filtro in base alla tecnologia                
+            self.session.findById("wnd[0]/usr/txtI4-LOW").text = "Z-R" + fltechnology + "S"
+            self.session.findById("wnd[0]/usr/txtI5-LOW").text = fltechnology      
+            # modifico il numero massimo di risultati
+            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
+            self.session.findById("wnd[0]").sendVKey(0)
+            # avvio la transazione
+            self.session.findById("wnd[0]").sendVKey(8)
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)    
+            # esporto i valori nella clipboard
+            self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)                          
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
+            self.session.findById("wnd[1]/tbar[0]/btn[0]").press()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)
+            # Attendi che la clipboard sia riempita
+            if not self.wait_for_clipboard_data(30):
+                # Gestisci il caso in cui non sono stati trovati dati
+                print("Nessun dato trovato nella clipboard")
+                # Eventuali azioni di fallback
+            # Leggo il contenuto della clipboard
+            return self.clipboard_data()
+            
+        except Exception as e:
+            print(f"Errore nell'estrazione dei materiali: {str(e)}")
+            return False        
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     def extract_ZPM4R_GL_T_FL(self, fltechnology: str) -> List[Dict]:
         """
         Estrae dati relativi alla tabella ZPM4R_GL_T_FL utilizzando la transazione SE16
@@ -42,10 +105,7 @@ class SAPDataExtractor:
             time.sleep(0.5)
             # filtro in base alla tecnologia                
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = "Z-R" + fltechnology + "S"
-            self.session.findById("wnd[0]/usr/ctxtI5-LOW").text = fltechnology
-            # filtro in base al livello della FL
-            self.session.findById("wnd[0]/usr/btn%_I6_%_APP_%-VALU_PUSH").press
-            time.sleep(0.5)          
+            self.session.findById("wnd[0]/usr/ctxtI5-LOW").text = fltechnology    
             # modifico il numero massimo di risultati
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
             self.session.findById("wnd[0]").sendVKey(0)
@@ -82,6 +142,7 @@ class SAPDataExtractor:
         except Exception as e:
             print(f"Errore nell'estrazione dei materiali: {str(e)}")
             return False
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     def wait_for_sap(self, timeout: int = 30):  # timeout in secondi
         """
