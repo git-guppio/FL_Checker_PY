@@ -1,0 +1,96 @@
+FL;Description;AM Section;AM Part;AM Component;Element Type;Tech.Obj.SAP CODE;Catalog Profile
+kkE;IsoCode Country + Technology (S);;;;;;
+kkE-yyyy;Plant code ;;;;;;
+kkE-yyyy-0A;Common Energy Collecting & Delivery System;;;;;;
+kkE-yyyy-0A-xT;HV/MV Common Transformer;0000;51;5150;;FL_TR_SS;FL00000E
+kkE-yyyy-0A-xT-HV;HV Section;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-Rn;HV/MV Protective Relays;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-Sn;HV Surge Arrester;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-Dn;HV Disconnector;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-An;HV M&P Transformers CT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-Vn;HV M&P Transformers VT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-BS;HV Connection;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xT-HV-Mn;Energy Meter;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-0A-xT-Mn;MV Section;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-In;MV Circuit Breaker/MV Panel;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Dn;MV Disconnector;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-An;MV M&P Transformers CT;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Vn;MV M&P Transformers VT;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Sn;MV Surge Arrester;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-BS;MV Connection;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-0n;Line protection;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Hn;Harmonic Filter;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-ZR;Shunt Reactor;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Zn;Zig Zag Earthing Transformer;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-ER;Earthing Reactor;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Cn;Capacitor Bank MV;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xT-Mn-Mn;Energy Meter;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-0A-xT-OC;Civil Works;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-0A-xL;HV Line;0000;51;5150;;FL_LI_SS;FL00000E
+kkE-yyyy-0A-xL-HV;HV Section;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-Rn;HV/MV Protective Relays;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-Dn;HV Disconnector;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-Sn;HV Surge Arrester;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-An;HV M&P Transformers CT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-Vn;HV M&P Transformers VT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-BS;HV Connection;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xL-HV-Mn;Energy Meter;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-0A-xL-OC;Civil Works;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-0A-xL-OL;Overhead Power Lines;0000;51;5150;;FL_POWLINE;FL00000E
+kkE-yyyy-0A-xL-UL;Underground Power Lines;0000;51;5150;;FL_POWLINE;FL00000E
+kkE-yyyy-0A-xS;HV Busbar;0000;51;5150;;FL_BU_SS;FL00000E
+kkE-yyyy-0A-xS-HV;HV Section;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Rn;HV/MV Protective Relays;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Dn;HV Disconnector;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Sn;HV Surge Arrester;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-An;HV M&P Transformers CT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Vn;HV M&P Transformers VT;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Cn;Capacitor Bank HV;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-BS;HV Connection;0000;51;5150;;FL_HVSECT;FL00000E
+kkE-yyyy-0A-xS-HV-Mn;Energy Meter;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-0A-xS-OC;Civil Works;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-0A-LA;LV Auxiliary services power distribution;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LP;DC LV Panel - uninterrupted;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LP-nn;DC Low Voltage Panel nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LN;AC LV Panel - normal and emergency p.s.;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LN-nn;AC Low Voltage Panel nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LU;AC LV Panel - uninterrupted ;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-LU-nn;AC Low Voltage Panel nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-SB;LV Switchboard;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-SB-nn;LV Switchboard nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-SG;LV Switchgear;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-LA-SG-nn;LV Switchgear nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA;Auxiliary service equipments;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-DG;Diesel Generator;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-EP;External Power Supply;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-BT;Batteries Bank;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-BT-nn;Batteries Bank nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-TR;Auxiliary service Transformer;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-TR-nn;Transformer nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-TS;Automatic Transfer Switch;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-TS-nn;Automatic Transfer Switch nn;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-UP;UPS;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-SA-FC;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-RE;Rectifier AC/DC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-RE-nn;Rectifier AC/DC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0A-xM;MV Feeders Connection;0000;51;5150;;FL_MVFEED;FL00000E
+kkE-yyyy-0A-xM-MA;MV Section;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-In;MV Circuit Breaker;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Dx;MV Disconnector;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Ax;MV M&P Transformers CT;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Vx;MV M&P Transformers VT;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Sx;MV Surge Arrester;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-BS;MV Connection;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-0x;Line protection;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Hx;Harmonic Filter;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-ZR;Shunt Reactor;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Zn;Zig Zag Earthing Transformer;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-ER;Earthing Reactor;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Cx;Capacitor Bank MV;0000;51;5150;;FL_MVSECT;FL00000E
+kkE-yyyy-0A-xM-MA-Mx;Energy Meter;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-0A-xM-OC;Civil Works;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-0A-xM-OL;Overhead Power Lines;0000;51;5150;;FL_POWLINE;FL00000E
+kkE-yyyy-0A-xM-UL;Underground Power Lines;0000;51;5150;;FL_POWLINE;FL00000E

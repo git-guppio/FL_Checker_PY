@@ -1,0 +1,1604 @@
+FL;Description;AM Section;AM Part;AM Component;Element Type;Tech.Obj.SAP CODE;Catalog Profile
+kkH;IsoCode Country + Technology (H);;;;;;
+kkH-yyyy;Nome Centrale;;;;;;FL00000H
+kkH-yyyy-Px;Parti Generiche di impianto;;;;;;FL00000H
+kkH-yyyy-Px-11x;Terreni;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-11x-10;Terreni EGP;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-11x-11;Terreni asserviti;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-11x-12;Opere sistemaz. Terreno;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-11x-13;Opere bonifica;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-11x-14;Opere di difesa idraulica;0000;11;1111;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x;Infrastrutture;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-10;Strade e Piazzali;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-11;Raccordi ferroviari;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-12;Rete idrica;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-13;Fognature acque bianche;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-14;Fognature acque nere;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-15;Recinzioni;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-16;Opere di giardinaggio e rimboschimento;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-17;Piazzuole atterraggio elicotteri;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-12x-18;Parapetti;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-13x;Conche e canali;0000;11;1120;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-13x-10;Conche di navigazione;0000;11;1120;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-13x-11;Canali irrigui;0000;11;1120;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-13x-12;Rogge;0000;11;1120;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-14x;Sistema trasporto;0000;11;1150;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-14x-10;Teleferiche;0000;11;1150;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-14x-11;Funivie;0000;11;1150;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-14x-12;Ascensori e montacarichi;0000;11;1150;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-14x-13;Funicolari e piani inclinati;0000;11;1150;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x;Strutture O.C.Industriali;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-10;Sala macchine;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-11;Sala trasformatori;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-12;Sala quadri e/o controllo;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-13;Sala per apparecchiature AT e/o MT;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-14;Fabbricati vari per impianti ausiliari;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-15;Fabbricati annessi ad opere idrauliche;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-21x-16;O.C. dei sistemi elettrici di trasf. Smist. Distribuz.;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-22x;Impianti idrosanitari in edifici logistici ed industriali;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-23x;Edifici logistici;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-23x-10;Locali mensa o refettorio, spogliatoi foresteria;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-23x-11;Uffici;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-23x-12;Autorimessa officina, magazzini vari;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-27x;Edifici per abitazione;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-27x-10;Abitazioni per il personale;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-27x-11;Case di guardia annesse ad opere idrauliche;0000;11;1110;ALI;FL_INFRAST;FL00000H
+kkH-yyyy-Px-28x;Impianti di climatizzazione;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-28x-10;Impianti di climatizzazione centralizzati;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-28x-11;Condizionatori locali;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-29x;Impianti luce, forza motrice e comunicazioni;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-29x-10;Impianto luce e forza motrice;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-29x-11;Internet;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-29x-12;Impianto telefonico;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Px-29x-13;Impianto sorveglianza confini;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-MG;Motogenratori;0000;12;1250;;;FL00000H
+kkH-yyyy-MG-C00;Parti Comuni.;0000;12;1250;COI;FL_AUXSYST;FL00000H
+kkH-yyyy-MG-D0x;Motogenratori MG n°;0000;12;1250;MOT;FL_AUXSYST;FL00000H
+kkH-yyyy-Nx;NODO <Nome nodo>;;;;;;FL00000H
+kkH-yyyy-Nx-31x;Opere di Captazione Derivazione e Convogliamento;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-10;Struttura traversa e organi di scarico;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-11;Imbocco e organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-12;Griglie ;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Nx-31x-13;Galleria o tubaz.di convogl.in pressione;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-14;Gallerie convogl. a pelo libero e o canali;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-15;Immissioni;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-16;Organi intercett. di galleria e o canale convogliamento;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-17;Spillamenti da opere di convogliamento;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-18;Sgrigliatori;0000;11;1120;SLI;FL_MECHCOM;FL00000H
+kkH-yyyy-Nx-31x-19;Immissioni con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-31x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-32x;Opere di Derivazione Provvisoria;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-32x-10;Diaframmi;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-32x-11;Sbarramento;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-32x-12;Galleria o canale di deviazione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-32x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-33x;DIGA <Nome della diga>;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-10;Diaframmi e opere di consolid. E imperm. In fondaz.;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-11;STRUTTURA DELLA DIGA;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-11-01;Struttura <tipo struttura>;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-11-02;Struttura <tipo struttura>;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-11-03;Struttura <tipo struttura>;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-12;Tenuta in elevazione;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-13;Opere di impermeabilizzazione serbatoio;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-14;Sistemazione sponde;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-33x-15;Altre opere;0000;11;1120;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-33x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-34x;Opere di scarico dell'invaso;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-34x-10;Scarico di superficie;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-34x-11;Scarico di alleggerimento o mezzofondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-34x-12;Scarico di fondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-34x-13;Scarico di esaurimento;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-34x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-35x;Opere di presa e derivazione;0000;11;1120;OPI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-10;Imbocco ;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-11;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-12;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Nx-35x-13;Galleria in pressione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-14;Gallerie  a pelo libero;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-15;Canale all'aperto;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-16;Immissioni a caduta;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-18;Spillamenti della derivazione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-19;Immissioni con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-35x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-36x;Pozzo piezometrico di monte;0000;11;1120;PCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-10;Canna;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-11;Camera di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-12;Camera di espansione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-13;Sfioratore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-14;Finestre e porte stagne;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-36x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-37x;Vasca di carico;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-37x-10;Vasca;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-37x-11;Organi di intercettazione alla vasca;0000;11;1120;PAI;FL_MECHCOM;FL00000H
+kkH-yyyy-Nx-37x-12;Imbocco adduzione forzata;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-37x-13;Opere di scarico;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-37x-14;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Nx-37x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-38x;Condotta;0000;11;1130;COF;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-10;Intercettazione di monte;0000;11;1130;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-11;Sede all'aperto;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-12;Sede in pozzo;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-13;Sede in discenderia;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-14;Finestre e porte stagne;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-15;Tubazione;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-16;Collettore;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-17;Spillamento della tubazione;0000;11;1130;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-38x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-39x;Opere di restituzione in galleria o canale;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-10;Galleria in pressione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-11;Galleria a pelo libero;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-12;Canale all'aperto;0000;11;1120;SMI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-13;Sbocco, presa;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-14;Organi di intercettazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-18;Spillamenti da opere di restituzione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-39x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-42x;Opere di sbarramento di valle serbatoio;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-10;Diaframma consolid.impermeab.fondaz.diga;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-20;Struttura sbarramento;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-42x-30;Tenuta in elevazione;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-40;Opere di impermeabilizzazione serbatoio;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-50;Sistemazione sponde;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-42x-60;Altre opere;0000;11;1120;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-43x;Opere di scarico dell'invaso a valle;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-43x-10;Scarico di superficie;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-43x-20;Scarico di alleggerimento o mezzofondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-43x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-43x-30;Scarico di fondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-43x-40;Apparecchiature comando centralizzato;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-43x-50;Scarico di esaurimento;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Nx-SSx;Alimentazione energia e impianti ausiliari;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-10;Impianti elettrici;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-11;Gruppo elettrogeno;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-12;Strumentazioni osservazione e controllo;0000;11;1150;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-13;Comunicazioni;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-14;Attrezzatura montaggio e manutenzione;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-15;Impianto di deghiacciamento;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-18;Contatori Energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Nx-SSx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx;Nome centrale- DERIVAZIONE (Gr. 1, 2, ... y);;;;DEI;;FL00000H
+kkH-yyyy-Dx-31x;Opere di Captazione Derivazione e Convogliamento;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-10;Struttura traversa e organi di scarico;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-11;Imbocco e organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-12;Griglie ;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-31x-13;Galleria o tubaz.di convogl.in pressione;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-14;Gallerie convogl. a pelo libero e o canali;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-15;Immissioni;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-16;Organi intercett. di galleria e o canale convogliamento;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-17;Spillamenti da opere di convogliamento;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-18;Sgrigliatori;0000;11;1120;SLI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-31x-19;Immissione con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-31x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-32x;Opere di Derivazione Provvisoria;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-32x-10;Diaframmi;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-32x-11;Sbarramento;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-32x-12;Galleria o canale di deviazione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-32x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-33x;Opere di sbarramento serbatoio;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-10;Diaframmi e opere di consolid. E imperm. In fondaz.;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-11;Struttura sbarramento;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-12;Tenuta in elevazione;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-13;Opere di impermeabilizzazione serbatoio;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-14;Sistemazione sponde;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-33x-15;Altre opere;0000;11;1120;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-33x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-34x;Opere di scarico dell'invaso;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-34x-10;Scarico di superficie;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-34x-11;Scarico di alleggerimento o mezzofondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-34x-12;Scarico di fondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-34x-13;Scarico di esaurimento;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-34x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-35x;Opere di presa e derivazione;0000;11;1120;OPI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-10;Imbocco ;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-11;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-12;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-35x-13;Galleria in pressione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-14;Gallerie  a pelo libero;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-15;Canale all'aperto;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-16;Immissioni a caduta;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-18;Spillamenti della derivazione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-19;Immissioni con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-35x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-36x;Pozzo piezometrico di monte;0000;11;1120;PCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-10;Canna;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-11;Camera di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-12;Camera di espansione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-13;Sfioratore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-14;Finestre e porte stagne;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-36x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-37x;Vasca di carico;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-37x-10;Vasca;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-37x-11;Organi di intercettazione alla vasca;0000;11;1120;PAI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-37x-12;Imbocco adduzione forzata;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-37x-13;Opere di scarico;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-37x-14;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-37x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-38x;Condotta;0000;11;1130;COF;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-10;Intercettazione di monte;0000;11;1130;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-11;Sede all'aperto;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-12;Sede in pozzo;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-13;Sede in discenderia;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-14;Finestre e porte stagne;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-15;Tubazione;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-16;Collettore;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-17;Spillamento della tubazione;0000;11;1130;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-38x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-39x;Opere di restituzione in galleria o canale;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-10;Galleria in pressione;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-11;Galleria a pelo libero;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-12;Canale all'aperto;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-13;Sbocco, presa;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-14;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-18;Spillamenti da opere di restituzione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-39x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-40x;Pozzo piezometrico di valle;0000;11;1120;PCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-10;Canna;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-11;Camera di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-12;Camera di espansione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-13;Sfioratore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-14;Finestre e porte stagne;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-40x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-41x;Opere deviazione provvis. invaso a valle;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-41x-10;Sbarramento;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-41x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-42x;Opere di sbarramento di valle serbatoio;0000;11;1120;DII;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-10;Diaframma consolid.impermeab.fondaz.diga;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-20;Struttura sbarramento;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-42x-30;Tenuta in elevazione;0000;11;1120;STI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-40;Opere di impermeabilizzazione serbatoio;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-50;Sistemazione sponde;0000;11;1120;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-42x-60;Altre opere;0000;11;1120;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-43x;Opere di scarico dell'invaso a valle;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-43x-10;Scarico di superficie;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-43x-20;Scarico di alleggerimento o mezzofondo;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-43x-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-43x-30;Scarico di fondo;0000;11;1180;SCI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-43x-40;Apparecchiature comando centralizzato;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-43x-50;Scarico di esaurimento;0000;11;1120;SCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SDx;Sistema Dissabbiatore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SDx-10;Canale di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SDx-20;Paratoie;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SDx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-SDx-40;Contenitore per la sabbia;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-SDx-50;Valvole di fondo ;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Dx-SDx-60;Sfioratore di Superficie;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SDx-70;Sistema di lavaggio;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Dx-SSx;Alimentazione energia e impianti ausiliari;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-10;Impianti elettrici;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-11;Gruppo elettrogeno;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-12;Strumentazioni osservazione e controllo;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-SSx-13;Comunicazioni;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-14;Attrezzatura montaggio e manutenzione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-15;Impianto di deghiacciamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Dx-SSx-18;Contatori Energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Dx-SSx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0;Componenti comuni per tutti i gruppi;;;;TOI;;FL00000H
+kkH-yyyy-U0-GSx;Sistema generale di comando e misure d'impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-10;Protezioni centralizzate;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11;Automatismo e controllo di impianto (SCADA);0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11-01;Sistema esterno di segnali;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11-02;Elaboratore e/o data logger;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11-03;Strumenti di monitoraggio;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11-04;Registratore cronologico di eventi;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-11-05;Circ.comando contr.serv.gener.parti com.;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-12;Apparecchiature di parallelo autom. di gruppi;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-13;Convertitori di misura;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-14;Sistema di controllo remoto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15;Comandi misure e automatismi centralizza;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-01;Quadri comando e controllo centralizzati;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-02;Regolazione centralizzata del carico;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-03;Automatismo di impianto - idro;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-04;Apparecch.parallelo automat. di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-05;Alleggeritori e stimolatori di carico;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-15-06;Apparati di teleconduz. impianto da p.t.;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-GSx-16;Collegamenti e apparecchiature di manovra per l'avviamento gruppi reversibili e pompe;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-39x;Opere di restituzione in galleria o canale;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-10;Galleria in pressione;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-11;Galleria a pelo libero;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-12;Canale all'aperto;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-13;Sbocco, presa;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-14;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-39x-18;Spillamenti da opere di restituzione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x;Pozzo piezometrico di valle;0000;11;1120;PCI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x-10;Canna;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x-11;Camera di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x-12;Camera di espansione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x-13;Sfioratore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-40x-14;Finestre e porte stagne;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-U0-96x;Sistema OleoIdraulico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-96x-10;Immagazzinamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-96x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-MCx;Quadro, comandi e controllo manuali;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-MCx-10;Comandi manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-MCx-11;Controlli manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-U0-EGx;Generatore di emergenza;0000;11;1150;MEL;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-10;Motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-11;Ausiliari motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-12;Generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-13;Ausiliari del generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-14;Controllo e regolazione del sistema;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-U0-EGx-15;Montante del generatore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux;Nome centrale: Ux;;;;;;FL00000H
+kkH-yyyy-Ux-35x;Opere di presa e derivazione;0000;11;1120;OPI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-10;Imbocco ;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-11;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-12;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-35x-13;Galleria in pressione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-14;Gallerie  a pelo libero;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-15;Canale all'aperto;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-16;Immissioni a caduta;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-18;Spillamenti della derivazione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-19;Immissioni con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-35x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-38x;Condotta;0000;11;1130;COF;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-10;Intercettazione di monte;0000;11;1130;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-11;Sede all'aperto;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-12;Sede in pozzo;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-13;Sede in discenderia;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-14;Finestre e porte stagne;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-15;Tubazione;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-16;Collettore;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-17;Spillamento della tubazione;0000;11;1130;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-38x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-39x;Opere di restituzione in galleria o canale;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-10;Galleria in pressione;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-11;Galleria a pelo libero;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-12;Canale all'aperto;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-13;Sbocco, presa;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-14;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-39x-18;Spillamenti da opere di restituzione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Ux-TUx;Turbina (Macchinario Meccanico);0000;11;1140;TRI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-10;Turbina;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Ux-TUx-10-01;Girante ;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Ux-TUx-10-02;Tenute;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Ux-TUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-12;Distributore;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-15;Supporti;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-16;Impianti ingrassaggio  componenenti turbina;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-17;Impianto irrorazione e pneumatizzazione della girante;0000;11;1140;ALI;FL_HYDRCOM;FL00000H
+kkH-yyyy-Ux-TUx-18;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-19;Protezioni meccaniche sistema turbina;0000;11;1140;SMI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-20;Albero;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-21;Moltiplicatore di giri;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-PUx;Pompa (impianti pompaggio);0000;11;1140;POM;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-10;Pompa;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-12;Giunto di accoppiamento;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-13;Prepompa;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-PUx-16;Impianto di ingrassaggio componenti pompa;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-PUx-17;Impianti di pneumatizzazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-PUx-19;Protezioni sistema pompa;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-PUx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MRx;Macchina Reversibile (impianti pompaggio);0000;11;1140;MRE;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-10;Macchina reversibile;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-12;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-16;Imp. Ingrassaggio componenti macchina reversibile;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MRx-17;Impianti di pneumatizzazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MRx-18;Dispositivi per l'avviamento in generazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MRx-19;Protezioni sistema macchina reversibile;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MRx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MEx;Macchina elettrica rotante;0000;11;1141;ASS;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-10;Generatore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Ux-MEx-10-01;Statore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Ux-MEx-10-02;Rotore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Ux-MEx-12;Eccitazione;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-13;Regolazione tensione;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-14;Supporti;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-14-01;Supporto di Spinta;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-14-02;Supporto di guida;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-14-03;Sistema di raffreddamento ad acqua;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-14-04;Sistema di lubrificazione;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-15;Impianto acqua raffreddamento diretto;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-16;Sollevamento rotore e frenatura meccanica;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-MEx-17;Complesso eccitazione frenatura elettrica;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-18;Macchine elettriche di avviamento gruppi reversibili e pompe;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-19;Protezioni elettriche generatore;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MEx-20;Motore per prepompa;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-21;Generatore motore;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-22;Motore;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Ux-MEx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-AAx;Automatismi e comandi di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-AAx-10;Automatismo di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-AAx-11;Comandi manuali centralizzati di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-AAx-12;Circuiti comando controllo servizi generali di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-94x;Acque varie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-94x-10;Ciclo acqua Raffreddamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-94x-11;Impianto di aggottamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-94x-12;Impianto di rilevazione allagamenti;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-94x-13;Sistema di Disoleazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-96x;Aria compressa;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-96x-10;Stazione di compressione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-96x-11;Ciclo distribuzione aria;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-97x;Antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-10;Stazione pompaggio acqua antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-11;Autoclave;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-12;Ciclo distribuzione ed utilizzazione acqua;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-13;Impianto schiumogeno;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-14;Rilevazione ed allarme incendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-15;Impianti fissi CO2;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-16;Estintori;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-18;Impianti fissi a polvere;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-97x-19;Altri;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Ux-MMx;Montante di macchina;0000;11;1141;MTG;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-12-01;Trasformatore di corrente;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-12-02;Trasformatore di tensione;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-13;Stallo di gruppo;0000;11;1141;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-13-0E;Interuttore di Gruppo;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-13-0G;Sezionatore;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-15;Collegamenti di potenza;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MMx-19;Protezioni elettriche montante di macchina;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MMx-20;Stallo trasformatore e/o apparecchiature lato AT del Trasformatore principale;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-21;Collegamenti e apparecchiature di manovra per l'avviamento gruppi reversibili e pompe;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-HVx;Sezione di smistamento AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-13;Collegamenti AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-HVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-HVx-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-HVx-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x;Sezione di smistamento AT 380 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H1x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H1x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H1x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x;Sezione di smistamento AT 220 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-10-;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H2x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H2x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H2x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x;Sezione di smistamento AT 132-150 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H3x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H3x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H3x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x;Sezione di smistamento AT < 132 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H4x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-H4x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-H4x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Ux-MVx;Sezione smistamento MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-11;Stallo Linea MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-11-14;Interuttore ;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-11-16;Sezionatore;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-12;Automatismi servizi ausialiari MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-13;Collegamenti MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-14-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-14-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-15;Stallo trasformatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-15-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-15-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-16;Linee di proprieta' MT;0000;11;1150;LNA;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-MVx-20;Stallo rifasamento;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-21;Stallo conversione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-21-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-21-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-22;Stallo S.A.;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-22-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MVx-22-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-LVx;Sezione smistamento BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-11;Stallo  Linea BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-11-14;Interuttore ;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-11-16;Sezionatore;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-12;Automatismi servizi ausialiari BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-13;Collegamenti BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-LVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-LVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-TRx;Trasformatore di gruppo;0000;11;1141;TRF;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-10;Trasformatore;0000;11;1141;TRF;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-11;Trasformatori 380 KV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-12;Trasformatori 220 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-13;Trasformatori 132- 150 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-14;Trasformatori <132 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-15;Trasformatori <=30 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-16;Componenti ausiliari;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Ux-TRx-19;Protezione elettriche;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Ux-SMx;Servizi ausiliari M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SMx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SMx-11;Quadri M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SMx-12;Automatismi servizi ausiliari M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SMx-13;Collegamenti M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SMx-14;Trasformatori SA;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-SLx;Servizi ausiliari B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-SLx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-SLx-11;Quadri B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-SLx-12;Automatismi servizi ausiliari B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-SLx-13;Collegamenti B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-SLx-14;Trasformatori SA;0000;11;1150;TRF;FL_LVSECT;FL00000H
+kkH-yyyy-Ux-DCx;Servizi ausiliari C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-DCx-10;Quadri raddrizzatori;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-DCx-11;Batterie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-DCx-12;Quadri in C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-DCx-16;Collegamenti C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx;Rifasamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-10;Condensatori statici;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-11;Reattori;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-21;Eccitazione sincrono;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-22;Regolatore di tensione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-23;Supporti;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-24;Impianto di raffreddamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-RIx-25;Sollevamento rotore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx;Conversione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-10;Filtro C.A.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-11;Circuito di smorzamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-12;Ponte di conversione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-13;Batterie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-14;Filtro C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-15;Regolazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-16;Ventilazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-COx-17;Collegamento A.T. C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx;Generatore di emergenza;0000;11;1150;MEL;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-10;Motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-11;Ausiliari motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-12;Generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-13;Ausiliari del generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-14;Controllo e regolazione del sistema;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-EGx-15;Montante del generatore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx;Servizi Ausiliari CA/CC (solo Spagna/LATAM);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-10;Corrente Alternata B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-11;Corrente Alternata M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-12;Corrente Continua;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-14;Trasformatore SA B.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-15;Trasformatore SA M.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Ux-SAx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk;Componenti comuni per tutti i gruppi;;;;TOI;;FL00000H
+kkH-yyyy-Gk-GSx;Sistema generale di comando e misure d'impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-10;Protezioni centralizzate;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11;Automatismo e controllo di impianto (SCADA);0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11-01;Sistema esterno di segnali;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11-02;Elaboratore e/o data logger;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11-03;Strumenti di monitoraggio;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11-04;Registratore cronologico di eventi;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-11-05;Circ.comando contr.serv.gener.parti com.;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-12;Apparecchiature di parallelo autom. di gruppi;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-13;Convertitori di misura;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-14;Sistema di controllo remoto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15;Comandi misure e automatismi centralizza;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-01;Quadri comando e controllo centralizzati;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-02;Regolazione centralizzata del carico;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-03;Automatismo di impianto - idro;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-04;Apparecch.parallelo automat. di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-05;Alleggeritori e stimolatori di carico;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-15-06;Apparati di teleconduz. impianto da p.t.;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-GSx-16;Collegamenti e apparecchiature di manovra per l'avviamento gruppi reversibili e pompe;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-35x;Opere di presa e derivazione;0000;11;1120;OPI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-10;Imbocco ;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-11;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-12;Griglie e sgrigliatori;0000;11;1120;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-35x-13;Galleria in pressione;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-14;Gallerie  a pelo libero;0000;11;1120;GAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-15;Canale all'aperto;0000;11;1120;CGI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-16;Immissioni a caduta;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-18;Spillamenti della derivazione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-19;Immissioni con pompaggio;0000;11;1120;ISI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-35x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-38x;Condotta;0000;11;1130;COF;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-10;Intercettazione di monte;0000;11;1130;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-11;Sede all'aperto;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-12;Sede in pozzo;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-13;Sede in discenderia;0000;11;1130;ASI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-14;Finestre e porte stagne;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-15;Tubazione;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-16;Collettore;0000;11;1130;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-17;Spillamento della tubazione;0000;11;1130;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-38x-23;Comandi, misurazioni e Sistema di Controllo;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-39x;Opere di restituzione in galleria o canale;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-10;Galleria in pressione;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-11;Galleria a pelo libero;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-12;Canale all'aperto;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-13;Sbocco, presa;0000;11;1120;CSI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-14;Organi di intercettazione;0000;11;1120;PAI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-39x-18;Spillamenti da opere di restituzione;0000;11;1120;SLI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x;Pozzo piezometrico di valle;0000;11;1120;PCI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x-10;Canna;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x-11;Camera di alimentazione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x-12;Camera di espansione;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x-13;Sfioratore;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-40x-14;Finestre e porte stagne;0000;11;1120;ALI;FL_HYDRINF;FL00000H
+kkH-yyyy-Gk-TUx;Turbina (Macchinario Meccanico);0000;11;1140;TRI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-10;Turbina;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Gk-TUx-10-01;Girante ;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Gk-TUx-10-02;Tenute;0000;11;1140;ALI;FL_TURBINE;FL00000H
+kkH-yyyy-Gk-TUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-12;Distributore;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-15;Supporti;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-16;Impianti ingrassaggio  componenenti turbina;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-17;Impianto irrorazione e pneumatizzazione della girante;0000;11;1140;ALI;FL_HYDRCOM;FL00000H
+kkH-yyyy-Gk-TUx-18;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-19;Protezioni meccaniche sistema turbina;0000;11;1140;SMI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-20;Albero;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-21;Moltiplicatore di giri;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-PUx;Pompa (impianti pompaggio);0000;11;1140;POM;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-10;Pompa;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-12;Giunto di accoppiamento;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-13;Prepompa;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-PUx-16;Impianto di ingrassaggio componenti pompa;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-PUx-17;Impianti di pneumatizzazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-PUx-19;Protezioni sistema pompa;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-PUx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MRx;Macchina Reversibile (impianti pompaggio);0000;11;1140;MRE;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-10;Macchina reversibile;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-12;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-15-03;Sistema di raffreddamento ad acqua;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-15-04;Sistema di lubrificazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-16;Imp. Ingrassaggio componenti macchina reversibile;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MRx-17;Impianti di pneumatizzazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MRx-18;Dispositivi per l'avviamento in generazione;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MRx-19;Protezioni sistema macchina reversibile;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MRx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MEx;Macchina elettrica rotante;0000;11;1141;ASS;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-10;Generatore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Gk-MEx-10-01;Statore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Gk-MEx-10-02;Rotore;0000;11;1141;ALI;FL_GENERAT;FL00000H
+kkH-yyyy-Gk-MEx-12;Eccitazione;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-13;Regolazione tensione;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-14;Supporti;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-14-01;Supporto di Spinta;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-14-02;Supporto di guida;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-14-03;Sistema di raffreddamento ad acqua;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-14-04;Sistema di lubrificazione;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-15;Impianto acqua raffreddamento diretto;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-16;Sollevamento rotore e frenatura meccanica;0000;11;1141;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-MEx-17;Complesso eccitazione frenatura elettrica;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-18;Macchine elettriche di avviamento gruppi reversibili e pompe;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-19;Protezioni elettriche generatore;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MEx-20;Motore per prepompa;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-21;Generatore motore;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-22;Motore;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Gk-MEx-23;Strumenti di misurazione;0000;11;1180;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-AAx;Automatismi e comandi di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-AAx-10;Automatismo di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-AAx-11;Comandi manuali centralizzati di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-AAx-12;Circuiti comando controllo servizi generali di gruppo;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-94x;Acque varie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-94x-10;Ciclo acqua Raffreddamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-94x-11;Impianto di aggottamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-94x-12;Impianto di rilevazione allagamenti;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-94x-13;Sistema di Disoleazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-96x;Aria compressa;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-96x-10;Stazione di compressione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-96x-11;Ciclo distribuzione aria;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-97x;Antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-10;Stazione pompaggio acqua antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-11;Autoclave;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-12;Ciclo distribuzione ed utilizzazione acqua;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-13;Impianto schiumogeno;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-14;Rilevazione ed allarme incendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-15;Impianti fissi CO2;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-16;Estintori;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-18;Impianti fissi a polvere;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-97x-19;Altri;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Gk-MCx;Quadro, comandi e controllo manuali;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MCx-10;Comandi manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MCx-11;Controlli manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MMx;Montante di macchina;0000;11;1141;MTG;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-12-01;Trasformatore di corrente;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-12-02;Trasformatore di tensione;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-13;Stallo di gruppo;0000;11;1141;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-13-0E;Interuttore di Gruppo;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-13-0G;Sezionatore;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-15;Collegamenti di potenza;0000;11;1141;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MMx-19;Protezioni elettriche montante di macchina;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MMx-20;Stallo trasformatore e/o apparecchiature lato AT del Trasformatore principale;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-21;Collegamenti e apparecchiature di manovra per l'avviamento gruppi reversibili e pompe;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-HVx;Sezione di smistamento AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-13;Collegamenti AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-HVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-HVx-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-HVx-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x;Sezione di smistamento AT 380 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H1x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H1x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H1x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x;Sezione di smistamento AT 220 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-10-;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H2x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H2x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H2x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x;Sezione di smistamento AT 132-150 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H3x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H3x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H3x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x;Sezione di smistamento AT < 132 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-13;Collegamenti AT;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-14-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-14-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-15;Stallo trasformatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-15-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-15-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H4x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-H4x-20;Stallo rifasamento;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-20-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-20-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-21;Stallo conversione;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-21-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-21-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-22;Stallo S.A.;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-22-14;Interuttore ;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-H4x-22-16;Sezionatore;0000;11;1150;STL;FL_HVSECT;FL00000H
+kkH-yyyy-Gk-MVx;Sezione smistamento MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-11;Stallo Linea MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-11-14;Interuttore ;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-11-16;Sezionatore;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-12;Automatismi servizi ausialiari MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-13;Collegamenti MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-14-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-14-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-15;Stallo trasformatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-15-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-15-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-16;Linee di proprieta' MT;0000;11;1150;LNA;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-MVx-20;Stallo rifasamento;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-21;Stallo conversione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-21-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-21-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-22;Stallo S.A.;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-22-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MVx-22-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-LVx;Sezione smistamento BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-11;Stallo  Linea BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-11-14;Interuttore ;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-11-16;Sezionatore;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-12;Automatismi servizi ausialiari BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-13;Collegamenti BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-LVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-LVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-TRx;Trasformatore di gruppo;0000;11;1141;TRF;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-10;Trasformatore;0000;11;1141;TRF;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-11;Trasformatori 380 KV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-12;Trasformatori 220 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-13;Trasformatori 132- 150 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-14;Trasformatori <132 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-15;Trasformatori <=30 kV;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-16;Componenti ausiliari;0000;11;1141;ALI;FL_TR_UNIT;FL00000H
+kkH-yyyy-Gk-TRx-19;Protezione elettriche;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Gk-SMx;Servizi ausiliari M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SMx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SMx-11;Quadri M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SMx-12;Automatismi servizi ausiliari M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SMx-13;Collegamenti M.T.;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SMx-14;Trasformatori SA;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-SLx;Servizi ausiliari B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-SLx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-SLx-11;Quadri B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-SLx-12;Automatismi servizi ausiliari B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-SLx-13;Collegamenti B.T.;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-SLx-14;Trasformatori SA;0000;11;1150;TRF;FL_LVSECT;FL00000H
+kkH-yyyy-Gk-DCx;Servizi ausiliari C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-DCx-10;Quadri raddrizzatori;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-DCx-11;Batterie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-DCx-12;Quadri in C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-DCx-16;Collegamenti C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx;Rifasamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-10;Condensatori statici;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-11;Reattori;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-21;Eccitazione sincrono;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-22;Regolatore di tensione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-23;Supporti;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-24;Impianto di raffreddamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-RIx-25;Sollevamento rotore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx;Conversione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-10;Filtro C.A.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-11;Circuito di smorzamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-12;Ponte di conversione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-13;Batterie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-14;Filtro C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-15;Regolazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-16;Ventilazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-COx-17;Collegamento A.T. C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx;Generatore di emergenza;0000;11;1150;MEL;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-10;Motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-11;Ausiliari motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-12;Generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-13;Ausiliari del generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-14;Controllo e regolazione del sistema;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-EGx-15;Montante del generatore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx;Servizi Ausiliari CA/CC (solo Spagna/LATAM);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-10;Corrente Alternata B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-11;Corrente Alternata M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-12;Corrente Continua;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-14;Trasformatore SA B.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-15;Trasformatore SA M.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Gk-SAx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0;Stazione;;;;STE;;FL00000H
+kkH-yyyy-S0-SSx;Alimentazione energia e impianti ausiliari;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SSx-10;Impianti elettrici;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SSx-11;Gruppo elettrogeno;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SSx-12;Strumentazioni osservazione e controllo;0000;11;1150;SMI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SSx-13;Comunicazioni;0000;11;1150;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx;Sistemi di supervisione e controllo stazione;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-10;Automatismo di stazione;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-10-01;Elaboratore e.o data logger;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-10-02;Apparecchiature perturbografiche;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-10-03;Registratore cronologico di eventi;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-12;Circ.com.controllo di sezione;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-13;Circ.com.controllo di sezione >=380 kV;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-14;Circ.com.controllo di sezione 220 kV;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-15;Circ.com.controllo di sezione 132-150 kV;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-16;Circ.com.controllo di sezione <130 kV;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-17;Circ.com.controllo di sezione <30 kV;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SCx-19;Protezioni elettriche stazione;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-S0-SMx;Servizi ausiliari M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SMx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SMx-11;Quadri M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SMx-12;Automatismi servizi ausiliari M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SMx-13;Collegamenti M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SMx-14;Trasformatori SA;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx;Servizi ausiliari B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx-11;Quadri B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx-12;Automatismi servizi ausiliari B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx-13;Collegamenti B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-SLx-14;Trasformatori SA;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx;Generatore di emergenza;0000;11;1150;MEL;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-10;Motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-11;Ausiliari motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-12;Generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-13;Ausiliari del generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-14;Controllo e regolazione del sistema;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-EGx-15;Montante del generatore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-S0-DCx;Servizi ausiliari C.C.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-DCx-10;Quadri raddrizzatori;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-DCx-11;Batterie;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-DCx-12;Quadri in C.C.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-DCx-16;Collegamenti C.C.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx;Rifasamento;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-10;Condensatori statici;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-11;Reattori;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-21;Eccitazione sincrono;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-22;Regolatore di tensione;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-23;Supporti;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-24;Impianto di raffreddamento;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-RIx-25;Sollevamento rotore;0000;11;1141;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx;Conversione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-10;Filtro C.A.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-11;Circuito di smorzamento;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-12;Ponte di conversione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-13;Batterie;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-14;Filtro C.C.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-15;Regolazione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-16;Ventilazione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-S0-COx-17;Collegamento A.T. C.C.;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx;Stazione Linea 1;;;;;;FL00000H
+kkH-yyyy-Sx-HVx;Sezione di smistamento AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-HVx-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-13;Collegamenti AT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-HVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-HVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-HVx-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-HVx-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x;Sezione di smistamento AT 380 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H1x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-H1x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H1x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H1x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H1x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x;Sezione di smistamento AT 220 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H2x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-H2x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H2x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H2x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H2x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x;Sezione di smistamento AT 132-150 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H3x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-H3x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H3x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H3x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H3x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x;Sezione di smistamento AT < 132 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Sx-H4x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-H4x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H4x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-H4x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-H4x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-MVx;Sezione smistamento MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-11;Stallo linea MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-11-14;Interuttore ;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-11-16;Sezionatore;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-12;Automatismi servizi ausialiari MT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-MVx-13;Collegamenti MT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-MVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-14-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-14-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-15;Stallo trasformatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-15-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-15-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-16;Linee di proprieta' MT;0000;11;1150;LNA;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-MVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-MVx-20;Stallo rifasamento;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-21;Stallo conversione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-21-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-21-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-22;Stallo S.A.;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-22-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MVx-22-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-LVx;Sezione smistamento BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-11;Stallo linea BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-11-14;Interuttore ;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-11-16;Sezionatore;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Sx-LVx-12;Automatismi servizi ausialiari BT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-LVx-13;Collegamenti BT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-LVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-LVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-TRx;Trasformazione;0000;11;1141;TRF;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-10;Trasformatori;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-11;Trasformatori 380 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-12;Trasformatori 220 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-13;Trasformatori 132- 150 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-14;Trasformatori <132 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Sx-TRx-15;Trasformatori <=30 kV;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Sx-TRx-16;Componenti ausiliari;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Sx-TRx-19;Protezioni elettriche TR;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-TSx;Sistema di trasmissione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-TSx-01;Linea di trasmissione;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-TSx-02;Struttura di sostegno;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-TSx-03;Isolatori;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-TSx-04;Cavi sommergibili;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Sx-TSx-05;Scaricatori;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Sx-MMx;Montante di macchina;0000;11;1150;MTG;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-12-11;Trasformatore di corrente;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-12-12;Trasformatore di tensione;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-13;Stallo di gruppo (AT/o MT o BT);0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-13-1E;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-13-1G;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-15;Collegamenti di potenza;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-MMx-19;Protezioni elettriche montante di macchina;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Sx-MMx-20;Stallo Apparecchiature Lato A.T. ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx;Altre ;;;;SET;;FL00000H
+kkH-yyyy-Zx-90x;Controllo ambientale;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-10;Passaggio pesci a monte;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-11;Passaggio pesci a valle;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-12;Sistema ad ossigeno disciolto;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-13;DVM;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-14;Sistema di misurazione del fiume;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-15;Struttura di misurazione passaggio pesci;0000;11;1180;ALI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-90x-19;Sistema di controllo DVM;0000;11;1180;SMI;FL_ENVSYST;FL00000H
+kkH-yyyy-Zx-91x;Impianti di terra e protezione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-91x-10;Impianti di terra;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-91x-11;Impianti di protezione cat.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-91x-12;Protezioni contro scariche atmosferiche;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-91x-13;Reattore di terra neutrale;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-94x;Acque varie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-94x-10;Ciclo acqua Raffreddamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-94x-11;Impianto di aggottamento;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-94x-12;Impianto di rilevazione allagamenti;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-94x-13;Sistema di Disoleazione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-96x;Aria compressa;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-96x-10;Stazione di compressione;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-96x-11;Ciclo distribuzione aria;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-97x;Antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-10;Stazione pompaggio acqua antincendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-11;Autoclave;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-12;Ciclo distribuzione ed utilizzazione acqua;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-13;Impianto schiumogeno;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-14;Rilevazione ed allarme incendio;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-15;Impianti fissi CO2;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-16;Estintori;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-18;Impianti fissi a polvere;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-97x-19;Altri;0000;11;1150;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-98x;Impianti e attrezzature varie;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-98x-10;Apparecchiature di sollevamento (carroponte);0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-98x-11;Trattamento olio isolante e lubrificante;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-98x-12;Imp. ingrassaggio centralizzato;0000;11;1150;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x;Attrezzature logistiche;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-10;Attrezzature di officina e laboratorio;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-11;Mobili e arredi di ufficio;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-12;Macchine di ufficio;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-13;Mezzi speciali;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-14;Computer, stampanti e altro;0000;11;1100;ALI;FL_OTHER;FL00000H
+kkH-yyyy-Zx-99x-15;Equipaggiamento di sicurezza;0000;11;1100;ALI;FL_SAFSYST;FL00000H
+kkH-yyyy-Zx-HVx;Sezione di smistamento AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-HVx-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-13;Collegamenti AT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-HVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-HVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-HVx-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-HVx-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x;Sezione di smistamento AT 380 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H1x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-H1x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H1x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H1x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H1x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x;Sezione di smistamento AT 220 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H2x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-H2x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H2x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H2x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H2x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x;Sezione di smistamento AT 132-150 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H3x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-H3x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H3x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H3x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H3x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x;Sezione di smistamento AT < 132 kV;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-11;Stallo linea AT;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-11-14;Interuttore ;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-11-16;Sezionatore;0000;11;1150;ALI;FL_HVSECT;FL00000H
+kkH-yyyy-Zx-H4x-12;Automatismi servizi ausialiari AT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-13;Collegamenti AT;0000;11;1150;STL;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-H4x-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-14-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-14-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-15;Stallo trasformatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-15-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-15-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-16;Linee di proprieta' AT;0000;11;1150;LNA;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H4x-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-H4x-20;Stallo rifasamento;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-20-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-20-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-21;Stallo conversione;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-21-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-21-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-22;Stallo S.A.;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-22-14;Interuttore ;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-H4x-22-16;Sezionatore;0000;11;1150;STL;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-MVx;Sezione smistamento MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-11;Stallo linea MT;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-11-14;Interuttore ;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-11-16;Sezionatore;0000;11;1150;ALI;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-12;Automatismi servizi ausialiari MT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-MVx-13;Collegamenti MT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-MVx-14;Stallo parallelo e.o traslazione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-14-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-14-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-15;Stallo trasformatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-15-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-15-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-16;Linee di proprieta' MT;0000;11;1150;LNA;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-MVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-MVx-20;Stallo rifasamento;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-20-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-20-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-21;Stallo conversione;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-21-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-21-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-22;Stallo S.A.;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-22-14;Interuttore ;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-MVx-22-16;Sezionatore;0000;11;1150;STL;FL_MVSECT;FL00000H
+kkH-yyyy-Zx-LVx;Sezione smistamento BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-10-01;Trasformatore di corrente;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-10-02;Trasformatore di tensione;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-11;Stallo linea BT;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-11-14;Interuttore ;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-11-16;Sezionatore;0000;11;1150;ALI;FL_LVSECT;FL00000H
+kkH-yyyy-Zx-LVx-12;Automatismi servizi ausialiari BT;0000;11;1150;ALI;FL_ELECEQ;FL00000H
+kkH-yyyy-Zx-LVx-13;Collegamenti BT;0000;11;1150;ALI;FL_POWLINE;FL00000H
+kkH-yyyy-Zx-LVx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-LVx-19;Protezioni elettriche ;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-SMx;Servizi ausiliari MT;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SMx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SMx-11;Quadri M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SMx-12;Automatismi servizi ausiliari M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SMx-13;Collegamenti M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SMx-14;Trasformatori SA;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx;Servizi ausiliari BT;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-10;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-11;Quadri B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-12;Automatismi servizi ausiliari B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-13;Collegamenti B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-14;Trasformatori SA;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SLx-15;impianto fotovoltaico ausiliario;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx;Generatore di emergenza;0000;11;1150;MEL;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-10;Motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-11;Ausiliari motore primo;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-12;Generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-13;Ausiliari del generatore elettrico;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-14;Controllo e regolazione del sistema;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-EGx-15;Montante del generatore;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-DCx;Servizi ausiliari C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-DCx-10;Quadri raddrizzatori;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-DCx-11;Batterie;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-DCx-12;Quadri in C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-DCx-16;Collegamenti C.C.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-TRx;Trasformazione;0000;11;1141;TRF;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-10;Trasformatori;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-11;Trasformatori 380 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-12;Trasformatori 220 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-13;Trasformatori 132- 150 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-14;Trasformatori <132 kV;0000;11;1141;ALI;FL_TR_SS;FL00000H
+kkH-yyyy-Zx-TRx-15;Trasformatori <=30 kV;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Zx-TRx-16;Componenti ausiliari;0000;11;1141;ALI;FL_ELECMAC;FL00000H
+kkH-yyyy-Zx-TRx-19;Protezioni elettriche TR;0000;11;1180;ALI;FL_AUT&CON;FL00000H
+kkH-yyyy-Zx-SAx;Servizi Ausiliari CA/CC (solo Spagna/LATAM);0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-10;Corrente Alternata B.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-11;Corrente Alternata M.T.;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-12;Corrente Continua;0000;11;1150;ALI;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-14;Trasformatore SA B.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-15;Trasformatore SA M.T.;0000;11;1150;TRF;FL_AUXSYST;FL00000H
+kkH-yyyy-Zx-SAx-18;Contatori energia;0000;11;1180;ALI;FL_AUT&CON;FL00000H

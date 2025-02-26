@@ -1,0 +1,245 @@
+FL,Description,AM Section,AM Part,AM Component,Element Type,Tech.Obj.SAP CODE,Catalog Profile,Source_File,FL_Lunghezza,FL_RE
+kkE,IsoCode Country + Technology (S),,,,,,,Bess_FL_SubStation_Guideline.csv,1,[A-Z][A-Z]E
+kkE-yyyy,Plant code ,,,,,,,Bess_FL_SubStation_Guideline.csv,2,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]
+kkE-yyyy-0A,Common Energy Collecting & Delivery System,,,,,,,Bess_FL_SubStation_Guideline.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A
+kkE-yyyy-0A-xT,HV/MV Common Transformer,0.0,51.0,5150.0,,FL_TR_SS,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T
+kkE-yyyy-0A-xT-HV,HV Section,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV
+kkE-yyyy-0A-xT-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-IT
+kkE-yyyy-0A-xT-HV-Rn,HV/MV Protective Relays,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-R[0-9]
+kkE-yyyy-0A-xT-HV-Sn,HV Surge Arrester,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-S[0-9]
+kkE-yyyy-0A-xT-HV-Dn,HV Disconnector,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-D[0-9]
+kkE-yyyy-0A-xT-HV-An,HV M&P Transformers CT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-A[0-9]
+kkE-yyyy-0A-xT-HV-Vn,HV M&P Transformers VT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-V[0-9]
+kkE-yyyy-0A-xT-HV-BS,HV Connection,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-BS
+kkE-yyyy-0A-xT-HV-Mn,Energy Meter,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-M[0-9]
+kkE-yyyy-0A-xT-Mn,MV Section,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]
+kkE-yyyy-0A-xT-Mn-In,MV Circuit Breaker/MV Panel,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-I[0-9]
+kkE-yyyy-0A-xT-Mn-Dn,MV Disconnector,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-D[0-9]
+kkE-yyyy-0A-xT-Mn-An,MV M&P Transformers CT,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-A[0-9]
+kkE-yyyy-0A-xT-Mn-Vn,MV M&P Transformers VT,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-V[0-9]
+kkE-yyyy-0A-xT-Mn-Sn,MV Surge Arrester,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-S[0-9]
+kkE-yyyy-0A-xT-Mn-BS,MV Connection,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-BS
+kkE-yyyy-0A-xT-Mn-0n,Line protection,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-0[0-9]
+kkE-yyyy-0A-xT-Mn-Hn,Harmonic Filter,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-H[0-9]
+kkE-yyyy-0A-xT-Mn-ZR,Shunt Reactor,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ZR
+kkE-yyyy-0A-xT-Mn-Zn,Zig Zag Earthing Transformer,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-Z[0-9]
+kkE-yyyy-0A-xT-Mn-ER,Earthing Reactor,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ER
+kkE-yyyy-0A-xT-Mn-Cn,Capacitor Bank MV,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-C[0-9]
+kkE-yyyy-0A-xT-Mn-Mn,Energy Meter,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-M[0-9]
+kkE-yyyy-0A-xT-OC,Civil Works,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-OC
+kkE-yyyy-0A-xL,HV Line,0.0,51.0,5150.0,,FL_LI_SS,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L
+kkE-yyyy-0A-xL-HV,HV Section,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV
+kkE-yyyy-0A-xL-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-IT
+kkE-yyyy-0A-xL-HV-Rn,HV/MV Protective Relays,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-R[0-9]
+kkE-yyyy-0A-xL-HV-Dn,HV Disconnector,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-D[0-9]
+kkE-yyyy-0A-xL-HV-Sn,HV Surge Arrester,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-S[0-9]
+kkE-yyyy-0A-xL-HV-An,HV M&P Transformers CT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-A[0-9]
+kkE-yyyy-0A-xL-HV-Vn,HV M&P Transformers VT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-V[0-9]
+kkE-yyyy-0A-xL-HV-BS,HV Connection,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-BS
+kkE-yyyy-0A-xL-HV-Mn,Energy Meter,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-M[0-9]
+kkE-yyyy-0A-xL-OC,Civil Works,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OC
+kkE-yyyy-0A-xL-OL,Overhead Power Lines,0.0,51.0,5150.0,,FL_POWLINE,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OL
+kkE-yyyy-0A-xL-UL,Underground Power Lines,0.0,51.0,5150.0,,FL_POWLINE,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-UL
+kkE-yyyy-0A-xS,HV Busbar,0.0,51.0,5150.0,,FL_BU_SS,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S
+kkE-yyyy-0A-xS-HV,HV Section,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV
+kkE-yyyy-0A-xS-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-IT
+kkE-yyyy-0A-xS-HV-Rn,HV/MV Protective Relays,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-R[0-9]
+kkE-yyyy-0A-xS-HV-Dn,HV Disconnector,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-D[0-9]
+kkE-yyyy-0A-xS-HV-Sn,HV Surge Arrester,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-S[0-9]
+kkE-yyyy-0A-xS-HV-An,HV M&P Transformers CT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-A[0-9]
+kkE-yyyy-0A-xS-HV-Vn,HV M&P Transformers VT,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-V[0-9]
+kkE-yyyy-0A-xS-HV-Cn,Capacitor Bank HV,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-C[0-9]
+kkE-yyyy-0A-xS-HV-BS,HV Connection,0.0,51.0,5150.0,,FL_HVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-BS
+kkE-yyyy-0A-xS-HV-Mn,Energy Meter,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-M[0-9]
+kkE-yyyy-0A-xS-OC,Civil Works,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-OC
+kkE-yyyy-0A-LA,LV Auxiliary services power distribution,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA
+kkE-yyyy-0A-LA-LP,DC LV Panel - uninterrupted,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP
+kkE-yyyy-0A-LA-LP-nn,DC Low Voltage Panel nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP-(?!00)[0-9]{2}
+kkE-yyyy-0A-LA-LN,AC LV Panel - normal and emergency p.s.,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN
+kkE-yyyy-0A-LA-LN-nn,AC Low Voltage Panel nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN-(?!00)[0-9]{2}
+kkE-yyyy-0A-LA-LU,AC LV Panel - uninterrupted ,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU
+kkE-yyyy-0A-LA-LU-nn,AC Low Voltage Panel nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU-(?!00)[0-9]{2}
+kkE-yyyy-0A-LA-SB,LV Switchboard,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB
+kkE-yyyy-0A-LA-SB-nn,LV Switchboard nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB-(?!00)[0-9]{2}
+kkE-yyyy-0A-LA-SG,LV Switchgear,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG
+kkE-yyyy-0A-LA-SG-nn,LV Switchgear nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG-(?!00)[0-9]{2}
+kkE-yyyy-0A-SA,Auxiliary service equipments,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA
+kkE-yyyy-0A-SA-DG,Diesel Generator,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-DG
+kkE-yyyy-0A-SA-EP,External Power Supply,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-EP
+kkE-yyyy-0A-SA-BT,Batteries Bank,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT
+kkE-yyyy-0A-SA-BT-nn,Batteries Bank nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT-(?!00)[0-9]{2}
+kkE-yyyy-0A-SA-TR,Auxiliary service Transformer,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR
+kkE-yyyy-0A-SA-TR-nn,Transformer nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR-(?!00)[0-9]{2}
+kkE-yyyy-0A-SA-TS,Automatic Transfer Switch,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS
+kkE-yyyy-0A-SA-TS-nn,Automatic Transfer Switch nn,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS-(?!00)[0-9]{2}
+kkE-yyyy-0A-SA-UP,UPS,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-UP
+kkE-yyyy-0A-SA-FC,HVAC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-FC
+kkE-yyyy-0A-RE,Rectifier AC/DC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE
+kkE-yyyy-0A-RE-nn,Rectifier AC/DC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE-(?!00)[0-9]{2}
+kkE-yyyy-0A-xM,MV Feeders Connection,0.0,51.0,5150.0,,FL_MVFEED,FL00000E,Bess_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M
+kkE-yyyy-0A-xM-MA,MV Section,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA
+kkE-yyyy-0A-xM-MA-In,MV Circuit Breaker,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-I[0-9]
+kkE-yyyy-0A-xM-MA-Dx,MV Disconnector,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-D[1-9A-Z]
+kkE-yyyy-0A-xM-MA-Ax,MV M&P Transformers CT,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-A[1-9A-Z]
+kkE-yyyy-0A-xM-MA-Vx,MV M&P Transformers VT,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-V[1-9A-Z]
+kkE-yyyy-0A-xM-MA-Sx,MV Surge Arrester,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-S[1-9A-Z]
+kkE-yyyy-0A-xM-MA-BS,MV Connection,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-BS
+kkE-yyyy-0A-xM-MA-0x,Line protection,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-0[1-9A-Z]
+kkE-yyyy-0A-xM-MA-Hx,Harmonic Filter,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-H[1-9A-Z]
+kkE-yyyy-0A-xM-MA-ZR,Shunt Reactor,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ZR
+kkE-yyyy-0A-xM-MA-Zn,Zig Zag Earthing Transformer,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-Z[0-9]
+kkE-yyyy-0A-xM-MA-ER,Earthing Reactor,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ER
+kkE-yyyy-0A-xM-MA-Cx,Capacitor Bank MV,0.0,51.0,5150.0,,FL_MVSECT,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-C[1-9A-Z]
+kkE-yyyy-0A-xM-MA-Mx,Energy Meter,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-M[1-9A-Z]
+kkE-yyyy-0A-xM-OC,Civil Works,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OC
+kkE-yyyy-0A-xM-OL,Overhead Power Lines,0.0,51.0,5150.0,,FL_POWLINE,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OL
+kkE-yyyy-0A-xM-UL,Underground Power Lines,0.0,51.0,5150.0,,FL_POWLINE,FL00000E,Bess_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-UL
+kkE-yyyy-00,Common Infrastructures and services,,,,,,FL00000E,Bess_FL_GuideLine.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00
+kkE-yyyy-00-VC,"Buildings, Areas and Roads",0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC
+kkE-yyyy-00-VC-BU,Buildings,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-BU
+kkE-yyyy-00-VC-FE,Fences and gates,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-FE
+kkE-yyyy-00-VC-GA,Green areas,0.0,51.0,5111.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-GA
+kkE-yyyy-00-VC-RO,Internal roads,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-RO
+kkE-yyyy-00-IL,Overhead lighting,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL
+kkE-yyyy-00-IL-LU,Luminaries,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LU
+kkE-yyyy-00-IL-LS,Lamps,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LS
+kkE-yyyy-00-IL-PL,Poles,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-PL
+kkE-yyyy-00-IL-CL,LV cables,0.0,51.0,5150.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-CL
+kkE-yyyy-00-IT,Communications System,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IT
+kkE-yyyy-00-SS,Plant Security System,0.0,51.0,5150.0,,FL_SECSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS
+kkE-yyyy-00-SS-VS,Videosurveillance system,0.0,51.0,5150.0,,FL_SECSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-VS
+kkE-yyyy-00-SS-IR,Anti intrusion system,0.0,51.0,5150.0,,FL_SECSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-IR
+kkE-yyyy-00-IC,Internal Communications ,0.0,51.0,5150.0,,FL_OTHER,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IC
+kkE-yyyy-00-TC,SCADA System,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC
+kkE-yyyy-00-TC-LN,Internal LAN,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-LN
+kkE-yyyy-00-TC-AP,Scada Devices,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-AP
+kkE-yyyy-00-TC-SM,Permanent Met Towers,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM
+kkE-yyyy-00-TC-HI,Human machine interface,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-HI
+kkE-yyyy-00-GG,Grounding grid,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-GG
+kkE-yyyy-00-AS,Anti rodent system,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-AS
+kkE-yyyy-00-CL,Underground Cables and Overhead Pwr Line,0.0,51.0,5150.0,,FL_OTHER,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL
+kkE-yyyy-00-CL-MC,MV cables,0.0,51.0,5140.0,,FL_POWLINE,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-MC
+kkE-yyyy-00-CL-JC,MV junctions and connections,0.0,51.0,5140.0,,FL_POWLINE,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-JC
+kkE-yyyy-00-CL-CT,Cable trays,0.0,51.0,5140.0,,FL_POWLINE,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-CT
+kkE-yyyy-00-OC,Civil Works,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC
+kkE-yyyy-00-OC-FO,Foundations,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-FO
+kkE-yyyy-00-OC-MR,Dirt Work,0.0,51.0,5110.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MR
+kkE-yyyy-00-FF,Fire Protection System,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF
+kkE-yyyy-00-FF-DP,Dry-Pipe,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF-DP
+kkE-yyyy-00-FF-CP,Fire fighting Control panel,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF-CP
+kkE-yyyy-00-FF-ES,Extinguishing agent storage system,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF-ES
+kkE-yyyy-0E,Bess Common,,,,,,FL00000E,Bess_FL_GuideLine.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E
+kkE-yyyy-0E-SA,BESS Dedicated Auxiliary System,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA
+kkE-yyyy-0E-SA-DG,Backup Generator,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-DG
+kkE-yyyy-0E-SA-TS,AutomaticTransferSwitch (ATS),0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-TS
+kkE-yyyy-0E-SA-UP,UPS,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-UP
+kkE-yyyy-0E-SA-TR,Ausiliary Transformer,0.0,51.0,5150.0,,FL_TRANSF,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-TR
+kkE-yyyy-0E-SA-IT,Circuit Breaker,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-IT
+kkE-yyyy-0E-SA-EP,External Power Supply,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-EP
+kkE-yyyy-0E-SA-ME,Auxiliary Meters,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-SA-ME
+kkE-yyyy-0E-N0,BESS Control System,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0
+kkE-yyyy-0E-N0-SC,BESS SCADA,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-SC
+kkE-yyyy-0E-N0-SW,Switch-router,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-SW
+kkE-yyyy-0E-N0-CC,Control Card,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-CC
+kkE-yyyy-0E-N0-HM,HMI,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-HM
+kkE-yyyy-0E-N0-CM,Communication cable,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-CM
+kkE-yyyy-0E-N0-PL,Centralized Safety PLC,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-PL
+kkE-yyyy-0E-N0-HV,HVAC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-HV
+kkE-yyyy-0E-N0-FD,Fire Detection,0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-FD
+kkE-yyyy-0E-N0-FS,Fire fighing (sprinkler & agent storage),0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0E-N0-FS
+kkE-yyyy-xE,Feeder_n,,,,,,FL00000E,Bess_FL_GuideLine.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E
+kkE-yyyy-xE-CE,Feeder_n BESS Energy Meters,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-CE
+kkE-yyyy-xE-MV,MV Section,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV
+kkE-yyyy-xE-MV-CL,MV cables,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV-CL
+kkE-yyyy-xE-MV-PR,MV Protective Relays,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV-PR
+kkE-yyyy-xE-MV-In,Storage unit MV Breaker/Switchgear,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV-I[0-9]
+kkE-yyyy-xE-MV-In-AT,MV M&P Transformer - Current Transformer,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV-I[0-9]-AT
+kkE-yyyy-xE-MV-In-VT,MV M&P Transformer - Voltage Transformer,0.0,51.0,5140.0,,FL_MVSECT,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-MV-I[0-9]-VT
+kkE-yyyy-xE-TR,Storage unit Trasformers,0.0,51.0,5190.0,,FL_TRANSF,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR
+kkE-yyyy-xE-TR-Tn,Transformer (of the Storage Unit n),0.0,51.0,5190.0,,FL_TRANSF,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]
+kkE-yyyy-xE-TR-Tn-PT,Transformer protective system,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-PT
+kkE-yyyy-xE-TR-Tn-FA,Fans,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-FA
+kkE-yyyy-xE-TR-Tn-OP,Oil Pumps,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-OP
+kkE-yyyy-xE-TR-Tn-RA,Radiator,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-RA
+kkE-yyyy-xE-TR-Tn-SW,Switches,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-SW
+kkE-yyyy-xE-TR-Tn-GA,Gauges,0.0,51.0,5190.0,,FL_TRACOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-TR-T[0-9]-GA
+kkE-yyyy-xE-LV,LV Section,0.0,51.0,5150.0,,FL_LVSECT,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-LV
+kkE-yyyy-xE-LV-CL,LV cables,0.0,51.0,5150.0,,FL_LVSECT,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-LV-CL
+kkE-yyyy-xE-nn,Storage Unit Field_nn,0.0,51.0,5180.0,,FL_FIELDBE,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}
+kkE-yyyy-xE-nn-CE,BESS Energy Meters,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-CE
+kkE-yyyy-xE-nn-00,Common of PCS,0.0,51.0,5150.0,,FL_OTHER,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-00
+kkE-yyyy-xE-nn-00-CP,Fire fighting Control panel ,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-00-CP
+kkE-yyyy-xE-nn-00-PL,Safety PLC Cabinet,0.0,51.0,5150.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-00-PL
+kkE-yyyy-xE-nn-00-CH,PCS Chiller,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-00-CH
+kkE-yyyy-xE-nn-Pm,PCS Inverter,0.0,51.0,5180.0,,FL_PCS,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]
+kkE-yyyy-xE-nn-Pm-PM,Power Module,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-PM
+kkE-yyyy-xE-nn-Pm-FU,Fuse Combiner,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-FU
+kkE-yyyy-xE-nn-Pm-GI,Ground Impedence system,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-GI
+kkE-yyyy-xE-nn-Pm-DC,DC Section,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-DC
+kkE-yyyy-xE-nn-Pm-AC,AC Section,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-AC
+kkE-yyyy-xE-nn-Pm-AR,Cooling Fans,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-AR
+kkE-yyyy-xE-nn-Pm-TK,PCS Enclosure,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-TK
+kkE-yyyy-xE-nn-Pm-HI,Human machine interface,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-HI
+kkE-yyyy-xE-nn-Pm-DS,DC Disconnect Switch,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-DS
+kkE-yyyy-xE-nn-Pm-PS,External Power supply,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-PS
+kkE-yyyy-xE-nn-Pm-RC,Remote communication ,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-RC
+kkE-yyyy-xE-nn-Pm-LC,Liquid Cooling System,0.0,51.0,5180.0,,FL_PCSCOMP,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-P[1-9]-LC
+kkE-yyyy-xE-nn-Cn-AC,Array Controller,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-AC
+kkE-yyyy-xE-nn-Cn-CL,Cable,0.0,51.0,5180.0,,FL_CONTCOM,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-CL
+kkE-yyyy-xE-nn-Cn-CP,Container Fire fighting Control panel ,0.0,51.0,5180.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-CP
+kkE-yyyy-xE-nn-Cn-DS,Door Switch,0.0,51.0,5180.0,,FL_CONTCOM,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-DS
+kkE-yyyy-xE-nn-Cn-EN,Enclosure structure,0.0,51.0,5180.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-EN
+kkE-yyyy-xE-nn-Cn-FD,Fire Detection,0.0,51.0,5150.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-FD
+kkE-yyyy-xE-nn-Cn-FS,Fire Figthing (sprinker & agent storage),0.0,51.0,5180.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-FS
+kkE-yyyy-xE-nn-Cn-GI,Ground Impedence System,0.0,51.0,5180.0,,FL_CONTCOM,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-GI
+kkE-yyyy-xE-nn-Cn-HV,HVAC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-HV
+kkE-yyyy-xE-nn-Cn-LC,Liquid Cooling System,0.0,51.0,5180.0,,FL_CONTCOM,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-LC
+kkE-yyyy-xE-nn-Cn-MS,Master Battery Control System (MBMS),0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-MS
+kkE-yyyy-xE-nn-Cn-OC,Civil Work,0.0,51.0,5180.0,,FL_INFRAST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-OC
+kkE-yyyy-xE-nn-Cn-PL,Container Safety PLC,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-PL
+kkE-yyyy-xE-nn-Cn-SA,Auxiliary distribution box,0.0,51.0,5180.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-SA
+kkE-yyyy-xE-nn-Cn-UP,UPS,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]-UP
+kkE-yyyy-xE-nn-Cn,Battery Container & Ancillary system,0.0,51.0,5150.0,,FL_BATCONT,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-C[0-9]
+kkE-yyyy-xE-nn-Bm,Battery Bank,0.0,51.0,5180.0,,FL_BATBANK,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-B[1-9]
+kkE-yyyy-xE-nn-Bm-BM,Battery Racks/Strings,0.0,51.0,5180.0,,FL_BAT,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-B[1-9]-BM
+kkE-yyyy-xE-nn-Bm-BS,Battery Management System (BMS),0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-B[1-9]-BS
+kkE-yyyy-xE-nn-Bm-CB,Battery Control Box,0.0,51.0,5180.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-B[1-9]-CB
+kkE-yyyy-xE-nn-Bm-BC,Battery Combiner,0.0,51.0,5180.0,,FL_BAT,FL00000E,Bess_FL_GuideLine.csv,6,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[1-9A-Z]E-(?!00)[0-9]{2}-B[1-9]-BC
+kkE-yyyy-WE,Bess Common West/North,,,,,,FL00000E,Bess_FL_GuideLine.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE
+kkE-yyyy-WE-SA,BESS Dedicated Auxiliary System,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA
+kkE-yyyy-WE-SA-DG,Backup Generator,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-DG
+kkE-yyyy-WE-SA-TS,AutomaticTransferSwitch (ATS),0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-TS
+kkE-yyyy-WE-SA-UP,UPS,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-UP
+kkE-yyyy-WE-SA-TR,Ausiliary Transformer,0.0,51.0,5150.0,,FL_TRANSF,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-TR
+kkE-yyyy-WE-SA-IT,Circuit Breaker,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-IT
+kkE-yyyy-WE-SA-EP,External Power Supply,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-EP
+kkE-yyyy-WE-SA-ME,Auxiliary Meters,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-SA-ME
+kkE-yyyy-WE-N0,BESS Control System,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0
+kkE-yyyy-WE-N0-SC,BESS SCADA,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-SC
+kkE-yyyy-WE-N0-SW,Switch-router,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-SW
+kkE-yyyy-WE-N0-CC,Control Card,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-CC
+kkE-yyyy-WE-N0-HM,HMI,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-HM
+kkE-yyyy-WE-N0-CM,Communication cable,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-CM
+kkE-yyyy-WE-N0-PL,Centralized Safety PLC,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-PL
+kkE-yyyy-WE-N0-HV,HVAC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-HV
+kkE-yyyy-WE-N0-FD,Fire Detection,0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-FD
+kkE-yyyy-WE-N0-FS,Fire fighing (sprinkler & agent storage),0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-WE-N0-FS
+kkE-yyyy-ZE,Bess Common East/South,,,,,,FL00000E,Bess_FL_GuideLine.csv,3,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE
+kkE-yyyy-ZE-SA,BESS Dedicated Auxiliary System,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA
+kkE-yyyy-ZE-SA-DG,Backup Generator,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-DG
+kkE-yyyy-ZE-SA-TS,AutomaticTransferSwitch (ATS),0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-TS
+kkE-yyyy-ZE-SA-UP,UPS,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-UP
+kkE-yyyy-ZE-SA-TR,Ausiliary Transformer,0.0,51.0,5150.0,,FL_TRANSF,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-TR
+kkE-yyyy-ZE-SA-IT,Circuit Breaker,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-IT
+kkE-yyyy-ZE-SA-EP,External Power Supply,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-EP
+kkE-yyyy-ZE-SA-ME,Auxiliary Meters,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-SA-ME
+kkE-yyyy-ZE-N0,BESS Control System,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,4,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0
+kkE-yyyy-ZE-N0-SC,BESS SCADA,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-SC
+kkE-yyyy-ZE-N0-SW,Switch-router,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-SW
+kkE-yyyy-ZE-N0-CC,Control Card,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-CC
+kkE-yyyy-ZE-N0-HM,HMI,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-HM
+kkE-yyyy-ZE-N0-CM,Communication cable,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-CM
+kkE-yyyy-ZE-N0-PL,Centralized Safety PLC,0.0,51.0,5190.0,,FL_AUT&CON,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-PL
+kkE-yyyy-ZE-N0-HV,HVAC,0.0,51.0,5150.0,,FL_AUXSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-HV
+kkE-yyyy-ZE-N0-FD,Fire Detection,0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-FD
+kkE-yyyy-ZE-N0-FS,Fire fighing (sprinkler & agent storage),0.0,51.0,5190.0,,FL_SAFSYST,FL00000E,Bess_FL_GuideLine.csv,5,[A-Z][A-Z]E-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZE-N0-FS

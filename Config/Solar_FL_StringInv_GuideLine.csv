@@ -1,0 +1,76 @@
+FL;Description;AM Section;AM Part;AM Component;Element Type;Tech.Obj.SAP CODE;Catalog Profile
+kkS;IsoCode Country + Technology (S);;;;;;
+kkS-yyyy;Plant code;;;;;;
+kkS-yyyy-yn;CT_<ID_FIELD>;0000;;;;;FL00000S
+kkS-yyyy-yn-OC;Civil Works;0000;18;1810;OPC;FL_INFRAST;FL00000S
+kkS-yyyy-yn-OC-WS;Sheaths;0000;18;1810;OPC;FL_INFRAST;FL00000S
+kkS-yyyy-yn-OC-MF;Metallic frame;0000;18;1810;OPC;FL_INFRAST;FL00000S
+kkS-yyyy-yn-OC-FO;Foundations;0000;18;1810;OPC;FL_INFRAST;FL00000S
+kkS-yyyy-yn-OC-MR;Dirt Work;0000;18;1810;;FL_INFRAST;FL00000S
+kkS-yyyy-yn-MV;MV Section;0000;18;1840;SCC;FL_MVSECT;FL00000S
+kkS-yyyy-yn-MV-CL;MV cables;0000;18;1840;ALE;FL_MVSECT;
+kkS-yyyy-yn-MV-IT;MV Switchgear;0000;18;1840;SCC;FL_MVSECT;FL00000S
+kkS-yyyy-yn-MV-PR;MV Protective Systems;0000;18;1840;CLE;FL_MVSECT;FL00000S
+kkS-yyyy-yn-MV-SZ;MV On Load Transformer Switch;0000;18;1840;;FL_MVSECT;FL00000S
+kkS-yyyy-yn-CE;Energy Meters;0000;18;1880;ALE;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-CE-CA;Auxiliary meter;0000;18;1880;ALE;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-CE-CR;AC Revenue Meter;0000;18;1880;ALE;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-LV;LV Section;0000;18;1850;SBT;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-CL;LV cables;0000;18;1850;ALE;FL_LVSECT;
+kkS-yyyy-yn-LV-LA;LV Auxiliary section;0000;18;1850;SBT;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-LA-IT;Auxiliary general breaker;0000;18;1850;SCC;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-LA-UP;UPS Circuits;0000;18;1850;ALI;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-LA-UN;Normal AC Circuits;0000;18;1850;ALI;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-LA-TR;Auxiliary service transformer;0000;18;1850;TRF;FL_AUXSYST;FL00000S
+kkS-yyyy-yn-LV-LP;Parallel LV section;0000;18;1840;SBT;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-IT;Parallel general breaker;0000;18;1840;SCC;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-TK;Metallic tank;0000;18;1840;CLE;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-PI;Relay parallel protection;0000;18;1840;CLE;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-QG;LV Cabling to SU Transformer;0000;18;1840;;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-CO;Consumables;0000;18;1840;SCC;FL_LVSECT;FL00000S
+kkS-yyyy-yn-LV-LP-nn;Inverter nn Output Circuit breaker;0000;18;1840;SCC;FL_LVSECT;FL00000S
+kkS-yyyy-yn-CS;Charging Station;0000;18;1840;;FL_LVSECT;FL00000S
+kkS-yyyy-yn-UP;UPS;0000;18;1850;SCC;FL_LVSECT;FL00000S
+kkS-yyyy-yn-FC;Container HVAC;0000;18;1860;SCC;FL_OTHER;FL00000S
+kkS-yyyy-yn-CL;Underground Cables and Overhead Power Lines;0000;18;1840;CLE;FL_POWLINE;FL00000S
+kkS-yyyy-yn-FP;Floating platform;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-FP-F1;Floating elements;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-FP-F2;Anchors;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-ST;Support Structures;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-ST-S1;Metallic parts;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-ST-S2;Concrete foundations and pillings;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-ST-S4;Grounding system;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-ST-S6;Panel Fixed Metal Structure;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-TT;Tracker System;0000;18;1850;;FL_TRACKER;FL00000S
+kkS-yyyy-yn-TS;Arrays anti-tefts system;0000;18;1850;ALE;FL_SECSYST;FL00000S
+kkS-yyyy-yn-TS-TA;Active Anti Tefts system;0000;18;1850;ALE;FL_SECSYST;FL00000S
+kkS-yyyy-yn-TS-TS;Passive Anti Tefts system;0000;18;1850;;FL_SECSYST;FL00000S
+kkS-yyyy-yn-TC;SCADA System;0000;18;1880;SCA;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-TC-AP;Scada devices;0000;18;1880;SCA;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-TC-LN;Internal LAN;0000;18;1880;SCA;FL_AUT&CON;FL00000S
+kkS-yyyy-yn-TC-SM;Met sensors;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-IR;Irradiance;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-TA;Ambient Temperature;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-TM;Module Temperature sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-PR;Ambient Pressure;0000;18;1880;;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-HU;Hummidity;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-WI;Wind intensity;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-WU;Wind direction;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-RI;Rain intensity sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-MS;Met station power supply;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-SO;Soiling sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-WE;Multipurpose weather sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
+kkS-yyyy-yn-TC-SM-BI;Back Irradiance;0000;18;1880;;FL_METSENS;
+kkS-yyyy-yn-Tn;CT_nn_LV/MV Transformer_n;0000;18;1842;TRF;FL_TRANSF;FL00000S
+kkS-yyyy-yn-Tn-PT;Transformer protective system;0000;18;1842;TAM;FL_TRACOMP;FL00000S
+kkS-yyyy-yn-Px;CT_<ID_FIELD>_LV/AC StrInv Panel_<ID_PANEL>;0000;18;1841;;FL_SINVPAN;FL00000S
+kkS-yyyy-yn-Px-nn;CT_<ID_FIELD>_INV_<ID_PANEL>.<ID_INV>;0000;18;1841;QUA;FL_INVERT;FL00000S
+kkS-yyyy-yn-Px-nn-DS;Disconnect Switches;0000;18;1840;SDC;FL_INVCOMP;FL00000S
+kkS-yyyy-yn-Px-nn-MP;DC MPPT control system;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-yn-Px-nn-GI;DC Ground Impedence system;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-yn-Px-nn-GC;AC Convertion group;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-yn-Px-nn-IP;AC Interface Protection System;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-yn-Px-nn-MS;Panel Fixed Metal Structure;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-yn-Px-nn-01;PV Strings;0000;18;1841;;FL_STRING;FL00000S
+kkS-yyyy-yn-Px-nn-TT;Tracker System;0000;18;1850;;FL_TRACKER;FL00000S
+kkS-yyyy-yn-Px-0z;AC Switch;0000;18;1841;;FL_INVCOMP;FL00000S

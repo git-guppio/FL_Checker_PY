@@ -9,8 +9,182 @@ class DataFrameTools:
     
     def __init__(self):
         pass
+    
+    @staticmethod
+    def stampa_risultato_differenze(risultato):
+        """
+        Stampa il numero di elementi e gli elementi presenti nel risultato
+        della funzione trova_differenze.
+        
+        Parameters:
+        -----------
+        risultato : list o None
+            Il risultato della funzione trova_differenze
+        
+        Returns:
+        --------
+        None
+            Questa funzione non restituisce valori ma stampa a schermo il risultato
+        """
+        try:
+            # Controlla se il risultato è None
+            if risultato is None:
+                print("Tutti gli elementi sono presenti nella tabella.")
+                return
+            
+            # Controlla se il risultato è una lista
+            if not isinstance(risultato, list):
+                raise TypeError("Il risultato deve essere una lista o None")
+            
+            # Stampa il numero di elementi
+            num_elementi = len(risultato)
+            print(f"Numero di elementi mancanti nella tabella: {num_elementi}")
+            
+            # Stampa gli elementi
+            if num_elementi > 0:
+                print("Elementi:")
+                for i, elemento in enumerate(risultato, 1):
+                    print(f"{i}. {elemento}")
+        
+        except Exception as e:
+            print(f"Errore durante la stampa del risultato: {str(e)}")    
+    
+    @staticmethod
+    def trova_differenze(df1, df2, col1, col2):
+        """
+        Trova gli elementi nella prima colonna che non sono presenti nella seconda.
+        
+        Parameters:
+        -----------
+        df1 : pandas.DataFrame
+            Il primo dataframe
+        df2 : pandas.DataFrame
+            Il secondo dataframe
+        col1 : str
+            Nome della colonna nel primo dataframe
+        col2 : str
+            Nome della colonna nel secondo dataframe
+        
+        Returns:
+        --------
+        list o None
+            Lista di elementi presenti in df1[col1] ma non in df2[col2],
+            o None se tutti gli elementi sono presenti
+            
+        Raises:
+        -------
+        TypeError
+            Se gli input non sono del tipo corretto
+        ValueError
+            Se i dataframe sono vuoti o le colonne non esistono
+        """
+        try:
+            # Verifiche sui tipi
+            if not isinstance(df1, pd.DataFrame) or not isinstance(df2, pd.DataFrame):
+                raise TypeError("Gli input devono essere pandas DataFrame")
+            if not isinstance(col1, str) or not isinstance(col2, str):
+                raise TypeError("I nomi delle colonne devono essere stringhe")
+            
+            # Verifica dataframe vuoti
+            if df1.empty:
+                raise ValueError("Il primo dataframe è vuoto")
+            if df2.empty:
+                raise ValueError("Il secondo dataframe è vuoto")
+            
+            # Verifica esistenza colonne
+            if col1 not in df1.columns:
+                raise ValueError(f"La colonna '{col1}' non esiste nel primo dataframe")
+            if col2 not in df2.columns:
+                raise ValueError(f"La colonna '{col2}' non esiste nel secondo dataframe")
+            
+            # Estrazione dei valori unici, escludendo stringhe vuote e valori null
+            valori_col1 = {x for x in df1[col1].unique() if pd.notna(x) and (not isinstance(x, str) or x.strip() != '')}
+            valori_col2 = {x for x in df2[col2].unique() if pd.notna(x) and (not isinstance(x, str) or x.strip() != '')}
+            
+            # Trova elementi in col1 ma non in col2
+            differenze = valori_col1 - valori_col2
+            
+            # Restituisci risultato
+            if not differenze:
+                return None
+            return sorted(list(differenze))  # Converti in lista ordinata per output più leggibile
+        
+        except Exception as e:
+            # Cattura errori non previsti
+            raise Exception(f"Errore durante il confronto delle colonne: {str(e)}")
 
 
+    @staticmethod
+    def pivot_hierarchy(df, values_col, level_col):
+        """
+        Trasforma un dataframe pivottando i livelli gerarchici in colonne.
+        Applica strip() su tutti i valori stringa.
+        
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            Il dataframe di input
+        values_col : str
+            Nome della colonna contenente i valori da pivottare
+        level_col : str
+            Nome della colonna contenente i livelli gerarchici
+        
+        Returns:
+        --------
+        pandas.DataFrame
+            Dataframe trasformato con i livelli come colonne
+            
+        Raises:
+        -------
+        ValueError
+            Se il dataframe è vuoto o se le colonne richieste non esistono
+        TypeError
+            Se gli input non sono del tipo corretto
+        """
+        try:
+            # Verifica che gli input siano del tipo corretto
+            if not isinstance(df, pd.DataFrame):
+                raise TypeError("L'input 'df' deve essere un pandas DataFrame")
+            if not isinstance(values_col, str) or not isinstance(level_col, str):
+                raise TypeError("I nomi delle colonne devono essere stringhe")
+                
+            # Verifica che il dataframe non sia vuoto
+            if df.empty:
+                raise ValueError("Il dataframe è vuoto")
+                
+            # Verifica che le colonne esistano nel dataframe
+            if values_col not in df.columns:
+                raise ValueError(f"La colonna '{values_col}' non esiste nel dataframe")
+            if level_col not in df.columns:
+                raise ValueError(f"La colonna '{level_col}' non esiste nel dataframe")
+                
+            # Crea una copia del dataframe per non modificare l'originale
+            df_clean = df.copy()
+            
+            # Applica strip() ai valori stringa
+            if df_clean[values_col].dtype == 'object':
+                df_clean[values_col] = df_clean[values_col].apply(lambda x: x.strip() if isinstance(x, str) else x)
+                
+            # Verifica che ci siano dati validi
+            if df_clean[level_col].isna().all() or df_clean[values_col].isna().all():
+                raise ValueError("Le colonne contengono solo valori nulli")
+                
+            # Procedi con la trasformazione
+            max_rows = max(df_clean[level_col].value_counts())
+            result = pd.DataFrame(index=range(max_rows))
+            
+            for level in sorted(df_clean[level_col].unique()):
+                values = df_clean[df_clean[level_col] == level][values_col].values
+                col_name = f'Livello_{level}'
+                result[col_name.strip()] = pd.Series(values)
+                
+            return result
+            
+        except Exception as e:
+            # Cattura eventuali altri errori non previsti
+            raise Exception(f"Errore durante l'elaborazione del dataframe: {str(e)}")
+    
+    
     @staticmethod
     def get_last_char(df, colonna):
         """
@@ -258,18 +432,18 @@ class DataFrameTools:
         return df_copy
     
     @staticmethod
-    def analyze_data(df: pd.DataFrame) -> None:
+    def analyze_data(df: pd.DataFrame, df_name: str = '') -> None:
         """
         Analizza il DataFrame pulito e mostra informazioni utili
         
         Args:
             df: DataFrame da analizzare
         """
-        print("\nAnalisi del DataFrame pulito:")
+        print("\nAnalisi del DataFrame pulito:" + df_name)
         print(f"Dimensioni: {df.shape}")
         print("\nColonne presenti:")
         for col in df.columns:
-            print(f"- {col}")
+            print(f"- '{col}'")
         print("\nPrime 5 righe:")
         print(df.head())
     

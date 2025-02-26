@@ -4,9 +4,9 @@ Z-RBS;XXX-XXXX-XX-XX-XX-XX;Code structure for Biomass tech second
 Z-RCM;XXX-XXXX-XX-XX-XX-XX;Code structure for Cogen tech main
 Z-RCS;XXX-XXXX-XX-XX-XX-XX;Code structure for Cogen tech second
 Z-RGM;XXX-XXXX-XX-XX-XXX-XX;Code struct for Geoth technology main
-Z-RGS;XXX-XXXX-XX-XX-XXX-XX;Code struct for Geoth technology second
 Z-RFM;XXX-XXXX-XX-XX-XXX-XX;Code structure Buildings Main
 Z-RFS;XXX-XXXX-XX-XX-XXX-XX;Code structure Buildings Second
+Z-RGS;XXX-XXXX-XX-XX-XXX-XX;Code struct for Geoth technology second
 Z-RHM;XXX-XXXX-XX-XXX-XX-XX;Code structure for Hydro technology main
 Z-RLS;XXX-XXXX-XX-XXX-XX-XX;Code structure for Hydro techn. second
 Z-ROM;XXX-XXXX-XX-XX-XX-XX;Code structure for Other technology main

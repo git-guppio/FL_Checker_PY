@@ -20,6 +20,114 @@ class SAPDataExtractor:
         self.session = session
 
 
+    def extract_ZPMR_CONTROL_FL1(self, fltechnology: str) -> List[Dict]:
+        """
+        Estrae dati relativi alla tabella ZPMR_CTRL_ASS utilizzando la transazione SE16
+        
+        Args:
+            fltechnology: Tecnologia ricavate dalle FL
+            
+        Returns:
+            True se la transazione va a buon fine, False altrimenti
+        """
+        try:
+            # Svuota la clipboard prima dell'estrazione
+            win32clipboard.OpenClipboard()
+            win32clipboard.EmptyClipboard()
+            win32clipboard.CloseClipboard()
+            # Naviga alla transazione SE16
+            self.session.findById("wnd[0]/tbar[0]/okcd").text = "/nSE16"
+            self.session.findById("wnd[0]").sendVKey(0)
+            self.session.findById("wnd[0]/usr/ctxtDATABROWSE-TABLENAME").text = "ZPMR_CONTROL_FL1"
+            self.session.findById("wnd[0]").sendVKey(0)
+            time.sleep(0.5)
+            self.session.findById("wnd[0]/usr/ctxtI2-LOW").text = "Z-R" + fltechnology + "M"
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = fltechnology
+            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").setFocus()
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").caretPosition = 1
+            self.session.findById("wnd[0]/tbar[1]/btn[8]").press()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)
+            self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
+            self.session.findById("wnd[1]/tbar[0]/btn[0]").press()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)
+            # Attendi che la clipboard sia riempita
+            if not self.wait_for_clipboard_data(30):
+                # Gestisci il caso in cui non sono stati trovati dati
+                print("Nessun dato trovato nella clipboard")
+                # Eventuali azioni di fallback
+            # Leggo il contenuto della clipboard
+            return self.clipboard_data()
+            
+        except Exception as e:
+            print(f"Errore nell'estrazione ZPMR_CONTROL_FL1: {str(e)}")
+            return False  
+
+
+    def extract_ZPMR_CONTROL_FL2(self, fltechnology: str) -> List[Dict]:
+        """
+        Estrae dati relativi alla tabella ZPMR_CTRL_ASS utilizzando la transazione SE16
+        
+        Args:
+            fltechnology: Tecnologia ricavate dalle FL
+            
+        Returns:
+            True se la transazione va a buon fine, False altrimenti
+        """
+        try:
+            # Svuota la clipboard prima dell'estrazione
+            win32clipboard.OpenClipboard()
+            win32clipboard.EmptyClipboard()
+            win32clipboard.CloseClipboard()
+            # Naviga alla transazione SE16
+            self.session.findById("wnd[0]/tbar[0]/okcd").text = "/nSE16"
+            self.session.findById("wnd[0]").sendVKey(0)
+            self.session.findById("wnd[0]/usr/ctxtDATABROWSE-TABLENAME").text = "ZPMR_CONTROL_FL2"
+            self.session.findById("wnd[0]").sendVKey(0)
+            time.sleep(0.5)
+            self.session.findById("wnd[0]/usr/ctxtI2-LOW").text = "Z-R" + fltechnology + "S"
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = fltechnology
+            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").setFocus()
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").caretPosition = 1
+            self.session.findById("wnd[0]/tbar[1]/btn[8]").press()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)
+            self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
+            self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
+            self.session.findById("wnd[1]/tbar[0]/btn[0]").press()
+            # Attendi che SAP sia pronto
+            if not self.wait_for_sap(30):
+                print(f"Timeout durante l'esecuzione della transazione")
+                return False
+            time.sleep(0.5)
+            # Attendi che la clipboard sia riempita
+            if not self.wait_for_clipboard_data(30):
+                # Gestisci il caso in cui non sono stati trovati dati
+                print("Nessun dato trovato nella clipboard")
+                # Eventuali azioni di fallback
+            # Leggo il contenuto della clipboard
+            return self.clipboard_data()
+            
+        except Exception as e:
+            print(f"Errore nell'estrazione ZPMR_CONTROL_FL2: {str(e)}")
+            return False
+        
+
     def extract_ZPMR_CTRL_ASS(self, fltechnology: str) -> List[Dict]:
         """
         Estrae dati relativi alla tabella ZPMR_CTRL_ASS utilizzando la transazione SE16
@@ -78,7 +186,7 @@ class SAPDataExtractor:
             return self.clipboard_data()
             
         except Exception as e:
-            print(f"Errore nell'estrazione dei materiali: {str(e)}")
+            print(f"Errore nell'estrazione ZPMR_CTRL_ASS: {str(e)}")
             return False        
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -140,7 +248,7 @@ class SAPDataExtractor:
             return self.clipboard_data()
             
         except Exception as e:
-            print(f"Errore nell'estrazione dei materiali: {str(e)}")
+            print(f"Errore nell'estrazione ZPM4R_GL_T_FL: {str(e)}")
             return False
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -1,0 +1,153 @@
+FL;Description;AM Section;AM Part;AM Component;Element Type;Tech.Obj.SAP CODE;Catalog Profile
+kkE;IsoCode Country + Technology (E);;;;;;FL00000E
+kkE-yyyy;Name of the plant;;;;;;FL00000E
+kkE-yyyy-0A;Common Energy Collecting & Delivery Syst;;;;;;FL00000E
+kkE-yyyy-00;Common Infrastructures and services;;;;;;FL00000E
+kkE-yyyy-00-VC;Buildings, Areas and Roads;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-VC-BU;Buildings;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-VC-FE;Fences and gates;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-VC-GA;Green areas;0000;51;5111;;FL_INFRAST;FL00000E
+kkE-yyyy-00-VC-RO;Internal roads;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IL;Overhead lighting;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IL-LU;Luminaries;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IL-LS;Lamps;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IL-PL;Poles;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IL-CL;LV cables;0000;51;5150;;FL_INFRAST;FL00000E
+kkE-yyyy-00-IT;Communications System;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-SS;Plant Security System;0000;51;5150;;FL_SECSYST;FL00000E
+kkE-yyyy-00-SS-VS;Videosurveillance system;0000;51;5150;;FL_SECSYST;FL00000E
+kkE-yyyy-00-SS-IR;Anti intrusion system;0000;51;5150;;FL_SECSYST;FL00000E
+kkE-yyyy-00-IC;Internal Communications ;0000;51;5150;;FL_OTHER;FL00000E
+kkE-yyyy-00-TC;SCADA System;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-TC-LN;Internal LAN;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-TC-AP;Scada Devices;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-TC-SM;Permanent Met Towers;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-TC-HI;Human machine interface;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-00-GG;Grounding grid;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-00-AS;Anti rodent system;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-00-CL;Underground Cables and Overhead Pwr Line;0000;51;5150;;FL_OTHER;FL00000E
+kkE-yyyy-00-CL-MC;MV cables;0000;51;5140;;FL_POWLINE;FL00000E
+kkE-yyyy-00-CL-JC;MV junctions and connections;0000;51;5140;;FL_POWLINE;FL00000E
+kkE-yyyy-00-CL-CT;Cable trays;0000;51;5140;;FL_POWLINE;FL00000E
+kkE-yyyy-00-OC;Civil Works;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-OC-FO;Foundations;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-OC-MR;Dirt Work;0000;51;5110;;FL_INFRAST;FL00000E
+kkE-yyyy-00-FF;Fire Protection System;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-00-FF-DP;Dry-Pipe;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-00-FF-CP;Fire fighting Control panel;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-00-FF-ES;Extinguishing agent storage system;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-0E;Bess Common;;;;;;FL00000E
+kkE-yyyy-0E-SA;BESS Dedicated Auxiliary System;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-DG;Backup Generator;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-TS;AutomaticTransferSwitch (ATS);0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-UP;UPS;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-TR;Ausiliary Transformer;0000;51;5150;;FL_TRANSF;FL00000E
+kkE-yyyy-0E-SA-IT;Circuit Breaker;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-EP;External Power Supply;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-SA-ME;Auxiliary Meters;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-N0;BESS Control System;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-SC;BESS SCADA;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-SW;Switch-router;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-CC;Control Card;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-HM;HMI;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-CM;Communication cable;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-PL;Centralized Safety PLC;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-0E-N0-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-0E-N0-FD;Fire Detection;0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-0E-N0-FS;Fire fighing (sprinkler & agent storage);0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-xE;Feeder_n;;;;;;FL00000E
+kkE-yyyy-xE-CE;Feeder_n BESS Energy Meters;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-MV;MV Section;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-MV-CL;MV cables;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-MV-PR;MV Protective Relays;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-MV-In;Storage unit MV Breaker/Switchgear;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-MV-In-AT;MV M&P Transformer - Current Transformer;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-MV-In-VT;MV M&P Transformer - Voltage Transformer;0000;51;5140;;FL_MVSECT;FL00000E
+kkE-yyyy-xE-TR;Storage unit Trasformers;0000;51;5190;;FL_TRANSF;FL00000E
+kkE-yyyy-xE-TR-Tn;Transformer (of the Storage Unit n);0000;51;5190;;FL_TRANSF;FL00000E
+kkE-yyyy-xE-TR-Tn-PT;Transformer protective system;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-TR-Tn-FA;Fans;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-TR-Tn-OP;Oil Pumps;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-TR-Tn-RA;Radiator;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-TR-Tn-SW;Switches;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-TR-Tn-GA;Gauges;0000;51;5190;;FL_TRACOMP;FL00000E
+kkE-yyyy-xE-LV;LV Section;0000;51;5150;;FL_LVSECT;FL00000E
+kkE-yyyy-xE-LV-CL;LV cables;0000;51;5150;;FL_LVSECT;FL00000E
+kkE-yyyy-xE-nn;Storage Unit Field_nn;0000;51;5180;;FL_FIELDBE;FL00000E
+kkE-yyyy-xE-nn-CE;BESS Energy Meters;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-00;Common of PCS;0000;51;5150;;FL_OTHER;FL00000E
+kkE-yyyy-xE-nn-00-CP;Fire fighting Control panel ;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-xE-nn-00-PL;Safety PLC Cabinet;0000;51;5150;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-00-CH;PCS Chiller;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-xE-nn-Pm;PCS Inverter;0000;51;5180;;FL_PCS;FL00000E
+kkE-yyyy-xE-nn-Pm-PM;Power Module;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-FU;Fuse Combiner;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-GI;Ground Impedence system;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-DC;DC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-AC;AC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-AR;Cooling Fans;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-TK;PCS Enclosure;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-HI;Human machine interface;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-DS;DC Disconnect Switch;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-PS;External Power supply;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-RC;Remote communication ;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Pm-LC;Liquid Cooling System;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Cn-AC;Array Controller;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Cn-CL;Cable;0000;51;5180;;FL_CONTCOM;FL00000E
+kkE-yyyy-xE-nn-Cn-CP;Container Fire fighting Control panel ;0000;51;5180;;FL_SAFSYST;FL00000E
+kkE-yyyy-xE-nn-Cn-DS;Door Switch;0000;51;5180;;FL_CONTCOM;FL00000E
+kkE-yyyy-xE-nn-Cn-EN;Enclosure structure;0000;51;5180;;FL_INFRAST;FL00000E
+kkE-yyyy-xE-nn-Cn-FD;Fire Detection;0000;51;5150;;FL_SAFSYST;FL00000E
+kkE-yyyy-xE-nn-Cn-FS;Fire Figthing (sprinker & agent storage);0000;51;5180;;FL_SAFSYST;FL00000E
+kkE-yyyy-xE-nn-Cn-GI;Ground Impedence System;0000;51;5180;;FL_CONTCOM;FL00000E
+kkE-yyyy-xE-nn-Cn-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-xE-nn-Cn-LC;Liquid Cooling System;0000;51;5180;;FL_CONTCOM;FL00000E
+kkE-yyyy-xE-nn-Cn-MS;Master Battery Control System (MBMS);0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Cn-OC;Civil Work;0000;51;5180;;FL_INFRAST;FL00000E
+kkE-yyyy-xE-nn-Cn-PL;Container Safety PLC;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Cn-SA;Auxiliary distribution box;0000;51;5180;;FL_AUXSYST;FL00000E
+kkE-yyyy-xE-nn-Cn-UP;UPS;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Cn;Battery Container & Ancillary system;0000;51;5150;;FL_BATCONT;FL00000E
+kkE-yyyy-xE-nn-Bm;Battery Bank;0000;51;5180;;FL_BATBANK;FL00000E
+kkE-yyyy-xE-nn-Bm-BM;Battery Racks/Strings;0000;51;5180;;FL_BAT;FL00000E
+kkE-yyyy-xE-nn-Bm-BS;Battery Management System (BMS);0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Bm-CB;Battery Control Box;0000;51;5180;;FL_AUT&CON;FL00000E
+kkE-yyyy-xE-nn-Bm-BC;Battery Combiner;0000;51;5180;;FL_BAT;FL00000E
+kkE-yyyy-WE;Bess Common West/North;;;;;;FL00000E
+kkE-yyyy-WE-SA;BESS Dedicated Auxiliary System;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-DG;Backup Generator;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-TS;AutomaticTransferSwitch (ATS);0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-UP;UPS;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-TR;Ausiliary Transformer;0000;51;5150;;FL_TRANSF;FL00000E
+kkE-yyyy-WE-SA-IT;Circuit Breaker;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-EP;External Power Supply;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-SA-ME;Auxiliary Meters;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-N0;BESS Control System;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-SC;BESS SCADA;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-SW;Switch-router;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-CC;Control Card;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-HM;HMI;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-CM;Communication cable;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-PL;Centralized Safety PLC;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-WE-N0-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-WE-N0-FD;Fire Detection;0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-WE-N0-FS;Fire fighing (sprinkler & agent storage);0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-ZE;Bess Common East/South;;;;;;FL00000E
+kkE-yyyy-ZE-SA;BESS Dedicated Auxiliary System;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-DG;Backup Generator;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-TS;AutomaticTransferSwitch (ATS);0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-UP;UPS;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-TR;Ausiliary Transformer;0000;51;5150;;FL_TRANSF;FL00000E
+kkE-yyyy-ZE-SA-IT;Circuit Breaker;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-EP;External Power Supply;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-SA-ME;Auxiliary Meters;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-N0;BESS Control System;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-SC;BESS SCADA;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-SW;Switch-router;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-CC;Control Card;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-HM;HMI;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-CM;Communication cable;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-PL;Centralized Safety PLC;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-ZE-N0-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-ZE-N0-FD;Fire Detection;0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-ZE-N0-FS;Fire fighing (sprinkler & agent storage);0000;51;5190;;FL_SAFSYST;FL00000E
