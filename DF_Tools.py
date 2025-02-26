@@ -365,7 +365,58 @@ class DataFrameTools:
         return unique_headers        
     
     @staticmethod
-    def add_concatenated_column(df: pd.DataFrame, 
+    def add_concatenated_column_FL(df: pd.DataFrame, 
+                            col1: str, 
+                            col2: str, 
+                            col3: str, 
+                            col4: str,
+                            col5: str,
+                            new_column_name: str = 'Check',
+                            separator: str = '_') -> pd.DataFrame:
+        """
+        Aggiunge una nuova colonna che concatena i valori di 4 colonne specificate usando un separatore
+        
+        Args:
+            df: DataFrame di input
+            col1: Nome della prima colonna -> Valore Livello
+            col2: Nome della seconda colonna -> Valore Liv. Superiore
+            col3: Nome della terza colonna -> Valore Liv. Superiore_1
+            col4: Nome della quarta colonna -> colonna contenente la lunghezza della FL
+            new_column_name: Nome della nuova colonna da creare (default: 'Check')
+            separator: Carattere/i da usare come separatore (default: '_')
+                
+        Returns:
+            DataFrame con la nuova colonna contenente i valori concatenati
+        """
+        # Verifica che tutte le colonne esistano nel DataFrame
+        required_cols = [col1, col2, col3, col4, col5]
+        if not all(col in df.columns for col in required_cols):
+            raise ValueError("Una o più colonne specificate non esistono nel DataFrame")
+
+        def create_concatenated_value(row):
+            # Verifica che col4 non sia nullo
+            if (str(row[col3]).strip(' \t\n\r') == ""):
+                return None
+            # add_concatenated_column(df, "Livello_6", "Livello_5", "Livello_4",  "Livello_3", "FL_Lunghezza")
+            #                               col1        col2         col3           col4        col5
+            if (row[col1].strip(' \t\n\r') != ""): # se è presente il 6 livello allora concateno 6-5-4-Lunghezza
+                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
+                return result
+            elif (row[col2].strip(' \t\n\r') != ""): # se è presente il 5 livello allora concateno 5-4-3-Lunghezza
+                result = f"{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
+                return result
+            elif (row[col3].strip(' \t\n\r') != ""):
+                result = f"{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
+                return result
+            else:
+                return None                 
+        
+        df_copy = df.copy()
+        df_copy[new_column_name] = df_copy.apply(create_concatenated_value, axis=1)
+        return df_copy
+    
+    @staticmethod
+    def add_concatenated_column_SAP(df: pd.DataFrame, 
                             col1: str, 
                             col2: str, 
                             col3: str, 
@@ -393,43 +444,21 @@ class DataFrameTools:
             raise ValueError("Una o più colonne specificate non esistono nel DataFrame")
 
         def create_concatenated_value(row):
-            # Verifico se sto utilizzando il DF delle FL o i DF delle estrazioni da SAP
-            if (col1 == "4"): # DF FL
-                # Verifica che col4 non sia nullo
-                if (str(row[col4]).strip(' \t\n\r') == ""):
-                    return None
-
-                if (row[col3].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col3].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                elif (row[col2].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                elif (row[col1].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                else:
-                    return None                
-            else: # DF SAP
-                # Verifica che col4 non sia nullo
-                if (str(row[col4]).strip(' \t\n\r') == ""):
-                    return None
-
-                if (row[col3].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                elif (row[col2].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                elif (row[col1].strip(' \t\n\r') != ""):
-                    result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
-                    return result
-                else:
-                    return None    
+            if (row[col3].strip(' \t\n\r') != ""):
+                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                return result
+            elif (row[col2].strip(' \t\n\r') != ""):
+                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(row[col2].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                return result
+            elif (row[col1].strip(' \t\n\r') != ""):
+                result = f"{str(row[col1].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}"
+                return result
+            else:
+                return None    
         
         df_copy = df.copy()
         df_copy[new_column_name] = df_copy.apply(create_concatenated_value, axis=1)
-        return df_copy
+        return df_copy    
     
     @staticmethod
     def analyze_data(df: pd.DataFrame, df_name: str = '') -> None:

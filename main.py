@@ -6,7 +6,8 @@ import DF_Tools
 import File_tools
 import RE_tools
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
-                           QHBoxLayout, QWidget, QTextEdit, QListWidget, QLabel, QMessageBox)
+                           QHBoxLayout, QWidget, QTextEdit, QListWidget, QLabel, QMessageBox,
+                           QDialog, QRadioButton, QButtonGroup, QDialogButtonBox)
 import SAP_Connection
 import SAP_Transactions
 import DF_Tools
@@ -107,8 +108,8 @@ class MainWindow(QMainWindow):
             if risultato is not None:
                 # Il risultato contiene elementi
                 num_elementi = len(risultato)
-                self.log_message(nomeTabella + " - Elementi non presenti: " + num_elementi, 'error')
-                self.log_message(risultato, 'error')
+                self.log_message(nomeTabella + " - Elementi non presenti: " + str(num_elementi), 'error')
+                self.log_message(risultato, 'warning')
             else:
                 # Il risultato è None
                 self.log_message(nomeTabella + ": Tutti gli elementi presenti", 'success')
@@ -181,7 +182,7 @@ class MainWindow(QMainWindow):
             
             # Aggiunge la colonna FL_Lunghezza con il numero di elementi dopo lo split
             df['FL_Lunghezza'] = df['FL'].apply(lambda x: len(x.split('-')))
-            df = self.df_utils.add_concatenated_column(df, "Livello_4", "Livello_5", "Livello_6", "FL_Lunghezza")
+            df = self.df_utils.add_concatenated_column_FL(df, "Livello_6", "Livello_5", "Livello_4", "Livello_3", "FL_Lunghezza")
             
             # Memorizza il DataFrame
             self.df_FL = df
@@ -236,7 +237,7 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
         # ricavo codice Country 
         # ----------------------------------------------------
-        file_country = os.path.join(current_dir, 'Config', 'Country.csv')
+        file_country = constants.file_Country
         country_code = self.df_utils.get_first_two_chars(self.df_FL, "Livello_1")
         if (country_code == None):
             self.log_message("Errore: Valore country code non trovato", 'error')
@@ -280,12 +281,36 @@ class MainWindow(QMainWindow):
         if tech_code == 'E':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
+
         elif tech_code == 'W':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_W_SubStation, constants.file_FL_Wind]
+
         elif tech_code == 'S':
-            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
-            File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
+            # Apri la finestra di dialogo per selezionare il tipo di inverter
+            self.log_message("Tecnologia Solare rilevata: selezione tipo inverter...", 'info')
+            dialog = InverterSelectionDialog(self)
+            if dialog.exec_() == QDialog.Accepted:
+                inverter_type = dialog.get_selected_inverter_type()
+                self.log_message(f"Tipo di inverter selezionato: {inverter_type}", 'success')
+                
+                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia solare
+                # con il tipo di inverter specifico
+                File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
+                
+                # Aggiungi il file specifico per il tipo di inverter selezionato
+                if inverter_type == "Central Inverter":
+                    File_guideLine_list.append(constants.file_FL_Solar_CentralInv)
+                elif inverter_type == "String Inverter":
+                    File_guideLine_list.append(constants.file_FL_Solar_StringInv)
+                elif inverter_type == "Inverter Module":
+                    File_guideLine_list.append(constants.file_FL_Solar_InvModule)
+            else:
+                # L'utente ha annullato la selezione dell'inverter
+                self.log_message("Selezione tipo inverter annullata", 'warning')
+                self.extract_button.setEnabled(True)
+                return
+            
         elif tech_code == 'H':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
@@ -293,9 +318,7 @@ class MainWindow(QMainWindow):
             self.log_message("Errore: Tecnologia non riconosciuta", 'error')
             return
 
-
-        # Genera il DataFrame con le espressioni regolari
-        File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
+        # Genera il DataFrame con le espressioni regolari a partire dai file di regole e guideLine
         try:
             df_regex = RegularExpressionsTools.Make_DF_RE_list(constants.file_Rules, File_guideLine_list)
         except Exception as e:
@@ -305,14 +328,9 @@ class MainWindow(QMainWindow):
         # salvo il df in un file csv
         df_regex.to_csv('df_re_completo.csv', index=False)
 
-        # Usa il DataFrame con le espressioni regolari per verificare un altro DataFrame
-        df_fl = pd.read_csv('FL_Bess_Ables.csv', sep=';')
-        # Disabilita temporaneamente i limiti di riga e colonna
-        print(df_fl)
-
         # Verifica le FL
         try:
-            result_df = RegularExpressionsTools.verifica_fl_con_regex(df_fl, df_regex)
+            result_df = RegularExpressionsTools.verifica_fl_con_regex(self.df_FL, df_regex)
         except Exception as e:
             print(f"Errore durante il processing dei file: {str(e)}")
 
@@ -322,7 +340,19 @@ class MainWindow(QMainWindow):
 
         # Trova le FL non valide
         fl_non_valide = result_df[result_df['Check_Result'] != True]['FL'].tolist()
-        print(fl_non_valide)
+
+        # Mostra la lista delle FL non valide
+        if fl_non_valide:
+            # Mostra il numero di FL non valide
+            # Mostra il numero di FL non valide con singolare o plurale
+            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}", 'error')
+            self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
+            for fl in fl_non_valide:
+                # Ottieni il messaggio di errore specifico per questa FL
+                error_msg = result_df[result_df['FL'] == fl]['Check_Result'].values[0]
+                self.log_message(f"{fl}: {error_msg}", 'error')
+        else:
+            self.log_message("Tutte le FL sono valide", 'success')
 
       
         # ----------------------------------------------------
@@ -410,7 +440,7 @@ class MainWindow(QMainWindow):
                 sys.exit(1)
             else:
                 # Aggiunge la colonna per la verifica
-                df_ZPM4R_GL_T_FL = self.df_utils.add_concatenated_column(df_ZPM4R_GL_T_FL, "Valore Livello", "Valore Liv. Superiore", "Valore Liv. Superiore_1", "Liv.Sede")
+                df_ZPM4R_GL_T_FL = self.df_utils.add_concatenated_column_SAP(df_ZPM4R_GL_T_FL, "Valore Livello", "Valore Liv. Superiore", "Valore Liv. Superiore_1", "Liv.Sede")
                 # Stampa anteprima del dataframe
                 print("#---- df_ZPM4R_GL_T_FL ----#")
                 print(df_ZPM4R_GL_T_FL)                
@@ -426,7 +456,7 @@ class MainWindow(QMainWindow):
                 sys.exit(1)
             else:
                 # Aggiunge la colonna per la verifica
-                df_ZPMR_CTRL_ASS = self.df_utils.add_concatenated_column(df_ZPMR_CTRL_ASS, "Valore Livello", "Valore Liv. Superiore", "Valore Liv. Superiore_1", "Liv.Sede")
+                df_ZPMR_CTRL_ASS = self.df_utils.add_concatenated_column_SAP(df_ZPMR_CTRL_ASS, "Valore Livello", "Valore Liv. Superiore", "Valore Liv. Superiore_1", "Liv.Sede")
                 # Stampa anteprima del dataframe
                 print("#---- df_ZPMR_CTRL_ASS ----#")
                 print(df_ZPMR_CTRL_ASS)                
@@ -486,7 +516,24 @@ class MainWindow(QMainWindow):
             self.log_risultato_differenze("Livello_6", risultato)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
-            print(f"Errore: {e}")                       
+            print(f"Errore: {e}")   
+
+        # verifico la presenza degli elementi della tabella df_ZPMR_CTRL_ASS
+        try:
+            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CTRL_ASS, 'Check', 'Check')
+            self.log_risultato_differenze("ZPMR_CTRL_ASS", risultato)
+        except Exception as e:
+            self.log_message(f"Errore: {e}", 'error')
+            print(f"Errore: {e}")               
+
+        # verifico la presenza degli elementi della tabella df_ZPM4R_GL_T_FL
+        try:
+            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPM4R_GL_T_FL, 'Check', 'Check')
+            self.log_risultato_differenze("ZPM4R_GL_T_FL", risultato)
+        except Exception as e:
+            self.log_message(f"Errore: {e}", 'error')
+            print(f"Errore: {e}") 
+
         # ----------------------------------------------------
         # ripristino il tasto di estrazione dei dati
         # ---------------------------------------------------- 
@@ -494,6 +541,59 @@ class MainWindow(QMainWindow):
 
     def upload_data(self):
         self.log_message("Funzionalità di upload non ancora implementata", 'info')
+
+# Classe per gestire la selezione del tipo di inverter
+class InverterSelectionDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Selezione Tipo di Inverter")
+        self.resize(400, 200)
+        
+        # Layout principale
+        layout = QVBoxLayout(self)
+        
+        # Label di istruzione
+        instruction_label = QLabel("Seleziona il tipo di inverter utilizzato per questo impianto solare:")
+        layout.addWidget(instruction_label)
+        
+        # Gruppo di radio button
+        self.button_group = QButtonGroup(self)
+        
+        # Opzione 1: Central Inverter
+        self.rb_central = QRadioButton("Central Inverter")
+        self.button_group.addButton(self.rb_central, 1)
+        layout.addWidget(self.rb_central)
+        
+        # Opzione 2: String Inverter
+        self.rb_string = QRadioButton("String Inverter")
+        self.button_group.addButton(self.rb_string, 2)
+        layout.addWidget(self.rb_string)
+        
+        # Opzione 3: Inverter Module
+        self.rb_module = QRadioButton("Inverter Module")
+        self.button_group.addButton(self.rb_module, 3)
+        layout.addWidget(self.rb_module)
+        
+        # Button box standard (OK/Cancel)
+        button_box = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        button_box.accepted.connect(self.accept)
+        button_box.rejected.connect(self.reject)
+        layout.addWidget(button_box)
+        
+        # Seleziona il primo radio button di default
+        self.rb_central.setChecked(True)
+    
+    def get_selected_inverter_type(self):
+        """Restituisce il tipo di inverter selezionato"""
+        id = self.button_group.checkedId()
+        if id == 1:
+            return "Central Inverter"
+        elif id == 2:
+            return "String Inverter"
+        elif id == 3:
+            return "Inverter Module"
+        else:
+            return None  # Nessuna selezione (non dovrebbe accadere)
 
 def main():
     app = QApplication(sys.argv)
