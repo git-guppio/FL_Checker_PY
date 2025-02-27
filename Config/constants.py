@@ -3,15 +3,17 @@ import os
 # Ottieni il percorso assoluto della directory contenente lo script principale
 A_ScriptDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # salgo di un livello rispetto alla cartella dove è contenuto il file constant.py
 
+print(f"La directory dello script è: {A_ScriptDir}")
+
 # ----------------------------------------------------
 # Intestazioni per i file di upload
 # ----------------------------------------------------
 # Intestazione dei file per upload tabelle di controllo globali
-intestazione_FL_2 = "TPLKZ;FLTYP;FLLEVEL;LAND1;VALUE\r\n"
-intestazione_FL_n = "TPLKZ;FLTYP;FLLEVEL;VALUE;VALUETX;REFLEVEL\r\n"
+intestazione_ZPMR_FL_2 = "TPLKZ;FLTYP;FLLEVEL;LAND1;VALUE"
+intestazione_ZPMR_FL_n = "TPLKZ;FLTYP;FLLEVEL;VALUE;VALUETX;REFLEVEL"
 # Intestazione dei file per upload CTRL_ASS e TECH_OBJ
-intestazione_CTRL_ASS = "VALUE;SUB_VALUE;SUB_VALUE2;TPLKZ;FLTYP;FLLEVEL;CODE_SEZ_PM;CODE_SIST;CODE_PARTE;TIPO_ELEM\r\n"
-intestazione_TECH_OBJ = "VALUE;SUB_VALUE;SUB_VALUE2;TPLKZ;FLTYP;FLLEVEL;EQART;RBNR;NATURE;DOCUMENTO_PM\r\n"
+intestazione_CTRL_ASS = "VALUE;SUB_VALUE;SUB_VALUE2;TPLKZ;FLTYP;FLLEVEL;CODE_SEZ_PM;CODE_SIST;CODE_PARTE;TIPO_ELEM"
+intestazione_TECH_OBJ = "VALUE;SUB_VALUE;SUB_VALUE2;TPLKZ;FLTYP;FLLEVEL;EQART;RBNR;NATURE;DOCUMENTO_PM"
 
 # ----------------------------------------------------
 # Definizione dei percorsi dei file per il controllo delle FL
@@ -40,12 +42,12 @@ file_FL_Hydro = os.path.join(A_ScriptDir, "Config", "Hydro_FL_GuideLine.csv")
 # ----------------------------------------------------
 path_file_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad")
 # Definizione dei files per l'upload delle tabelle globali
-file_FL_2_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "FL_2_UpLoad.csv")
-file_FL_n_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "FL_n_UpLoad.csv")
+file_ZPMR_FL_2_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_FL_2_UpLoad.csv")
+file_ZPMR_FL_n_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_FL_n_UpLoad.csv")
 # Definizione del file per l'upload delle tabelle Control Asset
-file_ZPMR_CTRL_ASS_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_CTRL_ASS.csv")
+file_ZPMR_CTRL_ASS_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_CTRL_ASS_UpLoad.csv")
 # Definizione del file per l'upload delle tabelle Technical Object
-file_ZPMR_TECH_OBJ_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_TECH_OBJ.csv")
+file_ZPMR_TECH_OBJ_UpLoad = os.path.join(A_ScriptDir, "FileUpLoad", "ZPMR_TECH_OBJ_UpLoad.csv")
 # Definizione del file per il controllo delle Technical Object di tutte le FL
 file_Check_TECH_OBJ = os.path.join(A_ScriptDir, "FileUpLoad", "FL_Check_TECH_OBJ.csv")
 

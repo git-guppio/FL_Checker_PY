@@ -1,0 +1,46 @@
+2025-02-27 15:50:06,403 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-02-27 15:50:06,405 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2
+2025-02-27 15:50:06,410 - DataFrameTools - ERROR - Errore TypeError in DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2() takes 4 positional arguments but 5 were given
+Traceback (most recent call last):
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\utils\decorators.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+TypeError: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2() takes 4 positional arguments but 5 were given
+
+2025-02-27 15:50:06,411 - DataFrameTools - WARNING - Errore di tipo: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2() takes 4 positional arguments but 5 were given
+2025-02-27 15:50:06,412 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-02-27 15:50:06,414 - DataFrameTools - ERROR - Errore TypeError in DataFrameTools.save_dataframe_to_csv: Il parametro df deve essere un DataFrame Pandas valido
+Traceback (most recent call last):
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\utils\decorators.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\DF_Tools.py", line 46, in save_dataframe_to_csv
+    raise TypeError("Il parametro df deve essere un DataFrame Pandas valido")
+TypeError: Il parametro df deve essere un DataFrame Pandas valido
+
+2025-02-27 15:50:06,414 - DataFrameTools - WARNING - Errore di tipo: Il parametro df deve essere un DataFrame Pandas valido
+2025-02-27 15:50:06,415 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn
+2025-02-27 15:50:06,415 - DataFrameTools - ERROR - Errore TypeError in DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\utils\decorators.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+TypeError: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn() takes 3 positional arguments but 4 were given
+
+2025-02-27 15:50:06,416 - DataFrameTools - WARNING - Errore di tipo: DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn() takes 3 positional arguments but 4 were given
+2025-02-27 15:50:06,416 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-02-27 15:50:06,417 - DataFrameTools - ERROR - Errore TypeError in DataFrameTools.save_dataframe_to_csv: Il parametro df deve essere un DataFrame Pandas valido
+Traceback (most recent call last):
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\utils\decorators.py", line 46, in wrapper
+    result = func(*args, **kwargs)
+  File "c:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\DF_Tools.py", line 46, in save_dataframe_to_csv
+    raise TypeError("Il parametro df deve essere un DataFrame Pandas valido")
+TypeError: Il parametro df deve essere un DataFrame Pandas valido
+
+2025-02-27 15:50:06,420 - DataFrameTools - WARNING - Errore di tipo: Il parametro df deve essere un DataFrame Pandas valido
+2025-02-27 15:56:05,239 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-02-27 15:56:05,241 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2
+2025-02-27 15:56:05,259 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FL2 in 0.0165 secondi
+2025-02-27 15:56:05,285 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-02-27 15:56:05,305 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0185 secondi
+2025-02-27 15:56:05,306 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn
+2025-02-27 15:56:05,316 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.create_df_from_lists_ZPMR_CONTROL_FLn in 0.0101 secondi
+2025-02-27 15:56:05,324 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-02-27 15:56:05,330 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0059 secondi

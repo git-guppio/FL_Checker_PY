@@ -1,3 +1,4 @@
+from opcode import hasconst
 import os
 import sys
 import pandas as pd
@@ -13,6 +14,21 @@ import SAP_Transactions
 import DF_Tools
 import Config.constants as constants
 from RE_tools import RegularExpressionsTools
+
+import logging
+
+# Configurazione base del logging per tutta l'applicazione
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
+
+# Logger specifico per questo modulo
+logger = logging.getLogger("main").setLevel(logging.DEBUG)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -472,67 +488,124 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------        
         # verifico la presenza degli elementi del primo livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_1', 'Livello_1')
-            self.log_risultato_differenze("Livello_1", risultato)
+            risultato_ZPMR_CONTROL_FL1_lev_1 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_1', 'Livello_1')
+            self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL1_lev_1)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")
         
         # verifico la presenza degli elementi del secondo livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_2', 'Livello_2')
-            self.log_risultato_differenze("Livello_2", risultato)
+            risultato_ZPMR_CONTROL_FL1_lev_2 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_2', 'Livello_2')
+            self.log_risultato_differenze("Livello_2", risultato_ZPMR_CONTROL_FL1_lev_2)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")
         
         # verifico la presenza degli elementi del terzo livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_3', 'Livello_3')
-            self.log_risultato_differenze("Livello_3", risultato)
+            risultato_ZPMR_CONTROL_FL2_lev_3 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_3', 'Livello_3')
+            self.log_risultato_differenze("Livello_3", risultato_ZPMR_CONTROL_FL2_lev_3)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")
 
         # verifico la presenza degli elementi del quarto livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_4', 'Livello_4')
-            self.log_risultato_differenze("Livello_4", risultato)
+            risultato_ZPMR_CONTROL_FL2_lev_4 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_4', 'Livello_4')
+            self.log_risultato_differenze("Livello_4", risultato_ZPMR_CONTROL_FL2_lev_4)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")
 
         # verifico la presenza degli elementi del quinto livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_5', 'Livello_5')
-            self.log_risultato_differenze("Livello_5", risultato)
+            risultato_ZPMR_CONTROL_FL2_lev_5 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_5', 'Livello_5')
+            self.log_risultato_differenze("Livello_5", risultato_ZPMR_CONTROL_FL2_lev_5)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")
 
         # verifico la presenza degli elementi del sesto livello nella tabella globale
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_6', 'Livello_6')
-            self.log_risultato_differenze("Livello_6", risultato)
+            risultato_ZPMR_CONTROL_FL2_lev_6 = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_6', 'Livello_6')
+            self.log_risultato_differenze("Livello_6", risultato_ZPMR_CONTROL_FL2_lev_6)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")   
 
         # verifico la presenza degli elementi della tabella df_ZPMR_CTRL_ASS
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CTRL_ASS, 'Check', 'Check')
-            self.log_risultato_differenze("ZPMR_CTRL_ASS", risultato)
+            risultato_ZPMR_CTRL_ASS = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CTRL_ASS, 'Check', 'Check')
+            self.log_risultato_differenze("ZPMR_CTRL_ASS", risultato_ZPMR_CTRL_ASS)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}")               
 
         # verifico la presenza degli elementi della tabella df_ZPM4R_GL_T_FL
         try:
-            risultato = self.df_utils.trova_differenze(self.df_FL, df_ZPM4R_GL_T_FL, 'Check', 'Check')
-            self.log_risultato_differenze("ZPM4R_GL_T_FL", risultato)
+            risultato_ZPM4R_GL_T_FL = self.df_utils.trova_differenze(self.df_FL, df_ZPM4R_GL_T_FL, 'Check', 'Check')
+            self.log_risultato_differenze("ZPM4R_GL_T_FL", risultato_ZPM4R_GL_T_FL)
         except Exception as e:
             self.log_message(f"Errore: {e}", 'error')
             print(f"Errore: {e}") 
+
+        # ----------------------------------------------------
+        # creo i file per eseguire l'aggiornamento delle tabelle 
+        # ----------------------------------------------------        
+        
+        # verifico che ci siano almeno una lista che contiene un elemento
+
+        liste_ZPMR_CONTROL_FL1 = [
+            risultato_ZPMR_CONTROL_FL1_lev_1,
+            risultato_ZPMR_CONTROL_FL1_lev_2
+        ]
+
+        liste_ZPMR_CONTROL_FL2 = [
+            risultato_ZPMR_CONTROL_FL2_lev_3,
+            risultato_ZPMR_CONTROL_FL2_lev_4,
+            risultato_ZPMR_CONTROL_FL2_lev_5,
+            risultato_ZPMR_CONTROL_FL2_lev_6
+        ]
+
+        liste_da_controllare = liste_ZPMR_CONTROL_FL1 + liste_ZPMR_CONTROL_FL2 + [risultato_ZPMR_CTRL_ASS] + [risultato_ZPM4R_GL_T_FL]
+
+        if any(len(liste_da_controllare) > 0 for lista in liste_da_controllare):
+            self.log_message("Creo file per aggiornamento tabelle globali SAP", 'info') # se esiste almeno una lista contenente elementi allora creo i file
+            processed_dfs = []
+            for index, risultato_ZPMR_CONTROL_FL1 in enumerate(liste_ZPMR_CONTROL_FL1, start=1):
+                # Verifica se la lista non è vuota
+                if len(risultato_ZPMR_CONTROL_FL1) > 0:
+                    # Crea il dataframe utilizzando il metodo del df_utils 
+                    # L'indice viene convertito a stringa per essere usato come parametro
+                    df_ZPMR_FL1 = self.df_utils.create_df_from_elements_ZPMR_CONTROL_FL1(
+                        constants.intestazione_ZPMR_FL_2, 
+                        str(index),  # Converte l'indice in stringa
+                        risultato_ZPMR_CONTROL_FL1, 
+                        tech_code, 
+                        country_code
+                    )
+                    processed_dfs.append(df_ZPMR_FL1)
+            # Concatena tutti i dataframe in uno solo
+            if processed_dfs:
+                df = pd.concat(processed_dfs, ignore_index=True)
+            else:
+                df = pd.DataFrame()  # Restituisce un dataframe vuoto se non ci sono dati
+
+            # verifico esistenza dati per la creazione del file aggiornamento ZPMR_FL_n_UpLoad.csv
+            if (len(risultato_ZPMR_CONTROL_FL2_lev_3) >0):
+                df_ZPMR_FL1 = self.df_utils.create_df_from_elements_ZPMR_CONTROL_FL1(constants.intestazione_ZPMR_FL_2, "1", risultato_ZPMR_CONTROL_FL1_lev_1, tech_code, country_code)
+            if (len(risultato_ZPMR_CONTROL_FL2_lev_4) >0):
+                df_ZPMR_FL2 = self.df_utils.create_df_from_elements_ZPMR_CONTROL_FL1(constants.intestazione_ZPMR_FL_2, "2", risultato_ZPMR_CONTROL_FL1_lev_2, tech_code, country_code)
+            if ((not df_ZPMR_FL1.empty) or (not df_ZPMR_FL2.empty)): # se almeno uno dei due DF contiene valori allora accodo e scrivo il file
+                    df = self.df_utils.merge_dataframes_and_save(df_ZPMR_FL1, df_ZPMR_FL2, constants.file_ZPMR_FL_2_UpLoad)
+                    self.log_message("Creato file: ZPMR_FL_2_UpLoad.csv", 'success') # se esiste almeno una lista contenente elementi allora creo i file
+                    print(df)                    
+
+
+
+        else:
+            raise ValueError("Tutte le liste sono vuote")
 
         # ----------------------------------------------------
         # ripristino il tasto di estrazione dei dati
