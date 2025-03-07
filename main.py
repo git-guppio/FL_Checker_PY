@@ -398,12 +398,13 @@ class MainWindow(QMainWindow):
         if fl_non_valide:
             # Mostra il numero di FL non valide
             # Mostra il numero di FL non valide con singolare o plurale
-            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}", 'error')
-            self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
+            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}:", 'warning')
+            #self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
             for fl in fl_non_valide:
                 # Ottieni il messaggio di errore specifico per questa FL
                 error_msg = result_df[result_df['FL'] == fl]['Check_Result'].values[0]
                 self.log_message(f"{fl}: {error_msg}", 'error')
+            return
         else:
             self.log_message("Tutte le FL sono valide", 'success')
 
@@ -688,7 +689,8 @@ class MainWindow(QMainWindow):
         ]
 
         # ------------verifico lista liste_ZPMR_CONTROL_FL2 prima di procedere -----------------------
-        if any(len(lista) > 0 for lista in liste_ZPMR_CONTROL_FL2):
+        # Tratta None come lista vuota (lunghezza 0)
+        if any(len(lista) > 0 if lista is not None else False for lista in liste_ZPMR_CONTROL_FL2):
             self.log_message("Creo file per aggiornamento tabelle ZPMR_CONTROL_FL2", 'info') # se esiste almeno una lista contenente elementi allora creo i file
             
             # ------------creo DF per ZPMR_CONTROL_FL2-----------------------
@@ -716,7 +718,9 @@ class MainWindow(QMainWindow):
             print(df)
         
         # ------------verifico lista liste_ZPMR_CONTROL_FLn prima di procedere -----------------------
-        if any(len(lista) > 0 for lista in liste_ZPMR_CONTROL_FLn):
+        # Tratta None come lista vuota (lunghezza 0)
+        if any(len(lista) > 0 if lista is not None else False for lista in liste_ZPMR_CONTROL_FLn):        
+        #if any(len(lista) > 0 for lista in liste_ZPMR_CONTROL_FLn):
             self.log_message("Creo file per aggiornamento tabelle ZPMR_CONTROL_FL2", 'info') # se esiste almeno una lista contenente elementi allora creo i file
             # ------------creo DF per ZPMR_CONTROL_FLn-----------------------
             df, error = self.df_utils.create_df_from_lists_ZPMR_CONTROL_FLn(constants.intestazione_ZPMR_FL_n,
@@ -740,8 +744,10 @@ class MainWindow(QMainWindow):
                 print(f"Si è verificato un errore nella creazione del DF: {error}")
                 self.log_message("Errore nella creazione del DF ZPMR_CONTROL_FLn", 'error')
             print(df)   
-
-        if (len(risultato_ZPMR_CTRL_ASS) > 0):
+        
+        # ------------verifico lista risultato_ZPMR_CTRL_ASS prima di procedere -----------------------            
+        # Verifico che la lista contenga elementi e che non sia None
+        if len(risultato_ZPMR_CTRL_ASS) > 0 if risultato_ZPMR_CTRL_ASS is not None else False:
             # creo un df a partire dalla lista 
             df, error = self.re_utils.validate_and_create_df_from_CTRL_ASS_codes(risultato_ZPMR_CTRL_ASS, 
                                                                                 constants.intestazione_CTRL_ASS, 
@@ -750,22 +756,48 @@ class MainWindow(QMainWindow):
             # Verifica del risultato
             if error is None:
                 print(f"Dataframe creato con successo!")
-                self.log_message("DF CTRL_ASS creato correttamente!", 'success')
+                self.log_message("DF ZPMR_CTRL_ASS creato correttamente!", 'success')
                 # ------------salvo il DF in un file csv-----------------------
                 result, error = self.df_utils.save_dataframe_to_csv(df, 
                                 constants.file_ZPMR_CTRL_ASS_UpLoad)
                 # Verifica del risultato
                 if result is True:
                     print(f"File {constants.file_ZPMR_CTRL_ASS_UpLoad} salvato correttamente")
-                    self.log_message("File CTRL_ASS creato correttamente!", 'success')
+                    self.log_message("File upload ZPMR_CTRL_ASS creato correttamente!", 'success')
                 elif error is not None:
                     print(f"Si è verificato un errore nella creazione del file: {error}")
-                    self.log_message("Errore nella creazione del file CTRL_ASS", 'error')
+                    self.log_message("Errore nella creazione del file ZPMR_CTRL_ASS", 'error')
             else:
                 print(f"Si è verificato un errore nella creazione del DF: {error}")
-                self.log_message("Errore nella creazione del DF CTRL_ASS", 'error')
+                self.log_message("Errore nella creazione del DF ZPMR_CTRL_ASS", 'error')
             print(df)             
         
+        # ------------verifico lista risultato_ZPM4R_GL_T_FL prima di procedere -----------------------            
+        # Verifico che la lista contenga elementi e che non sia None
+        if len(risultato_ZPM4R_GL_T_FL) > 0 if risultato_ZPM4R_GL_T_FL is not None else False:
+            # creo un df a partire dalla lista 
+            df, error = self.re_utils.validate_and_create_df_from_ZPM4R_GL_T_FL_codes(risultato_ZPM4R_GL_T_FL, 
+                                                                                constants.intestazione_TECH_OBJ, 
+                                                                                df_regex, 
+                                                                                tech_code)
+            # Verifica del risultato
+            if error is None:
+                print(f"Dataframe creato con successo!")
+                self.log_message("DF ZPM4R_GL_T_FL creato correttamente!", 'success')
+                # ------------salvo il DF in un file csv-----------------------
+                result, error = self.df_utils.save_dataframe_to_csv(df, 
+                                constants.file_ZPMR_TECH_OBJ_UpLoad)
+                # Verifica del risultato
+                if result is True:
+                    print(f"File {constants.file_ZPMR_CTRL_ASS_UpLoad} salvato correttamente")
+                    self.log_message("File upload ZPM4R_GL_T_FL creato correttamente!", 'success')
+                elif error is not None:
+                    print(f"Si è verificato un errore nella creazione del file: {error}")
+                    self.log_message("Errore nella creazione del file ZPM4R_GL_T_FL", 'error')
+            else:
+                print(f"Si è verificato un errore nella creazione del DF: {error}")
+                self.log_message("Errore nella creazione del DF ZPM4R_GL_T_FL", 'error')
+            print(df)          
 
         # ----------------------------------------------------
         # ripristino il tasto di estrazione dei dati

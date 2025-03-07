@@ -540,7 +540,8 @@ class RegularExpressionsTools:
                         'regex': re.compile(pattern),
                         'AM Section': row['AM Section'],
                         'AM Part': row['AM Part'],
-                        'AM Component': row['AM Component']
+                        'AM Component': row['AM Component'],
+                        'Element Type': row['Element Type']
                     }
                 except re.error as e:
                     raise ValueError(f"Espressione regolare non valida '{pattern}': {str(e)}")
@@ -559,7 +560,9 @@ class RegularExpressionsTools:
                 
                 # Verifico che sia un numero
                 if not fl_length.isdigit():
-                    continue
+                    raise ValueError(f"La lunghezza {fl_length} non corrisponde a ad un numerico valore valido")
+                else:
+                    fl_length = int(fl_length)
                     
                 # Verifico se il codice corrisponde a qualche espressione regolare
                 matching_patterns = []
@@ -583,22 +586,23 @@ class RegularExpressionsTools:
                 new_row = {col: None for col in column_names}
                 
                 # Imposto i valori in base al numero di parti
-                if len(code_parts) >= 4:
+                if ((fl_length >= 3) and (fl_length <= 6)):
                     new_row['VALUE'] = code_parts[0]
-                    new_row['SUB_VALUE'] = code_parts[1]
-                    new_row['SUB_VALUE2'] = "" if len(code_parts) == 4 else code_parts[2]
+                    new_row['SUB_VALUE'] = "" if fl_length == 3 else code_parts[1]
+                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]
                     
                     # Imposto i valori fissi
-                    new_row['TPLKZ'] = "Z-RS" + technology + "S"
+                    new_row['TPLKZ'] = "Z-RS" + technology
                     new_row['FLTYP'] = technology
                     
                     # Imposto lunghezza della FL
-                    new_row['FLLEVEL'] = code_parts[2] if len(code_parts) == 4 else code_parts[3]
+                    new_row['FLLEVEL'] = fl_length
 
                     # Imposto i valori dal dizionario dell'espressione regolare
                     new_row['CODE_SEZ_PM'] = matching_pattern_data['AM Section']
                     new_row['CODE_SIST'] = matching_pattern_data['AM Part']
                     new_row['CODE_PARTE'] = matching_pattern_data['AM Component']
+                    new_row['TIPO_ELEM'] = matching_pattern_data['Element Type']
                     
                     valid_rows.append(new_row)
             
@@ -616,6 +620,150 @@ class RegularExpressionsTools:
             # Rilanciamo l'eccezione con contesto aggiuntivo
             raise Exception(f"Errore nell'analisi dei codici e creazione del DataFrame: {str(e)}") from e
     
+    @staticmethod
+    @error_logger(logger=logger)
+    def validate_and_create_df_from_ZPM4R_GL_T_FL_codes(code_list: list,
+                                        header_string: str, 
+                                        regex_df: pd.DataFrame, 
+                                        technology: str) -> pd.DataFrame:
+        """
+        Analizza una lista di codici, verifica la corrispondenza con espressioni regolari 
+        e crea un DataFrame con i dati estratti.
+        
+        Args:
+            code_list: Lista di codici da analizzare, il cui ultimo carattere specifica la lunghezza
+            header_string: Stringa contenente i nomi delle colonne separati da delimitatore
+            regex_df: DataFrame contenente espressioni regolari nella colonna 'Check_RE'
+            technology: Codice della tecnologia
+        
+        Returns:
+            DataFrame contenente i dati estratti dai codici validi
+            
+        Raises:
+            ValueError: Se gli input non sono validi o se non ci sono codici validi
+            TypeError: Se i tipi di dati non sono corretti
+            Exception: Per altri errori imprevisti
+        """
+        try:
+            # Verifico i tipi di input
+            if not isinstance(code_list, list):
+                raise TypeError("code_list deve essere una lista")
+            if not isinstance(header_string, str):
+                raise TypeError("header_string deve essere una stringa")
+            if not isinstance(regex_df, pd.DataFrame):
+                raise TypeError("regex_df deve essere un DataFrame pandas")
+            if not isinstance(technology, str) or not technology.strip():
+                raise ValueError("technology deve essere una stringa valida")
+                
+            # Verifico che gli input non siano vuoti
+            if not code_list:
+                raise ValueError("La lista di codici non può essere vuota")
+            if not header_string.strip():
+                raise ValueError("header_string non può essere vuota")
+            if regex_df.empty:
+                raise ValueError("Il DataFrame delle espressioni regolari è vuoto")
+                
+            # Verifico la presenza della colonna delle espressioni regolari
+            if 'Check_RE' not in regex_df.columns:
+                raise ValueError("La colonna 'Check_RE' non è presente nel DataFrame delle espressioni regolari")
+            
+            # Verifico la presenza delle colonne necessarie nel DataFrame regex
+            required_regex_cols = ['Tech.Obj.SAP CODE', 'Catalog Profile']
+            missing_cols = [col for col in required_regex_cols if col not in regex_df.columns]
+            if missing_cols:
+                raise ValueError(f"Colonne mancanti in regex_df: {', '.join(missing_cols)}")
+                
+            # Parsing dell'intestazione per ottenere i nomi delle colonne
+            column_names = [col.strip() for col in header_string.split(';')]
+               
+            # Creo un DataFrame vuoto con le colonne specificate
+            result_df = pd.DataFrame(columns=column_names)
+            
+            # Dizionario per memorizzare le espressioni regolari compilate
+            compiled_patterns = {}
+            for _, row in regex_df.iterrows():
+                pattern = row['Check_RE']
+                try:
+                    compiled_patterns[pattern] = {
+                        'regex': re.compile(pattern),
+                        'Tech.Obj.SAP CODE': row['Tech.Obj.SAP CODE'],
+                        'Catalog Profile': row['Catalog Profile']
+                    }
+                except re.error as e:
+                    raise ValueError(f"Espressione regolare non valida '{pattern}': {str(e)}")
+            
+            # Lista per raccogliere le righe valide
+            valid_rows = []
+            
+            # Analizzo ogni codice nella lista
+            for code in code_list:
+                # Verifico che il codice sia valido
+                if not code or len(code) < 1:
+                    continue
+                    
+                # Estraggo l'ultimo carattere che indica la lunghezza della FL
+                fl_length = code[-1]
+                
+                # Verifico che sia un numero
+                if not fl_length.isdigit():
+                    raise ValueError(f"La lunghezza {fl_length} non corrisponde a ad un numerico valore valido")
+                else:
+                    fl_length = int(fl_length)
+                    
+                # Verifico se il codice corrisponde a qualche espressione regolare
+                matching_patterns = []
+                matching_pattern_data = {}
+                
+                for pattern, data in compiled_patterns.items():
+                    if data['regex'].fullmatch(code):
+                        matching_patterns.append(pattern)
+                        matching_pattern_data = data
+                
+                # Verifico i risultati della corrispondenza
+                if not matching_patterns:
+                    raise ValueError(f"Il codice {code} non corrisponde a nessuna espressione regolare")
+                elif len(matching_patterns) > 1:
+                    raise ValueError(f"Il codice {code} corrisponde a più espressioni regolari: {', '.join(matching_patterns)}")
+                
+                # Split del codice in base al separatore "_"
+                code_parts = code.split('_')
+                
+                # Creo una nuova riga con valori None
+                new_row = {col: None for col in column_names}
+                
+                # Imposto i valori in base al numero di parti
+                if ((fl_length >= 3) and (fl_length <= 6)):
+                    new_row['VALUE'] = code_parts[0]
+                    new_row['SUB_VALUE'] = "" if fl_length == 3 else code_parts[1]
+                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]
+                    
+                    # Imposto i valori fissi
+                    new_row['TPLKZ'] = "Z-RS" + technology
+                    new_row['FLTYP'] = technology
+                    
+                    # Imposto lunghezza della FL
+                    new_row['FLLEVEL'] = fl_length
+
+                    # Imposto i valori dal dizionario dell'espressione regolare
+                    new_row['EQART'] = matching_pattern_data['Tech.Obj.SAP CODE']
+                    new_row['RBNR'] = matching_pattern_data['Catalog Profile']
+                    
+                    valid_rows.append(new_row)
+            
+            # Se non ci sono righe valide, genero un errore
+            if not valid_rows:
+                raise ValueError("Nessun codice valido trovato")
+            
+            # Creo il DataFrame finale
+            for row in valid_rows:
+                result_df = pd.concat([result_df, pd.DataFrame([row])], ignore_index=True)
+                
+            return result_df
+                
+        except Exception as e:
+            # Rilanciamo l'eccezione con contesto aggiuntivo
+            raise Exception(f"Errore nell'analisi dei codici e creazione del DataFrame: {str(e)}") from e
+
     @staticmethod
     def verifica_fl_con_regex(df_fl, df_regex):
         """
