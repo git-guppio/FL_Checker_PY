@@ -6,6 +6,11 @@ A_ScriptDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # salg
 print(f"La directory dello script è: {A_ScriptDir}")
 
 # ----------------------------------------------------
+# Debug mode
+# ----------------------------------------------------
+DEBUG_MODE = True
+
+# ----------------------------------------------------
 # Intestazioni per i file di upload
 # ----------------------------------------------------
 # Intestazione dei file per upload tabelle di controllo globali

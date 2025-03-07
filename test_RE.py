@@ -1,99 +1,53 @@
-# Importa la classe
-import logging
-
-# Configurazione base del logging per tutta l'applicazione
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("app.log"),
-        logging.StreamHandler()
-    ]
-)
-
-import os
-import sys
 import pandas as pd
 import re
-import DF_Tools
-import File_tools
-import RE_tools
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
-                           QHBoxLayout, QWidget, QTextEdit, QListWidget, QLabel, QMessageBox)
-import SAP_Connection
-import SAP_Transactions
-import DF_Tools
-import Config.constants as constants
 from RE_tools import RegularExpressionsTools
 
+# Esempio di utilizzo:
+if __name__ == "__main__":
+    # Creo un DataFrame di esempio
 
+    # Creo un DataFrame di esempio
+    # Percorso del file CSV da leggere
+    #file_path = r"C:\Users\a259046\OneDrive - Enel Spa\SCRIPT AHK e VBA\GITHUB\FL_Checker_PY\df_re_completo.csv"  # Modifica con il percorso effettivo
+    file_path = "df_re_completo.csv"  # Modifica con il percorso effettivo
 
-# Logger specifico per questo modulo
-logger = logging.getLogger("test_RE").setLevel(logging.DEBUG)
+    # Leggi il CSV in un DataFrame
+    df = pd.read_csv(file_path)
+    print("#----------- df ---------#")
+    print(df)
 
-df_utils = DF_Tools.DataFrameTools()
-tech_code = "S"
-country_code = "IT"
+    # Identifica colonne dove tutti i valori sono NA
+    colonne_da_eliminare = df.columns[df.isna().all()].tolist()
 
-# Genera il DataFrame con le espressioni regolari
-risultato_ZPMR_CONTROL_FL1_lev_1 = ["A1","A2","A3", "A4"]
-risultato_ZPMR_CONTROL_FL1_lev_2 = ["AA1","AA2","AA3", "AA4"]
+    # Verifico se ci sono colonne vuote (stringhe vuote o spazi)
+    for col in df.columns:
+        if df[col].dtype == 'object':  # Solo per colonne di tipo stringa
+            if (df[col].str.strip().eq('') | df[col].isna()).all():
+                colonne_da_eliminare.append(col)
 
-liste_ZPMR_CONTROL_FL1 = [
-    risultato_ZPMR_CONTROL_FL1_lev_1,
-    risultato_ZPMR_CONTROL_FL1_lev_2
-]
+    # Elimina le colonne identificate
+    df_pulito = df.drop(columns=list(set(colonne_da_eliminare)))
+    print("#----------- df_pulito ---------#")
+    print(df_pulito)
 
-df, error = df_utils.create_df_from_lists_ZPMR_CONTROL_FL2(constants.intestazione_ZPMR_FL_2,
-                                                        liste_ZPMR_CONTROL_FL1,
-                                                        tech_code,
-                                                        country_code)
-# Verifica del risultato
-if error is None:
-    print(f"Operazione completata con successo!")
-else:
-    print(f"Si è verificato un errore: {error}")
-print(df)
+    # Definisco il dizionario di regex
+    regex_dict = {
+        'SubStation': [r'^[a-zA-Z]{2}S-[a-zA-Z0-9]{4}-0A'],
+        'Common': [r'^[a-zA-Z]{2}S-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{2}S-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{2}S-[a-zA-Z0-9]{4}-9z']
+    }
 
-
-result, error = df_utils.save_dataframe_to_csv(df, 
-                                constants.file_ZPMR_FL_2_UpLoad)
-
-# Verifica del risultato
-if error is None:
-    print(f"File {constants.file_ZPMR_FL_2_UpLoad} salvato correttamente")
-else:
-    print(f"Si è verificato un errore: {error}")
-
-# Genera il DataFrame con le espressioni regolari
-risultato_ZPMR_CONTROL_FL1_lev_3 = ["A1","A2","A3", "A4"]
-risultato_ZPMR_CONTROL_FL1_lev_4 = ["AA1","AA2","AA3", "AA4"]
-risultato_ZPMR_CONTROL_FL1_lev_5 = ["AAA1","AAA2","AAA3", "AAA4"]
-risultato_ZPMR_CONTROL_FL1_lev_6 = ["AAAA1","AAAA2","AAAA3", "AAAA4"]
-
-
-liste_ZPMR_CONTROL_FL1 = [
-    risultato_ZPMR_CONTROL_FL1_lev_3,
-    risultato_ZPMR_CONTROL_FL1_lev_4,
-    risultato_ZPMR_CONTROL_FL1_lev_5,
-    risultato_ZPMR_CONTROL_FL1_lev_6    
-]
-
-df, error = df_utils.create_df_from_lists_ZPMR_CONTROL_FLn(constants.intestazione_ZPMR_FL_n,
-                                                        liste_ZPMR_CONTROL_FL1,
-                                                        tech_code)
-# Verifica del risultato
-if error is None:
-    print(f"Operazione completata con successo!")
-else:
-    print(f"Si è verificato un errore: {error}")
-print(df)
-
-result, error = df_utils.save_dataframe_to_csv(df, 
-                                constants.file_ZPMR_FL_n_UpLoad)
-
-# Verifica del risultato
-if error is None:
-    print(f"File {constants.file_ZPMR_FL_n_UpLoad} salvato correttamente")
-else:
-    print(f"Si è verificato un errore: {error}")    
+    # Applico la funzione
+    try:
+        result = RegularExpressionsTools.filter_dataframe_by_regex(df_pulito, regex_dict)
+        
+        # Stampo i risultati
+        for category, filtered_df in result.items():
+            print(f"\n{category} ({len(filtered_df)} righe):")
+            print(filtered_df)
+        
+        # Valido i risultati
+        valid, error_msg = RegularExpressionsTools.validate_filtering_result(df_pulito, result)
+        print(f"\nValidazione: {'Successo' if valid else 'Fallita - ' + error_msg}")
+        
+    except Exception as e:
+        print(f"Errore: {e}")

@@ -2,6 +2,13 @@ import pandas as pd
 import re
 import os
 from pathlib import Path
+from DF_Tools import DataFrameTools
+import logging
+from utils.decorators import error_logger
+from typing import Dict, List, Union, Optional, Tuple
+
+# Logger specifico per questo modulo
+logger = logging.getLogger("RegularExpressionsTools")
 
 class RegularExpressionsTools:
     """
@@ -10,6 +17,173 @@ class RegularExpressionsTools:
     
     def __init__(self):
         pass    
+
+    @staticmethod
+    def filter_dataframe_by_regex(
+                    df: pd.DataFrame,
+                    regex_dict: Dict[str, List[str]],
+                    column_name: str = 'FL'
+                    ) -> Dict[str, pd.DataFrame]:
+        """
+        Filtra un DataFrame in sottoinsiemi disgiunti basati su espressioni regolari.
+        
+        Parameters:
+        -----------
+        df : pd.DataFrame
+            Il DataFrame da filtrare.
+        regex_dict : Dict[str, List[str]]
+            Dizionario contenente le chiavi 'SubStation', 'Common' con liste
+            di espressioni regolari da applicare in OR tra loro.
+        column_name : str, default='FL'
+            Nome della colonna su cui applicare i filtri.
+            
+        Returns:
+        --------
+        Dict[str, pd.DataFrame]
+            Dizionario contenente i DataFrame filtrati con le chiavi originali più
+            una chiave 'Others' per le righe che non corrispondono a nessun pattern.
+            
+        Raises:
+        -------
+        ValueError
+            Se il DataFrame è vuoto o non contiene la colonna specificata.
+        TypeError
+            Se i parametri non sono del tipo corretto.
+        KeyError
+            Se il dizionario non contiene le chiavi richieste.
+        """
+        # Validazione input
+        if not isinstance(df, pd.DataFrame):
+            raise TypeError("Il parametro 'df' deve essere un pandas DataFrame")
+        
+        if df.empty:
+            raise ValueError("Il DataFrame non può essere vuoto")
+        
+        if column_name not in df.columns:
+            raise ValueError(f"La colonna '{column_name}' non esiste nel DataFrame")
+        
+        if not isinstance(regex_dict, dict):
+            raise TypeError("Il parametro 'regex_dict' deve essere un dizionario")
+        
+        required_keys = ['SubStation', 'Common']
+        for key in required_keys:
+            if key not in regex_dict:
+                raise KeyError(f"La chiave '{key}' deve essere presente nel dizionario")
+            if not isinstance(regex_dict[key], list):
+                raise TypeError(f"Il valore per la chiave '{key}' deve essere una lista")
+        
+        # Inizializzo il dizionario di risultati e mappe delle maschere
+        result_dict = {}
+        mask_map = {}
+        
+        # Creo una maschera principale inizialmente tutta False
+        # Questa maschera terrà traccia di tutte le righe già classificate
+        master_mask = pd.Series(False, index=df.index)
+        
+        # Per ogni categoria nel dizionario
+        for category, patterns in regex_dict.items():
+            # Salto la categoria se non ci sono pattern
+            if not patterns:
+                result_dict[category] = pd.DataFrame(columns=df.columns)
+                continue
+            
+            # Combino tutte le regex in OR per questa categoria
+            category_mask = pd.Series(False, index=df.index)
+            
+            for pattern in patterns:
+                try:
+                    # Compilo l'espressione regolare
+                    regex = re.compile(pattern)
+                    # Aggiorno la maschera della categoria con OR
+                    pattern_mask = df[column_name].str.contains(regex, regex=True)
+                    category_mask = category_mask | pattern_mask
+                except re.error:
+                    print(f"Avviso: '{pattern}' non è un'espressione regolare valida, verrà ignorata")
+            
+            # Filtro solo le righe che non sono già state classificate
+            unique_mask = category_mask & ~master_mask
+            
+            # Aggiorno la maschera principale
+            master_mask = master_mask | unique_mask
+            
+            # Salvo la maschera e il DataFrame filtrato
+            mask_map[category] = unique_mask
+            result_dict[category] = df[unique_mask].copy()
+        
+        # Creo la categoria "Others" per righe non classificate
+        result_dict['Others'] = df[~master_mask].copy()
+        
+        # Verifico che tutti i sottoinsiemi siano disgiunti e la loro unione sia il df originale
+        total_rows = sum(len(subset) for subset in result_dict.values())
+        if total_rows != len(df):
+            print("Avviso: La somma delle righe nei sottoinsiemi non corrisponde al DataFrame originale")
+        
+        return result_dict
+
+    @staticmethod
+    def validate_filtering_result(
+                    original_df: pd.DataFrame,
+                    filtered_dict: Dict[str, pd.DataFrame]
+                    ) -> Tuple[bool, Optional[str]]:
+        """
+        Verifica che i DataFrame filtrati siano disgiunti e la loro unione sia uguale al DataFrame originale.
+
+        Parameters:
+        -----------
+        original_df : pd.DataFrame
+            Il DataFrame originale.
+        filtered_dict : Dict[str, pd.DataFrame]
+            Dizionario con i DataFrame filtrati.
+            
+        Returns:
+        --------
+        Tuple[bool, Optional[str]]
+            (True, None) se la validazione ha successo,
+            (False, messaggio di errore) in caso contrario.
+        """
+        # Calcolo il numero totale di righe
+        total_rows = sum(len(df) for df in filtered_dict.values())
+        
+        if total_rows != len(original_df):
+            return False, f"Numero di righe non corrispondente: originale={len(original_df)}, filtrato={total_rows}"
+        else:
+            print("Il numero totale di righe nei sottoinsiemi corrisponde al DataFrame originale")
+        
+        # Ricostruisco il DataFrame unendo solo i sottoinsiemi non vuoti
+        non_empty_dfs = [df for df in filtered_dict.values() if df is not None and not df.empty]
+        
+
+        """ 
+        # Escludi colonne vuote o con tutti NA prima della concatenazione
+        for i, df in enumerate(non_empty_dfs):
+            # Identifica colonne che sono tutte NA
+            all_na_cols = df.columns[df.isna().all()].tolist()
+            if all_na_cols:
+                # Rimuovi colonne tutte NA per preservare i dtypes
+                non_empty_dfs[i] = df.drop(columns=all_na_cols)
+        """        
+
+        # Concatena i dataframe filtrati, mantenendo i tipi di dati originali
+        reconstructed_df = pd.concat(non_empty_dfs, ignore_index=True) if non_empty_dfs else pd.DataFrame(columns=original_df.columns)
+
+        print("#----------- reconstructed_df ---------#")
+        print(reconstructed_df)
+
+        # Verifico che non ci siano righe duplicate
+        if len(reconstructed_df) != len(reconstructed_df.drop_duplicates()):
+            return False, "Sono presenti righe duplicate nei sottoinsiemi"
+        
+        # Ordino i DataFrame per un confronto preciso
+        sort_cols = list(original_df.columns)
+        original_sorted = original_df.sort_values(sort_cols).reset_index(drop=True)
+        reconstructed_sorted = reconstructed_df.sort_values(sort_cols).reset_index(drop=True)
+        
+        # Confronto i DataFrame
+        if not original_sorted.equals(reconstructed_sorted):
+            return False, "I DataFrame ricostruito e originale non sono identici"
+        
+        return True, None
+
 
     @staticmethod
     def Make_DF_RE_list(rules_file_path, guideline_files_list):
@@ -47,7 +221,7 @@ class RegularExpressionsTools:
                 
             # 1. Carica il file Rules.csv e crea un dizionario di regole
             try:
-                rules_df = pd.read_csv(rules_file_path, sep=';', header=0, encoding='utf-8')
+                rules_df = pd.read_csv(rules_file_path, sep=';', header=0, encoding='utf-8', dtype=str)
                 
                 # Verifica che il file Rules.csv abbia almeno due colonne
                 if rules_df.shape[1] < 2:
@@ -80,7 +254,7 @@ class RegularExpressionsTools:
                         continue
                     
                     # Carica il file guideline
-                    guideline_df = pd.read_csv(guideline_file_path, sep=';', encoding='utf-8')
+                    guideline_df = pd.read_csv(guideline_file_path, sep=';', encoding='utf-8', dtype=str)
                     
                     # Verifica che ci sia una colonna FL
                     if 'FL' not in guideline_df.columns:
@@ -106,7 +280,7 @@ class RegularExpressionsTools:
                         guideline_df['FL'] = guideline_df['FL'].astype(str)
                         
                     guideline_df['FL_Lunghezza'] = guideline_df['FL'].apply(lambda x: x.count('-') + 1)
-                    
+
                     # 4. Costruisce la colonna FL_RE con le espressioni regolari
                     def create_regex(fl_value):
                         if pd.isna(fl_value) or not isinstance(fl_value, str):
@@ -127,13 +301,12 @@ class RegularExpressionsTools:
                     
                     # Applica la funzione a ogni valore della colonna FL
                     guideline_df['FL_RE'] = guideline_df['FL'].apply(create_regex)
-                    
-                    # Aggiungi questo dataframe al dataframe combinato
+
                     if combined_df is None:
                         combined_df = guideline_df
                     else:
                         combined_df = pd.concat([combined_df, guideline_df], ignore_index=True)
-                    
+
                 except pd.errors.ParserError as e:
                     print(f"Errore nel parsing del file {guideline_file_path}: {str(e)}, verrà saltato")
                     continue
@@ -155,7 +328,15 @@ class RegularExpressionsTools:
                     print(duplicates_df[['FL', 'FL_RE', 'Source_File']].to_string())
                 
                 # Rimuovi duplicati
-                combined_df = combined_df.drop_duplicates(subset=['FL_RE'], keep='first')        
+                combined_df = combined_df.drop_duplicates(subset=['FL_RE'], keep='first')
+
+            # Crea la colonna ['Check'] per la costruzione delle tabelle di aggiornamento ZPMR_CTRL_ASS e ZPM4R_GL_T_FL
+            if (DataFrameTools.Add_Column_Check_ZPMR(combined_df)):
+                # Applica la funzione a ogni valore della colonna FL
+                combined_df['Check_RE'] = combined_df['Check'].apply(create_regex)
+            else:
+                print("Errore nella creazione della colonna Check nel DF guideline_df")
+            # Aggiungi questo dataframe al dataframe combinato     
                 
             return combined_df
                 
@@ -290,6 +471,151 @@ class RegularExpressionsTools:
             print(f"Errore imprevisto: {str(e)}")
             raise
     
+    
+    @staticmethod
+    @error_logger(logger=logger)
+    def validate_and_create_df_from_CTRL_ASS_codes(code_list: list, 
+                                        header_string: str, 
+                                        regex_df: pd.DataFrame, 
+                                        technology: str) -> pd.DataFrame:
+        """
+        Analizza una lista di codici, verifica la corrispondenza con espressioni regolari 
+        e crea un DataFrame con i dati estratti.
+        
+        Args:
+            code_list: Lista di codici da analizzare, il cui ultimo carattere specifica la lunghezza
+            header_string: Stringa contenente i nomi delle colonne separati da delimitatore
+            regex_df: DataFrame contenente espressioni regolari nella colonna 'Check_RE'
+            technology: Codice della tecnologia
+        
+        Returns:
+            DataFrame contenente i dati estratti dai codici validi
+            
+        Raises:
+            ValueError: Se gli input non sono validi o se non ci sono codici validi
+            TypeError: Se i tipi di dati non sono corretti
+            Exception: Per altri errori imprevisti
+        """
+        try:
+            # Verifico i tipi di input
+            if not isinstance(code_list, list):
+                raise TypeError("code_list deve essere una lista")
+            if not isinstance(header_string, str):
+                raise TypeError("header_string deve essere una stringa")
+            if not isinstance(regex_df, pd.DataFrame):
+                raise TypeError("regex_df deve essere un DataFrame pandas")
+            if not isinstance(technology, str) or not technology.strip():
+                raise ValueError("technology deve essere una stringa valida")
+                
+            # Verifico che gli input non siano vuoti
+            if not code_list:
+                raise ValueError("La lista di codici non può essere vuota")
+            if not header_string.strip():
+                raise ValueError("header_string non può essere vuota")
+            if regex_df.empty:
+                raise ValueError("Il DataFrame delle espressioni regolari è vuoto")
+                
+            # Verifico la presenza della colonna delle espressioni regolari
+            if 'Check_RE' not in regex_df.columns:
+                raise ValueError("La colonna 'Check_RE' non è presente nel DataFrame delle espressioni regolari")
+            
+            # Verifico la presenza delle colonne necessarie nel DataFrame regex
+            required_regex_cols = ['AM Section', 'AM Part', 'AM Component']
+            missing_cols = [col for col in required_regex_cols if col not in regex_df.columns]
+            if missing_cols:
+                raise ValueError(f"Colonne mancanti in regex_df: {', '.join(missing_cols)}")
+                
+            # Parsing dell'intestazione per ottenere i nomi delle colonne
+            column_names = [col.strip() for col in header_string.split(';')]
+               
+            # Creo un DataFrame vuoto con le colonne specificate
+            result_df = pd.DataFrame(columns=column_names)
+            
+            # Dizionario per memorizzare le espressioni regolari compilate
+            compiled_patterns = {}
+            for _, row in regex_df.iterrows():
+                pattern = row['Check_RE']
+                try:
+                    compiled_patterns[pattern] = {
+                        'regex': re.compile(pattern),
+                        'AM Section': row['AM Section'],
+                        'AM Part': row['AM Part'],
+                        'AM Component': row['AM Component']
+                    }
+                except re.error as e:
+                    raise ValueError(f"Espressione regolare non valida '{pattern}': {str(e)}")
+            
+            # Lista per raccogliere le righe valide
+            valid_rows = []
+            
+            # Analizzo ogni codice nella lista
+            for code in code_list:
+                # Verifico che il codice sia valido
+                if not code or len(code) < 1:
+                    continue
+                    
+                # Estraggo l'ultimo carattere che indica la lunghezza della FL
+                fl_length = code[-1]
+                
+                # Verifico che sia un numero
+                if not fl_length.isdigit():
+                    continue
+                    
+                # Verifico se il codice corrisponde a qualche espressione regolare
+                matching_patterns = []
+                matching_pattern_data = {}
+                
+                for pattern, data in compiled_patterns.items():
+                    if data['regex'].fullmatch(code):
+                        matching_patterns.append(pattern)
+                        matching_pattern_data = data
+                
+                # Verifico i risultati della corrispondenza
+                if not matching_patterns:
+                    raise ValueError(f"Il codice {code} non corrisponde a nessuna espressione regolare")
+                elif len(matching_patterns) > 1:
+                    raise ValueError(f"Il codice {code} corrisponde a più espressioni regolari: {', '.join(matching_patterns)}")
+                
+                # Split del codice in base al separatore "_"
+                code_parts = code.split('_')
+                
+                # Creo una nuova riga con valori None
+                new_row = {col: None for col in column_names}
+                
+                # Imposto i valori in base al numero di parti
+                if len(code_parts) >= 4:
+                    new_row['VALUE'] = code_parts[0]
+                    new_row['SUB_VALUE'] = code_parts[1]
+                    new_row['SUB_VALUE2'] = "" if len(code_parts) == 4 else code_parts[2]
+                    
+                    # Imposto i valori fissi
+                    new_row['TPLKZ'] = "Z-RS" + technology + "S"
+                    new_row['FLTYP'] = technology
+                    
+                    # Imposto lunghezza della FL
+                    new_row['FLLEVEL'] = code_parts[2] if len(code_parts) == 4 else code_parts[3]
+
+                    # Imposto i valori dal dizionario dell'espressione regolare
+                    new_row['CODE_SEZ_PM'] = matching_pattern_data['AM Section']
+                    new_row['CODE_SIST'] = matching_pattern_data['AM Part']
+                    new_row['CODE_PARTE'] = matching_pattern_data['AM Component']
+                    
+                    valid_rows.append(new_row)
+            
+            # Se non ci sono righe valide, genero un errore
+            if not valid_rows:
+                raise ValueError("Nessun codice valido trovato")
+            
+            # Creo il DataFrame finale
+            for row in valid_rows:
+                result_df = pd.concat([result_df, pd.DataFrame([row])], ignore_index=True)
+                
+            return result_df
+                
+        except Exception as e:
+            # Rilanciamo l'eccezione con contesto aggiuntivo
+            raise Exception(f"Errore nell'analisi dei codici e creazione del DataFrame: {str(e)}") from e
+    
     @staticmethod
     def verifica_fl_con_regex(df_fl, df_regex):
         """
@@ -420,3 +746,104 @@ class RegularExpressionsTools:
             # Cattura e rilancia altre eccezioni impreviste
             print(f"Errore imprevisto durante la validazione: {str(e)}")
             raise Exception(f"Errore imprevisto durante la validazione: {str(e)}") from e
+    
+    @staticmethod
+    def verifica_fl_con_regex_per_categorie(
+        df_fl_completo: pd.DataFrame,
+        df_regex_completo: pd.DataFrame,
+        categorie_dict: Dict[str, List[str]],
+        colonna_fl: str = 'FL'
+    ) -> pd.DataFrame:
+        """
+        Applica la funzione verifica_fl_con_regex a ciascuna categoria di FL
+        definita dal dizionario di espressioni regolari, e unisce i risultati.
+        
+        Args:
+            df_fl_completo (pd.DataFrame): DataFrame contenente le FL da verificare
+            df_regex_completo (pd.DataFrame): DataFrame contenente le espressioni regolari
+            categorie_dict (Dict[str, List[str]]): Dizionario con le categorie e le relative regex
+            colonna_fl (str): Nome della colonna contenente le FL
+            
+        Returns:
+            pd.DataFrame: DataFrame unificato con i risultati della verifica
+        """
+        # Verifica degli input
+        if not isinstance(df_fl_completo, pd.DataFrame) or df_fl_completo.empty:
+            raise ValueError("df_fl_completo deve essere un DataFrame pandas non vuoto")
+        
+        if not isinstance(df_regex_completo, pd.DataFrame) or df_regex_completo.empty:
+            raise ValueError("df_regex_completo deve essere un DataFrame pandas non vuoto")
+        
+        if not isinstance(categorie_dict, dict) or not categorie_dict:
+            raise ValueError("categorie_dict deve essere un dizionario non vuoto")
+        
+        if colonna_fl not in df_fl_completo.columns:
+            raise ValueError(f"La colonna '{colonna_fl}' non esiste nel DataFrame delle FL")
+        
+        # Verifica che la colonna FL_lunghezza esista, altrimenti genero un errore
+        if 'FL_Lunghezza' not in df_fl_completo.columns:
+            raise ValueError("La colonna 'FL_Lunghezza' non esiste nel DataFrame delle FL")
+        
+        if 'FL_Lunghezza' not in df_regex_completo.columns:
+            raise ValueError("La colonna 'FL_Lunghezza' non esiste nel DataFrame delle RegEx")
+        
+        # Assicuriamoci che i tipi siano corretti
+        df_fl_completo['FL_Lunghezza'] = df_fl_completo['FL_Lunghezza'].astype(int)
+        df_regex_completo['FL_Lunghezza'] = df_regex_completo['FL_Lunghezza'].astype(int)
+        
+        # Inizializziamo il risultato
+        risultati_categorie = {}
+        
+        # Eseguiamo la funzione filter_dataframe_by_regex per ottenere i sottoinsiemi
+        df_per_categoria = RegularExpressionsTools.filter_dataframe_by_regex(df_fl_completo, categorie_dict, colonna_fl)
+        
+        # Filtriamo anche il DataFrame delle espressioni regolari per categoria
+        df_regex_per_categoria = RegularExpressionsTools.filter_dataframe_by_regex(df_regex_completo, categorie_dict)
+        
+        # Eseguiamo la verifica per ogni categoria
+        for categoria in df_per_categoria.keys():
+            print(f"Elaborazione categoria: {categoria}")
+            
+            # Otteniamo i DataFrame relativi alla categoria corrente
+            df_fl_categoria = df_per_categoria[categoria]
+            df_regex_categoria = df_regex_per_categoria.get(categoria, pd.DataFrame())
+            
+            # Verifichiamo che ci siano dati da elaborare
+            if df_fl_categoria.empty:
+                print(f"Nessun dato FL per la categoria {categoria}")
+                continue
+            
+            if df_regex_categoria.empty:
+                # Se non ci sono regex specifiche per questa categoria, usiamo tutte le regex
+                print(f"Nessuna regex specifica per {categoria}, utilizzeremo tutte le regex disponibili")
+                df_regex_categoria = df_regex_completo.copy()
+            
+            # Eseguiamo la verifica
+            try:
+            
+                # Aggiungiamo una colonna per indicare la categoria
+                df_fl_categoria['Categoria'] = categoria
+                
+                # Chiamiamo la funzione di verifica
+                risultato = RegularExpressionsTools.verifica_fl_con_regex(df_fl_categoria, df_regex_categoria)
+                risultati_categorie[categoria] = risultato
+                
+            except Exception as e:
+                print(f"Errore durante la verifica della categoria {categoria}: {str(e)}")
+                # Continuiamo con le altre categorie
+        
+        # Unifichiamo i risultati
+        df_risultati = pd.DataFrame()
+        
+        # Uniamo solo i DataFrame non vuoti
+        dfs_da_unire = [df for df in risultati_categorie.values() if df is not None and not df.empty]
+        
+        if dfs_da_unire:
+            df_risultati = pd.concat(dfs_da_unire, ignore_index=True)
+        """         
+        # Riordiniamo le colonne per una migliore leggibilità
+        colonne_ordinate = ['Categoria', 'FL', 'FL_Lunghezza', 'Check_Result']
+        altre_colonne = [col for col in df_risultati.columns if col not in colonne_ordinate]
+        df_risultati = df_risultati[colonne_ordinate + altre_colonne]
+        """    
+        return df_risultati

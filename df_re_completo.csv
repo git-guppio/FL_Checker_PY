@@ -1,239 +1,228 @@
-FL,Description,AM Section,AM Part,AM Component,Element Type,Tech.Obj.SAP CODE,Catalog Profile,Source_File,FL_Lunghezza,FL_RE,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
-kkS,IsoCode Country + Technology (S),,,,,,,Solar_FL_SubStation_Guideline.csv,1,[A-Z][A-Z]S,,,,,
-kkS-yyyy,Plant code ,,,,,,,Solar_FL_SubStation_Guideline.csv,2,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z],,,,,
-kkS-yyyy-0A,Common Energy Collecting & Delivery System,,,,,,,Solar_FL_SubStation_Guideline.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A,,,,,
-kkS-yyyy-0A-xT,HV/MV Common Transformer,0.0,18.0,1850.0,,FL_TR_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T,,,,,
-kkS-yyyy-0A-xT-HV,HV Section,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV,,,,,
-kkS-yyyy-0A-xT-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-IT,,,,,
-kkS-yyyy-0A-xT-HV-Rn,HV/MV Protective Relays,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-R[0-9],,,,,
-kkS-yyyy-0A-xT-HV-Sn,HV Surge Arrester,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-S[0-9],,,,,
-kkS-yyyy-0A-xT-HV-Dn,HV Disconnector,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-D[0-9],,,,,
-kkS-yyyy-0A-xT-HV-An,HV M&P Transformers CT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-A[0-9],,,,,
-kkS-yyyy-0A-xT-HV-Vn,HV M&P Transformers VT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-V[0-9],,,,,
-kkS-yyyy-0A-xT-HV-BS,HV Connection,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-BS,,,,,
-kkS-yyyy-0A-xT-HV-Mn,Energy Meter,0.0,18.0,1850.0,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-M[0-9],,,,,
-kkS-yyyy-0A-xT-Mn,MV Section,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-Iy,MV Circuit Breaker/MV Panel,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-I[0-9A-Z],,,,,
-kkS-yyyy-0A-xT-Mn-Dn,MV Disconnector,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-D[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-An,MV M&P Transformers CT,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-A[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-Vn,MV M&P Transformers VT,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-V[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-Sn,MV Surge Arrester,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-S[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-BS,MV Connection,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-BS,,,,,
-kkS-yyyy-0A-xT-Mn-0n,Line protection,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-0[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-Hn,Harmonic Filter,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-H[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-ZR,Shunt Reactor,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ZR,,,,,
-kkS-yyyy-0A-xT-Mn-Zn,Zig Zag Earthing Transformer,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-Z[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-ER,Earthing Reactor,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ER,,,,,
-kkS-yyyy-0A-xT-Mn-Cn,Capacitor Bank MV,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-C[0-9],,,,,
-kkS-yyyy-0A-xT-Mn-Mn,Energy Meter,0.0,18.0,1850.0,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-M[0-9],,,,,
-kkS-yyyy-0A-xT-OC,Civil Works,0.0,18.0,1810.0,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-OC,,,,,
-kkS-yyyy-0A-xL,HV Line,0.0,18.0,1850.0,,FL_LI_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L,,,,,
-kkS-yyyy-0A-xL-HV,HV Section,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV,,,,,
-kkS-yyyy-0A-xL-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-IT,,,,,
-kkS-yyyy-0A-xL-HV-Rn,HV/MV Protective Relays,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-R[0-9],,,,,
-kkS-yyyy-0A-xL-HV-Dn,HV Disconnector,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-D[0-9],,,,,
-kkS-yyyy-0A-xL-HV-Sn,HV Surge Arrester,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-S[0-9],,,,,
-kkS-yyyy-0A-xL-HV-An,HV M&P Transformers CT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-A[0-9],,,,,
-kkS-yyyy-0A-xL-HV-Vn,HV M&P Transformers VT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-V[0-9],,,,,
-kkS-yyyy-0A-xL-HV-BS,HV Connection,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-BS,,,,,
-kkS-yyyy-0A-xL-HV-Mn,Energy Meter,0.0,18.0,1850.0,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-M[0-9],,,,,
-kkS-yyyy-0A-xL-OC,Civil Works,0.0,18.0,1810.0,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OC,,,,,
-kkS-yyyy-0A-xL-OL,Overhead Power Lines,0.0,18.0,1850.0,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OL,,,,,
-kkS-yyyy-0A-xL-UL,Underground Power Lines,0.0,18.0,1850.0,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-UL,,,,,
-kkS-yyyy-0A-xS,HV Busbar,0.0,18.0,1850.0,,FL_BU_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S,,,,,
-kkS-yyyy-0A-xS-HV,HV Section,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV,,,,,
-kkS-yyyy-0A-xS-HV-IT,HV Breaker/Circuit Breaker/HGIS,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-IT,,,,,
-kkS-yyyy-0A-xS-HV-Rn,HV/MV Protective Relays,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-R[0-9],,,,,
-kkS-yyyy-0A-xS-HV-Dn,HV Disconnector,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-D[0-9],,,,,
-kkS-yyyy-0A-xS-HV-Sn,HV Surge Arrester,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-S[0-9],,,,,
-kkS-yyyy-0A-xS-HV-An,HV M&P Transformers CT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-A[0-9],,,,,
-kkS-yyyy-0A-xS-HV-Vn,HV M&P Transformers VT,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-V[0-9],,,,,
-kkS-yyyy-0A-xS-HV-Cn,Capacitor Bank HV,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-C[0-9],,,,,
-kkS-yyyy-0A-xS-HV-BS,HV Connection,0.0,18.0,1850.0,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-BS,,,,,
-kkS-yyyy-0A-xS-HV-Mn,Energy Meter,0.0,18.0,1850.0,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-M[0-9],,,,,
-kkS-yyyy-0A-xS-OC,Civil Works,0.0,18.0,1810.0,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-OC,,,,,
-kkS-yyyy-0A-LA,LV Auxiliary services power distribution,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA,,,,,
-kkS-yyyy-0A-LA-LP,DC LV Panel - uninterrupted,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP,,,,,
-kkS-yyyy-0A-LA-LP-nn,DC Low Voltage Panel nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-LA-LN,AC LV Panel - normal and emergency p.s.,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN,,,,,
-kkS-yyyy-0A-LA-LN-nn,AC Low Voltage Panel nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-LA-LU,AC LV Panel - uninterrupted ,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU,,,,,
-kkS-yyyy-0A-LA-LU-nn,AC Low Voltage Panel nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-LA-SB,LV Switchboard,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB,,,,,
-kkS-yyyy-0A-LA-SB-nn,LV Switchboard nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-LA-SG,LV Switchgear,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG,,,,,
-kkS-yyyy-0A-LA-SG-nn,LV Switchgear nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-SA,Auxiliary service equipments,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA,,,,,
-kkS-yyyy-0A-SA-DG,Diesel Generator,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-DG,,,,,
-kkS-yyyy-0A-SA-EP,External Power Supply,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-EP,,,,,
-kkS-yyyy-0A-SA-BT,Batteries Bank,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT,,,,,
-kkS-yyyy-0A-SA-BT-nn,Batteries Bank nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-SA-TR,Auxiliary service Transformer,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR,,,,,
-kkS-yyyy-0A-SA-TR-nn,Transformer nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-SA-TS,Automatic Transfer Switch,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS,,,,,
-kkS-yyyy-0A-SA-TS-nn,Automatic Transfer Switch nn,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-SA-UP,UPS,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-UP,,,,,
-kkS-yyyy-0A-SA-FC,HVAC,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-FC,,,,,
-kkS-yyyy-0A-RE,Rectifier AC/DC,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE,,,,,
-kkS-yyyy-0A-RE-nn,Rectifier AC/DC,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE-(?!00)[0-9]{2},,,,,
-kkS-yyyy-0A-xM,MV Feeders Connection,0.0,18.0,1850.0,,FL_MVFEED,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M,,,,,
-kkS-yyyy-0A-xM-MA,MV Section,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA,,,,,
-kkS-yyyy-0A-xM-MA-In,MV Circuit Breaker,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-I[0-9],,,,,
-kkS-yyyy-0A-xM-MA-Dx,MV Disconnector,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-D[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-Ax,MV M&P Transformers CT,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-A[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-Vx,MV M&P Transformers VT,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-V[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-Sx,MV Surge Arrester,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-S[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-BS,MV Connection,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-BS,,,,,
-kkS-yyyy-0A-xM-MA-0x,Line protection,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-0[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-Hx,Harmonic Filter,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-H[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-ZR,Shunt Reactor,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ZR,,,,,
-kkS-yyyy-0A-xM-MA-Zn,Zig Zag Earthing Transformer,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-Z[0-9],,,,,
-kkS-yyyy-0A-xM-MA-ER,Earthing Reactor,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ER,,,,,
-kkS-yyyy-0A-xM-MA-Cx,Capacitor Bank MV,0.0,18.0,1850.0,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-C[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-MA-Mx,Energy Meter,0.0,18.0,1850.0,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-M[1-9A-Z],,,,,
-kkS-yyyy-0A-xM-OC,Civil Works,0.0,18.0,1850.0,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OC,,,,,
-kkS-yyyy-0A-xM-OL,Overhead Power Lines,0.0,18.0,1850.0,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OL,,,,,
-kkS-yyyy-0A-xM-UL,Underground Power Lines,0.0,18.0,1850.0,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-UL,,,,,
-kkS-yyyy-00,Common Infrastructures and services,,,,,,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00,,,,,
-kkS-yyyy-00-PV,PV system,0.0,18.0,1860.0,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV,,,,,
-kkS-yyyy-00-PV-CL,wiring and cabling,0.0,18.0,1860.0,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-CL,,,,,
-kkS-yyyy-00-PV-SC,wiring and solar connections,0.0,18.0,1860.0,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-SC,,,,,
-kkS-yyyy-00-PV-CC,connectors,0.0,18.0,1860.0,CLE,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-CC,,,,,
-kkS-yyyy-00-PV-SM,solar modules,0.0,18.0,1860.0,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-SM,,,,,
-kkS-yyyy-00-VC,"Buildings, Areas and Roads",0.0,18.0,1810.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC,,,,,
-kkS-yyyy-00-VC-BU,buildings,0.0,18.0,1810.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-BU,,,,,
-kkS-yyyy-00-VC-FE,fences and gates,0.0,18.0,1810.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-FE,,,,,
-kkS-yyyy-00-VC-GA,green areas,0.0,18.0,1811.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-GA,,,,,
-kkS-yyyy-00-VC-RO,internal roads,0.0,18.0,1810.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-RO,,,,,
-kkS-yyyy-00-IL,Overhead lighting,0.0,18.0,1850.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL,,,,,
-kkS-yyyy-00-IL-LU,luminaries,0.0,18.0,1850.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LU,,,,,
-kkS-yyyy-00-IL-LS,lamps,0.0,18.0,1850.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LS,,,,,
-kkS-yyyy-00-IL-PL,poles,0.0,18.0,1850.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-PL,,,,,
-kkS-yyyy-00-IL-CL,LV cables,0.0,18.0,1850.0,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-CL,,,,,
-kkS-yyyy-00-IT,Communications System,0.0,18.0,1880.0,ALE,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IT,,,,,
-kkS-yyyy-00-SS,Plant Security System,0.0,18.0,1850.0,STS,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS,,,,,
-kkS-yyyy-00-SS-VS,Videosurveillance system,0.0,18.0,1850.0,ALE,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-VS,,,,,
-kkS-yyyy-00-SS-IR,Anti intrusion system,0.0,18.0,1850.0,ALE,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-IR,,,,,
-kkS-yyyy-00-IC,Internal Communications,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IC,,,,,
-kkS-yyyy-00-IC-HT,Telephone Devices,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IC-HT,,,,,
-kkS-yyyy-00-TC,SCADA System,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC,,,,,
-kkS-yyyy-00-TC-LN,Internal LAN,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-LN,,,,,
-kkS-yyyy-00-TC-AP,Scada Devices,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-AP,,,,,
-kkS-yyyy-00-TC-SM,Permanent Met Towers,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM,,,,,
-kkS-yyyy-00-TC-SM-IR,Irradiance,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-IR,,,,,
-kkS-yyyy-00-TC-SM-PR,Ambient Pressure,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-PR,,,,,
-kkS-yyyy-00-TC-SM-TA,Ambient Temperature,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-TA,,,,,
-kkS-yyyy-00-TC-SM-TM,Module Temperature sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-TM,,,,,
-kkS-yyyy-00-TC-SM-HU,Hummidity,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-HU,,,,,
-kkS-yyyy-00-TC-SM-WI,Wind intensity,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-WI,,,,,
-kkS-yyyy-00-TC-SM-WU,Wind direction,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-WU,,,,,
-kkS-yyyy-00-TC-SM-RI,Rain intensity sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-RI,,,,,
-kkS-yyyy-00-TC-HI,Human machine interface,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-HI,,,,,
-kkS-yyyy-00-FF,Fire Protection System,0.0,18.0,1850.0,ALE,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF,,,,,
-kkS-yyyy-00-GG,Grounding grid,0.0,18.0,1840.0,ALE,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-GG,,,,,
-kkS-yyyy-00-AS,Anti rodent system,0.0,18.0,1850.0,ALE,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-AS,,,,,
-kkS-yyyy-00-CL,Underground Cables and Overhead Power Lines,0.0,18.0,1840.0,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL,,,,,
-kkS-yyyy-00-CL-MC,MV cables,0.0,18.0,1840.0,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-MC,,,,,
-kkS-yyyy-00-CL-JC,MV junctions and connections,0.0,18.0,1840.0,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-JC,,,,,
-kkS-yyyy-00-CL-CT,Cable trays,0.0,18.0,1840.0,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-CT,,,,,
-kkS-yyyy-00-Tn,LV/MV Field Transformer,0.0,18.0,1842.0,TRF,FL_TRANSF,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-T[0-9],,,,,
-kkS-yyyy-00-OC,Civil Works,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC,,,,,
-kkS-yyyy-00-OC-WS,Sheaths,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-WS,,,,,
-kkS-yyyy-00-OC-MF,Metallic frame,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MF,,,,,
-kkS-yyyy-00-OC-FO,Foundations,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-FO,,,,,
-kkS-yyyy-00-OC-MR,Dirt Work,0.0,18.0,1810.0,,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MR,,,,,
-kkS-yyyy-ZZ,Systems and Various Equipment,,,,,,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ,,,,,
-kkS-yyyy-ZZ-GE,Generator Group,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-GE,,,,,
-kkS-yyyy-ZZ-VB,Systems and Various Equipment,0.0,18.0,1850.0,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VB,,,,,
-kkS-yyyy-ZZ-VD,Water Network and Sanitation,0.0,18.0,1810.0,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VD,,,,,
-kkS-yyyy-9Z,Logistic tools,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z,,,,,
-kkS-yyyy-9Z-01,Tools for workshop and laboratory,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-01,,,,,
-kkS-yyyy-9Z-02,Office furniture,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-02,,,,,
-kkS-yyyy-9Z-03,Office machinery,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-03,,,,,
-kkS-yyyy-9Z-04,Special vehicles,0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-04,,,,,
-kkS-yyyy-9Z-05,"Computers, printers and other",0.0,18.0,1850.0,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-05,,,,,
-kkS-yyyy-9Z-06,Safety equipment,0.0,18.0,1850.0,,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-06,,,,,
-kkS-yyyy-pp,PCU_<ID_FIELD>,0.0,,,,,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9],,,,,
-kkS-yyyy-pp-OC,Civil Works,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-OC,,,,,
-kkS-yyyy-pp-OC-WS,Sheaths,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-OC-WS,,,,,
-kkS-yyyy-pp-OC-MF,Metallic frame,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-OC-MF,,,,,
-kkS-yyyy-pp-OC-FO,Foundations,0.0,18.0,1810.0,OPC,FL_INFRAST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-OC-FO,,,,,
-kkS-yyyy-pp-OC-MR,Dirt Work,0.0,18.0,1810.0,,FL_INFRAST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-OC-MR,,,,,
-kkS-yyyy-pp-MV,MV Section,0.0,18.0,1840.0,SCC,FL_MVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-MV,,,,,
-kkS-yyyy-pp-MV-CL,MV cables,0.0,18.0,1840.0,ALE,FL_MVSECT,,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-MV-CL,,,,,
-kkS-yyyy-pp-MV-IT,MV Switchgear,0.0,18.0,1840.0,SCC,FL_MVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-MV-IT,,,,,
-kkS-yyyy-pp-MV-PR,MV Protective Systems,0.0,18.0,1840.0,CLE,FL_MVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-MV-PR,,,,,
-kkS-yyyy-pp-MV-SZ,MV On Load Transformer Switch,0.0,18.0,1840.0,,FL_MVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-MV-SZ,,,,,
-kkS-yyyy-pp-CE,Energy Meters,0.0,18.0,1880.0,ALE,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-CE,,,,,
-kkS-yyyy-pp-CE-CA,Auxiliary meter,0.0,18.0,1880.0,ALE,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-CE-CA,,,,,
-kkS-yyyy-pp-CE-CR,AC Revenue Meter,0.0,18.0,1880.0,ALE,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-CE-CR,,,,,
-kkS-yyyy-pp-LV,LV Section,0.0,18.0,1850.0,SBT,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV,,,,,
-kkS-yyyy-pp-LV-CL,LV cables,0.0,18.0,1850.0,ALE,FL_LVSECT,,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-CL,,,,,
-kkS-yyyy-pp-LV-LA,LV Auxiliary section,0.0,18.0,1850.0,SBT,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LA,,,,,
-kkS-yyyy-pp-LV-LA-IT,Auxiliary general breaker,0.0,18.0,1850.0,SCC,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LA-IT,,,,,
-kkS-yyyy-pp-LV-LA-UP,UPS Circuits,0.0,18.0,1850.0,ALI,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LA-UP,,,,,
-kkS-yyyy-pp-LV-LA-UN,Normal AC Circuits,0.0,18.0,1850.0,ALI,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LA-UN,,,,,
-kkS-yyyy-pp-LV-LA-TR,Auxiliary service transformer,0.0,18.0,1850.0,TRF,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LA-TR,,,,,
-kkS-yyyy-pp-LV-LP,Parallel LV section,0.0,18.0,1840.0,SBT,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP,,,,,
-kkS-yyyy-pp-LV-LP-IT,Parallel general breaker,0.0,18.0,1840.0,SCC,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-IT,,,,,
-kkS-yyyy-pp-LV-LP-TK,Metallic tank,0.0,18.0,1840.0,CLE,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-TK,,,,,
-kkS-yyyy-pp-LV-LP-PI,Relay parallel protection,0.0,18.0,1840.0,CLE,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-PI,,,,,
-kkS-yyyy-pp-LV-LP-QG,LV Cabling to SU Transformer,0.0,18.0,1840.0,,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-QG,,,,,
-kkS-yyyy-pp-LV-LP-CO,Consumables,0.0,18.0,1840.0,SCC,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-CO,,,,,
-kkS-yyyy-pp-LV-LP-pp,Inverter nn Output Circuit breaker,0.0,18.0,1840.0,SCC,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-LV-LP-(?!00)[0-9A-Z][0-9],,,,,
-kkS-yyyy-pp-CS,Charging Station,0.0,18.0,1840.0,,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-CS,,,,,
-kkS-yyyy-pp-UP,UPS,0.0,18.0,1850.0,SCC,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-UP,,,,,
-kkS-yyyy-pp-FC,Container HVAC,0.0,18.0,1860.0,SCC,FL_OTHER,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-FC,,,,,
-kkS-yyyy-pp-CL,Underground Cables and Overhead Power Lines,0.0,18.0,1840.0,CLE,FL_POWLINE,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-CL,,,,,
-kkS-yyyy-pp-FP,Floating platform,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-FP,,,,,
-kkS-yyyy-pp-FP-F1,Floating elements,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-FP-F1,,,,,
-kkS-yyyy-pp-FP-F2,Anchors,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-FP-F2,,,,,
-kkS-yyyy-pp-ST,Support Structures,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-ST,,,,,
-kkS-yyyy-pp-ST-S1,Metallic parts,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-ST-S1,,,,,
-kkS-yyyy-pp-ST-S2,Concrete foundations and pillings,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-ST-S2,,,,,
-kkS-yyyy-pp-ST-S4,Grounding system,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-ST-S4,,,,,
-kkS-yyyy-pp-ST-S6,Panel Fixed Metal Structure,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-ST-S6,,,,,
-kkS-yyyy-pp-TT,Tracker System,0.0,18.0,1850.0,,FL_TRACKER,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TT,,,,,
-kkS-yyyy-pp-TS,Arrays anti-tefts system,0.0,18.0,1850.0,ALE,FL_SECSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TS,,,,,
-kkS-yyyy-pp-TS-TA,Active Anti Tefts system,0.0,18.0,1850.0,ALE,FL_SECSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TS-TA,,,,,
-kkS-yyyy-pp-TS-TS,Passive Anti Tefts system,0.0,18.0,1850.0,,FL_SECSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TS-TS,,,,,
-kkS-yyyy-pp-TC,SCADA System,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC,,,,,
-kkS-yyyy-pp-TC-AP,Scada devices,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-AP,,,,,
-kkS-yyyy-pp-TC-LN,Internal LAN,0.0,18.0,1880.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-LN,,,,,
-kkS-yyyy-pp-TC-SM,Met sensors,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM,,,,,
-kkS-yyyy-pp-TC-SM-IR,Irradiance,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-IR,,,,,
-kkS-yyyy-pp-TC-SM-TA,Ambient Temperature,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-TA,,,,,
-kkS-yyyy-pp-TC-SM-TM,Module Temperature sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-TM,,,,,
-kkS-yyyy-pp-TC-SM-PR,Ambient Pressure,0.0,18.0,1880.0,,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-PR,,,,,
-kkS-yyyy-pp-TC-SM-HU,Hummidity,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-HU,,,,,
-kkS-yyyy-pp-TC-SM-WI,Wind intensity,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-WI,,,,,
-kkS-yyyy-pp-TC-SM-WU,Wind direction,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-WU,,,,,
-kkS-yyyy-pp-TC-SM-RI,Rain intensity sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-RI,,,,,
-kkS-yyyy-pp-TC-SM-MS,Met station power supply,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-MS,,,,,
-kkS-yyyy-pp-TC-SM-SO,Soiling sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-SO,,,,,
-kkS-yyyy-pp-TC-SM-WE,Multipurpose weather sensor,0.0,18.0,1880.0,SCA,FL_METSENS,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-WE,,,,,
-kkS-yyyy-pp-TC-SM-BI,Back Irradiance,0.0,18.0,1880.0,,FL_METSENS,,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-TC-SM-BI,,,,,
-kkS-yyyy-pp-Tn,PCU_nn_LV/MV Transformer_n,0.0,18.0,1842.0,TRF,FL_TRANSF,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-T[0-9],,,,,
-kkS-yyyy-pp-Tn-PT,Transformer protective system,0.0,18.0,1842.0,TAM,FL_TRACOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-T[0-9]-PT,,,,,
-kkS-yyyy-pp-nn,PCU_<ID_FIELD>_INV_<ID_INV>,0.0,18.0,1841.0,INV,FL_INVERT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2},,,,,
-kkS-yyyy-pp-nn-Tn,LV/LV Field Transformer,0.0,18.0,1841.0,TRF,FL_LVSECT,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-T[0-9],,,,,
-kkS-yyyy-pp-nn-FU,Fuse Combiner,0.0,18.0,1841.0,,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-FU,,,,,
-kkS-yyyy-pp-nn-D1,DC section,0.0,18.0,1841.0,SDC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-D1,,,,,
-kkS-yyyy-pp-nn-D1-MP,MPPT control system,0.0,18.0,1841.0,SDC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-D1-MP,,,,,
-kkS-yyyy-pp-nn-D1-GI,Ground Impedence system,0.0,18.0,1841.0,SDC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-D1-GI,,,,,
-kkS-yyyy-pp-nn-AC,AC section,0.0,18.0,1841.0,SAC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-AC,,,,,
-kkS-yyyy-pp-nn-AC-GC,Convertion group,0.0,18.0,1841.0,SAC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-AC-GC,,,,,
-kkS-yyyy-pp-nn-AC-IP,Interface Protection System,0.0,18.0,1841.0,SAC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-AC-IP,,,,,
-kkS-yyyy-pp-nn-IS,Isolation Transformer,0.0,18.0,1841.0,SAC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-IS,,,,,
-kkS-yyyy-pp-nn-CO,Consumables,0.0,18.0,1841.0,ALE,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-CO,,,,,
-kkS-yyyy-pp-nn-AR,Cooling Fans,0.0,18.0,1841.0,ALE,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-AR,,,,,
-kkS-yyyy-pp-nn-TK,Metallic tank,0.0,18.0,1841.0,ALE,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-TK,,,,,
-kkS-yyyy-pp-nn-HI,Human machine interface,0.0,18.0,1841.0,SCA,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-HI,,,,,
-kkS-yyyy-pp-nn-DS,DC Disconnect Switch,0.0,18.0,1841.0,SDC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-DS,,,,,
-kkS-yyyy-pp-nn-IT,AC Breaker,0.0,18.0,1841.0,SAC,FL_INVCOMP,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-IT,,,,,
-kkS-yyyy-pp-nn-PS,External Power supply,0.0,18.0,1850.0,,FL_AUXSYST,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-PS,,,,,
-kkS-yyyy-pp-nn-RC,Remote communication,0.0,18.0,1841.0,SCA,FL_AUT&CON,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-RC,,,,,
-kkS-yyyy-pp-nn-nn,Combiner nn,0.0,18.0,1840.0,QUA,FL_COMBINE,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-(?!00)[0-9]{2},,,,,
-kkS-yyyy-pp-nn-nn-01,PV Strings,0.0,18.0,1841.0,,FL_STRING,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-(?!00)[0-9]{2}-01,,,,,
-kkS-yyyy-pp-nn-nn-MS,Panel Fixed Metal Structure,0.0,18.0,1860.0,STS,FL_SUPSTRU,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-(?!00)[0-9]{2}-MS,,,,,
-kkS-yyyy-pp-nn-nn-TT,Tracker System,0.0,18.0,1850.0,,FL_TRACKER,FL00000S,Solar_FL_CentrealInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-(?!00)[0-9A-Z][0-9]-(?!00)[0-9]{2}-(?!00)[0-9]{2}-TT,,,,,
+FL,Description,AM Section,AM Part,AM Component,Element Type,Tech.Obj.SAP CODE,Catalog Profile,Source_File,FL_Lunghezza,FL_RE,Check,Check_RE
+kkS,IsoCode Country + Technology (S),,,,,,,Solar_FL_SubStation_Guideline.csv,1,[A-Z][A-Z]S,,
+kkS-yyyy,Plant code ,,,,,,,Solar_FL_SubStation_Guideline.csv,2,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z],,
+kkS-yyyy-0A,Common Energy Collecting & Delivery System,,,,,,,Solar_FL_SubStation_Guideline.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A,,
+kkS-yyyy-0A-xT,HV/MV Common Transformer,0000,18,1850,,FL_TR_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T,xT_0A_4,[1-9A-Z]T_0A_4
+kkS-yyyy-0A-xT-HV,HV Section,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV,HV_xT_0A_5,HV_[1-9A-Z]T_0A_5
+kkS-yyyy-0A-xT-HV-IT,HV Breaker/Circuit Breaker/HGIS,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-IT,IT_HV_xT_6,IT_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-Rn,HV/MV Protective Relays,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-R[0-9],Rn_HV_xT_6,R[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-Sn,HV Surge Arrester,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-S[0-9],Sn_HV_xT_6,S[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-Dn,HV Disconnector,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-D[0-9],Dn_HV_xT_6,D[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-An,HV M&P Transformers CT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-A[0-9],An_HV_xT_6,A[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-Vn,HV M&P Transformers VT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-V[0-9],Vn_HV_xT_6,V[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-BS,HV Connection,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-BS,BS_HV_xT_6,BS_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-HV-Mn,Energy Meter,0000,18,1850,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-HV-M[0-9],Mn_HV_xT_6,M[0-9]_HV_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn,MV Section,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9],Mn_xT_0A_5,M[0-9]_[1-9A-Z]T_0A_5
+kkS-yyyy-0A-xT-Mn-Iy,MV Circuit Breaker/MV Panel,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-I[0-9A-Z],Iy_Mn_xT_6,I[0-9A-Z]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Dn,MV Disconnector,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-D[0-9],Dn_Mn_xT_6,D[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-An,MV M&P Transformers CT,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-A[0-9],An_Mn_xT_6,A[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Vn,MV M&P Transformers VT,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-V[0-9],Vn_Mn_xT_6,V[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Sn,MV Surge Arrester,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-S[0-9],Sn_Mn_xT_6,S[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-BS,MV Connection,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-BS,BS_Mn_xT_6,BS_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-0n,Line protection,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-0[0-9],0n_Mn_xT_6,0[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Hn,Harmonic Filter,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-H[0-9],Hn_Mn_xT_6,H[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-ZR,Shunt Reactor,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ZR,ZR_Mn_xT_6,ZR_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Zn,Zig Zag Earthing Transformer,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-Z[0-9],Zn_Mn_xT_6,Z[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-ER,Earthing Reactor,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-ER,ER_Mn_xT_6,ER_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Cn,Capacitor Bank MV,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-C[0-9],Cn_Mn_xT_6,C[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-Mn-Mn,Energy Meter,0000,18,1850,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-M[0-9]-M[0-9],Mn_Mn_xT_6,M[0-9]_M[0-9]_[1-9A-Z]T_6
+kkS-yyyy-0A-xT-OC,Civil Works,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]T-OC,OC_xT_0A_5,OC_[1-9A-Z]T_0A_5
+kkS-yyyy-0A-xL,HV Line,0000,18,1850,,FL_LI_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L,xL_0A_4,[1-9A-Z]L_0A_4
+kkS-yyyy-0A-xL-HV,HV Section,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV,HV_xL_0A_5,HV_[1-9A-Z]L_0A_5
+kkS-yyyy-0A-xL-HV-IT,HV Breaker/Circuit Breaker/HGIS,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-IT,IT_HV_xL_6,IT_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-Rn,HV/MV Protective Relays,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-R[0-9],Rn_HV_xL_6,R[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-Dn,HV Disconnector,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-D[0-9],Dn_HV_xL_6,D[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-Sn,HV Surge Arrester,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-S[0-9],Sn_HV_xL_6,S[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-An,HV M&P Transformers CT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-A[0-9],An_HV_xL_6,A[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-Vn,HV M&P Transformers VT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-V[0-9],Vn_HV_xL_6,V[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-BS,HV Connection,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-BS,BS_HV_xL_6,BS_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-HV-Mn,Energy Meter,0000,18,1850,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-HV-M[0-9],Mn_HV_xL_6,M[0-9]_HV_[1-9A-Z]L_6
+kkS-yyyy-0A-xL-OC,Civil Works,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OC,OC_xL_0A_5,OC_[1-9A-Z]L_0A_5
+kkS-yyyy-0A-xL-OL,Overhead Power Lines,0000,18,1850,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-OL,OL_xL_0A_5,OL_[1-9A-Z]L_0A_5
+kkS-yyyy-0A-xL-UL,Underground Power Lines,0000,18,1850,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]L-UL,UL_xL_0A_5,UL_[1-9A-Z]L_0A_5
+kkS-yyyy-0A-xS,HV Busbar,0000,18,1850,,FL_BU_SS,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S,xS_0A_4,[1-9A-Z]S_0A_4
+kkS-yyyy-0A-xS-HV,HV Section,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV,HV_xS_0A_5,HV_[1-9A-Z]S_0A_5
+kkS-yyyy-0A-xS-HV-IT,HV Breaker/Circuit Breaker/HGIS,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-IT,IT_HV_xS_6,IT_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Rn,HV/MV Protective Relays,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-R[0-9],Rn_HV_xS_6,R[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Dn,HV Disconnector,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-D[0-9],Dn_HV_xS_6,D[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Sn,HV Surge Arrester,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-S[0-9],Sn_HV_xS_6,S[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-An,HV M&P Transformers CT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-A[0-9],An_HV_xS_6,A[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Vn,HV M&P Transformers VT,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-V[0-9],Vn_HV_xS_6,V[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Cn,Capacitor Bank HV,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-C[0-9],Cn_HV_xS_6,C[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-BS,HV Connection,0000,18,1850,,FL_HVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-BS,BS_HV_xS_6,BS_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-HV-Mn,Energy Meter,0000,18,1850,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-HV-M[0-9],Mn_HV_xS_6,M[0-9]_HV_[1-9A-Z]S_6
+kkS-yyyy-0A-xS-OC,Civil Works,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]S-OC,OC_xS_0A_5,OC_[1-9A-Z]S_0A_5
+kkS-yyyy-0A-LA,LV Auxiliary services power distribution,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA,LA_0A_4,LA_0A_4
+kkS-yyyy-0A-LA-LP,DC LV Panel - uninterrupted,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP,LP_LA_0A_5,LP_LA_0A_5
+kkS-yyyy-0A-LA-LP-nn,DC Low Voltage Panel nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LP-(?!00)[0-9]{2},nn_LP_LA_6,(?!00)[0-9]{2}_LP_LA_6
+kkS-yyyy-0A-LA-LN,AC LV Panel - normal and emergency p.s.,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN,LN_LA_0A_5,LN_LA_0A_5
+kkS-yyyy-0A-LA-LN-nn,AC Low Voltage Panel nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LN-(?!00)[0-9]{2},nn_LN_LA_6,(?!00)[0-9]{2}_LN_LA_6
+kkS-yyyy-0A-LA-LU,AC LV Panel - uninterrupted ,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU,LU_LA_0A_5,LU_LA_0A_5
+kkS-yyyy-0A-LA-LU-nn,AC Low Voltage Panel nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-LU-(?!00)[0-9]{2},nn_LU_LA_6,(?!00)[0-9]{2}_LU_LA_6
+kkS-yyyy-0A-LA-SB,LV Switchboard,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB,SB_LA_0A_5,SB_LA_0A_5
+kkS-yyyy-0A-LA-SB-nn,LV Switchboard nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SB-(?!00)[0-9]{2},nn_SB_LA_6,(?!00)[0-9]{2}_SB_LA_6
+kkS-yyyy-0A-LA-SG,LV Switchgear,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG,SG_LA_0A_5,SG_LA_0A_5
+kkS-yyyy-0A-LA-SG-nn,LV Switchgear nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-LA-SG-(?!00)[0-9]{2},nn_SG_LA_6,(?!00)[0-9]{2}_SG_LA_6
+kkS-yyyy-0A-SA,Auxiliary service equipments,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA,SA_0A_4,SA_0A_4
+kkS-yyyy-0A-SA-DG,Diesel Generator,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-DG,DG_SA_0A_5,DG_SA_0A_5
+kkS-yyyy-0A-SA-EP,External Power Supply,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-EP,EP_SA_0A_5,EP_SA_0A_5
+kkS-yyyy-0A-SA-BT,Batteries Bank,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT,BT_SA_0A_5,BT_SA_0A_5
+kkS-yyyy-0A-SA-BT-nn,Batteries Bank nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-BT-(?!00)[0-9]{2},nn_BT_SA_6,(?!00)[0-9]{2}_BT_SA_6
+kkS-yyyy-0A-SA-TR,Auxiliary service Transformer,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR,TR_SA_0A_5,TR_SA_0A_5
+kkS-yyyy-0A-SA-TR-nn,Transformer nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TR-(?!00)[0-9]{2},nn_TR_SA_6,(?!00)[0-9]{2}_TR_SA_6
+kkS-yyyy-0A-SA-TS,Automatic Transfer Switch,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS,TS_SA_0A_5,TS_SA_0A_5
+kkS-yyyy-0A-SA-TS-nn,Automatic Transfer Switch nn,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-TS-(?!00)[0-9]{2},nn_TS_SA_6,(?!00)[0-9]{2}_TS_SA_6
+kkS-yyyy-0A-SA-UP,UPS,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-UP,UP_SA_0A_5,UP_SA_0A_5
+kkS-yyyy-0A-SA-FC,HVAC,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-SA-FC,FC_SA_0A_5,FC_SA_0A_5
+kkS-yyyy-0A-RE,Rectifier AC/DC,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE,RE_0A_4,RE_0A_4
+kkS-yyyy-0A-RE-nn,Rectifier AC/DC,0000,18,1850,,FL_AUXSYST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-RE-(?!00)[0-9]{2},nn_RE_0A_5,(?!00)[0-9]{2}_RE_0A_5
+kkS-yyyy-0A-xM,MV Feeders Connection,0000,18,1850,,FL_MVFEED,FL00000S,Solar_FL_SubStation_Guideline.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M,xM_0A_4,[1-9A-Z]M_0A_4
+kkS-yyyy-0A-xM-MA,MV Section,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA,MA_xM_0A_5,MA_[1-9A-Z]M_0A_5
+kkS-yyyy-0A-xM-MA-In,MV Circuit Breaker,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-I[0-9],In_MA_xM_6,I[0-9]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Dx,MV Disconnector,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-D[1-9A-Z],Dx_MA_xM_6,D[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Ax,MV M&P Transformers CT,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-A[1-9A-Z],Ax_MA_xM_6,A[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Vx,MV M&P Transformers VT,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-V[1-9A-Z],Vx_MA_xM_6,V[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Sx,MV Surge Arrester,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-S[1-9A-Z],Sx_MA_xM_6,S[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-BS,MV Connection,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-BS,BS_MA_xM_6,BS_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-0x,Line protection,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-0[1-9A-Z],0x_MA_xM_6,0[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Hx,Harmonic Filter,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-H[1-9A-Z],Hx_MA_xM_6,H[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-ZR,Shunt Reactor,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ZR,ZR_MA_xM_6,ZR_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Zn,Zig Zag Earthing Transformer,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-Z[0-9],Zn_MA_xM_6,Z[0-9]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-ER,Earthing Reactor,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-ER,ER_MA_xM_6,ER_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Cx,Capacitor Bank MV,0000,18,1850,,FL_MVSECT,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-C[1-9A-Z],Cx_MA_xM_6,C[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-MA-Mx,Energy Meter,0000,18,1850,,FL_AUT&CON,FL00000S,Solar_FL_SubStation_Guideline.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-MA-M[1-9A-Z],Mx_MA_xM_6,M[1-9A-Z]_MA_[1-9A-Z]M_6
+kkS-yyyy-0A-xM-OC,Civil Works,0000,18,1850,,FL_INFRAST,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OC,OC_xM_0A_5,OC_[1-9A-Z]M_0A_5
+kkS-yyyy-0A-xM-OL,Overhead Power Lines,0000,18,1850,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-OL,OL_xM_0A_5,OL_[1-9A-Z]M_0A_5
+kkS-yyyy-0A-xM-UL,Underground Power Lines,0000,18,1850,,FL_POWLINE,FL00000S,Solar_FL_SubStation_Guideline.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-0A-[1-9A-Z]M-UL,UL_xM_0A_5,UL_[1-9A-Z]M_0A_5
+kkS-yyyy-00,Common Infrastructures and services,,,,,,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00,,
+kkS-yyyy-00-PV,PV system,0000,18,1860,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV,PV_00_4,PV_00_4
+kkS-yyyy-00-PV-CL,wiring and cabling,0000,18,1860,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-CL,CL_PV_00_5,CL_PV_00_5
+kkS-yyyy-00-PV-SC,wiring and solar connections,0000,18,1860,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-SC,SC_PV_00_5,SC_PV_00_5
+kkS-yyyy-00-PV-CC,connectors,0000,18,1860,CLE,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-CC,CC_PV_00_5,CC_PV_00_5
+kkS-yyyy-00-PV-SM,solar modules,0000,18,1860,SPV,FL_DCSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-PV-SM,SM_PV_00_5,SM_PV_00_5
+kkS-yyyy-00-VC,"Buildings, Areas and Roads",0000,18,1810,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC,VC_00_4,VC_00_4
+kkS-yyyy-00-VC-BU,buildings,0000,18,1810,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-BU,BU_VC_00_5,BU_VC_00_5
+kkS-yyyy-00-VC-FE,fences and gates,0000,18,1810,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-FE,FE_VC_00_5,FE_VC_00_5
+kkS-yyyy-00-VC-GA,green areas,0000,18,1811,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-GA,GA_VC_00_5,GA_VC_00_5
+kkS-yyyy-00-VC-RO,internal roads,0000,18,1810,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-VC-RO,RO_VC_00_5,RO_VC_00_5
+kkS-yyyy-00-IL,Overhead lighting,0000,18,1850,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL,IL_00_4,IL_00_4
+kkS-yyyy-00-IL-LU,luminaries,0000,18,1850,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LU,LU_IL_00_5,LU_IL_00_5
+kkS-yyyy-00-IL-LS,lamps,0000,18,1850,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-LS,LS_IL_00_5,LS_IL_00_5
+kkS-yyyy-00-IL-PL,poles,0000,18,1850,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-PL,PL_IL_00_5,PL_IL_00_5
+kkS-yyyy-00-IL-CL,LV cables,0000,18,1850,ALE,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IL-CL,CL_IL_00_5,CL_IL_00_5
+kkS-yyyy-00-IT,Communications System,0000,18,1880,ALE,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IT,IT_00_4,IT_00_4
+kkS-yyyy-00-SS,Plant Security System,0000,18,1850,STS,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS,SS_00_4,SS_00_4
+kkS-yyyy-00-SS-VS,Videosurveillance system,0000,18,1850,ALE,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-VS,VS_SS_00_5,VS_SS_00_5
+kkS-yyyy-00-SS-IR,Anti intrusion system,0000,18,1850,ALE,FL_SECSYST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-SS-IR,IR_SS_00_5,IR_SS_00_5
+kkS-yyyy-00-IC,Internal Communications,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IC,IC_00_4,IC_00_4
+kkS-yyyy-00-IC-HT,Telephone Devices,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-IC-HT,HT_IC_00_5,HT_IC_00_5
+kkS-yyyy-00-TC,SCADA System,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC,TC_00_4,TC_00_4
+kkS-yyyy-00-TC-LN,Internal LAN,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-LN,LN_TC_00_5,LN_TC_00_5
+kkS-yyyy-00-TC-AP,Scada Devices,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-AP,AP_TC_00_5,AP_TC_00_5
+kkS-yyyy-00-TC-SM,Permanent Met Towers,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM,SM_TC_00_5,SM_TC_00_5
+kkS-yyyy-00-TC-SM-IR,Irradiance,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-IR,IR_SM_TC_6,IR_SM_TC_6
+kkS-yyyy-00-TC-SM-PR,Ambient Pressure,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-PR,PR_SM_TC_6,PR_SM_TC_6
+kkS-yyyy-00-TC-SM-TA,Ambient Temperature,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-TA,TA_SM_TC_6,TA_SM_TC_6
+kkS-yyyy-00-TC-SM-TM,Module Temperature sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-TM,TM_SM_TC_6,TM_SM_TC_6
+kkS-yyyy-00-TC-SM-HU,Hummidity,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-HU,HU_SM_TC_6,HU_SM_TC_6
+kkS-yyyy-00-TC-SM-WI,Wind intensity,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-WI,WI_SM_TC_6,WI_SM_TC_6
+kkS-yyyy-00-TC-SM-WU,Wind direction,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-WU,WU_SM_TC_6,WU_SM_TC_6
+kkS-yyyy-00-TC-SM-RI,Rain intensity sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_Common_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-SM-RI,RI_SM_TC_6,RI_SM_TC_6
+kkS-yyyy-00-TC-HI,Human machine interface,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-TC-HI,HI_TC_00_5,HI_TC_00_5
+kkS-yyyy-00-FF,Fire Protection System,0000,18,1850,ALE,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-FF,FF_00_4,FF_00_4
+kkS-yyyy-00-GG,Grounding grid,0000,18,1840,ALE,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-GG,GG_00_4,GG_00_4
+kkS-yyyy-00-AS,Anti rodent system,0000,18,1850,ALE,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-AS,AS_00_4,AS_00_4
+kkS-yyyy-00-CL,Underground Cables and Overhead Power Lines,0000,18,1840,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL,CL_00_4,CL_00_4
+kkS-yyyy-00-CL-MC,MV cables,0000,18,1840,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-MC,MC_CL_00_5,MC_CL_00_5
+kkS-yyyy-00-CL-JC,MV junctions and connections,0000,18,1840,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-JC,JC_CL_00_5,JC_CL_00_5
+kkS-yyyy-00-CL-CT,Cable trays,0000,18,1840,CLE,FL_POWLINE,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-CL-CT,CT_CL_00_5,CT_CL_00_5
+kkS-yyyy-00-Tn,LV/MV Field Transformer,0000,18,1842,TRF,FL_TRANSF,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-T[0-9],Tn_00_4,T[0-9]_00_4
+kkS-yyyy-00-OC,Civil Works,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC,OC_00_4,OC_00_4
+kkS-yyyy-00-OC-WS,Sheaths,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-WS,WS_OC_00_5,WS_OC_00_5
+kkS-yyyy-00-OC-MF,Metallic frame,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MF,MF_OC_00_5,MF_OC_00_5
+kkS-yyyy-00-OC-FO,Foundations,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-FO,FO_OC_00_5,FO_OC_00_5
+kkS-yyyy-00-OC-MR,Dirt Work,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MR,MR_OC_00_5,MR_OC_00_5
+kkS-yyyy-ZZ,Systems and Various Equipment,,,,,,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ,,
+kkS-yyyy-ZZ-GE,Generator Group,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-GE,GE_ZZ_4,GE_ZZ_4
+kkS-yyyy-ZZ-VB,Systems and Various Equipment,0000,18,1850,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VB,VB_ZZ_4,VB_ZZ_4
+kkS-yyyy-ZZ-VD,Water Network and Sanitation,0000,18,1810,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VD,VD_ZZ_4,VD_ZZ_4
+kkS-yyyy-9Z,Logistic tools,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z,,
+kkS-yyyy-9Z-01,Tools for workshop and laboratory,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-01,01_9Z_4,01_9Z_4
+kkS-yyyy-9Z-02,Office furniture,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-02,02_9Z_4,02_9Z_4
+kkS-yyyy-9Z-03,Office machinery,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-03,03_9Z_4,03_9Z_4
+kkS-yyyy-9Z-04,Special vehicles,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-04,04_9Z_4,04_9Z_4
+kkS-yyyy-9Z-05,"Computers, printers and other",0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-05,05_9Z_4,05_9Z_4
+kkS-yyyy-9Z-06,Safety equipment,0000,18,1850,,FL_SAFSYST,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-06,06_9Z_4,06_9Z_4
+kkS-yyyy-yn,CT_<ID_FIELD>,0000,,,,,FL00000S,Solar_FL_StringInv_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9],,
+kkS-yyyy-yn-OC,Civil Works,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-OC,OC_yn_4,OC_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-OC-WS,Sheaths,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-OC-WS,WS_OC_yn_5,WS_OC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-OC-MF,Metallic frame,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-OC-MF,MF_OC_yn_5,MF_OC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-OC-FO,Foundations,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-OC-FO,FO_OC_yn_5,FO_OC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-OC-MR,Dirt Work,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-OC-MR,MR_OC_yn_5,MR_OC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-MV,MV Section,0000,18,1840,SCC,FL_MVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-MV,MV_yn_4,MV_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-MV-CL,MV cables,0000,18,1840,ALE,FL_MVSECT,,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-MV-CL,CL_MV_yn_5,CL_MV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-MV-IT,MV Switchgear,0000,18,1840,SCC,FL_MVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-MV-IT,IT_MV_yn_5,IT_MV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-MV-PR,MV Protective Systems,0000,18,1840,CLE,FL_MVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-MV-PR,PR_MV_yn_5,PR_MV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-MV-SZ,MV On Load Transformer Switch,0000,18,1840,,FL_MVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-MV-SZ,SZ_MV_yn_5,SZ_MV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-CE,Energy Meters,0000,18,1880,ALE,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-CE,CE_yn_4,CE_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-CE-CA,Auxiliary meter,0000,18,1880,ALE,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-CE-CA,CA_CE_yn_5,CA_CE_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-CE-CR,AC Revenue Meter,0000,18,1880,ALE,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-CE-CR,CR_CE_yn_5,CR_CE_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-LV,LV Section,0000,18,1850,SBT,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV,LV_yn_4,LV_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-LV-CL,LV cables,0000,18,1850,ALE,FL_LVSECT,,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-CL,CL_LV_yn_5,CL_LV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-LV-LA,LV Auxiliary section,0000,18,1850,SBT,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LA,LA_LV_yn_5,LA_LV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-LV-LA-IT,Auxiliary general breaker,0000,18,1850,SCC,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LA-IT,IT_LA_LV_6,IT_LA_LV_6
+kkS-yyyy-yn-LV-LA-UP,UPS Circuits,0000,18,1850,ALI,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LA-UP,UP_LA_LV_6,UP_LA_LV_6
+kkS-yyyy-yn-LV-LA-UN,Normal AC Circuits,0000,18,1850,ALI,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LA-UN,UN_LA_LV_6,UN_LA_LV_6
+kkS-yyyy-yn-LV-LA-TR,Auxiliary service transformer,0000,18,1850,TRF,FL_AUXSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LA-TR,TR_LA_LV_6,TR_LA_LV_6
+kkS-yyyy-yn-LV-LP,Parallel LV section,0000,18,1840,SBT,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP,LP_LV_yn_5,LP_LV_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-LV-LP-IT,Parallel general breaker,0000,18,1840,SCC,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-IT,IT_LP_LV_6,IT_LP_LV_6
+kkS-yyyy-yn-LV-LP-TK,Metallic tank,0000,18,1840,CLE,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-TK,TK_LP_LV_6,TK_LP_LV_6
+kkS-yyyy-yn-LV-LP-PI,Relay parallel protection,0000,18,1840,CLE,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-PI,PI_LP_LV_6,PI_LP_LV_6
+kkS-yyyy-yn-LV-LP-QG,LV Cabling to SU Transformer,0000,18,1840,,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-QG,QG_LP_LV_6,QG_LP_LV_6
+kkS-yyyy-yn-LV-LP-CO,Consumables,0000,18,1840,SCC,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-CO,CO_LP_LV_6,CO_LP_LV_6
+kkS-yyyy-yn-LV-LP-nn,Inverter nn Output Circuit breaker,0000,18,1840,SCC,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-LV-LP-(?!00)[0-9]{2},nn_LP_LV_6,(?!00)[0-9]{2}_LP_LV_6
+kkS-yyyy-yn-CS,Charging Station,0000,18,1840,,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-CS,CS_yn_4,CS_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-UP,UPS,0000,18,1850,SCC,FL_LVSECT,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-UP,UP_yn_4,UP_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-FC,Container HVAC,0000,18,1860,SCC,FL_OTHER,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-FC,FC_yn_4,FC_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-CL,Underground Cables and Overhead Power Lines,0000,18,1840,CLE,FL_POWLINE,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-CL,CL_yn_4,CL_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-FP,Floating platform,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-FP,FP_yn_4,FP_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-FP-F1,Floating elements,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-FP-F1,F1_FP_yn_5,F1_FP_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-FP-F2,Anchors,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-FP-F2,F2_FP_yn_5,F2_FP_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-ST,Support Structures,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-ST,ST_yn_4,ST_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-ST-S1,Metallic parts,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-ST-S1,S1_ST_yn_5,S1_ST_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-ST-S2,Concrete foundations and pillings,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-ST-S2,S2_ST_yn_5,S2_ST_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-ST-S4,Grounding system,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-ST-S4,S4_ST_yn_5,S4_ST_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-ST-S6,Panel Fixed Metal Structure,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-ST-S6,S6_ST_yn_5,S6_ST_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TT,Tracker System,0000,18,1850,,FL_TRACKER,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TT,TT_yn_4,TT_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-TS,Arrays anti-tefts system,0000,18,1850,ALE,FL_SECSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TS,TS_yn_4,TS_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-TS-TA,Active Anti Tefts system,0000,18,1850,ALE,FL_SECSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TS-TA,TA_TS_yn_5,TA_TS_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TS-TS,Passive Anti Tefts system,0000,18,1850,,FL_SECSYST,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TS-TS,TS_TS_yn_5,TS_TS_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TC,SCADA System,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC,TC_yn_4,TC_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-TC-AP,Scada devices,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-AP,AP_TC_yn_5,AP_TC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TC-LN,Internal LAN,0000,18,1880,SCA,FL_AUT&CON,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-LN,LN_TC_yn_5,LN_TC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TC-SM,Met sensors,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM,SM_TC_yn_5,SM_TC_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-TC-SM-IR,Irradiance,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-IR,IR_SM_TC_6,IR_SM_TC_6
+kkS-yyyy-yn-TC-SM-TA,Ambient Temperature,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-TA,TA_SM_TC_6,TA_SM_TC_6
+kkS-yyyy-yn-TC-SM-TM,Module Temperature sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-TM,TM_SM_TC_6,TM_SM_TC_6
+kkS-yyyy-yn-TC-SM-PR,Ambient Pressure,0000,18,1880,,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-PR,PR_SM_TC_6,PR_SM_TC_6
+kkS-yyyy-yn-TC-SM-HU,Hummidity,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-HU,HU_SM_TC_6,HU_SM_TC_6
+kkS-yyyy-yn-TC-SM-WI,Wind intensity,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-WI,WI_SM_TC_6,WI_SM_TC_6
+kkS-yyyy-yn-TC-SM-WU,Wind direction,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-WU,WU_SM_TC_6,WU_SM_TC_6
+kkS-yyyy-yn-TC-SM-RI,Rain intensity sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-RI,RI_SM_TC_6,RI_SM_TC_6
+kkS-yyyy-yn-TC-SM-MS,Met station power supply,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-MS,MS_SM_TC_6,MS_SM_TC_6
+kkS-yyyy-yn-TC-SM-SO,Soiling sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-SO,SO_SM_TC_6,SO_SM_TC_6
+kkS-yyyy-yn-TC-SM-WE,Multipurpose weather sensor,0000,18,1880,SCA,FL_METSENS,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-WE,WE_SM_TC_6,WE_SM_TC_6
+kkS-yyyy-yn-TC-SM-BI,Back Irradiance,0000,18,1880,,FL_METSENS,,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-TC-SM-BI,BI_SM_TC_6,BI_SM_TC_6
+kkS-yyyy-yn-Tn,CT_nn_LV/MV Transformer_n,0000,18,1842,TRF,FL_TRANSF,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-T[0-9],Tn_yn_4,T[0-9]_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-Tn-PT,Transformer protective system,0000,18,1842,TAM,FL_TRACOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-T[0-9]-PT,PT_Tn_yn_5,PT_T[0-9]_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-Px,CT_<ID_FIELD>_LV/AC StrInv Panel_<ID_PANEL>,0000,18,1841,,FL_SINVPAN,FL00000S,Solar_FL_StringInv_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z],Px_yn_4,P[1-9A-Z]_[0-9A-Z][0-9]_4
+kkS-yyyy-yn-Px-nn,CT_<ID_FIELD>_INV_<ID_PANEL>.<ID_INV>,0000,18,1841,QUA,FL_INVERT,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2},nn_Px_yn_5,(?!00)[0-9]{2}_P[1-9A-Z]_[0-9A-Z][0-9]_5
+kkS-yyyy-yn-Px-nn-DS,Disconnect Switches,0000,18,1840,SDC,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-DS,DS_nn_Px_6,DS_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-MP,DC MPPT control system,0000,18,1841,,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-MP,MP_nn_Px_6,MP_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-GI,DC Ground Impedence system,0000,18,1841,,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-GI,GI_nn_Px_6,GI_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-GC,AC Convertion group,0000,18,1841,,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-GC,GC_nn_Px_6,GC_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-IP,AC Interface Protection System,0000,18,1841,,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-IP,IP_nn_Px_6,IP_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-MS,Panel Fixed Metal Structure,0000,18,1860,STS,FL_SUPSTRU,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-MS,MS_nn_Px_6,MS_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-01,PV Strings,0000,18,1841,,FL_STRING,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-01,01_nn_Px_6,01_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-nn-TT,Tracker System,0000,18,1850,,FL_TRACKER,FL00000S,Solar_FL_StringInv_GuideLine.csv,6,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-(?!00)[0-9]{2}-TT,TT_nn_Px_6,TT_(?!00)[0-9]{2}_P[1-9A-Z]_6
+kkS-yyyy-yn-Px-0z,AC Switch,0000,18,1841,,FL_INVCOMP,FL00000S,Solar_FL_StringInv_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-[0-9A-Z][0-9]-P[1-9A-Z]-0[B-Z],0z_Px_yn_5,0[B-Z]_P[1-9A-Z]_[0-9A-Z][0-9]_5
