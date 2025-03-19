@@ -524,28 +524,56 @@ class RegularExpressionsTools:
             missing_cols = [col for col in required_regex_cols if col not in regex_df.columns]
             if missing_cols:
                 raise ValueError(f"Colonne mancanti in regex_df: {', '.join(missing_cols)}")
-                
+
+            # Verifico la presenza della colonna FL_Lunghezza
+            if 'FL_Lunghezza' not in regex_df.columns:
+                # Se non esiste genero un errore
+                raise ValueError("La colonna 'FL_Lunghezza' non è presente nel DataFrame delle espressioni regolari")
+            
             # Parsing dell'intestazione per ottenere i nomi delle colonne
             column_names = [col.strip() for col in header_string.split(';')]
-               
-            # Creo un DataFrame vuoto con le colonne specificate
-            result_df = pd.DataFrame(columns=column_names)
             
-            # Dizionario per memorizzare le espressioni regolari compilate
-            compiled_patterns = {}
+            # Dizionario per memorizzare le espressioni regolari compilate, organizzate per lunghezza
+            # Questo ottimizza la ricerca successiva
+            compiled_patterns_by_length = {}
+
             for _, row in regex_df.iterrows():
                 pattern = row['Check_RE']
+
+                # Estraggo la lunghezza della FL associata a questa regex
                 try:
-                    compiled_patterns[pattern] = {
+                    fl_length = row['FL_Lunghezza']
+                    
+                    # Converto in modo sicuro la lunghezza in intero
+                    if fl_length is not None:
+                        if isinstance(fl_length, (int, float)):
+                            fl_length = int(fl_length)
+                        elif isinstance(fl_length, str) and fl_length.strip().isdigit():
+                            fl_length = int(fl_length)
+                        else:
+                            # Se non convertibile, uso None come chiave
+                            fl_length = None
+                except:
+                    fl_length = None
+
+                try:
+                    regex_data = {
                         'regex': re.compile(pattern),
                         'AM Section': row['AM Section'],
                         'AM Part': row['AM Part'],
                         'AM Component': row['AM Component'],
                         'Element Type': row['Element Type']
                     }
+                    # Inizializzo il dizionario per questa lunghezza se non esiste
+                    if fl_length not in compiled_patterns_by_length:
+                        compiled_patterns_by_length[fl_length] = {}
+                        
+                    # Aggiungo il pattern al dizionario per questa lunghezza
+                    compiled_patterns_by_length[fl_length][pattern] = regex_data
+                
                 except re.error as e:
                     raise ValueError(f"Espressione regolare non valida '{pattern}': {str(e)}")
-            
+
             # Lista per raccogliere le righe valide
             valid_rows = []
             
@@ -556,22 +584,37 @@ class RegularExpressionsTools:
                     continue
                     
                 # Estraggo l'ultimo carattere che indica la lunghezza della FL
-                fl_length = code[-1]
+                fl_length_char = code[-1]
                 
                 # Verifico che sia un numero
-                if not fl_length.isdigit():
-                    raise ValueError(f"La lunghezza {fl_length} non corrisponde a ad un numerico valore valido")
-                else:
-                    fl_length = int(fl_length)
-                    
+                if not fl_length_char.isdigit():
+                    raise ValueError(f"La lunghezza {fl_length_char} non corrisponde a un valore numerico valido")
+                
+                # Converto in intero
+                fl_length = int(fl_length_char)
+                
                 # Verifico se il codice corrisponde a qualche espressione regolare
+                # Usando solo quelle con la lunghezza corrispondente
                 matching_patterns = []
                 matching_pattern_data = {}
                 
-                for pattern, data in compiled_patterns.items():
-                    if data['regex'].fullmatch(code):
-                        matching_patterns.append(pattern)
-                        matching_pattern_data = data
+                # Ottengo il sottoinsieme di pattern per questa lunghezza
+                patterns_for_length = compiled_patterns_by_length.get(fl_length, {})
+                
+                # Se non ci sono pattern per questa lunghezza, provo con tutte le regex
+                if not patterns_for_length:
+                    # Cerco in tutti i pattern (fallback)
+                    for length, patterns in compiled_patterns_by_length.items():
+                        for pattern, data in patterns.items():
+                            if data['regex'].fullmatch(code):
+                                matching_patterns.append(pattern)
+                                matching_pattern_data = data
+                else:
+                    # Verifico solo i pattern con la lunghezza corrispondente
+                    for pattern, data in patterns_for_length.items():
+                        if data['regex'].fullmatch(code):
+                            matching_patterns.append(pattern)
+                            matching_pattern_data = data
                 
                 # Verifico i risultati della corrispondenza
                 if not matching_patterns:
@@ -589,7 +632,7 @@ class RegularExpressionsTools:
                 if ((fl_length >= 3) and (fl_length <= 6)):
                     new_row['VALUE'] = code_parts[0]
                     new_row['SUB_VALUE'] = "" if fl_length == 3 else code_parts[1]
-                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]
+                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]                
                     
                     # Imposto i valori fissi
                     new_row['TPLKZ'] = "Z-RS" + technology
@@ -602,7 +645,7 @@ class RegularExpressionsTools:
                     new_row['CODE_SEZ_PM'] = matching_pattern_data['AM Section']
                     new_row['CODE_SIST'] = matching_pattern_data['AM Part']
                     new_row['CODE_PARTE'] = matching_pattern_data['AM Component']
-                    new_row['TIPO_ELEM'] = matching_pattern_data['Element Type']
+                    new_row['TIPO_ELEM'] = matching_pattern_data.get('Element Type', '')  # Uso get per gestire colonne mancanti
                     
                     valid_rows.append(new_row)
             
@@ -610,9 +653,8 @@ class RegularExpressionsTools:
             if not valid_rows:
                 raise ValueError("Nessun codice valido trovato")
             
-            # Creo il DataFrame finale
-            for row in valid_rows:
-                result_df = pd.concat([result_df, pd.DataFrame([row])], ignore_index=True)
+            # Creo il DataFrame finale in modo efficiente, specificando le colonne
+            result_df = pd.DataFrame(valid_rows, columns=column_names)
                 
             return result_df
                 
@@ -668,30 +710,58 @@ class RegularExpressionsTools:
                 raise ValueError("La colonna 'Check_RE' non è presente nel DataFrame delle espressioni regolari")
             
             # Verifico la presenza delle colonne necessarie nel DataFrame regex
-            required_regex_cols = ['Tech.Obj.SAP CODE', 'Catalog Profile']
+            required_regex_cols = ['AM Section', 'AM Part', 'AM Component']
             missing_cols = [col for col in required_regex_cols if col not in regex_df.columns]
             if missing_cols:
                 raise ValueError(f"Colonne mancanti in regex_df: {', '.join(missing_cols)}")
-                
+
+            # Verifico la presenza della colonna FL_Lunghezza
+            if 'FL_Lunghezza' not in regex_df.columns:
+                # Se non esiste genero un errore
+                raise ValueError("La colonna 'FL_Lunghezza' non è presente nel DataFrame delle espressioni regolari")
+            
             # Parsing dell'intestazione per ottenere i nomi delle colonne
             column_names = [col.strip() for col in header_string.split(';')]
-               
-            # Creo un DataFrame vuoto con le colonne specificate
-            result_df = pd.DataFrame(columns=column_names)
-            
-            # Dizionario per memorizzare le espressioni regolari compilate
-            compiled_patterns = {}
+                        
+            # Dizionario per memorizzare le espressioni regolari compilate, organizzate per lunghezza
+            # Questo ottimizza la ricerca successiva
+            compiled_patterns_by_length = {}
+
             for _, row in regex_df.iterrows():
                 pattern = row['Check_RE']
+
+                # Estraggo la lunghezza della FL associata a questa regex
                 try:
-                    compiled_patterns[pattern] = {
+                    fl_length = row['FL_Lunghezza']
+                    
+                    # Converto in modo sicuro la lunghezza in intero
+                    if fl_length is not None:
+                        if isinstance(fl_length, (int, float)):
+                            fl_length = int(fl_length)
+                        elif isinstance(fl_length, str) and fl_length.strip().isdigit():
+                            fl_length = int(fl_length)
+                        else:
+                            # Se non convertibile, uso None come chiave
+                            fl_length = None
+                except:
+                    fl_length = None
+
+                try:
+                    regex_data = {
                         'regex': re.compile(pattern),
                         'Tech.Obj.SAP CODE': row['Tech.Obj.SAP CODE'],
                         'Catalog Profile': row['Catalog Profile']
                     }
+                    # Inizializzo il dizionario per questa lunghezza se non esiste
+                    if fl_length not in compiled_patterns_by_length:
+                        compiled_patterns_by_length[fl_length] = {}
+                        
+                    # Aggiungo il pattern al dizionario per questa lunghezza
+                    compiled_patterns_by_length[fl_length][pattern] = regex_data
+                
                 except re.error as e:
                     raise ValueError(f"Espressione regolare non valida '{pattern}': {str(e)}")
-            
+
             # Lista per raccogliere le righe valide
             valid_rows = []
             
@@ -702,22 +772,37 @@ class RegularExpressionsTools:
                     continue
                     
                 # Estraggo l'ultimo carattere che indica la lunghezza della FL
-                fl_length = code[-1]
+                fl_length_char = code[-1]
                 
                 # Verifico che sia un numero
-                if not fl_length.isdigit():
-                    raise ValueError(f"La lunghezza {fl_length} non corrisponde a ad un numerico valore valido")
-                else:
-                    fl_length = int(fl_length)
-                    
+                if not fl_length_char.isdigit():
+                    raise ValueError(f"La lunghezza {fl_length_char} non corrisponde a un valore numerico valido")
+                
+                # Converto in intero
+                fl_length = int(fl_length_char)
+                
                 # Verifico se il codice corrisponde a qualche espressione regolare
+                # Usando solo quelle con la lunghezza corrispondente
                 matching_patterns = []
                 matching_pattern_data = {}
                 
-                for pattern, data in compiled_patterns.items():
-                    if data['regex'].fullmatch(code):
-                        matching_patterns.append(pattern)
-                        matching_pattern_data = data
+                # Ottengo il sottoinsieme di pattern per questa lunghezza
+                patterns_for_length = compiled_patterns_by_length.get(fl_length, {})
+                
+                # Se non ci sono pattern per questa lunghezza, provo con tutte le regex
+                if not patterns_for_length:
+                    # Cerco in tutti i pattern (fallback)
+                    for length, patterns in compiled_patterns_by_length.items():
+                        for pattern, data in patterns.items():
+                            if data['regex'].fullmatch(code):
+                                matching_patterns.append(pattern)
+                                matching_pattern_data = data
+                else:
+                    # Verifico solo i pattern con la lunghezza corrispondente
+                    for pattern, data in patterns_for_length.items():
+                        if data['regex'].fullmatch(code):
+                            matching_patterns.append(pattern)
+                            matching_pattern_data = data
                 
                 # Verifico i risultati della corrispondenza
                 if not matching_patterns:
@@ -754,9 +839,8 @@ class RegularExpressionsTools:
             if not valid_rows:
                 raise ValueError("Nessun codice valido trovato")
             
-            # Creo il DataFrame finale
-            for row in valid_rows:
-                result_df = pd.concat([result_df, pd.DataFrame([row])], ignore_index=True)
+            # Creo il DataFrame finale in modo efficiente, specificando le colonne
+            result_df = pd.DataFrame(valid_rows, columns=column_names)
                 
             return result_df
                 

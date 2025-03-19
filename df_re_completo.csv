@@ -144,8 +144,8 @@ kkS-yyyy-00-OC-FO,Foundations,0000,18,1810,OPC,FL_INFRAST,FL00000S,Solar_FL_Comm
 kkS-yyyy-00-OC-MR,Dirt Work,0000,18,1810,,FL_INFRAST,FL00000S,Solar_FL_Common_GuideLine.csv,5,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-00-OC-MR,MR_OC_00_5,MR_OC_00_5
 kkS-yyyy-ZZ,Systems and Various Equipment,,,,,,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ,,
 kkS-yyyy-ZZ-GE,Generator Group,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-GE,GE_ZZ_4,GE_ZZ_4
-kkS-yyyy-ZZ-VB,Systems and Various Equipment,0000,18,1850,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VB,VB_ZZ_4,VB_ZZ_4
-kkS-yyyy-ZZ-VD,Water Network and Sanitation,0000,18,1810,,,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VD,VD_ZZ_4,VD_ZZ_4
+kkS-yyyy-ZZ-VB,Systems and Various Equipment,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VB,VB_ZZ_4,VB_ZZ_4
+kkS-yyyy-ZZ-VD,Water Network and Sanitation,0000,18,1810,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-ZZ-VD,VD_ZZ_4,VD_ZZ_4
 kkS-yyyy-9Z,Logistic tools,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,3,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z,,
 kkS-yyyy-9Z-01,Tools for workshop and laboratory,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-01,01_9Z_4,01_9Z_4
 kkS-yyyy-9Z-02,Office furniture,0000,18,1850,,FL_OTHER,FL00000S,Solar_FL_Common_GuideLine.csv,4,[A-Z][A-Z]S-[0-9A-Z][0-9A-Z][0-9A-Z][0-9A-Z]-9Z-02,02_9Z_4,02_9Z_4

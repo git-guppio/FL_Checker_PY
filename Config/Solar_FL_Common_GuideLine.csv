@@ -51,8 +51,8 @@ kkS-yyyy-00-OC-FO;Foundations;0000;18;1810;OPC;FL_INFRAST;FL00000S
 kkS-yyyy-00-OC-MR;Dirt Work;0000;18;1810;;FL_INFRAST;FL00000S
 kkS-yyyy-ZZ;Systems and Various Equipment;;;;;;FL00000S
 kkS-yyyy-ZZ-GE;Generator Group;0000;18;1850;;FL_OTHER;FL00000S
-kkS-yyyy-ZZ-VB;Systems and Various Equipment;0000;18;1850;;;FL00000S
-kkS-yyyy-ZZ-VD;Water Network and Sanitation;0000;18;1810;;;FL00000S
+kkS-yyyy-ZZ-VB;Systems and Various Equipment;0000;18;1850;;FL_OTHER;FL00000S
+kkS-yyyy-ZZ-VD;Water Network and Sanitation;0000;18;1810;;FL_OTHER;FL00000S
 kkS-yyyy-0A;Common Energy Collecting & Delivery System;0000;18;1840;;;FL00000S
 kkS-yyyy-9Z;Logistic tools;0000;18;1850;;FL_OTHER;FL00000S
 kkS-yyyy-9Z-01;Tools for workshop and laboratory;0000;18;1850;;FL_OTHER;FL00000S

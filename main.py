@@ -9,7 +9,9 @@ import File_tools
 import RE_tools
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
                            QHBoxLayout, QWidget, QTextEdit, QListWidget, QLabel, QMessageBox,
-                           QDialog, QRadioButton, QButtonGroup, QDialogButtonBox)
+                           QDialog, QRadioButton, QButtonGroup, QDialogButtonBox, QListWidgetItem, QStyle, QMenu, QAction)
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QCursor
 import SAP_Connection
 import SAP_Transactions
 import DF_Tools
@@ -44,6 +46,15 @@ class MainWindow(QMainWindow):
         self.init_ui()
         # Ottiene il percorso della directory del file Python corrente
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
+        # Definisco un dizionario da utilizzare per memorizzare i file di aggiornamento creati
+        self.FileGenerated = {
+            "Total_files": 0,
+            "ZPMR_CONTROL_FL2": {"generated": False, "path": constants.file_ZPMR_FL_2_UpLoad},
+            "ZPMR_CONTROL_FLn": {"generated": False, "path": constants.file_ZPMR_FL_n_UpLoad},
+            "ZPMR_CTRL_ASS": {"generated": False, "path": constants.file_ZPMR_CTRL_ASS_UpLoad},
+            "ZPM4R_GL_T_FL": {"generated": False, "path": constants.file_ZPMR_TECH_OBJ_UpLoad}
+        }      
+
 
     def init_ui(self):
         # Widget centrale
@@ -75,6 +86,10 @@ class MainWindow(QMainWindow):
         
         self.log_list = QListWidget()
         right_panel.addWidget(self.log_list)
+
+        # Attiva il menu contestuale per il widget dei log
+        self.log_list.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.log_list.customContextMenuRequested.connect(self.show_context_menu)        
         
         # Aggiungi il layout destro al layout orizzontale
         content_layout.addLayout(right_panel)
@@ -91,7 +106,7 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(self.clear_button)
         
         # Bottone Estrai
-        self.extract_button = QPushButton('Estrai Dati')
+        self.extract_button = QPushButton('Verifica Dati')
         self.extract_button.clicked.connect(self.extract_data)
         button_layout.addWidget(self.extract_button)
         
@@ -103,44 +118,116 @@ class MainWindow(QMainWindow):
         
         # Aggiungi il layout dei bottoni al layout principale
         main_layout.addLayout(button_layout)
+    
+    # ----------------------------------------------------
+    # Funzioni per mostrare un menu contestuale x copiare i dati
+    # ----------------------------------------------------
+    def show_context_menu(self, position):
+        # Crea menu contestuale
+        context_menu = QMenu()
+        
+        # Aggiungi l'azione "Copia"
+        copy_action = QAction("Copia elemento", self)
+        copy_action.triggered.connect(self.copy_selected_items)
+        context_menu.addAction(copy_action)
+        
+        # Aggiungi l'azione "Copia tutto"
+        copy_all_action = QAction("Copia tutto", self)
+        copy_all_action.triggered.connect(self.copy_all_items)
+        context_menu.addAction(copy_all_action)
+        
+        # Mostra il menu contestuale alla posizione corrente del cursore
+        context_menu.exec_(QCursor.pos())
+
+    def copy_selected_items(self):
+        # Copia solo gli elementi selezionati
+        selected_items = self.log_list.selectedItems()
+        if selected_items:
+            text = "\n".join(item.text() for item in selected_items)
+            QApplication.clipboard().setText(text)
+            print("Elementi selezionati copiati negli appunti")        
+
+    def copy_all_items(self):
+        # Copia tutti gli elementi
+        all_items = []
+        for i in range(self.log_list.count()):
+            all_items.append(self.log_list.item(i).text())
+        
+        text = "\n".join(all_items)
+        QApplication.clipboard().setText(text)
+        print("Tutti gli elementi copiati negli appunti")        
+
 
     def log_message(self, message, icon_type='info'):
         """
-        Aggiunge un messaggio al log con un'emoji come icona
+        Aggiunge un messaggio al log con un'icona Qt
         """
-        icons = {
-            'info': '\U0001f604',
-            'error': '❌',
-            'success': '✅',
-            'warning': '⚠️',
-            'loading': '⏳'
-        }
+        item = QListWidgetItem(message)
         
-        icon = icons.get(icon_type, '')
-        self.log_list.addItem(f"{icon} {message}")
+        # Imposta l'icona in base al tipo
+        if icon_type == 'info':
+            item.setIcon(self.style().standardIcon(QStyle.SP_MessageBoxInformation))
+        elif icon_type == 'error':
+            item.setIcon(self.style().standardIcon(QStyle.SP_MessageBoxCritical))
+        elif icon_type == 'success':
+            item.setIcon(self.style().standardIcon(QStyle.SP_DialogApplyButton))
+        elif icon_type == 'warning':
+            item.setIcon(self.style().standardIcon(QStyle.SP_MessageBoxWarning))
+        elif icon_type == 'loading':
+            item.setIcon(self.style().standardIcon(QStyle.SP_BrowserReload))
+        
+        self.log_list.addItem(item)
         self.log_list.scrollToBottom()
 
+
+    """ 
+        def log_message(self, message, icon_type='info'):
+            
+            #Aggiunge un messaggio al log con un'emoji come icona
+            
+
+            icons = {
+                'info': '\U0001f604',
+                'error': '❌',
+                'success': '✅',
+                'warning': '⚠️',
+                'loading': '⏳'
+            }  
+            icon = icons.get(icon_type, '')
+            self.log_list.addItem(f"{icon} {message}")
+            self.log_list.scrollToBottom()
+    """
     def log_risultato_differenze(self, nomeTabella, risultato):
         try:
+            if not isinstance(risultato, list):
+                raise TypeError(f"L'argomento 'risultato' deve essere di tipo list, anzichè {type(risultato)}")
             if risultato is not None:
                 # Il risultato contiene elementi
                 num_elementi = len(risultato)
                 self.log_message(nomeTabella + " - Elementi non presenti: " + str(num_elementi), 'error')
-                self.log_message(risultato, 'warning')
+                #tabella = self.crea_tabella(risultato)
+                separatore = "; "
+                tabella = ""
+                for i in range(0, num_elementi, 10):
+                    riga = risultato[i:i+10]
+                    tabella += separatore.join(riga) + "\n"            
+                self.log_message(tabella, 'warning')
             else:
                 # Il risultato è None
                 self.log_message(nomeTabella + ": Tutti gli elementi presenti", 'success')
         
         except Exception as e:
-            raise Exception(f"Errore durante la stampa dei risultati: {str(e)}")
+            raise Exception(f"Errore durante la stampa dei risultati: {str(e)}")      
 
     def clear_windows(self):
         self.clipboard_area.clear()
         self.log_list.clear()
+        self.extract_button.setEnabled(True)
+        self.upload_button.setEnabled(False)
         self.log_message("Finestre pulite")
 
     def validate_clipboard_data(self):
-        """Valida i dati nella clipboard"""
+        """Valida i dati nella finestra di testo sinistra (clipboard_area)"""
         data = self.clipboard_area.toPlainText().strip().split('\n')
         data = [line.strip() for line in data if line.strip()]  # Rimuove linee vuote
         
@@ -176,9 +263,9 @@ class MainWindow(QMainWindow):
         return True  
 
     def create_dataframe(self):
-        """Crea un DataFrame dai dati della clipboard e aggiunge le colonne richieste"""
+        """Crea un DataFrame dai dati della finestra di testo sinistra (clipboard_area) e aggiunge le colonne richieste"""
         try:
-            # Ottiene i dati validati dalla clipboard
+            # Ottiene i dati validati dalla finestra di testo sinistra (clipboard_area)
             data = self.clipboard_area.toPlainText().strip().split('\n')
             data = [line.strip() for line in data if line.strip()]  # Rimuove linee vuote
             
@@ -227,14 +314,83 @@ class MainWindow(QMainWindow):
             self.log_message(f"Errore nella creazione del DataFrame: {str(e)}", 'error')
             return False       
 
+    def VerificaParent(self, df):
+        """
+        Crea un dizionario con 6 chiavi (1-6) a partire da un DataFrame
+        che contiene le colonne 'FL' e 'FL_Lunghezza'.
+        Verifica anche che ogni elemento del livello n abbia un genitore nel livello n-1.
+        
+        Parameters:
+        df (pandas.DataFrame): DataFrame con colonne 'FL' e 'FL_Lunghezza'
+        
+        Returns:
+        list: contenente gli elementi senza Parent
+        """
+        # Verifica che il DataFrame contenga le colonne necessarie
+        if 'FL' not in df.columns or 'FL_Lunghezza' not in df.columns:
+            raise ValueError("Il DataFrame deve contenere le colonne 'FL' e 'FL_Lunghezza'")
+        
+        # Inizializza il dizionario con le 7 chiavi richieste
+        dizionario = {
+            1: [],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: []
+        }
+        
+        # Prima passa: popoliamo il dizionario in base alla lunghezza FL
+        for i in range(1, 7):
+            filtered_df = df[df['FL_Lunghezza'] == i]
+            dizionario[i] = filtered_df['FL'].tolist()
+        
+        # Identificare gli elementi senza genitori corretti
+        parent_mancanti = []
+        
+        # Seconda passa: controlliamo che ogni elemento abbia un genitore corretto
+        for livello in range(2, 7):  # Partiamo dal livello 2 fino al 6
+            # Per ogni elemento nel livello corrente
+            for elemento in dizionario[livello][:]:  # Usiamo una copia della lista con [:]
+                # Troviamo il potenziale genitore rimuovendo l'ultimo segmento
+                ultima_occorrenza = elemento.rfind('-')
+                if ultima_occorrenza != -1:
+                    potenziale_genitore = elemento[:ultima_occorrenza]
+                    
+                    # Verifichiamo se il genitore è presente nel livello n-1
+                    if potenziale_genitore not in dizionario[livello-1]:
+                        # Se non è presente, lo spostiamo in NoParent
+                        self.append_unique(parent_mancanti, potenziale_genitore)
+ 
+        return parent_mancanti
+    
+    # Funzione helper per aggiungere elementi univoci
+    def append_unique(self, lista, elemento):
+        if elemento not in lista:
+            lista.append(elemento)
+            return True
+        return False     
+
+    # ----------------------------------------------------
+    # Routine associata al tasto <Estrai Dati>
+    # ----------------------------------------------------
     def extract_data(self):
 
-        # Prima verifica i dati nella clipboard
+        # disabilito il tasto
+        self.extract_button.setEnabled(False)
+        # Prima verifica i dati nella finestra di testo sinistra (clipboard_area)
         if not self.validate_clipboard_data():
             return
         # Creo un DF con i dati contenuti nella finestra
         if not self.create_dataframe():
             return
+        # Inizializzo la struttura dati per la memorizzazione dei file prodotti 
+        self.FileGenerated["Total_files"] = 0
+        self.FileGenerated["ZPMR_CONTROL_FL2"]["generated"] = False
+        self.FileGenerated["ZPMR_CONTROL_FLn"]["generated"] = False
+        self.FileGenerated["ZPMR_CTRL_ASS"]["generated"] = False
+        self.FileGenerated["ZPM4R_GL_T_FL"]["generated"] = False
+
         # ----------------------------------------------------
         # Verifico che i dati della prima e seconda colonna siano univoci
         # ----------------------------------------------------
@@ -284,15 +440,31 @@ class MainWindow(QMainWindow):
             return
         else:
             self.log_message(f"Check: Country = {description_techno}", 'success')
-
-        self.extract_button.setEnabled(False)
         # ----------------------------------------------------    
         # verifico coerenza con la maschera della tecnolgia
         # ----------------------------------------------------
 
+
+        # ----------------------------------------------------    
+        # verifico i parent
+        # ----------------------------------------------------
+        try:
+            NoParentList = self.VerificaParent(self.df_FL)
+            if not NoParentList:
+                self.log_message("Verifica Parent OK", 'success')
+            else:
+                self.log_message(f"Errore: {len(NoParentList)} Parent mancant{'e' if len(NoParentList) == 1 else 'i'}.", 'error')
+            for element in NoParentList:
+                # Ottieni il messaggio di dettaglio
+                self.log_message(f"Parent: {element} mancante.", 'warning')
+                
+        except Exception as e:
+            print(f"Errore durante la verifica dei parent: {str(e)}")
+            return 
+
        
         # ----------------------------------------------------    
-        # verifico coerenza con la guideline dele tecnologia
+        # in base a tecnologia determino le linee guida da utilizzare
         # ----------------------------------------------------
         """         
         Il parametro regex_dict è un dizionario che definisce dei pattern per classificare le righe
@@ -398,12 +570,12 @@ class MainWindow(QMainWindow):
         if fl_non_valide:
             # Mostra il numero di FL non valide
             # Mostra il numero di FL non valide con singolare o plurale
-            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}:", 'warning')
+            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}:", 'error')
             #self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
             for fl in fl_non_valide:
                 # Ottieni il messaggio di errore specifico per questa FL
                 error_msg = result_df[result_df['FL'] == fl]['Check_Result'].values[0]
-                self.log_message(f"{fl}: {error_msg}", 'error')
+                self.log_message(f"{fl}: {error_msg}", 'warning')
             return
         else:
             self.log_message("Tutte le FL sono valide", 'success')
@@ -605,7 +777,6 @@ class MainWindow(QMainWindow):
         elif (error is not None):
             print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL1")
             self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL1", 'error')
-
         
         # verifico la presenza degli elementi del secondo livello nella tabella globale
         risultato_ZPMR_CONTROL_FL1_lev_2, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_2', 'Livello_2')
@@ -673,7 +844,7 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
         # creo i file per eseguire l'aggiornamento delle tabelle 
         # ----------------------------------------------------        
-        
+
         # verifico che ci siano almeno una lista che contiene un elemento
 
         liste_ZPMR_CONTROL_FL2 = [
@@ -702,6 +873,8 @@ class MainWindow(QMainWindow):
             if error is None:
                 print(f"Dataframe creato con successo!")
                 self.log_message("DF ZPMR_CONTROL_FL2 creato correttamente!", 'success')
+                self.FileGenerated["Total_files"] += 1
+                self.FileGenerated["ZPMR_CONTROL_FL2"]["generated"] = True
                 # ------------salvo il DF in un file csv-----------------------
                 result, error = self.df_utils.save_dataframe_to_csv(df, 
                                 constants.file_ZPMR_FL_2_UpLoad)
@@ -730,6 +903,8 @@ class MainWindow(QMainWindow):
             if error is None:
                 print(f"Dataframe creato con successo!")
                 self.log_message("DF ZPMR_CONTROL_FLn creato correttamente!", 'success')
+                self.FileGenerated["Total_files"] += 1
+                self.FileGenerated["ZPMR_CONTROL_FLn"]["generated"] = True
                 # ------------salvo il DF in un file csv-----------------------
                 result, error = self.df_utils.save_dataframe_to_csv(df, 
                                 constants.file_ZPMR_FL_n_UpLoad)
@@ -764,6 +939,8 @@ class MainWindow(QMainWindow):
                 if result is True:
                     print(f"File {constants.file_ZPMR_CTRL_ASS_UpLoad} salvato correttamente")
                     self.log_message("File upload ZPMR_CTRL_ASS creato correttamente!", 'success')
+                    self.FileGenerated["Total_files"] += 1
+                    self.FileGenerated["ZPMR_CTRL_ASS"]["generated"] = True
                 elif error is not None:
                     print(f"Si è verificato un errore nella creazione del file: {error}")
                     self.log_message("Errore nella creazione del file ZPMR_CTRL_ASS", 'error')
@@ -791,6 +968,8 @@ class MainWindow(QMainWindow):
                 if result is True:
                     print(f"File {constants.file_ZPMR_CTRL_ASS_UpLoad} salvato correttamente")
                     self.log_message("File upload ZPM4R_GL_T_FL creato correttamente!", 'success')
+                    self.FileGenerated["Total_files"] += 1
+                    self.FileGenerated["ZPM4R_GL_T_FL"]["generated"] = True
                 elif error is not None:
                     print(f"Si è verificato un errore nella creazione del file: {error}")
                     self.log_message("Errore nella creazione del file ZPM4R_GL_T_FL", 'error')
@@ -798,14 +977,124 @@ class MainWindow(QMainWindow):
                 print(f"Si è verificato un errore nella creazione del DF: {error}")
                 self.log_message("Errore nella creazione del DF ZPM4R_GL_T_FL", 'error')
             print(df)          
+        
+        # ------------Verifico creazione file per abilitare tasto UpLoad----------------------- 
+        if (self.FileGenerated["Total_files"]>0):
+            self.upload_button.setEnabled(True)
+        else:
+            print(f"Le tabelle SAP risultano aggiornate")
+            self.log_message("Le tabelle SAP risultano aggiornate", 'success')            
+            self.upload_button.setEnabled(False)
 
         # ----------------------------------------------------
-        # ripristino il tasto di estrazione dei dati
+        # Verifica completata - ripristino il tasto di estrazione dei dati
         # ---------------------------------------------------- 
         self.extract_button.setEnabled(True)
 
     def upload_data(self):
-        self.log_message("Funzionalità di upload non ancora implementata", 'info')
+        # ------------Verifico che ci siano file da caricare----------------------- 
+        if (self.FileGenerated["Total_files"] == 0):
+            # Crea la finestra di dialogo con messaggio
+            msg_box_info = QMessageBox()
+            msg_box_info.setWindowTitle("Attenzione")  # Titolo della finestra
+            msg_box_info.setText("Non ci sono file da caricare.")  # Testo del messaggio
+            msg_box_info.setIcon(QMessageBox.Warning)  # Icona informativa
+            msg_box_info.setStandardButtons(QMessageBox.Ok)  # Solo pulsante OK
+
+            # Mostra la finestra e attendi che l'utente prema OK
+            msg_box_info.exec_()
+            self.upload_button.setEnabled(False)
+            return
+        else:
+        # ----------------------------------------------------
+        # Carico i file in SAP 
+        # ---------------------------------------------------- 
+            # ------------Creo una finestra di dialogo (yes/no) per richiedere conferma al caricamento dei file----------------------- 
+            # Crea la finestra di dialogo
+            msg_box_YesNo = QMessageBox()
+            msg_box_YesNo.setWindowTitle("Aggiornamento Tabelle SAP")
+            msg_box_YesNo.setText("Caricare i file di aggiornamento delle tabelle global SAP?")
+            msg_box_YesNo.setIcon(QMessageBox.Question)
+
+            # Imposta i pulsanti
+            msg_box_YesNo.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+            msg_box_YesNo.setDefaultButton(QMessageBox.No)  # Default è No per evitare click accidentali
+
+            # Personalizza il testo dei pulsanti (opzionale)
+            msg_box_YesNo.button(QMessageBox.Yes).setText("Sì")
+            msg_box_YesNo.button(QMessageBox.No).setText("No")
+
+            # Mostra la finestra di dialogo e ottieni la risposta
+            response = msg_box_YesNo.exec_()
+
+            # Verifica la risposta e procedi di conseguenza
+            if (response == QMessageBox.Yes):
+                # Codice per caricare i file di aggiornamento
+                self.log_message("Avvio caricamento degli aggiornamenti...", 'info')
+                print("Avvio caricamento degli aggiornamenti...")
+                try:
+                    with SAP_Connection.SAPGuiConnection() as sap:
+                        if sap.is_connected():
+                            session = sap.get_session()
+                            if session:
+                                self.log_message("Connessione SAP attiva", 'success')
+                                loader = SAP_Transactions.SAPDataUpLoader(session)
+                                # Itera su tutte le chiavi del dizionario
+                                for key, value in self.FileGenerated.items():
+                                    # Verifica se la chiave inizia con "ZPM" e che si riferisca ad un file generato
+                                    if isinstance(key, str) and key.startswith("ZPM") and value["generated"]:
+                                        # Verifica quale routine specifica chiamare in base al nome
+                                        if key == "ZPMR_CONTROL_FL2":
+                                            result = loader.UpLoadLivello_n_SAP(value["path"])
+                                            # Verifica del risultato
+                                            if result is True:
+                                                print(f"Tabella ZPMR_CONTROL_FL2 aggiornata correttamente!")
+                                                self.log_message("Tabella ZPMR_CONTROL_FL2 aggiornata correttamente!", 'success')
+                                            else:
+                                                print(f"Si è verificato un errore nel caricamento del file:\n\t {value["path"]}")
+                                                self.log_message("Errore nel caricamento del file: ZPMR_CONTROL_FL2", 'error')
+                                        elif key == "ZPMR_CONTROL_FLn":
+                                            result = loader.UpLoadLivello_n_SAP(value["path"])
+                                            # Verifica del risultato
+                                            if result is True:
+                                                print(f"Tabella ZPMR_CONTROL_FLn aggiornata correttamente!")
+                                                self.log_message("Tabella ZPMR_CONTROL_FLn aggiornata correttamente!", 'success')
+                                            else:
+                                                print(f"Si è verificato un errore nel caricamento del file:\n\t {value["path"]}")
+                                                self.log_message("Errore nel caricamento del file: ZPMR_CONTROL_FLn", 'error')
+                                        elif key == "ZPMR_CTRL_ASS":
+                                            result = loader.UpLoadCTRL_ASS(value["path"])
+                                            # Verifica del risultato
+                                            if result is True:
+                                                print(f"Tabella ZPMR_CTRL_ASS aggiornata correttamente!")
+                                                self.log_message("Tabella ZPMR_CTRL_ASS aggiornata correttamente!", 'success')
+                                            else:
+                                                print(f"Si è verificato un errore nel caricamento del file:\n\t {value["path"]}")
+                                                self.log_message("Errore nel caricamento del file: ZPMR_CTRL_ASS", 'error')                                        
+                                        elif key == "ZPM4R_GL_T_FL":
+                                            result = loader.UpLoadTECH_OBJ(value["path"])
+                                            # Verifica del risultato
+                                            if result is True:
+                                                print(f"Tabella ZPM4R_GL_T_FL aggiornata correttamente!")
+                                                self.log_message("Tabella ZPM4R_GL_T_FL aggiornata correttamente!", 'success')
+                                            else:
+                                                print(f"Si è verificato un errore nel caricamento del file:\n\t {value["path"]}")
+                                                self.log_message("Errore nel caricamento del file: ZPM4R_GL_T_FL", 'error')                                                  
+                                        else:
+                                            pass  
+                                print("Aggiornamento terminato.")
+                                self.log_message("Aggiornamento tabelle SAP terminato.", 'info')                                                                           
+                        else:
+                            self.log_message("Connessione SAP NON attiva", 'error')
+                            return
+                except Exception as e:
+                    self.log_message(f"Caricamento aggiornamenti SAP: Errore: {str(e)}", 'error')
+                    return             
+            else:
+                # Codice da eseguire se l'utente ha selezionato "No"
+                self.log_message("Aggiornamento annullato dall'utente.", 'warning')
+                print("Aggiornamento annullato dall'utente.")
+                return
 
 # Classe per gestire la selezione del tipo di inverter
 class InverterSelectionDialog(QDialog):

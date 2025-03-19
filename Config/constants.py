@@ -8,7 +8,7 @@ print(f"La directory dello script è: {A_ScriptDir}")
 # ----------------------------------------------------
 # Debug mode
 # ----------------------------------------------------
-DEBUG_MODE = True
+DEBUG_MODE = False
 
 # ----------------------------------------------------
 # Intestazioni per i file di upload
