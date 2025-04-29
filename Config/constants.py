@@ -11,22 +11,22 @@ print(f"La directory dello script è: {A_ScriptDir}")
 DEBUG_MODE = False
 
 # ----------------------------------------------------
-# Abilitazione allésecuzione dei test du FL
+# Abilitazione allésecuzione dei test du FL [True/False]
 # ----------------------------------------------------
-# Validazione con maschera generica
+# Validazione con maschera generica 
 Check_validazione = True
 # Verifico che i dati della prima e seconda colonna siano univoci
-Check_univoci = True
+Check_univoci = False
 # Verifico se esistono FL duplicate
 Check_duplicati = True
 # Verifico Country
-Check_country = True
+Check_country = False
 # Verifico Tecnologia
 Check_tecnologia = True
 # Verifica maschera specifica per tecnologia
 Check_mask = True
 # Verifico parent
-Check_parent = True
+Check_parent = False
 # Verifico linee guida
 Check_lineeGuida = True
 # Validazione con maschera generica

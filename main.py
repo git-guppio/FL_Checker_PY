@@ -897,7 +897,8 @@ class MainWindow(QMainWindow):
             
             # ----------------------------------------------------
             # verifica degli elementi della FL nelle tabelle
-            # ----------------------------------------------------        
+            # ----------------------------------------------------    
+                
             # verifico la presenza degli elementi del primo livello nella tabella globale
             risultato_ZPMR_CONTROL_FL1_lev_1, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_1', 'Livello_1')
             # Verifica del risultato
@@ -911,7 +912,7 @@ class MainWindow(QMainWindow):
             risultato_ZPMR_CONTROL_FL1_lev_2, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL1_pivot, 'Livello_2', 'Livello_2')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CONTROL_FL1_lev_2 is not None)):
-                self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL1_lev_2)
+                self.log_risultato_differenze("Livello_2", risultato_ZPMR_CONTROL_FL1_lev_2)
             elif (error is not None):
                 print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL1_lev_2")
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL1_lev_2", 'error')
@@ -920,7 +921,7 @@ class MainWindow(QMainWindow):
             risultato_ZPMR_CONTROL_FL2_lev_3, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_3', 'Livello_3')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CONTROL_FL2_lev_3 is not None)):
-                self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL2_lev_3)
+                self.log_risultato_differenze("Livello_3", risultato_ZPMR_CONTROL_FL2_lev_3)
             elif (error is not None):
                 print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_3")
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_3", 'error')
@@ -929,7 +930,7 @@ class MainWindow(QMainWindow):
             risultato_ZPMR_CONTROL_FL2_lev_4, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_4', 'Livello_4')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CONTROL_FL2_lev_4 is not None)):
-                self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL2_lev_4)
+                self.log_risultato_differenze("Livello_4", risultato_ZPMR_CONTROL_FL2_lev_4)
             elif (error is not None):
                 print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_4")
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_4", 'error')
@@ -938,7 +939,7 @@ class MainWindow(QMainWindow):
             risultato_ZPMR_CONTROL_FL2_lev_5, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_5', 'Livello_5')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CONTROL_FL2_lev_5 is not None)):
-                self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL2_lev_5)
+                self.log_risultato_differenze("Livello_5", risultato_ZPMR_CONTROL_FL2_lev_5)
             elif (error is not None):
                 print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_5")
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_5", 'error')
@@ -947,7 +948,7 @@ class MainWindow(QMainWindow):
             risultato_ZPMR_CONTROL_FL2_lev_6, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CONTROL_FL2_pivot, 'Livello_6', 'Livello_6')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CONTROL_FL2_lev_6 is not None)):
-                self.log_risultato_differenze("Livello_1", risultato_ZPMR_CONTROL_FL2_lev_6)
+                self.log_risultato_differenze("Livello_6", risultato_ZPMR_CONTROL_FL2_lev_6)
             elif (error is not None):
                 print(f"Si è verificato un errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_6")
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_6", 'error')  
@@ -1086,6 +1087,7 @@ class MainWindow(QMainWindow):
                                                                                     constants.intestazione_TECH_OBJ, 
                                                                                     df_regex, 
                                                                                     tech_code)
+                
                 # Verifica del risultato
                 if error is None:
                     print(f"Dataframe creato con successo!")
@@ -1105,7 +1107,7 @@ class MainWindow(QMainWindow):
                 else:
                     print(f"Si è verificato un errore nella creazione del DF: {error}")
                     self.log_message("Errore nella creazione del DF ZPM4R_GL_T_FL", 'error')
-                print(df)          
+                print(df)
             
             # ------------Verifico creazione file per abilitare tasto UpLoad----------------------- 
             if (self.FileGenerated["Total_files"]>0):

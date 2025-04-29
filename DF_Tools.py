@@ -277,7 +277,7 @@ class DataFrameTools:
 
                             # Imposto i valori nei campi specifici
                             if len(df.columns) == 6:
-                                new_row[df.columns[0]] = "Z-R" + technology + "S"
+                                new_row[df.columns[0]] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
                                 new_row[df.columns[1]] = technology.strip()
                                 new_row[df.columns[2]] = str(index).strip()  # Livello come stringa
                                 new_row[df.columns[3]] = element.strip() if isinstance(element, str) else str(element)
@@ -297,82 +297,83 @@ class DataFrameTools:
             except Exception as e:
                 # Rilanciamo l'eccezione con contesto aggiuntivo
                 raise Exception(f"Errore nella creazione del DataFrame: {str(e)}") from e    
-    
-    @staticmethod    
-    @error_logger(logger=logger)
-    def create_df_from_elements_ZPMR_CTRL_ASS(header_string: str, elements_list: str, technology: str, country_code: str) -> pd.DataFrame:
-        """
-        Crea un DataFrame usando i nomi delle colonne dall'intestazione e gli elementi come righe
+
+
+    # @staticmethod    
+    # @error_logger(logger=logger)
+    # def create_df_from_elements_ZPMR_CTRL_ASS(header_string: str, elements_list: str, technology: str, country_code: str) -> pd.DataFrame:
+    #     """
+    #     Crea un DataFrame usando i nomi delle colonne dall'intestazione e gli elementi come righe
         
-        Args:
-            header_string: Stringa contenente i nomi delle colonne separati da delimitatore
-            elements_list: Lista degli elementi da inserire, uno per riga
-            technology: Tecnologia utilizzata
-            country_code: Codice paese
+    #     Args:
+    #         header_string: Stringa contenente i nomi delle colonne separati da delimitatore
+    #         elements_list: Lista degli elementi da inserire, uno per riga
+    #         technology: Tecnologia utilizzata
+    #         country_code: Codice paese
         
-        Returns:
-            DataFrame con colonne definite dall'intestazione e gli elementi nelle righe
+    #     Returns:
+    #         DataFrame con colonne definite dall'intestazione e gli elementi nelle righe
             
-        Raises:
-            ValueError: Se header_string è vuota o non contiene abbastanza colonne
-            TypeError: Se elements_list non è una lista o stringa
-            ValueError: Se elements_list è vuota
-            ValueError: Se technology o country_code non sono stringhe valide
-        """
-        # Controllo validità header_string
-        if not isinstance(header_string, str):
-            raise TypeError("header_string deve essere una stringa")
-        if not header_string.strip():
-            raise ValueError("header_string non può essere vuota")
+    #     Raises:
+    #         ValueError: Se header_string è vuota o non contiene abbastanza colonne
+    #         TypeError: Se elements_list non è una lista o stringa
+    #         ValueError: Se elements_list è vuota
+    #         ValueError: Se technology o country_code non sono stringhe valide
+    #     """
+    #     # Controllo validità header_string
+    #     if not isinstance(header_string, str):
+    #         raise TypeError("header_string deve essere una stringa")
+    #     if not header_string.strip():
+    #         raise ValueError("header_string non può essere vuota")
         
-        # Parsing dell'intestazione per ottenere i nomi delle colonne
-        column_names = [col.strip() for col in header_string.split(';')]
+    #     # Parsing dell'intestazione per ottenere i nomi delle colonne
+    #     column_names = [col.strip() for col in header_string.split(';')]
         
-        # Verifica che ci siano abbastanza colonne
-        if len(column_names) != 6:
-            raise ValueError(f"L'intestazione deve contenere 6 colonne, trovate {len(column_names)}")
+    #     # Verifica che ci siano abbastanza colonne
+    #     if len(column_names) != 6:
+    #         raise ValueError(f"L'intestazione deve contenere 6 colonne, trovate {len(column_names)}")
         
-        # Controllo validità elements_list
-        if not isinstance(elements_list, (list, str)):
-            raise TypeError("elements_list deve essere una lista o una stringa")
+    #     # Controllo validità elements_list
+    #     if not isinstance(elements_list, (list, str)):
+    #         raise TypeError("elements_list deve essere una lista o una stringa")
         
-        # Se elements_list è una stringa, convertiamola in lista
-        if isinstance(elements_list, str):
-            elements_list = [elem.strip() for elem in elements_list.split(',') if elem.strip()]
+    #     # Se elements_list è una stringa, convertiamola in lista
+    #     if isinstance(elements_list, str):
+    #         elements_list = [elem.strip() for elem in elements_list.split(',') if elem.strip()]
         
-        if len(elements_list) == 0:
-            raise ValueError("elements_list non può essere vuota")
+    #     if len(elements_list) == 0:
+    #         raise ValueError("elements_list non può essere vuota")
         
-        # Controllo validità technology e country_code
-        if not isinstance(technology, str) or not technology.strip():
-            raise ValueError("technology deve essere una stringa valida")
-        if not isinstance(country_code, str) or not country_code.strip():
-            raise ValueError("country_code deve essere una stringa valida")
+    #     # Controllo validità technology e country_code
+    #     if not isinstance(technology, str) or not technology.strip():
+    #         raise ValueError("technology deve essere una stringa valida")
+    #     if not isinstance(country_code, str) or not country_code.strip():
+    #         raise ValueError("country_code deve essere una stringa valida")
         
-        try:
-            # Creo un DataFrame vuoto con le colonne dell'intestazione
-            df = pd.DataFrame(columns=column_names)
+    #     try:
+    #         # Creo un DataFrame vuoto con le colonne dell'intestazione
+    #         df = pd.DataFrame(columns=column_names)
             
-            # Aggiungo gli elementi come righe
-            for element in elements_list:
-                # Creo una nuova riga con valori None
-                new_row = {col: None for col in df.columns}
+    #         # Aggiungo gli elementi come righe
+    #         for element in elements_list:
+    #             # Creo una nuova riga con valori None
+    #             new_row = {col: None for col in df.columns}
                 
-                # Imposto i valori nei campi specifici
-                if len(df.columns) == 6:
-                    new_row[df.columns[0]] = "Z-R" + technology + "S"
-                    new_row[df.columns[1]] = technology.strip()
-                    new_row[df.columns[2]] = "" #f_level.strip()
-                    new_row[df.columns[3]] = element.strip()
+    #             # Imposto i valori nei campi specifici
+    #             if len(df.columns) == 6:
+    #                 new_row[df.columns[0]] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
+    #                 new_row[df.columns[1]] = technology.strip()
+    #                 new_row[df.columns[2]] = "" #f_level.strip()
+    #                 new_row[df.columns[3]] = element.strip()
                 
-                # Aggiungo la riga al DataFrame
-                df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+    #             # Aggiungo la riga al DataFrame
+    #             df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
             
-            return df
+    #         return df
         
-        except Exception as e:
-            # Rilanciamo l'eccezione con contesto aggiuntivo
-            raise Exception(f"Errore nella creazione del DataFrame: {str(e)}") from e
+    #     except Exception as e:
+    #         # Rilanciamo l'eccezione con contesto aggiuntivo
+    #         raise Exception(f"Errore nella creazione del DataFrame: {str(e)}") from e
     
     @staticmethod    
     @error_logger(logger=logger)

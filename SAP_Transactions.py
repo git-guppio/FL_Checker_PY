@@ -443,7 +443,7 @@ class SAPDataExtractor:
             self.session.findById("wnd[0]/usr/ctxtDATABROWSE-TABLENAME").text = "ZPMR_CONTROL_FL2"
             self.session.findById("wnd[0]").sendVKey(0)
             time.sleep(0.5)
-            self.session.findById("wnd[0]/usr/ctxtI2-LOW").text = "Z-R" + fltechnology + "S"
+            self.session.findById("wnd[0]/usr/ctxtI2-LOW").text = "Z-RLS" if fltechnology == "H" else "Z-R" + fltechnology + "S"
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = fltechnology
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").setFocus()
@@ -498,7 +498,7 @@ class SAPDataExtractor:
             self.session.findById("wnd[0]").sendVKey(0)
             time.sleep(0.5)
             # filtro in base alla tecnologia                
-            self.session.findById("wnd[0]/usr/txtI4-LOW").text = "Z-R" + fltechnology + "S"
+            self.session.findById("wnd[0]/usr/txtI4-LOW").text = "Z-RLS" if fltechnology == "H" else "Z-R" + fltechnology + "S"
             self.session.findById("wnd[0]/usr/txtI5-LOW").text = fltechnology      
             # modifico il numero massimo di risultati
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
@@ -560,7 +560,7 @@ class SAPDataExtractor:
             self.session.findById("wnd[0]").sendVKey(0)
             time.sleep(0.5)
             # filtro in base alla tecnologia                
-            self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = "Z-R" + fltechnology + "S"
+            self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = "Z-RLS" if fltechnology == "H" else "Z-R" + fltechnology + "S"
             self.session.findById("wnd[0]/usr/ctxtI5-LOW").text = fltechnology    
             # modifico il numero massimo di risultati
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"

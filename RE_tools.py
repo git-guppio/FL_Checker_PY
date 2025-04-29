@@ -636,7 +636,7 @@ class RegularExpressionsTools:
                     new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]                
                     
                     # Imposto i valori fissi
-                    new_row['TPLKZ'] = "Z-RS" + technology
+                    new_row['TPLKZ'] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
                     new_row['FLTYP'] = technology
                     
                     # Imposto lunghezza della FL
@@ -824,7 +824,7 @@ class RegularExpressionsTools:
                     new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]
                     
                     # Imposto i valori fissi
-                    new_row['TPLKZ'] = "Z-RS" + technology
+                    new_row['TPLKZ'] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
                     new_row['FLTYP'] = technology
                     
                     # Imposto lunghezza della FL
@@ -840,7 +840,7 @@ class RegularExpressionsTools:
             if not valid_rows:
                 raise ValueError("Nessun codice valido trovato")
             
-            # Creo il DataFrame finale in modo efficiente, specificando le colonne
+            # Creo il DataFrame finale specificando le colonne
             result_df = pd.DataFrame(valid_rows, columns=column_names)
                 
             return result_df
