@@ -252,7 +252,7 @@ class RegularExpressionsTools:
                     if not Path(guideline_file_path).exists():
                         print(f"Attenzione: Il file guideline non esiste: {guideline_file_path}, verrà saltato")
                         continue
-                    
+
                     # Carica il file guideline
                     guideline_df = pd.read_csv(guideline_file_path, sep=';', encoding='utf-8', dtype=str)
                     
@@ -403,6 +403,7 @@ class RegularExpressionsTools:
             
             # 2. Carica il file GuideLine.csv
             try:
+                
                 re_df = pd.read_csv(gl_file_path, sep=';', encoding='utf-8')
                 
                 # Verifica che ci sia una colonna FL

@@ -11,6 +11,23 @@ print(f"La directory dello script è: {A_ScriptDir}")
 DEBUG_MODE = False
 
 # ----------------------------------------------------
+# Abilitazione allésecuzione dei test du FL
+# ----------------------------------------------------
+# Validazione con maschera generica
+Check_validazione = True
+# Verifico che i dati della prima e seconda colonna siano univoci
+Check_univoci = None
+# Verifico Country
+Check_country = None
+# Verifico Country
+Check_tecnologia = True
+# Verifico parent
+Check_parent = None
+# Verifico linee guida
+Check_lineeGuida = True
+# Validazione con maschera generica
+Check_TabGlobaliSAP = True
+# ----------------------------------------------------
 # Intestazioni per i file di upload
 # ----------------------------------------------------
 # Intestazione dei file per upload tabelle di controllo globali

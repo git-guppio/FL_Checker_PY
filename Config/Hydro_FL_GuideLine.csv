@@ -1,5 +1,5 @@
 FL;Description;AM Section;AM Part;AM Component;Element Type;Tech.Obj.SAP CODE;Catalog Profile
-kkH;IsoCode Country + Technology (H);;;;;;
+kkH;IsoCode Country + Technology (H);;;;;;FL00000H
 kkH-yyyy;Nome Centrale;;;;;;FL00000H
 kkH-yyyy-Px;Parti Generiche di impianto;;;;;;FL00000H
 kkH-yyyy-Px-11x;Terreni;0000;11;1111;ALI;FL_INFRAST;FL00000H
@@ -53,7 +53,7 @@ kkH-yyyy-Px-29x-12;Impianto telefonico;0000;11;1150;ALI;FL_OTHER;FL00000H
 kkH-yyyy-Px-29x-13;Impianto sorveglianza confini;0000;11;1150;ALI;FL_OTHER;FL00000H
 kkH-yyyy-MG;Motogenratori;0000;12;1250;;;FL00000H
 kkH-yyyy-MG-C00;Parti Comuni.;0000;12;1250;COI;FL_AUXSYST;FL00000H
-kkH-yyyy-MG-D0x;Motogenratori MG n°;0000;12;1250;MOT;FL_AUXSYST;FL00000H
+kkH-yyyy-MG-D0x;Motogenratori MG nï¿½;0000;12;1250;MOT;FL_AUXSYST;FL00000H
 kkH-yyyy-Nx;NODO <Nome nodo>;;;;;;FL00000H
 kkH-yyyy-Nx-31x;Opere di Captazione Derivazione e Convogliamento;0000;11;1120;ALI;FL_HYDRINF;FL00000H
 kkH-yyyy-Nx-31x-10;Struttura traversa e organi di scarico;0000;11;1120;DII;FL_HYDRINF;FL00000H
@@ -354,8 +354,8 @@ kkH-yyyy-Ux-TUx-10-01;Girante ;0000;11;1140;ALI;FL_TURBINE;FL00000H
 kkH-yyyy-Ux-TUx-10-02;Tenute;0000;11;1140;ALI;FL_TURBINE;FL00000H
 kkH-yyyy-Ux-TUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-TUx-12;Distributore;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Ux-TUx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Ux-TUx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Ux-TUx-13;Regolatore di velocitï¿½ el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-TUx-14;Circuiti di forza e/o regol. di velocitï¿½ meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Ux-TUx-15;Supporti;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Ux-TUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Ux-TUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_MECHCOM;FL00000H
@@ -386,8 +386,8 @@ kkH-yyyy-Ux-MRx;Macchina Reversibile (impianti pompaggio);0000;11;1140;MRE;FL_HY
 kkH-yyyy-Ux-MRx-10;Macchina reversibile;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-MRx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-MRx-12;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Ux-MRx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Ux-MRx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-13;Regolatore di velocitï¿½ el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Ux-MRx-14;Circuiti di forza e/o regol. di velocitï¿½ meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-MRx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-MRx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Ux-MRx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
@@ -442,7 +442,7 @@ kkH-yyyy-Ux-97x-18;Impianti fissi a polvere;0000;11;1150;ALI;FL_SAFSYST;FL00000H
 kkH-yyyy-Ux-97x-19;Altri;0000;11;1150;ALI;FL_SAFSYST;FL00000H
 kkH-yyyy-Ux-MMx;Montante di macchina;0000;11;1141;MTG;FL_MVSECT;FL00000H
 kkH-yyyy-Ux-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1141;ALI;FL_MVSECT;FL00000H
-kkH-yyyy-Ux-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Ux-MMx-11;Trasformatori S.A. di unitï¿½;0000;11;1150;TRF;FL_MVSECT;FL00000H
 kkH-yyyy-Ux-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1141;ALI;FL_MVSECT;FL00000H
 kkH-yyyy-Ux-MMx-12-01;Trasformatore di corrente;0000;11;1141;ALI;FL_MVSECT;FL00000H
 kkH-yyyy-Ux-MMx-12-02;Trasformatore di tensione;0000;11;1141;ALI;FL_MVSECT;FL00000H
@@ -746,8 +746,8 @@ kkH-yyyy-Gk-TUx-10-01;Girante ;0000;11;1140;ALI;FL_TURBINE;FL00000H
 kkH-yyyy-Gk-TUx-10-02;Tenute;0000;11;1140;ALI;FL_TURBINE;FL00000H
 kkH-yyyy-Gk-TUx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-TUx-12;Distributore;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Gk-TUx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Gk-TUx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
+kkH-yyyy-Gk-TUx-13;Regolatore di velocitï¿½ el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-TUx-14;Circuiti di forza e/o regol. di velocitï¿½ meccanico;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Gk-TUx-15;Supporti;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Gk-TUx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_MECHCOM;FL00000H
 kkH-yyyy-Gk-TUx-15-02;Supporto di guida;0000;11;1140;ALI;FL_MECHCOM;FL00000H
@@ -778,8 +778,8 @@ kkH-yyyy-Gk-MRx;Macchina Reversibile (impianti pompaggio);0000;11;1140;MRE;FL_HY
 kkH-yyyy-Gk-MRx-10;Macchina reversibile;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-MRx-11;Organi di intercettazione;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-MRx-12;Scarico sincrono;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Gk-MRx-13;Regolatore di velocità el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
-kkH-yyyy-Gk-MRx-14;Circuiti di forza e/o regol. di velocità meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-13;Regolatore di velocitï¿½ el.;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
+kkH-yyyy-Gk-MRx-14;Circuiti di forza e/o regol. di velocitï¿½ meccanico;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-MRx-15;Supporti;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-MRx-15-01;Supporto di Spinta;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
 kkH-yyyy-Gk-MRx-15-02;Supporto di guida;0000;11;1140;ALI;FL_HYDRMAC;FL00000H
@@ -837,7 +837,7 @@ kkH-yyyy-Gk-MCx-10;Comandi manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL000
 kkH-yyyy-Gk-MCx-11;Controlli manuali di impianto;0000;11;1180;ALI;FL_AUT&CON;FL00000H
 kkH-yyyy-Gk-MMx;Montante di macchina;0000;11;1141;MTG;FL_MVSECT;FL00000H
 kkH-yyyy-Gk-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1141;ALI;FL_MVSECT;FL00000H
-kkH-yyyy-Gk-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Gk-MMx-11;Trasformatori S.A. di unitï¿½;0000;11;1150;TRF;FL_MVSECT;FL00000H
 kkH-yyyy-Gk-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1141;ALI;FL_MVSECT;FL00000H
 kkH-yyyy-Gk-MMx-12-01;Trasformatore di corrente;0000;11;1141;ALI;FL_MVSECT;FL00000H
 kkH-yyyy-Gk-MMx-12-02;Trasformatore di tensione;0000;11;1141;ALI;FL_MVSECT;FL00000H
@@ -1332,7 +1332,7 @@ kkH-yyyy-Sx-TSx-04;Cavi sommergibili;0000;11;1150;ALI;FL_POWLINE;FL00000H
 kkH-yyyy-Sx-TSx-05;Scaricatori;0000;11;1150;ALI;FL_ELECEQ;FL00000H
 kkH-yyyy-Sx-MMx;Montante di macchina;0000;11;1150;MTG;FL_MVSECT;FL00000H
 kkH-yyyy-Sx-MMx-10;Condotti sbarra scricatori condensatori;0000;11;1150;ALI;FL_MVSECT;FL00000H
-kkH-yyyy-Sx-MMx-11;Trasformatori S.A. di unità;0000;11;1150;TRF;FL_MVSECT;FL00000H
+kkH-yyyy-Sx-MMx-11;Trasformatori S.A. di unitï¿½;0000;11;1150;TRF;FL_MVSECT;FL00000H
 kkH-yyyy-Sx-MMx-12;Sensori di corrente e di tensione (TA/TV);0000;11;1150;ALI;FL_MVSECT;FL00000H
 kkH-yyyy-Sx-MMx-12-11;Trasformatore di corrente;0000;11;1150;TRF;FL_MVSECT;FL00000H
 kkH-yyyy-Sx-MMx-12-12;Trasformatore di tensione;0000;11;1150;TRF;FL_MVSECT;FL00000H
