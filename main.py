@@ -262,6 +262,63 @@ class MainWindow(QMainWindow):
         self.log_message("Validazione dati completata con successo", 'success')
         return True  
 
+    def validate_Mask(self, technology, dataframe, nome_colonna_fl):
+        """ Valida i dati in base alla maschera specifica della tecnologia ricavata nei controlli precedenti """
+        # Ottiene il nome del file che contiene le maschere di validazione
+        file_Mask = constants.file_Mask
+        
+        # Cerca il pattern regex associato alla tecnologia specificata nel file delle maschere
+        regex_pattern = self.file_utils.trova_valore(file_Mask, 
+                                    valore_da_cercare=technology, 
+                                    colonna_da_cercare="Tech", 
+                                    colonna_da_restituire="Regex")
+        
+        # Verifica se è stato trovato un pattern regex per la tecnologia specificata
+        if (regex_pattern == None):
+            # Log di errore se non è stata trovata una maschera per la tecnologia
+            self.log_message(f"Errore: Valore maschera per tecnologia {technology} non trovata", 'error')
+            return
+        else:
+            # Cerca la maschera associata alla tecnologia specificata nel file delle maschere
+            regex_mask = self.file_utils.trova_valore(file_Mask, 
+                                        valore_da_cercare=technology, 
+                                        colonna_da_cercare="Tech", 
+                                        colonna_da_restituire="Mask")
+            # Verifica se è stata trovata una maschera valida per la tecnologia specificata
+            try:
+                compiled_regex = re.compile(regex_pattern)
+                # La regex è valida
+            except re.error as e:
+                self.log_message(f"Errore nella regex: {str(e)}", 'error')
+                return False
+            
+            # Log di successo se la maschera è stata trovata
+            self.log_message(f"Mask: {technology} = {regex_mask}", 'success')
+        
+        # Itera su tutti i valori nella colonna FL del dataframe
+        for valore in dataframe[nome_colonna_fl]:
+            try:
+                # Verifica se il valore corrente rispetta il pattern regex
+                if not compiled_regex.match(valore):
+                    # Crea un messaggio di errore dettagliato
+                    error_msg = (f"Errore il valore {valore} non rispetta la maschera {regex_mask}")
+                    # Log dell'errore
+                    self.log_message(error_msg, 'error')
+                    # Mostra una finestra di dialogo all'utente con l'errore
+                    QMessageBox.warning(self, "Errore di Validazione", error_msg)
+                    # Interrompe la validazione al primo errore trovato
+                    return False                 
+            except Exception as e:
+                # Gestisce eventuali eccezioni durante il processo di validazione
+                self.log_message(f"Errore nel processare il valore {valore}: {str(e)}", 'error')
+                # Interrompe la validazione in caso di eccezione
+                return False
+                
+        # Se tutti i valori rispettano la maschera, log di successo
+        #self.log_message("Validazione maschera completata con successo", 'success')
+        # Ritorna True per indicare che la validazione è avvenuta con successo
+        return True
+
     def create_dataframe(self):
         """Crea un DataFrame dai dati della finestra di testo sinistra (clipboard_area) e aggiunge le colonne richieste"""
         try:
@@ -406,42 +463,59 @@ class MainWindow(QMainWindow):
             unique_values_lev1 = self.df_FL['Livello_1'].nunique()  # restituisce il numero di valori unici in una colonna.
             if unique_values_lev1 > 1:  # più di un valore unico riscontrato
                 # Ci sono valori diversi
-                self.log_message(f"Errore: Trovati {unique_values_lev1} valori diversi nella prima colonna", 'error')
+                different_values_lev1 = self.df_FL['Livello_1'].unique()
+                different_values_str_lev1 = "\n".join([str(val) for val in different_values_lev1])
+                
+                self.log_message(f"Errore: Trovati {unique_values_lev1} valori diversi nella prima colonna.\nValori diversi:\n{different_values_str_lev1}", 'error')
                 return
             else:
                 # Tutti i valori sono uguali (univoci)
                 self.log_message("Check: Tutti i valori nella prima colonna sono uguali", 'success')
             
-            # Verifica se tutti i valori sono uguali in Livello_2
-            unique_values_lev2 = self.df_FL['Livello_2'].nunique()
-            if unique_values_lev2 > 1:
-                # Ci sono valori diversi
-                self.log_message(f"Errore: Trovati {unique_values_lev2} valori diversi nella seconda colonna", 'error')
-                return
-            else:
-                # Tutti i valori sono uguali (univoci)
-                self.log_message("Check: Tutti i valori nella seconda colonna sono uguali", 'success')
-
-                if constants.Check_univoci:
-                    # Verifica se ci sono valori duplicati
-                    if self.df_FL['Livello_1'].duplicated().any():
-                        # Ci sono duplicati
-                        duplicate_count_lev1 = self.df_FL['Livello_1'].duplicated().sum()
-                        self.log_message(f"Errore: Trovati {duplicate_count_lev1} valori duplicati nella prima colonna", 'error')
-                        return
+            # Verifica se tutti i valori sono uguali in Livello_2, esclusi i valori con FL_Lunghezza < 1
+            # Crea un subset del DataFrame con solo le righe in cui FL_Lunghezza > 1
+            filtered_df = self.df_FL[self.df_FL['FL_Lunghezza'] > 1]
+            # Verifica se ci sono righe che soddisfano la condizione
+            if not filtered_df.empty:
+                # Verifica se tutti i valori sono uguali in Livello_2 (solo per le righe filtrate)
+                unique_values_lev2 = filtered_df['Livello_2'].nunique()
+                if unique_values_lev2 > 1:
+                    # Ci sono valori diversi
+                    different_values_lev2 = filtered_df['Livello_2'].unique()
+                    different_values_str_lev2 = "\n".join([str(val) for val in different_values_lev2])
+                    
+                    self.log_message(f"Errore: Trovati {unique_values_lev2} valori diversi nella seconda colonna.\nValori diversi:\n{different_values_str_lev2}", 'error')
+                    return
                 else:
-                    # Tutti i valori sono univoci
-                    self.log_message("Check: Valori nella prima colonna univoci", 'success')
+                    # Tutti i valori sono uguali (univoci)
+                    self.log_message("Check: Tutti i valori nella seconda colonna sono uguali", 'success')
+            else:
+                # Non ci sono righe con FL_Lunghezza > 1
+                self.log_message("Check: Nessuna riga con FL_Lunghezza > 1, controllo sulla seconda colonna non necessario", 'info')
+                return
 
+        # ----------------------------------------------------
+        # Verifico che non ci siano valori duplicati nella lista delle FL
+        # ----------------------------------------------------
+
+        if constants.Check_duplicati:
             # Verifica se ci sono valori duplicati
-            if self.df_FL['Livello_2'].duplicated().any():
+            if self.df_FL['FL'].duplicated().any():
                 # Ci sono duplicati
-                duplicate_count_lev2 = self.df_FL['Livello_2'].duplicated().sum()
-                self.log_message(f"Errore: Trovati {duplicate_count_lev2} valori duplicati nella seconda colonna", 'error')
+                duplicate_count_FL = self.df_FL['FL'].duplicated().sum()
+                
+                # Trova i valori duplicati
+                duplicate_values = self.df_FL['FL'][self.df_FL['FL'].duplicated(keep=False)]
+                duplicate_values_unique = duplicate_values.unique()
+                
+                # Formatta il messaggio di errore con i valori duplicati
+                duplicate_values_str = "\n".join([str(val) for val in duplicate_values_unique])
+                
+                self.log_message(f"Errore: Trovati {duplicate_count_FL} valori duplicati nella colonna FL.\nValori duplicati:\n{duplicate_values_str}", 'error')
                 return
             else:
                 # Tutti i valori sono univoci
-                self.log_message("Check: Valori nella seconda colonna univoci", 'success')
+                self.log_message("Check: Valori nella colonna FL univoci", 'success')             
 
         # ----------------------------------------------------
         # ricavo codice Country 
@@ -461,6 +535,7 @@ class MainWindow(QMainWindow):
                 return
             else:
                 self.log_message(f"Check: Country = {description_country}", 'success')
+
         # ----------------------------------------------------    
         # ricavo codice Tecnologia
         # ----------------------------------------------------
@@ -479,10 +554,22 @@ class MainWindow(QMainWindow):
                 return
             else:
                 self.log_message(f"Check: Country = {description_techno}", 'success')
+
         # ----------------------------------------------------    
         # verifico coerenza con la maschera della tecnolgia
         # ----------------------------------------------------
-
+        if constants.Check_mask:
+            # Verifica se la tecnologia è stata trovata
+            if (description_techno == None):
+                self.log_message("Errore: Valore tecnologia non trovato", 'error')
+                return
+            else:
+                # Verifica se la maschera è valida per la tecnologia
+                if not self.validate_Mask(tech_code, self.df_FL, "FL"):
+                    self.log_message("Errore nella verifica maschera della tecnologia", 'error')
+                    return
+                else:
+                    self.log_message("Check: Verifica maschera della tecnologia", 'success')
 
         # ----------------------------------------------------    
         # verifico i parent
@@ -491,7 +578,7 @@ class MainWindow(QMainWindow):
             try:
                 NoParentList = self.VerificaParent(self.df_FL)
                 if not NoParentList:
-                    self.log_message("Verifica Parent OK", 'success')
+                    self.log_message("Check: Verifica Parent", 'success')
                 else:
                     self.log_message(f"Errore: {len(NoParentList)} Parent mancant{'e' if len(NoParentList) == 1 else 'i'}.", 'error')
                 for element in NoParentList:
@@ -619,7 +706,7 @@ class MainWindow(QMainWindow):
                     self.log_message(f"{fl}: {error_msg}", 'warning')
                 return
             else:
-                self.log_message("Tutte le FL sono valide", 'success')
+                self.log_message("Check: Guide Line", 'success')
 
       
         # ----------------------------------------------------

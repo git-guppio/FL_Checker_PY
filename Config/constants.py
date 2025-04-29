@@ -17,10 +17,14 @@ DEBUG_MODE = False
 Check_validazione = True
 # Verifico che i dati della prima e seconda colonna siano univoci
 Check_univoci = True
+# Verifico se esistono FL duplicate
+Check_duplicati = True
 # Verifico Country
 Check_country = True
-# Verifico Country
+# Verifico Tecnologia
 Check_tecnologia = True
+# Verifica maschera specifica per tecnologia
+Check_mask = True
 # Verifico parent
 Check_parent = True
 # Verifico linee guida

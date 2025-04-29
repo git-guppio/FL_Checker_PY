@@ -1,23 +1,6 @@
-Str.;Edit mask;StructIndText for FunctLocations
-Z-RBM;XXX-XXXX-XX-XX-XX-XX;Code structure for Biomass tech main
-Z-RBS;XXX-XXXX-XX-XX-XX-XX;Code structure for Biomass tech second
-Z-RCM;XXX-XXXX-XX-XX-XX-XX;Code structure for Cogen tech main
-Z-RCS;XXX-XXXX-XX-XX-XX-XX;Code structure for Cogen tech second
-Z-RGM;XXX-XXXX-XX-XX-XXX-XX;Code struct for Geoth technology main
-Z-RFM;XXX-XXXX-XX-XX-XXX-XX;Code structure Buildings Main
-Z-RFS;XXX-XXXX-XX-XX-XXX-XX;Code structure Buildings Second
-Z-RGS;XXX-XXXX-XX-XX-XXX-XX;Code struct for Geoth technology second
-Z-RHM;XXX-XXXX-XX-XXX-XX-XX;Code structure for Hydro technology main
-Z-RLS;XXX-XXXX-XX-XXX-XX-XX;Code structure for Hydro techn. second
-Z-ROM;XXX-XXXX-XX-XX-XX-XX;Code structure for Other technology main
-Z-ROS;XXX-XXXX-XX-XX-XX-XX;Code structure for Other techn. second
-Z-RSM;XXX-XXXX-XX-XX-XX-XX;Code structure for Solar technology main
-Z-RSS;XXX-XXXX-XX-XX-XX-XX;Code structure for Solar technology second
-Z-RWM;XXX-XXXX-XX-XX-XX-XX;Code structure for Wind technology main
-Z-RWS;XXX-XXXX-XX-XX-XX-XX;Code structure for Wind technology second
-Z-RXM;XXX-XXXX-XX-XX-XX-XX;Code structure for Manufacturing techn. main
-Z-RXS;XXX-XXXX-XX-XX-XX-XX;Code structure for Manufacturing techn. second
-Z-REM;XXX-XXXX-XX-XX-XX-XX;Code structure for Bess techn. main
-Z-RES;XXX-XXXX-XX-XX-XX-XX;Code structure for Bess techn. second
-Z-RJM;XXX-XXXX-XX-XX-XX-XX;Code structure for Hydrogen techn. main
-Z-RJS;XXX-XXXX-XX-XX-XX-XX;Code structure for Hydrogen techn. second
+Tech;Mask;Regex
+H;XXX-XXXX-XX-XXX-XX-XX;^(?:([A-Z0-9]{3})(?:-([A-Z0-9]{4})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{3})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2}))?)?)?)?)?)?$
+S;XXX-XXXX-XX-XX-XX-XX;^(?:([A-Z0-9]{3})(?:-([A-Z0-9]{4})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2}))?)?)?)?)?)?$
+W;XXX-XXXX-XX-XX-XX-XX;^(?:([A-Z0-9]{3})(?:-([A-Z0-9]{4})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2}))?)?)?)?)?)?$
+E;XXX-XXXX-XX-XX-XX-XX;^(?:([A-Z0-9]{3})(?:-([A-Z0-9]{4})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2}))?)?)?)?)?)?$
+J;XXX-XXXX-XX-XX-XX-XX;^(?:([A-Z0-9]{3})(?:-([A-Z0-9]{4})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2})(?:-([A-Z0-9]{2}))?)?)?)?)?)?$

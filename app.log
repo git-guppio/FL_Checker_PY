@@ -2785,3 +2785,225 @@ Exception: Errore nell'analisi dei codici e creazione del DataFrame: '>=' not su
 2025-04-29 09:54:21,026 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6268 secondi
 2025-04-29 09:54:21,044 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
 2025-04-29 09:54:21,127 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0828 secondi
+2025-04-29 10:09:11,958 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 10:09:20,262 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:09:20,925 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6621 secondi
+2025-04-29 10:09:20,942 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:09:21,024 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0813 secondi
+2025-04-29 10:10:24,897 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 10:10:31,279 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:10:31,872 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5923 secondi
+2025-04-29 10:10:31,889 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:10:31,954 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0647 secondi
+2025-04-29 10:14:58,195 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:14:58,223 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.0277 secondi
+2025-04-29 10:14:58,224 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:14:58,228 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0042 secondi
+2025-04-29 10:15:55,045 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:55,051 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0059 secondi
+2025-04-29 10:15:55,092 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:55,097 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0039 secondi
+2025-04-29 10:15:55,828 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:56,083 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.2540 secondi
+2025-04-29 10:15:57,162 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:57,500 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.3373 secondi
+2025-04-29 10:15:57,502 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,503 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0011 secondi
+2025-04-29 10:15:57,504 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,505 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0010 secondi
+2025-04-29 10:15:57,505 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,506 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0007 secondi
+2025-04-29 10:15:57,507 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,508 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0009 secondi
+2025-04-29 10:15:57,508 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,510 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0011 secondi
+2025-04-29 10:15:57,510 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,511 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0008 secondi
+2025-04-29 10:15:57,512 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,557 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0449 secondi
+2025-04-29 10:15:57,561 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:15:57,588 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0266 secondi
+2025-04-29 10:15:57,593 - RegularExpressionsTools - INFO - Iniziata esecuzione di RegularExpressionsTools.validate_and_create_df_from_CTRL_ASS_codes
+2025-04-29 10:15:57,637 - RegularExpressionsTools - INFO - Completata esecuzione di RegularExpressionsTools.validate_and_create_df_from_CTRL_ASS_codes in 0.0429 secondi
+2025-04-29 10:15:57,639 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:57,642 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0030 secondi
+2025-04-29 10:15:57,652 - RegularExpressionsTools - INFO - Iniziata esecuzione di RegularExpressionsTools.validate_and_create_df_from_ZPM4R_GL_T_FL_codes
+2025-04-29 10:15:57,669 - RegularExpressionsTools - INFO - Completata esecuzione di RegularExpressionsTools.validate_and_create_df_from_ZPM4R_GL_T_FL_codes in 0.0172 secondi
+2025-04-29 10:15:57,671 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:15:57,675 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0032 secondi
+2025-04-29 10:33:36,749 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:33:37,419 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6690 secondi
+2025-04-29 10:33:37,426 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:33:37,496 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0689 secondi
+2025-04-29 10:33:42,491 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:33:42,517 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.0260 secondi
+2025-04-29 10:33:42,518 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:33:42,522 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0042 secondi
+2025-04-29 10:34:37,715 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:37,720 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0038 secondi
+2025-04-29 10:34:37,775 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:37,781 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0052 secondi
+2025-04-29 10:34:38,651 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:39,054 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.4020 secondi
+2025-04-29 10:34:40,216 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:40,710 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.4933 secondi
+2025-04-29 10:34:40,714 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,716 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0011 secondi
+2025-04-29 10:34:40,716 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,718 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0015 secondi
+2025-04-29 10:34:40,719 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,721 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0013 secondi
+2025-04-29 10:34:40,721 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,723 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0011 secondi
+2025-04-29 10:34:40,723 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,725 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0019 secondi
+2025-04-29 10:34:40,726 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,728 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0015 secondi
+2025-04-29 10:34:40,729 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,787 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0583 secondi
+2025-04-29 10:34:40,796 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 10:34:40,827 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0305 secondi
+2025-04-29 10:34:40,836 - RegularExpressionsTools - INFO - Iniziata esecuzione di RegularExpressionsTools.validate_and_create_df_from_CTRL_ASS_codes
+2025-04-29 10:34:40,858 - RegularExpressionsTools - INFO - Completata esecuzione di RegularExpressionsTools.validate_and_create_df_from_CTRL_ASS_codes in 0.0224 secondi
+2025-04-29 10:34:40,861 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:40,864 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0029 secondi
+2025-04-29 10:34:40,876 - RegularExpressionsTools - INFO - Iniziata esecuzione di RegularExpressionsTools.validate_and_create_df_from_ZPM4R_GL_T_FL_codes
+2025-04-29 10:34:40,899 - RegularExpressionsTools - INFO - Completata esecuzione di RegularExpressionsTools.validate_and_create_df_from_ZPM4R_GL_T_FL_codes in 0.0220 secondi
+2025-04-29 10:34:40,902 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 10:34:40,906 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0031 secondi
+2025-04-29 10:53:41,786 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 10:53:51,663 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 10:53:52,307 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6437 secondi
+2025-04-29 10:53:52,319 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 10:53:52,400 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0807 secondi
+2025-04-29 11:01:43,136 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 11:01:58,249 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:01:58,822 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5721 secondi
+2025-04-29 11:01:58,833 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:01:58,910 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0764 secondi
+2025-04-29 11:02:44,649 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 11:02:52,264 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:02:52,809 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5444 secondi
+2025-04-29 11:02:52,819 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:02:52,895 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0749 secondi
+2025-04-29 11:09:37,973 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 11:09:44,269 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:09:44,822 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5529 secondi
+2025-04-29 11:09:44,834 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:09:44,895 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0605 secondi
+2025-04-29 11:30:41,947 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 11:31:10,182 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:31:10,711 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5282 secondi
+2025-04-29 11:31:10,721 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:31:10,784 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0626 secondi
+2025-04-29 11:31:42,500 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 11:32:00,736 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:32:01,271 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5345 secondi
+2025-04-29 11:32:01,280 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:32:01,359 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0788 secondi
+2025-04-29 11:32:38,858 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 11:32:39,426 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5666 secondi
+2025-04-29 11:32:39,433 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 11:32:39,496 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0618 secondi
+2025-04-29 12:06:02,275 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 12:12:31,312 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:12:31,845 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5326 secondi
+2025-04-29 12:12:31,855 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:12:31,921 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0653 secondi
+2025-04-29 12:16:56,897 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 12:17:06,862 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:17:07,451 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5882 secondi
+2025-04-29 12:17:07,468 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:17:07,532 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0629 secondi
+2025-04-29 12:24:43,797 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 12:25:19,001 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:25:19,605 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6035 secondi
+2025-04-29 12:25:19,621 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:25:19,682 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0612 secondi
+2025-04-29 12:26:21,964 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 12:26:29,296 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:26:29,842 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5455 secondi
+2025-04-29 12:26:29,853 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:26:29,913 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0599 secondi
+2025-04-29 12:26:33,805 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:26:33,832 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.0266 secondi
+2025-04-29 12:26:33,832 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:26:33,837 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0044 secondi
+2025-04-29 12:42:27,197 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:42:27,751 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5535 secondi
+2025-04-29 12:42:27,759 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:42:27,819 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0597 secondi
+2025-04-29 12:42:45,196 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:42:45,727 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5295 secondi
+2025-04-29 12:42:45,734 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:42:45,800 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0652 secondi
+2025-04-29 12:43:25,964 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 12:43:26,541 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5770 secondi
+2025-04-29 12:43:26,549 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 12:43:26,609 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0595 secondi
+2025-04-29 13:21:36,953 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 13:25:33,474 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 13:25:34,076 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6010 secondi
+2025-04-29 13:25:34,091 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 13:25:34,182 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0904 secondi
+2025-04-29 13:28:00,105 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 13:28:07,902 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 13:28:08,503 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5998 secondi
+2025-04-29 13:28:08,518 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 13:28:08,603 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0847 secondi
+2025-04-29 13:32:57,091 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 13:33:06,637 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 13:33:07,259 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6220 secondi
+2025-04-29 13:33:07,274 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 13:33:07,353 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0785 secondi
+2025-04-29 13:50:39,449 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 13:50:51,128 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 13:50:51,743 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6139 secondi
+2025-04-29 13:50:51,758 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 13:50:51,837 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0787 secondi
+2025-04-29 14:37:49,996 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 14:37:57,279 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 14:37:57,877 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5978 secondi
+2025-04-29 14:37:57,893 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 14:37:57,966 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0730 secondi
+2025-04-29 14:40:27,362 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 14:40:35,123 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 14:40:35,723 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5990 secondi
+2025-04-29 14:40:35,737 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 14:40:35,812 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0741 secondi
+2025-04-29 14:43:25,391 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 14:43:25,429 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.0364 secondi
+2025-04-29 14:43:25,430 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 14:43:25,436 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0060 secondi
+2025-04-29 14:44:40,214 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 14:44:40,219 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0048 secondi
+2025-04-29 14:44:40,276 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 14:44:40,282 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.0058 secondi
+2025-04-29 14:44:41,032 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 14:44:41,324 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.2908 secondi
+2025-04-29 14:44:42,451 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.save_dataframe_to_csv
+2025-04-29 14:44:42,862 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.save_dataframe_to_csv in 0.4108 secondi
+2025-04-29 14:44:42,865 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,867 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0010 secondi
+2025-04-29 14:44:42,867 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,869 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0013 secondi
+2025-04-29 14:44:42,869 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,871 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0011 secondi
+2025-04-29 14:44:42,874 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,882 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0050 secondi
+2025-04-29 14:44:42,884 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,888 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0017 secondi
+2025-04-29 14:44:42,888 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,892 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0018 secondi
+2025-04-29 14:44:42,892 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:42,959 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0666 secondi
+2025-04-29 14:44:42,962 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.trova_differenze
+2025-04-29 14:44:43,013 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.trova_differenze in 0.0500 secondi
+2025-04-29 14:56:07,662 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 14:56:08,324 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6608 secondi
+2025-04-29 14:56:08,331 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 14:56:08,405 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0739 secondi
+2025-04-29 14:56:30,718 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 14:56:31,252 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.5325 secondi
+2025-04-29 14:56:31,259 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 14:56:31,330 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0706 secondi
