@@ -16,13 +16,13 @@ DEBUG_MODE = False
 # Validazione con maschera generica
 Check_validazione = True
 # Verifico che i dati della prima e seconda colonna siano univoci
-Check_univoci = None
+Check_univoci = True
 # Verifico Country
-Check_country = None
+Check_country = True
 # Verifico Country
 Check_tecnologia = True
 # Verifico parent
-Check_parent = None
+Check_parent = True
 # Verifico linee guida
 Check_lineeGuida = True
 # Validazione con maschera generica

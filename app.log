@@ -2780,3 +2780,8 @@ Exception: Errore nell'analisi dei codici e creazione del DataFrame: '>=' not su
 2025-04-24 22:16:20,293 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
 2025-04-24 22:16:20,311 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0178 secondi
 2025-04-24 22:48:01,427 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 09:53:58,729 - DataFrameTools - INFO - Inizializzazione DataFrameTools
+2025-04-29 09:54:20,398 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_level_lunghezza
+2025-04-29 09:54:21,026 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_level_lunghezza in 0.6268 secondi
+2025-04-29 09:54:21,044 - DataFrameTools - INFO - Iniziata esecuzione di DataFrameTools.add_concatenated_column_FL
+2025-04-29 09:54:21,127 - DataFrameTools - INFO - Completata esecuzione di DataFrameTools.add_concatenated_column_FL in 0.0828 secondi

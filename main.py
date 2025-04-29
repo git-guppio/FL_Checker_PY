@@ -400,16 +400,38 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
         # Verifico che i dati della prima e seconda colonna siano univoci
         # ----------------------------------------------------
+
         if constants.Check_univoci:
-            # Verifica se ci sono valori duplicati
-            if self.df_FL['Livello_1'].duplicated().any():
-                # Ci sono duplicati
-                duplicate_count_lev1 = self.df_FL['Livello_1'].duplicated().sum()
-                self.log_message(f"Errore: Trovati {duplicate_count_lev1} valori duplicati nella prima colonna", 'error')
+            # Verifica se tutti i valori sono uguali in Livello_1
+            unique_values_lev1 = self.df_FL['Livello_1'].nunique()  # restituisce il numero di valori unici in una colonna.
+            if unique_values_lev1 > 1:  # più di un valore unico riscontrato
+                # Ci sono valori diversi
+                self.log_message(f"Errore: Trovati {unique_values_lev1} valori diversi nella prima colonna", 'error')
                 return
             else:
-                # Tutti i valori sono univoci
-                self.log_message("Check: Valori nella prima colonna univoci", 'success')
+                # Tutti i valori sono uguali (univoci)
+                self.log_message("Check: Tutti i valori nella prima colonna sono uguali", 'success')
+            
+            # Verifica se tutti i valori sono uguali in Livello_2
+            unique_values_lev2 = self.df_FL['Livello_2'].nunique()
+            if unique_values_lev2 > 1:
+                # Ci sono valori diversi
+                self.log_message(f"Errore: Trovati {unique_values_lev2} valori diversi nella seconda colonna", 'error')
+                return
+            else:
+                # Tutti i valori sono uguali (univoci)
+                self.log_message("Check: Tutti i valori nella seconda colonna sono uguali", 'success')
+
+                if constants.Check_univoci:
+                    # Verifica se ci sono valori duplicati
+                    if self.df_FL['Livello_1'].duplicated().any():
+                        # Ci sono duplicati
+                        duplicate_count_lev1 = self.df_FL['Livello_1'].duplicated().sum()
+                        self.log_message(f"Errore: Trovati {duplicate_count_lev1} valori duplicati nella prima colonna", 'error')
+                        return
+                else:
+                    # Tutti i valori sono univoci
+                    self.log_message("Check: Valori nella prima colonna univoci", 'success')
 
             # Verifica se ci sono valori duplicati
             if self.df_FL['Livello_2'].duplicated().any():
