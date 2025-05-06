@@ -825,7 +825,7 @@ class RegularExpressionsTools:
                     
                     # Imposto i valori fissi
                     new_row['TPLKZ'] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
-                    new_row['FLTYP'] = technology
+                    new_row['FLTYP'] = "L" if technology == "H" else technology
                     
                     # Imposto lunghezza della FL
                     new_row['FLLEVEL'] = fl_length

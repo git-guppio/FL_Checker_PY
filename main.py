@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
         self.file_utils = File_tools.FileTools()
         self.re_utils = RE_tools.RegularExpressionsTools()
         # Inizializza l'interfaccia utente
-        self.setWindowTitle("FL Data Manager")
+        self.setWindowTitle("FL Validator")
         self.setGeometry(100, 100, 1000, 600)
         self.init_ui()
         # Ottiene il percorso della directory del file Python corrente
@@ -588,7 +588,6 @@ class MainWindow(QMainWindow):
             except Exception as e:
                 print(f"Errore durante la verifica dei parent: {str(e)}")
                 return 
-
        
         # ----------------------------------------------------    
         # verifico con linee guida in base alla tecnologia

@@ -561,7 +561,7 @@ class SAPDataExtractor:
             time.sleep(0.5)
             # filtro in base alla tecnologia                
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = "Z-RLS" if fltechnology == "H" else "Z-R" + fltechnology + "S"
-            self.session.findById("wnd[0]/usr/ctxtI5-LOW").text = fltechnology    
+            self.session.findById("wnd[0]/usr/ctxtI5-LOW").text = "L" if fltechnology == "H" else fltechnology
             # modifico il numero massimo di risultati
             self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
             self.session.findById("wnd[0]").sendVKey(0)
