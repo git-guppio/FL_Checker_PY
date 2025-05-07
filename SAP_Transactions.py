@@ -166,7 +166,7 @@ class SAPDataUpLoader:
         - false altrimenti
         Esempio: UpLoadSecondoLivello_SAP("USS8")
         """           
-        result = self.analyze_file_path(self,FilePath)
+        result = self.analyze_file_path(FilePath)
         if not(result):
             return False            
         print(f"Eseguo UpLoad: \n\tFolder: {result['folderPath']}\n\tFile name: {result['fileName']}\n\tCheck csv: {result['isCSV']}")

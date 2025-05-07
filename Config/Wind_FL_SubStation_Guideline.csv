@@ -22,7 +22,7 @@ kkW-yyyy-0A-xT-Mn-BS;MV Connection;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-0x;Line protection;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-Hx;Harmonic Filter;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-ZR;Shunt Reactor;0000;16;1650;;FL_MVSECT;FL00000W
-kkW-yyyy-0A-xT-Mn-Zn;Zig Zag Earthing Transformer;0000;16;1650;;FL_MVSECT;FL00000W
+kkW-yyyy-0A-xT-Mn-Zm;Zig Zag Earthing Transformer;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-ER;Earthing Reactor;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-Cx;Capacitor Bank MV;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xT-Mn-Mx;Energy Meter;0000;16;1650;;FL_AUT&CON;FL00000W
@@ -78,7 +78,7 @@ kkW-yyyy-0A-RE;Rectifier AC/DC;0000;16;1650;;FL_AUXSYST;FL00000W
 kkW-yyyy-0A-RE-nn;Rectifier AC/DC;0000;16;1650;;FL_AUXSYST;FL00000W
 kkW-yyyy-0A-xM;MV Feeders Connection;0000;16;1650;;FL_MVFEED;FL00000W
 kkW-yyyy-0A-xM-MA;MV Section;0000;16;1650;;FL_MVSECT;FL00000W
-kkW-yyyy-0A-xM-MA-In;MV Circuit Breaker;0000;16;1650;;FL_MVSECT;FL00000W
+kkW-yyyy-0A-xM-MA-Ix;MV Circuit Breaker;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Dx;MV Disconnector;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Ax;MV M&P Transformers CT;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Vx;MV M&P Transformers VT;0000;16;1650;;FL_MVSECT;FL00000W
@@ -87,7 +87,7 @@ kkW-yyyy-0A-xM-MA-BS;MV Connection;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-0x;Line protection;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Hx;Harmonic Filter;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-ZR;Shunt Reactor;0000;16;1650;;FL_MVSECT;FL00000W
-kkW-yyyy-0A-xM-MA-Zn;Zig Zag Earthing Transformer;0000;16;1650;;FL_MVSECT;FL00000W
+kkW-yyyy-0A-xM-MA-Zm;Zig Zag Earthing Transformer;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-ER;Earthing Reactor;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Cx;Capacitor Bank MV;0000;16;1650;;FL_MVSECT;FL00000W
 kkW-yyyy-0A-xM-MA-Mx;Energy Meter;0000;16;1650;;FL_AUT&CON;FL00000W

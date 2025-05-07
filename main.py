@@ -1175,7 +1175,7 @@ class MainWindow(QMainWindow):
                                     if isinstance(key, str) and key.startswith("ZPM") and value["generated"]:
                                         # Verifica quale routine specifica chiamare in base al nome
                                         if key == "ZPMR_CONTROL_FL2":
-                                            result = loader.UpLoadLivello_n_SAP(value["path"])
+                                            result = loader.UpLoadLivello_2_SAP(value["path"])
                                             # Verifica del risultato
                                             if result is True:
                                                 print(f"Tabella ZPMR_CONTROL_FL2 aggiornata correttamente!")

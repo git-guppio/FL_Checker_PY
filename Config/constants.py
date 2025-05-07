@@ -20,7 +20,7 @@ Check_univoci = False
 # Verifico se esistono FL duplicate
 Check_duplicati = True
 # Verifico Country
-Check_country = False
+Check_country = True
 # Verifico Tecnologia
 Check_tecnologia = True
 # Verifica maschera specifica per tecnologia

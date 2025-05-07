@@ -5,52 +5,52 @@ kkS-yyyy-0A;Common Energy Collecting & Delivery System;;;;;;
 kkS-yyyy-0A-xT;HV/MV Common Transformer;0000;18;1850;;FL_TR_SS;FL00000S
 kkS-yyyy-0A-xT-HV;HV Section;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xT-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-Rn;HV/MV Protective Relays;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-Sn;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-Dn;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-An;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-Vn;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xT-HV-Rx;HV/MV Protective Relays;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xT-HV-Sx;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xT-HV-Dx;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xT-HV-Ax;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xT-HV-Vx;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xT-HV-BS;HV Connection;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xT-HV-Mn;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
+kkS-yyyy-0A-xT-HV-Mx;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
 kkS-yyyy-0A-xT-Mn;MV Section;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Iy;MV Circuit Breaker/MV Panel;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Dn;MV Disconnector;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-An;MV M&P Transformers CT;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Vn;MV M&P Transformers VT;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Sn;MV Surge Arrester;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Ix;MV Circuit Breaker/MV Panel;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Dx;MV Disconnector;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Ax;MV M&P Transformers CT;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Vx;MV M&P Transformers VT;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Sx;MV Surge Arrester;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xT-Mn-BS;MV Connection;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-0n;Line protection;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Hn;Harmonic Filter;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-0x;Line protection;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Hx;Harmonic Filter;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xT-Mn-ZR;Shunt Reactor;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Zn;Zig Zag Earthing Transformer;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Zm;Zig Zag Earthing Transformer;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xT-Mn-ER;Earthing Reactor;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Cn;Capacitor Bank MV;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xT-Mn-Mn;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
+kkS-yyyy-0A-xT-Mn-Cx;Capacitor Bank MV;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xT-Mn-Mx;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
 kkS-yyyy-0A-xT-OC;Civil Works;0000;18;1810;;FL_INFRAST;FL00000S
 kkS-yyyy-0A-xL;HV Line;0000;18;1850;;FL_LI_SS;FL00000S
 kkS-yyyy-0A-xL-HV;HV Section;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xL-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xL-HV-Rx;HV/MV Protective Relays;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xL-HV-Dn;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xL-HV-Sn;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xL-HV-An;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xL-HV-Vn;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xL-HV-Dx;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xL-HV-Sx;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xL-HV-Ax;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xL-HV-Vx;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xL-HV-BS;HV Connection;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xL-HV-Mn;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
+kkS-yyyy-0A-xL-HV-Mx;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
 kkS-yyyy-0A-xL-OC;Civil Works;0000;18;1810;;FL_INFRAST;FL00000S
 kkS-yyyy-0A-xL-OL;Overhead Power Lines;0000;18;1850;;FL_POWLINE;FL00000S
 kkS-yyyy-0A-xL-UL;Underground Power Lines;0000;18;1850;;FL_POWLINE;FL00000S
 kkS-yyyy-0A-xS;HV Busbar;0000;18;1850;;FL_BU_SS;FL00000S
 kkS-yyyy-0A-xS-HV;HV Section;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xS-HV-IT;HV Breaker/Circuit Breaker/HGIS;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Rn;HV/MV Protective Relays;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Dn;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Sn;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-An;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Vn;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Cn;Capacitor Bank HV;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Rx;HV/MV Protective Relays;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Dx;HV Disconnector;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Sx;HV Surge Arrester;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Ax;HV M&P Transformers CT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Vx;HV M&P Transformers VT;0000;18;1850;;FL_HVSECT;FL00000S
+kkS-yyyy-0A-xS-HV-Cx;Capacitor Bank HV;0000;18;1850;;FL_HVSECT;FL00000S
 kkS-yyyy-0A-xS-HV-BS;HV Connection;0000;18;1850;;FL_HVSECT;FL00000S
-kkS-yyyy-0A-xS-HV-Mn;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
+kkS-yyyy-0A-xS-HV-Mx;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
 kkS-yyyy-0A-xS-OC;Civil Works;0000;18;1810;;FL_INFRAST;FL00000S
 kkS-yyyy-0A-LA;LV Auxiliary services power distribution;0000;18;1850;;FL_AUXSYST;FL00000S
 kkS-yyyy-0A-LA-LP;DC LV Panel - uninterrupted;0000;18;1850;;FL_AUXSYST;FL00000S
@@ -78,7 +78,7 @@ kkS-yyyy-0A-RE;Rectifier AC/DC;0000;18;1850;;FL_AUXSYST;FL00000S
 kkS-yyyy-0A-RE-nn;Rectifier AC/DC;0000;18;1850;;FL_AUXSYST;FL00000S
 kkS-yyyy-0A-xM;MV Feeders Connection;0000;18;1850;;FL_MVFEED;FL00000S
 kkS-yyyy-0A-xM-MA;MV Section;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xM-MA-In;MV Circuit Breaker;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xM-MA-Ix;MV Circuit Breaker;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Dx;MV Disconnector;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Ax;MV M&P Transformers CT;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Vx;MV M&P Transformers VT;0000;18;1850;;FL_MVSECT;FL00000S
@@ -87,7 +87,7 @@ kkS-yyyy-0A-xM-MA-BS;MV Connection;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-0x;Line protection;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Hx;Harmonic Filter;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-ZR;Shunt Reactor;0000;18;1850;;FL_MVSECT;FL00000S
-kkS-yyyy-0A-xM-MA-Zn;Zig Zag Earthing Transformer;0000;18;1850;;FL_MVSECT;FL00000S
+kkS-yyyy-0A-xM-MA-Zm;Zig Zag Earthing Transformer;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-ER;Earthing Reactor;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Cx;Capacitor Bank MV;0000;18;1850;;FL_MVSECT;FL00000S
 kkS-yyyy-0A-xM-MA-Mx;Energy Meter;0000;18;1850;;FL_AUT&CON;FL00000S
