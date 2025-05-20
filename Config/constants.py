@@ -16,7 +16,7 @@ DEBUG_MODE = False
 # Validazione con maschera generica 
 Check_validazione = True
 # Verifico che i dati della prima e seconda colonna siano univoci
-Check_univoci = False
+Check_univoci = True
 # Verifico se esistono FL duplicate
 Check_duplicati = True
 # Verifico Country

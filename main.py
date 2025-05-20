@@ -197,6 +197,7 @@ class MainWindow(QMainWindow):
             self.log_list.addItem(f"{icon} {message}")
             self.log_list.scrollToBottom()
     """
+
     def log_risultato_differenze(self, nomeTabella, risultato):
         try:
             if not isinstance(risultato, list):
