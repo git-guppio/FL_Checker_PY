@@ -681,8 +681,7 @@ class SAPDataExtractor:
 
     def clipboard_data(self) -> Optional[pd.DataFrame]:
         """
-        Legge i dati dalla clipboard, rimuove le righe di separazione e le colonne vuote,
-        e gestisce le intestazioni duplicate.
+        Legge i dati dalla clipboard.
         
         Returns:
             DataFrame Pandas pulito o None in caso di errore

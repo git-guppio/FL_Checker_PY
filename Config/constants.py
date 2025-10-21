@@ -11,7 +11,7 @@ print(f"La directory dello script è: {A_ScriptDir}")
 DEBUG_MODE = False
 
 # ----------------------------------------------------
-# Abilitazione allésecuzione dei test du FL [True/False]
+# Abilitazione all'esecuzione dei test FL [True/False]
 # ----------------------------------------------------
 # Validazione con maschera generica 
 Check_validazione = True
@@ -26,7 +26,7 @@ Check_tecnologia = True
 # Verifica maschera specifica per tecnologia
 Check_mask = True
 # Verifico parent
-Check_parent = False
+Check_parent = True
 # Verifico linee guida
 Check_lineeGuida = True
 # Validazione con maschera generica

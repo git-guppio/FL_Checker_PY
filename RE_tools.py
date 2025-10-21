@@ -284,9 +284,9 @@ class RegularExpressionsTools:
                     # 4. Costruisce la colonna FL_RE con le espressioni regolari
                     def create_regex(fl_value):
                         if pd.isna(fl_value) or not isinstance(fl_value, str):
-                            print(f"Attenzione: Valore non valido nella colonna FL: {fl_value}")
+                            print(f"Attenzione: Valore non valido nella colonna esaminata: {fl_value}")
                             return ""
-                        
+
                         # Copia il valore originale
                         fl_regex = fl_value
                         
@@ -297,9 +297,11 @@ class RegularExpressionsTools:
                         for key in ordered_keys:
                             fl_regex = fl_regex.replace(key, rules_dict[key])
                             
+                        # print(f"fl_value: {fl_value}; fl_regex: {fl_regex}")
                         return fl_regex
                     
                     # Applica la funzione a ogni valore della colonna FL
+                    print(f"Creo colonna 'FL_RE' con espressioni regolari a partire dalla colonna 'FL'")
                     guideline_df['FL_RE'] = guideline_df['FL'].apply(create_regex)
 
                     if combined_df is None:
@@ -331,8 +333,10 @@ class RegularExpressionsTools:
                 combined_df = combined_df.drop_duplicates(subset=['FL_RE'], keep='first')
 
             # Crea la colonna ['Check'] per la costruzione delle tabelle di aggiornamento ZPMR_CTRL_ASS e ZPM4R_GL_T_FL
+            # per valori di lunghezza > 3
             if (DataFrameTools.Add_Column_Check_ZPMR(combined_df)):
                 # Applica la funzione a ogni valore della colonna FL
+                print(f"Creo colonna 'Check_RE' con espressioni regolari a partire dalla colonna 'Check'")
                 combined_df['Check_RE'] = combined_df['Check'].apply(create_regex)
             else:
                 print("Errore nella creazione della colonna Check nel DF guideline_df")
@@ -1025,7 +1029,7 @@ class RegularExpressionsTools:
         df_regex_completo['FL_Lunghezza'] = df_regex_completo['FL_Lunghezza'].astype(int)
         
         # Inizializziamo il risultato
-        risultati_categorie = {}
+        diz_risultati_categorie = {}
         
         # Eseguiamo la funzione filter_dataframe_by_regex per ottenere i sottoinsiemi
         df_per_categoria = RegularExpressionsTools.filter_dataframe_by_regex(df_fl_completo, categorie_dict, colonna_fl)
@@ -1059,7 +1063,7 @@ class RegularExpressionsTools:
                 
                 # Chiamiamo la funzione di verifica
                 risultato = RegularExpressionsTools.verifica_fl_con_regex(df_fl_categoria, df_regex_categoria)
-                risultati_categorie[categoria] = risultato
+                diz_risultati_categorie[categoria] = risultato
                 
             except Exception as e:
                 print(f"Errore durante la verifica della categoria {categoria}: {str(e)}")
@@ -1068,11 +1072,11 @@ class RegularExpressionsTools:
         # Unifichiamo i risultati
         df_risultati = pd.DataFrame()
         
-        # Uniamo solo i DataFrame non vuoti
-        dfs_da_unire = [df for df in risultati_categorie.values() if df is not None and not df.empty]
+        # Creiamo una lista dei DataFrame da unire
+        list_df_da_unire = [df for df in diz_risultati_categorie.values() if df is not None and not df.empty]
         
-        if dfs_da_unire:
-            df_risultati = pd.concat(dfs_da_unire, ignore_index=True)
+        if list_df_da_unire:
+            df_risultati = pd.concat(list_df_da_unire, ignore_index=True)
         """         
         # Riordiniamo le colonne per una migliore leggibilità
         colonne_ordinate = ['Categoria', 'FL', 'FL_Lunghezza', 'Check_Result']

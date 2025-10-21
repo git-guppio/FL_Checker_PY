@@ -79,19 +79,19 @@ kkE-yyyy-xE-nn-00;Common of PCS;0000;51;5150;;FL_OTHER;FL00000E
 kkE-yyyy-xE-nn-00-CP;Fire fighting Control panel ;0000;51;5150;;FL_SAFSYST;FL00000E
 kkE-yyyy-xE-nn-00-PL;Safety PLC Cabinet;0000;51;5150;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE-nn-00-CH;PCS Chiller;0000;51;5150;;FL_AUXSYST;FL00000E
-kkE-yyyy-xE-nn-Pm;PCS Inverter;0000;51;5180;;FL_PCS;FL00000E
-kkE-yyyy-xE-nn-Pm-PM;Power Module;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-FU;Fuse Combiner;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-GI;Ground Impedence system;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-DC;DC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-AC;AC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-AR;Cooling Fans;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-TK;PCS Enclosure;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-HI;Human machine interface;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-DS;DC Disconnect Switch;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-PS;External Power supply;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-RC;Remote communication ;0000;51;5180;;FL_PCSCOMP;FL00000E
-kkE-yyyy-xE-nn-Pm-LC;Liquid Cooling System;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px;PCS Inverter;0000;51;5180;;FL_PCS;FL00000E
+kkE-yyyy-xE-nn-Px-PM;Power Module;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-FU;Fuse Combiner;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-GI;Ground Impedence system;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-DC;DC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-AC;AC Section;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-AR;Cooling Fans;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-TK;PCS Enclosure;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-HI;Human machine interface;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-DS;DC Disconnect Switch;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-PS;External Power supply;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-RC;Remote communication ;0000;51;5180;;FL_PCSCOMP;FL00000E
+kkE-yyyy-xE-nn-Px-LC;Liquid Cooling System;0000;51;5180;;FL_PCSCOMP;FL00000E
 kkE-yyyy-xE-nn-Cn-AC;Array Controller;0000;51;5180;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE-nn-Cn-CL;Cable;0000;51;5180;;FL_CONTCOM;FL00000E
 kkE-yyyy-xE-nn-Cn-CP;Container Fire fighting Control panel ;0000;51;5180;;FL_SAFSYST;FL00000E

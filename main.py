@@ -1,7 +1,10 @@
-from ast import pattern
-from opcode import hasconst
+#from ast import pattern
+#from opcode import hasconst
+from ast import List
 import os
 import sys
+#from tabnanny import check
+#from turtle import Turtle
 import pandas as pd
 import re
 import DF_Tools
@@ -17,6 +20,9 @@ import SAP_Transactions
 import DF_Tools
 import Config.constants as constants
 from RE_tools import RegularExpressionsTools
+from typing import Tuple, Optional, Dict
+
+from ConfigWindow import ConfigWindow, load_config_from_file
 
 import logging
 
@@ -44,6 +50,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("FL Validator")
         self.setGeometry(100, 100, 1000, 600)
         self.init_ui()
+        # Carica la configurazione all'avvio
+        self.validation_config = load_config_from_file()
         # Ottiene il percorso della directory del file Python corrente
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
         # Definisco un dizionario da utilizzare per memorizzare i file di aggiornamento creati
@@ -53,7 +61,15 @@ class MainWindow(QMainWindow):
             "ZPMR_CONTROL_FLn": {"generated": False, "path": constants.file_ZPMR_FL_n_UpLoad},
             "ZPMR_CTRL_ASS": {"generated": False, "path": constants.file_ZPMR_CTRL_ASS_UpLoad},
             "ZPM4R_GL_T_FL": {"generated": False, "path": constants.file_ZPMR_TECH_OBJ_UpLoad}
-        }      
+        }
+        # -- Dataframe utilizzati nella classe --
+        # df contenente la lista delle FL presenti nella finestra sinistra (le FL da verificare),
+        # Viene modificato durante l'esecuzione inserendo nuove colonne per la verifica delle FL.
+        self.df_FL = pd.DataFrame()
+        # df contenente le linee guida e le relative espressioni regolari inerenti alla tecnologia delle FL.
+        self.df_regex = pd.DataFrame()
+        # df contenente il risultato della verifica delle espressioni regolari sulla lista delle FL
+        self.df_result = pd.DataFrame()
 
 
     def init_ui(self):
@@ -115,6 +131,11 @@ class MainWindow(QMainWindow):
         self.upload_button.clicked.connect(self.upload_data)
         self.upload_button.setEnabled(False)  # Disabilitato finché non implementato
         button_layout.addWidget(self.upload_button)
+
+        # Bottone Configura
+        self.config_button = QPushButton('Configura')
+        self.config_button.clicked.connect(self.config)
+        button_layout.addWidget(self.config_button)        
         
         # Aggiungi il layout dei bottoni al layout principale
         main_layout.addLayout(button_layout)
@@ -227,15 +248,25 @@ class MainWindow(QMainWindow):
         self.upload_button.setEnabled(False)
         self.log_message("Finestre pulite")
 
-    def validate_clipboard_data(self):
-        """Valida i dati nella finestra di testo sinistra (clipboard_area)"""
-        data = self.clipboard_area.toPlainText().strip().split('\n')
-        data = [line.strip() for line in data if line.strip()]  # Rimuove linee vuote
+    def validate_clipboard_data(self, data:list) -> Tuple[bool, Optional[pd.DataFrame]]:
+        """
+        Verifica che i dati incollati nella finestra di testo sinistra (clipboard_area) rispettino la maschera generica.
+        Se ci sono righe non valide, le rimuove e restituisce un DataFrame con sole righe corrette.
         
-        # Verifica se ci sono dati
-        if not data:
-            QMessageBox.warning(self, "Attenzione", "Inserire i dati nella finestra di sinistra prima di procedere.")
-            return False
+        Args:
+            None
+        Returns:
+            Tuple[bool, Optional[pd.DataFrame]]: 
+                - bool: True se esistono dati validi, false se nessun dato è corretto
+                - df: dataframe contenente le informazioni corrette (se presenti) altrimenti un df vuoto
+            
+        Raises:
+            None
+        """        
+
+        df = pd.DataFrame()  # Inizializza il DataFrame vuoto
+        valid_fl_list = []  # Lista temporanea per raccogliere le FL valide
+        error_count = 0  # Contatore degli errori
             
         # Esempio di pattern regex per la validazione
         # utilizzo una maschera generica, dato che ancora non ho rilevato la tecnologia
@@ -245,6 +276,7 @@ class MainWindow(QMainWindow):
         }
         
         #lines = data.split('\n')
+        # imposto una variabile per verificare che tutti gli elementi corrispondano alla maschera  anzichè terminare il ciclo al primo valore errato
         for i, line in enumerate(data, 1):
             if not line.strip():
                 continue
@@ -253,17 +285,32 @@ class MainWindow(QMainWindow):
                 if not re.match(patterns['MaskGenerica'], line):
                     error_msg = (f"Errore riga {i}: la FL: {line} non rispetta le maschere FL")
                     self.log_message(error_msg, 'error')
-                    QMessageBox.warning(self, "Errore di Validazione", error_msg)
-                    return False                 
+                    error_count += 1
+                else:
+                    # Aggiungi alla lista temporanea
+                    valid_fl_list.append(line.strip())                                  
 
             except Exception as e:
                 self.log_message(f"Errore nel processare la riga {i}: {str(e)}", 'error')
-                return False
-                
-        self.log_message("Validazione dati completata con successo", 'success')
-        return True  
+                error_count += 1
+        
+        # Verifica che siano presenti dati nella lista temporeane
+        if valid_fl_list:
+            # Crea il DataFrame con i dati presenti nella lista temporanea
+            df = pd.DataFrame({'FL': valid_fl_list})
+            if (error_count == 0):        
+                self.log_message("Validazione dati completata con successo", 'success')  
+            else:
+                self.log_message("Errore di validazione dei dati", 'error')
+                if error_count == 1:
+                    self.log_message(f"Rimossa {error_count} riga non valida", 'error')
+                else:
+                    self.log_message(f"Rimosse {error_count} righe non valide", 'error')
+            return True, df
+        else:
+            return False, pd.DataFrame()
 
-    def validate_Mask(self, technology, dataframe, nome_colonna_fl):
+    def validate_Mask(self, technology, dataframe, nome_colonna_fl) -> bool:
         """ Valida i dati in base alla maschera specifica della tecnologia ricavata nei controlli precedenti """
         # Ottiene il nome del file che contiene le maschere di validazione
         file_Mask = constants.file_Mask
@@ -278,7 +325,7 @@ class MainWindow(QMainWindow):
         if (regex_pattern == None):
             # Log di errore se non è stata trovata una maschera per la tecnologia
             self.log_message(f"Errore: Valore maschera per tecnologia {technology} non trovata", 'error')
-            return
+            return False
         else:
             # Cerca la maschera associata alla tecnologia specificata nel file delle maschere
             regex_mask = self.file_utils.trova_valore(file_Mask, 
@@ -320,15 +367,9 @@ class MainWindow(QMainWindow):
         # Ritorna True per indicare che la validazione è avvenuta con successo
         return True
 
-    def create_dataframe(self):
+    def create_dataframe(self, df:pd.DataFrame) -> bool:
         """Crea un DataFrame dai dati della finestra di testo sinistra (clipboard_area) e aggiunge le colonne richieste"""
         try:
-            # Ottiene i dati validati dalla finestra di testo sinistra (clipboard_area)
-            data = self.clipboard_area.toPlainText().strip().split('\n')
-            data = [line.strip() for line in data if line.strip()]  # Rimuove linee vuote
-            
-            # Crea DataFrame base con colonna FL
-            df = pd.DataFrame(data, columns=['FL'])
             
             # Aggiunge le colonne per i livelli e la lunghezza 
             df, error = self.df_utils.add_level_lunghezza(df, 'FL')
@@ -337,7 +378,7 @@ class MainWindow(QMainWindow):
                 print(df)  # Funziona correttamente
             else:
                 print(f"Si è verificato un errore: {error}")
-                return
+                return False
 
             # Aggiunge la colonna <Check> per la verifica della presenza delle singole FL nelle tabelle globali
             df, error = self.df_utils.add_concatenated_column_FL(df, "Livello_6", "Livello_5", "Livello_4", "Livello_3", "FL_Lunghezza")
@@ -346,7 +387,7 @@ class MainWindow(QMainWindow):
                 print(df)  # Funziona correttamente
             else:
                 print(f"Si è verificato un errore: {error}")
-                return            
+                return False           
             # Memorizza il DataFrame
             self.df_FL = df
             
@@ -372,7 +413,7 @@ class MainWindow(QMainWindow):
             self.log_message(f"Errore nella creazione del DataFrame: {str(e)}", 'error')
             return False       
 
-    def VerificaParent(self, df):
+    def VerificaParent(self) -> List: # utilizza self.df_FL
         """
         Crea un dizionario con 6 chiavi (1-6) a partire da un DataFrame
         che contiene le colonne 'FL' e 'FL_Lunghezza'.
@@ -384,6 +425,9 @@ class MainWindow(QMainWindow):
         Returns:
         list: contenente gli elementi senza Parent
         """
+        df = pd.DataFrame()
+        df = self.df_FL.copy()
+
         # Verifica che il DataFrame contenga le colonne necessarie
         if 'FL' not in df.columns or 'FL_Lunghezza' not in df.columns:
             raise ValueError("Il DataFrame deve contenere le colonne 'FL' e 'FL_Lunghezza'")
@@ -397,6 +441,12 @@ class MainWindow(QMainWindow):
             5: [],
             6: []
         }
+        # Funzione helper per aggiungere elementi univoci
+        def append_unique(lista, elemento):
+            if elemento not in lista:
+                lista.append(elemento)
+                return True
+            return False          
         
         # Prima passa: popoliamo il dizionario in base alla lunghezza FL
         for i in range(1, 7):
@@ -418,16 +468,170 @@ class MainWindow(QMainWindow):
                     # Verifichiamo se il genitore è presente nel livello n-1
                     if potenziale_genitore not in dizionario[livello-1]:
                         # Se non è presente, lo spostiamo in NoParent
-                        self.append_unique(parent_mancanti, potenziale_genitore)
+                        append_unique(parent_mancanti, potenziale_genitore)
  
         return parent_mancanti
     
-    # Funzione helper per aggiungere elementi univoci
-    def append_unique(self, lista, elemento):
-        if elemento not in lista:
-            lista.append(elemento)
+    def check_duplicati(self) -> Tuple[bool, Optional[pd.DataFrame]]:
+        """
+        Verifica la presenza di duplicati nella colonna FL e restituisce un DataFrame filtrato.
+        
+        Args:
+            df: DataFrame da verificare
+            
+        Returns:
+            Tuple[bool, Optional[pd.DataFrame]]: 
+                - bool: True se non ci sono duplicati, False se ci sono
+                - DataFrame: DataFrame originale se non ci sono duplicati, 
+                            DataFrame filtrato con valori univoci se ci sono duplicati
+        """
+        df = pd.DataFrame()
+        df = self.df_FL.copy()
+        # Verifica se ci sono valori duplicati
+        if df['FL'].duplicated().any():
+            # Ci sono duplicati
+            duplicate_count_FL = df['FL'].duplicated().sum()
+            
+            # Trova i valori duplicati
+            duplicate_values = df['FL'][df['FL'].duplicated(keep=False)]
+            duplicate_values_unique = duplicate_values.unique()
+            
+            # Formatta il messaggio di errore con i valori duplicati
+            duplicate_values_str = "\n".join([str(val) for val in duplicate_values_unique])
+            
+            self.log_message(f"Errore: Trovati {duplicate_count_FL} valori duplicati nella colonna FL.\nValori duplicati:\n{duplicate_values_str}", 'error')
+            
+            # Crea DataFrame filtrato mantenendo solo la prima occorrenza di ogni valore
+            df_filtered = df.drop_duplicates(subset=['FL'], keep='first').reset_index(drop=True)
+            
+            # Log del numero di righe rimosse
+            rows_removed = len(df) - len(df_filtered)
+            self.log_message(f"Rimosse {rows_removed} righe duplicate. DataFrame filtrato contiene {len(df_filtered)} righe univoche.", 'warning')
+            
+            return False, df_filtered # Restituisco il dataframe filtrato contenente solo i valori univoci
+        
+        else:
+            # Tutti i valori sono univoci
+            self.log_message("Check: Valori nella colonna FL univoci", 'success')
+            return True, df
+        
+    def check_linee_guida(self, tech_code: str) -> bool:
+        """         
+        Verifica le linee guida in base alla tecnologia specificata.
+        Crea un DataFrame con le espressioni regolari e verifica le FL.
+        Utilizza le variabili di istanza self.df_FL, self.df_regex e memorizza il risultato in self.df_result.
+        """
+        df = pd.DataFrame()
+        df = self.df_FL.copy()
+
+        if tech_code == 'E':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
+            # Definisco il dizionario di regex
+            regex_dict = {
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
+            }            
+
+        elif tech_code == 'W':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_W_SubStation, constants.file_FL_Wind]
+            # Definisco il dizionario di regex            
+            regex_dict = {
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00']
+            }             
+
+        elif tech_code == 'S':
+            # Apri la finestra di dialogo per selezionare il tipo di inverter
+            self.log_message("Tecnologia Solare rilevata: selezione tipo inverter...", 'info')
+            dialog = InverterSelectionDialog(self)
+            if dialog.exec_() == QDialog.Accepted:
+                inverter_type = dialog.get_selected_inverter_type()
+                self.log_message(f"Tipo di inverter selezionato: {inverter_type}", 'success')
+                
+                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia solare
+                # con il tipo di inverter specifico
+                File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
+                
+                # Aggiungi il file specifico per il tipo di inverter selezionato
+                if inverter_type == "Central Inverter":
+                    File_guideLine_list.append(constants.file_FL_Solar_CentralInv)
+                elif inverter_type == "String Inverter":
+                    File_guideLine_list.append(constants.file_FL_Solar_StringInv)
+                elif inverter_type == "Inverter Module":
+                    File_guideLine_list.append(constants.file_FL_Solar_InvModule)
+                # Definisco il dizionario di regex                    
+                regex_dict = {
+                    'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                    'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
+                } 
+
+            else:
+                # L'utente ha annullato la selezione dell'inverter
+                self.log_message("Selezione tipo inverter annullata", 'warning')
+                self.extract_button.setEnabled(True)
+                return False
+            
+        elif tech_code == 'H':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_Hydro]
+            # Definisco il dizionario di regex                    
+            regex_dict = {
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
+            }             
+        else:
+            self.log_message("Errore: Tecnologia non riconosciuta", 'error')
+            return False
+
+        # Genera un unico DataFrame con le espressioni regolari a partire dai file di regole e la lista delle guideLine
+        try:
+            self.df_regex = RegularExpressionsTools.Make_DF_RE_list(constants.file_Rules, File_guideLine_list)
+        except Exception as e:
+            print(f"Errore durante il processing dei file: {str(e)}")
+    
+        print("#----------- df_regex ---------#")
+        print(self.df_regex)
+        # salvo il df in un file csv
+        self.df_regex.to_csv('df_re_completo.csv', index=False)
+        
+        """ 
+        Creo un Dizionario contenente i DataFrame filtrati con le chiavi contenute 
+        in regex_dict originali più una chiave 'Others' per le righe che non corrispondono a nessun pattern
+        """
+        try:
+            # Eseguiamo la verifica
+            self.df_result = RegularExpressionsTools.verifica_fl_con_regex_per_categorie(df, self.df_regex, regex_dict)
+            
+            # Stampiamo i risultati
+            print(f"\nRisultati della verifica: df_result = {len(self.df_result)} righe | df = {len(df)} righe")
+            print(self.df_result)
+            
+        except Exception as e:
+            print(f"Errore nell'esecuzione: {str(e)}")   
+    
+        # salvo il df in un file csv
+        self.df_result.to_csv('df_result_completo.csv', index=False)
+        print(self.df_result)
+
+        # Trova le FL non valide
+        fl_non_valide = self.df_result[self.df_result['Check_Result'] != True]['FL'].tolist()
+
+        # Mostra la lista delle FL non valide
+        if fl_non_valide:
+            # Mostra il numero di FL non valide
+            # Mostra il numero di FL non valide con singolare o plurale
+            self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}:", 'error')
+            #self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
+            for fl in fl_non_valide:
+                # Ottieni il messaggio di errore specifico per questa FL
+                error_msg = self.df_result[self.df_result['FL'] == fl]['Check_Result'].values[0]
+                self.log_message(f"{fl}: {error_msg}", 'warning')
+            return False
+        else:
+            self.log_message("Check: Guide Line", 'success')
             return True
-        return False     
 
     # ----------------------------------------------------
     # Routine associata al tasto <Estrai Dati>
@@ -443,17 +647,49 @@ class MainWindow(QMainWindow):
         self.FileGenerated["ZPMR_CTRL_ASS"]["generated"] = False
         self.FileGenerated["ZPM4R_GL_T_FL"]["generated"] = False
 
+        # Creo un dizionario per memorizzare i risultati dei test
+        check_results = {
+            "Check_validazione": False,
+            "Check_univoci": False,
+            "Check_duplicati": False,
+            "Check_country": False,
+            "Check_tecnologia": False,
+            "Check_mask": False,
+            "Check_parent": False,
+            "Check_lineeGuida": False,
+            "Check_TabGlobaliSAP": False
+        }
+
+        # ----------------------------------------------------
+        # Leggo i dati presenti nella finestra di testo sinistra (clipboard_area)
+        # ----------------------------------------------------          
+        data = self.clipboard_area.toPlainText().strip().split('\n')
+        data = [line.strip() for line in data if line.strip()]  # Rimuove linee vuote
+        # Verifica se ci sono dati
+        if not data:
+            self.log_message(f"Non sono presenti dati", 'error')
+            QMessageBox.warning(self, "Attenzione", "Inserire i dati nella finestra di sinistra prima di procedere.")
+            return
+        else:
+            self.log_message(f"Dati presenti: {len(data)} righe", 'info')
+            
+        
         # ----------------------------------------------------
         # Validazione dati con maschera generica
         # ----------------------------------------------------        
         if constants.Check_validazione:
-            # Prima verifica i dati nella finestra di testo sinistra (clipboard_area)
-            if not self.validate_clipboard_data():
-                return
-            # Creo un DF con i dati contenuti nella finestra
-            if not self.create_dataframe():
+            # Verifico che i dati incollati rispettino la maschera generica
+            check_results["Check_validazione"], df =  self.validate_clipboard_data(data)
+            if not check_results["Check_validazione"]:
+                self.log_message("Errore: Nessun dato valido da processare", 'error')
                 return
 
+        # ----------------------------------------------------
+        # Creo un DF con i dati ottenuti dalla validazione
+        # ----------------------------------------------------                    
+
+        if not self.create_dataframe(df):
+            return
 
         # ----------------------------------------------------
         # Verifico che i dati della prima e seconda colonna siano univoci
@@ -500,24 +736,8 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
 
         if constants.Check_duplicati:
-            # Verifica se ci sono valori duplicati
-            if self.df_FL['FL'].duplicated().any():
-                # Ci sono duplicati
-                duplicate_count_FL = self.df_FL['FL'].duplicated().sum()
-                
-                # Trova i valori duplicati
-                duplicate_values = self.df_FL['FL'][self.df_FL['FL'].duplicated(keep=False)]
-                duplicate_values_unique = duplicate_values.unique()
-                
-                # Formatta il messaggio di errore con i valori duplicati
-                duplicate_values_str = "\n".join([str(val) for val in duplicate_values_unique])
-                
-                self.log_message(f"Errore: Trovati {duplicate_count_FL} valori duplicati nella colonna FL.\nValori duplicati:\n{duplicate_values_str}", 'error')
-                return
-            else:
-                # Tutti i valori sono univoci
-                self.log_message("Check: Valori nella colonna FL univoci", 'success')             
-
+            check_results["Check_duplicati"], self.df_FL = self.check_duplicati() # applico il metodo alla variabile di istanza self.df_FL
+            
         # ----------------------------------------------------
         # ricavo codice Country 
         # ----------------------------------------------------
@@ -577,7 +797,7 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
         if constants.Check_parent:        
             try:
-                NoParentList = self.VerificaParent(self.df_FL)
+                NoParentList = self.VerificaParent() # applico il metodo alla variabile di istanza self.df_FL
                 if not NoParentList:
                     self.log_message("Check: Verifica Parent", 'success')
                 else:
@@ -594,120 +814,14 @@ class MainWindow(QMainWindow):
         # verifico con linee guida in base alla tecnologia
         # ----------------------------------------------------
         if constants.Check_lineeGuida:
-            """         
-            Il parametro regex_dict è un dizionario che definisce dei pattern per classificare le righe
-            del DataFrame contenente le FL e il DataFrame contenenti le espressioni regolari in categorie specifiche.
-            Questo permette di applicare i pattern corretti a seconda della categoria di FL, in modo da non avere duplicati nei controlli
-
-            """
-            if tech_code == 'E':
-                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
-                File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
-                # Definisco il dizionario di regex
-                regex_dict = {
-                    'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
-                    'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
-                }            
-
-            elif tech_code == 'W':
-                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
-                File_guideLine_list = [constants.file_FL_W_SubStation, constants.file_FL_Wind]
-                # Definisco il dizionario di regex            
-                regex_dict = {
-                    'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
-                    'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00']
-                }             
-
-            elif tech_code == 'S':
-                # Apri la finestra di dialogo per selezionare il tipo di inverter
-                self.log_message("Tecnologia Solare rilevata: selezione tipo inverter...", 'info')
-                dialog = InverterSelectionDialog(self)
-                if dialog.exec_() == QDialog.Accepted:
-                    inverter_type = dialog.get_selected_inverter_type()
-                    self.log_message(f"Tipo di inverter selezionato: {inverter_type}", 'success')
-                    
-                    # Creo una lista con i file delle guideLine da utilizzare per la tecnologia solare
-                    # con il tipo di inverter specifico
-                    File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
-                    
-                    # Aggiungi il file specifico per il tipo di inverter selezionato
-                    if inverter_type == "Central Inverter":
-                        File_guideLine_list.append(constants.file_FL_Solar_CentralInv)
-                    elif inverter_type == "String Inverter":
-                        File_guideLine_list.append(constants.file_FL_Solar_StringInv)
-                    elif inverter_type == "Inverter Module":
-                        File_guideLine_list.append(constants.file_FL_Solar_InvModule)
-                    # Definisco il dizionario di regex                    
-                    regex_dict = {
-                        'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
-                        'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
-                    } 
-
-                else:
-                    # L'utente ha annullato la selezione dell'inverter
-                    self.log_message("Selezione tipo inverter annullata", 'warning')
-                    self.extract_button.setEnabled(True)
-                    return
-                
-            elif tech_code == 'H':
-                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
-                File_guideLine_list = [constants.file_FL_Hydro]
-                # Definisco il dizionario di regex                    
-                regex_dict = {
-                    'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
-                    'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
-                }             
-            else:
-                self.log_message("Errore: Tecnologia non riconosciuta", 'error')
+            # Verifico le line guida, in base alla tecnologia rilevata, sulla lista delle FL.
+            # Restituisco True se tutte le FL sono corrette, False altrimenti.
+            # Utilizzo la variabile di istanza self.df_FL per leggere la lista delle Fl e memorizzo il risultato nel dataframe self.df_result
+            check_results["Check_lineeGuida"] = self.check_linee_guida(tech_code)
+            # Se la verifica delle linee guida non è andata a buon fine, non proseguo con la verifica delle tabelle globali in SAP
+            if not check_results["Check_lineeGuida"]:
+                self.log_message("Errore nella verifica delle linee guida", 'error')
                 return
-
-            # Genera un unico DataFrame con le espressioni regolari a partire dai file di regole e la lista delle guideLine
-            try:
-                df_regex = RegularExpressionsTools.Make_DF_RE_list(constants.file_Rules, File_guideLine_list)
-            except Exception as e:
-                print(f"Errore durante il processing dei file: {str(e)}")
-        
-            print("#----------- df_regex ---------#")
-            print(df_regex)
-            # salvo il df in un file csv
-            df_regex.to_csv('df_re_completo.csv', index=False)
-            
-            """ 
-            Creo un Dizionario contenente i DataFrame filtrati con le chiavi contenute 
-            in regex_dict originali più una chiave 'Others' per le righe che non corrispondono a nessun pattern
-            """
-            try:
-                # Eseguiamo la verifica
-                result_df = RegularExpressionsTools.verifica_fl_con_regex_per_categorie(self.df_FL, df_regex, regex_dict)
-                
-                # Stampiamo i risultati
-                print(f"\nRisultati della verifica: result_df = {len(result_df)} righe | self.df_fl = {len(self.df_FL)} righe")
-                print(result_df)
-                
-            except Exception as e:
-                print(f"Errore nell'esecuzione: {str(e)}")   
-        
-            # salvo il df in un file csv
-            result_df.to_csv('df_result_completo.csv', index=False)
-            print(result_df)
-
-            # Trova le FL non valide
-            fl_non_valide = result_df[result_df['Check_Result'] != True]['FL'].tolist()
-
-            # Mostra la lista delle FL non valide
-            if fl_non_valide:
-                # Mostra il numero di FL non valide
-                # Mostra il numero di FL non valide con singolare o plurale
-                self.log_message(f"Errore: {len(fl_non_valide)} FL non valid{'a' if len(fl_non_valide) == 1 else 'e'}:", 'error')
-                #self.log_message(f"{"FL non valida" if len(fl_non_valide) == 1 else "Lista delle FL non valide"}:", 'warning')
-                for fl in fl_non_valide:
-                    # Ottieni il messaggio di errore specifico per questa FL
-                    error_msg = result_df[result_df['FL'] == fl]['Check_Result'].values[0]
-                    self.log_message(f"{fl}: {error_msg}", 'warning')
-                return
-            else:
-                self.log_message("Check: Guide Line", 'success')
-
       
         # ----------------------------------------------------
         # verifico tabella globali in SAP
@@ -1056,7 +1170,7 @@ class MainWindow(QMainWindow):
                 # creo un df a partire dalla lista 
                 df, error = self.re_utils.validate_and_create_df_from_CTRL_ASS_codes(risultato_ZPMR_CTRL_ASS, 
                                                                                     constants.intestazione_CTRL_ASS, 
-                                                                                    df_regex, 
+                                                                                    self.df_regex, 
                                                                                     tech_code)
                 # Verifica del risultato
                 if error is None:
@@ -1085,7 +1199,7 @@ class MainWindow(QMainWindow):
                 # creo un df a partire dalla lista 
                 df, error = self.re_utils.validate_and_create_df_from_ZPM4R_GL_T_FL_codes(risultato_ZPM4R_GL_T_FL, 
                                                                                     constants.intestazione_TECH_OBJ, 
-                                                                                    df_regex, 
+                                                                                    self.df_regex, 
                                                                                     tech_code)
                 
                 # Verifica del risultato
@@ -1121,6 +1235,18 @@ class MainWindow(QMainWindow):
         # Verifica completata - ripristino il tasto di estrazione dei dati
         # ---------------------------------------------------- 
         self.extract_button.setEnabled(True)
+
+    def config_button(self):
+        self.config_window = ConfigWindow(self)
+        self.config_window.show()   
+
+    def config(self):
+        """Apre la finestra di configurazione"""
+        self.config_window = ConfigWindow(self)
+        if self.config_window.exec_() == QDialog.Accepted:
+            # Ricarica la configurazione dopo che è stata salvata
+            self.validation_config = load_config_from_file()
+            self.log_message("Configurazione aggiornata", 'success')
 
     def upload_data(self):
         # ------------Verifico che ci siano file da caricare----------------------- 
@@ -1229,6 +1355,7 @@ class MainWindow(QMainWindow):
 
 # Classe per gestire la selezione del tipo di inverter
 class InverterSelectionDialog(QDialog):
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Selezione Tipo di Inverter")
