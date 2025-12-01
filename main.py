@@ -524,7 +524,16 @@ class MainWindow(QMainWindow):
         df = pd.DataFrame()
         df = self.df_FL.copy()
 
-        if tech_code == 'E':
+        if tech_code == 'K':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_C_SubStation]
+            # Definisco il dizionario di regex
+            regex_dict = { # la parte 'Common' non viene in realtà utilizzata per la tecnologia Cas ma viene mantenuta per uniformità
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
+            }       
+
+        elif tech_code == 'E':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
             # Definisco il dizionario di regex
@@ -774,7 +783,7 @@ class MainWindow(QMainWindow):
                 self.log_message("Errore: Valore tecnologia non trovato", 'error')
                 return
             else:
-                self.log_message(f"Check: Country = {description_techno}", 'success')
+                self.log_message(f"Check: Techno = {description_techno}", 'success')
 
         # ----------------------------------------------------    
         # verifico coerenza con la maschera della tecnolgia
@@ -1176,6 +1185,14 @@ class MainWindow(QMainWindow):
                 if error is None:
                     print(f"Dataframe creato con successo!")
                     self.log_message("DF ZPMR_CTRL_ASS creato correttamente!", 'success')
+                    # ---------------------------------------------------------
+                    # Ordino il risultato per evitare errori durante il caricamento in SAP
+                    self.log_message("Ordino il DF ZPMR_CTRL_ASS in base alla lunghezza delle FL!", 'info')
+                    result, df = self.df_utils.ordina_df_per_colonna(df, "FLLEVEL")
+                    if result is False:
+                        print(f"Errore nell'ordinamento del df ZPMR_CTRL_ASS")
+                        self.log_message("Errore nell'ordinamento del df ZPMR_CTRL_ASS", 'error')
+                        
                     # ------------salvo il DF in un file csv-----------------------
                     result, error = self.df_utils.save_dataframe_to_csv(df, 
                                     constants.file_ZPMR_CTRL_ASS_UpLoad)
@@ -1206,6 +1223,14 @@ class MainWindow(QMainWindow):
                 if error is None:
                     print(f"Dataframe creato con successo!")
                     self.log_message("DF ZPM4R_GL_T_FL creato correttamente!", 'success')
+                    # ---------------------------------------------------------
+                    # Ordino il risultato per evitare errori durante il caricamento in SAP
+                    self.log_message("Ordino il DF ZPM4R_GL_T_FL in base alla lunghezza delle FL!", 'info')
+                    result, df = self.df_utils.ordina_df_per_colonna(df, "FLLEVEL")
+                    if result is False:
+                        print(f"Errore nell'ordinamento del df ZPM4R_GL_T_FL")
+                        self.log_message("Errore nell'ordinamento del df ZPM4R_GL_T_FL", 'error')
+
                     # ------------salvo il DF in un file csv-----------------------
                     result, error = self.df_utils.save_dataframe_to_csv(df, 
                                     constants.file_ZPMR_TECH_OBJ_UpLoad)

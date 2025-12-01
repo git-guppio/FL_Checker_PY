@@ -8,7 +8,7 @@ kkS-yyyy-pp-OC-MF;Metallic frame;0000;18;1810;OPC;FL_INFRAST;FL00000S
 kkS-yyyy-pp-OC-FO;Foundations;0000;18;1810;OPC;FL_INFRAST;FL00000S
 kkS-yyyy-pp-OC-MR;Dirt Work;0000;18;1810;;FL_INFRAST;FL00000S
 kkS-yyyy-pp-MV;MV Section;0000;18;1840;SCC;FL_MVSECT;FL00000S
-kkS-yyyy-pp-MV-CL;MV cables;0000;18;1840;ALE;FL_MVSECT;
+kkS-yyyy-pp-MV-CL;MV cables;0000;18;1840;ALE;FL_MVSECT;FL00000S
 kkS-yyyy-pp-MV-IT;MV Switchgear;0000;18;1840;SCC;FL_MVSECT;FL00000S
 kkS-yyyy-pp-MV-PR;MV Protective Systems;0000;18;1840;CLE;FL_MVSECT;FL00000S
 kkS-yyyy-pp-MV-SZ;MV On Load Transformer Switch;0000;18;1840;;FL_MVSECT;FL00000S
@@ -16,7 +16,7 @@ kkS-yyyy-pp-CE;Energy Meters;0000;18;1880;ALE;FL_AUT&CON;FL00000S
 kkS-yyyy-pp-CE-CA;Auxiliary meter;0000;18;1880;ALE;FL_AUT&CON;FL00000S
 kkS-yyyy-pp-CE-CR;AC Revenue Meter;0000;18;1880;ALE;FL_AUT&CON;FL00000S
 kkS-yyyy-pp-LV;LV Section;0000;18;1850;SBT;FL_AUXSYST;FL00000S
-kkS-yyyy-pp-LV-CL;LV cables;0000;18;1850;ALE;FL_LVSECT;
+kkS-yyyy-pp-LV-CL;LV cables;0000;18;1850;ALE;FL_LVSECT;FL00000S
 kkS-yyyy-pp-LV-LA;LV Auxiliary section;0000;18;1850;SBT;FL_AUXSYST;FL00000S
 kkS-yyyy-pp-LV-LA-IT;Auxiliary general breaker;0000;18;1850;SCC;FL_AUXSYST;FL00000S
 kkS-yyyy-pp-LV-LA-UP;UPS Circuits;0000;18;1850;ALI;FL_AUXSYST;FL00000S
@@ -60,7 +60,7 @@ kkS-yyyy-pp-TC-SM-RI;Rain intensity sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
 kkS-yyyy-pp-TC-SM-MS;Met station power supply;0000;18;1880;SCA;FL_METSENS;FL00000S
 kkS-yyyy-pp-TC-SM-SO;Soiling sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
 kkS-yyyy-pp-TC-SM-WE;Multipurpose weather sensor;0000;18;1880;SCA;FL_METSENS;FL00000S
-kkS-yyyy-pp-TC-SM-BI;Back Irradiance;0000;18;1880;;FL_METSENS;
+kkS-yyyy-pp-TC-SM-BI;Back Irradiance;0000;18;1880;;FL_METSENS;FL00000S
 kkS-yyyy-pp-Tn;PCU_nn_LV/MV Transformer_n;0000;18;1842;TRF;FL_TRANSF;FL00000S
 kkS-yyyy-pp-Tn-PT;Transformer protective system;0000;18;1842;TAM;FL_TRACOMP;FL00000S
 kkS-yyyy-pp-nn;PCU_<ID_FIELD>_INV_<ID_INV>;0000;18;1841;INV;FL_INVERT;FL00000S

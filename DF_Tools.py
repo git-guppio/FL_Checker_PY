@@ -1,6 +1,6 @@
 import pandas as pd
 from collections import Counter
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 import os
 import logging
 from utils.decorators import error_logger
@@ -15,6 +15,57 @@ class DataFrameTools:
     
     def __init__(self):
         logger.info("Inizializzazione DataFrameTools")
+
+    @staticmethod
+    def ordina_df_per_colonna(df, nome_colonna) -> Tuple[bool, pd.DataFrame | None]:
+        """
+        Ordina un DataFrame in base a una colonna con valori da 1 a 6.
+        
+        Parametri:
+        - df: DataFrame da ordinare
+        - nome_colonna: nome della colonna per l'ordinamento
+        
+        Restituisce:
+        - tupla (bool, DataFrame): (True, df ordinato) se successo, 
+                                    (False, df originale) se errore
+        """
+        # Verifica che la colonna esista
+        if nome_colonna not in df.columns:
+            print(f"Errore: la colonna '{nome_colonna}' non esiste nel DataFrame")
+            return (False, df)
+        
+        # Crea una copia per non modificare l'originale
+        df_temp = df.copy()
+        
+        try:
+            # Converti la colonna in numerico, gestendo eventuali stringhe
+            df_temp[nome_colonna] = pd.to_numeric(df_temp[nome_colonna], errors='coerce')
+            
+            # Verifica la presenza di valori NaN (conversione fallita)
+            if df_temp[nome_colonna].isna().any():
+                print(f"Errore: la colonna '{nome_colonna}' contiene valori non convertibili in numeri")
+                return (False, df)
+            
+            # Converti in int per controllo più preciso
+            df_temp[nome_colonna] = df_temp[nome_colonna].astype(int)
+            
+            # Verifica che tutti i valori siano tra 1 e 6
+            valori_unici = df_temp[nome_colonna].unique()
+            valori_non_validi = [v for v in valori_unici if v < 1 or v > 6]
+            
+            if valori_non_validi:
+                print(f"Errore: trovati valori non validi nella colonna '{nome_colonna}': {valori_non_validi}")
+                print(f"Sono ammessi solo valori da 1 a 6")
+                return (False, df)
+            
+            # Ordina il DataFrame in ordine crescente
+            df_ordinato = df_temp.sort_values(by=nome_colonna, ascending=True).reset_index(drop=True)
+            
+            return (True, df_ordinato)
+            
+        except Exception as e:
+            print(f"Errore durante l'elaborazione: {str(e)}")
+            return (False, df)
 
 
     # Controllo validità DataFrame
