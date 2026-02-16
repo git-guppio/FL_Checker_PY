@@ -391,7 +391,7 @@ class SAPDataExtractor:
             time.sleep(0.5)
             self.session.findById("wnd[0]/usr/ctxtI2-LOW").text = "Z-R" + fltechnology + "M"
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").text = fltechnology
-            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
+            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = ""
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").setFocus()
             self.session.findById("wnd[0]/usr/ctxtI4-LOW").caretPosition = 1
             self.session.findById("wnd[0]/tbar[1]/btn[8]").press()
@@ -400,6 +400,13 @@ class SAPDataExtractor:
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)
+
+            # Verifico che la tabell contenga dei valori
+            if self.session.findById("wnd[0]/sbar").text == "Non sono stati trovati inserimenti tab. relativi alla chiave indicata" and \
+                "videata di selezione" in self.session.findById("wnd[0]").text:
+                print("La tabella ZPMR_CONTROL_FL1 è vuota per la tecnologia indicata")
+                return constants.empty_tab_ZPMR_CONTROL_FL1
+            
             self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
@@ -454,6 +461,13 @@ class SAPDataExtractor:
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)
+
+            # Verifico che la tabell contenga dei valori
+            if self.session.findById("wnd[0]/sbar").text == "Non sono stati trovati inserimenti tab. relativi alla chiave indicata" and \
+                "videata di selezione" in self.session.findById("wnd[0]").text:
+                print("La tabella ZPMR_CONTROL_FL2 è vuota per la tecnologia indicata")
+                return constants.empty_tab_ZPMR_CONTROL_FL2
+
             self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
@@ -501,7 +515,7 @@ class SAPDataExtractor:
             self.session.findById("wnd[0]/usr/txtI4-LOW").text = "Z-RLS" if fltechnology == "H" else "Z-R" + fltechnology + "S"
             self.session.findById("wnd[0]/usr/txtI5-LOW").text = fltechnology      
             # modifico il numero massimo di risultati
-            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = "9999999"
+            self.session.findById("wnd[0]/usr/txtMAX_SEL").text = ""
             self.session.findById("wnd[0]").sendVKey(0)
             # avvio la transazione
             self.session.findById("wnd[0]").sendVKey(8)
@@ -510,13 +524,21 @@ class SAPDataExtractor:
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)    
+
+            # Verifico che la tabell contenga dei valori
+            if self.session.findById("wnd[0]/sbar").text == "Non sono stati trovati inserimenti tab. relativi alla chiave indicata" and \
+                "videata di selezione" in self.session.findById("wnd[0]").text:
+                print("La tabella ZPMR_CTRL_ASS è vuota per la tecnologia indicata")
+                return constants.empty_tab_ZPMR_CTRL_ASS
+
             # esporto i valori nella clipboard
             self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
             # Attendi che SAP sia pronto
             if not self.wait_for_sap(30):
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
-            time.sleep(0.5)                          
+            time.sleep(0.5)   
+
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").select()
             self.session.findById("wnd[1]/usr/subSUBSCREEN_STEPLOOP:SAPLSPO5:0150/sub:SAPLSPO5:0150/radSPOPLI-SELFLAG[4,0]").setFocus()
             self.session.findById("wnd[1]/tbar[0]/btn[0]").press()
@@ -572,6 +594,13 @@ class SAPDataExtractor:
                 print(f"Timeout durante l'esecuzione della transazione")
                 return False
             time.sleep(0.5)    
+
+            # Verifico che la tabell contenga dei valori
+            if self.session.findById("wnd[0]/sbar").text == "Non sono stati trovati inserimenti tab. relativi alla chiave indicata" and \
+                "videata di selezione" in self.session.findById("wnd[0]").text:
+                print("La tabella ZPM4R_GL_T_FL è vuota per la tecnologia indicata")
+                return constants.empty_tab_ZPM4R_GL_T_FL
+
             # esporto i valori nella clipboard
             self.session.findById("wnd[0]/mbar/menu[0]/menu[10]/menu[3]/menu[2]").select()
             # Attendi che SAP sia pronto

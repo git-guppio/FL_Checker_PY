@@ -898,6 +898,7 @@ class MainWindow(QMainWindow):
                 # ----------------------------------------------------
                     # Pulisce i nomi delle colonne
                     df_ZPMR_CONTROL_FL1 = self.df_utils.clean_data(string_ZPMR_CONTROL_FL1)
+
                     # Verifica che il DataFrame sia valido
                     if not(self.df_utils.check_dataframe(df_ZPMR_CONTROL_FL1, name="ZPM4R_GL_T_FL1")):
                         print("Errore nella verifica del DataFrame")
@@ -908,8 +909,10 @@ class MainWindow(QMainWindow):
                     # creo un nuovo DF facendo pivot sulla colonna <Liv.Sede>
                     try:
                         df_ZPMR_CONTROL_FL1_pivot = self.df_utils.pivot_hierarchy(df_ZPMR_CONTROL_FL1, "Valore Livello", "Liv.Sede")
-                        print("#---- df_ZPMR_CONTROL_FL1_pivot ----#")
-                        print(df_ZPMR_CONTROL_FL1_pivot)
+                        # Se il risultato è un df vuoto allora crea un df con le sole colonne necessarie a finalizzare la creazione di tabelle di aggiornamento.
+                        if df_ZPMR_CONTROL_FL1_pivot.empty and len(df_ZPMR_CONTROL_FL1_pivot.columns) == 0:
+                            print(f"Attenzione: il pivot del df_ZPMR_CONTROL_FL1 ha prodotto un DataFrame vuoto. Creo un DataFrame con le sole colonne necessarie.", 'warning')
+                            df_ZPMR_CONTROL_FL1_pivot = pd.DataFrame(columns=["Livello_","Livello_1","Livello_2"])
                     except Exception as e:
                         print(f"Errore: {e}")            
                     # Stampa anteprima del dataframe
@@ -941,8 +944,10 @@ class MainWindow(QMainWindow):
                     # creo un nuovo DF facendo pivot sulla colonna <Liv.Sede>
                     try:
                         df_ZPMR_CONTROL_FL2_pivot = self.df_utils.pivot_hierarchy(df_ZPMR_CONTROL_FL2, "Valore Livello", "Liv.Sede")
-                        print("---- df_ZPMR_CONTROL_FL2_pivot ----")
-                        print(df_ZPMR_CONTROL_FL2_pivot)
+                        # Se il risultato è un df vuoto allora crea un df con le sole colonne necessarie a finalizzare la creazione di tabelle di aggiornamento.
+                        if df_ZPMR_CONTROL_FL2_pivot.empty and len(df_ZPMR_CONTROL_FL2_pivot.columns) == 0:
+                            print(f"Attenzione: il pivot del df_ZPMR_CONTROL_FL1 ha prodotto un DataFrame vuoto. Creo un DataFrame con le sole colonne necessarie.", 'warning')
+                            df_ZPMR_CONTROL_FL2_pivot = pd.DataFrame(columns=["Livello_3","Livello_4","Livello_5","Livello_6"])
                     except Exception as e:
                         print(f"Errore: {e}")            
                     # Stampa anteprima del dataframe

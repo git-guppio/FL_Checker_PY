@@ -601,9 +601,9 @@ class DataFrameTools:
                 raise TypeError("I nomi delle colonne devono essere stringhe")
             
             # Verifica dataframe vuoti
-            if df1.empty:
+            if df1.empty and len(df1.columns) == 0:
                 raise ValueError("Il primo dataframe è vuoto")
-            if df2.empty:
+            if df2.empty and len(df2.columns) == 0:
                 raise ValueError("Il secondo dataframe è vuoto")
             
             # Verifica esistenza colonne
@@ -663,7 +663,7 @@ class DataFrameTools:
                 raise TypeError("I nomi delle colonne devono essere stringhe")
                 
             # Verifica che il dataframe non sia vuoto
-            if df.empty:
+            if df.empty and len(df.columns) == 0:
                 raise ValueError("Il dataframe è vuoto")
                 
             # Verifica che le colonne esistano nel dataframe
@@ -671,7 +671,12 @@ class DataFrameTools:
                 raise ValueError(f"La colonna '{values_col}' non esiste nel dataframe")
             if level_col not in df.columns:
                 raise ValueError(f"La colonna '{level_col}' non esiste nel dataframe")
-                
+
+            # Verifica se il df contiene solo valori nulli nelle colonne specificate
+            if df.empty and len(df.columns) > 0:
+                # ritorno un df vuoto
+                return pd.DataFrame()
+
             # Crea una copia del dataframe per non modificare l'originale
             df_clean = df.copy()
             
@@ -769,15 +774,10 @@ class DataFrameTools:
             if not isinstance(df, pd.DataFrame):
                 print(f"{name} non è un DataFrame valido")
                 return False
-                
-            # Verifica se è vuoto
-            if df.empty:
-                print(f"{name} è vuoto")
-                return False
-                
-            # Verifica se ha righe e colonne
-            if df.shape[0] == 0 or df.shape[1] == 0:
-                print(f"{name} non ha righe o colonne")
+                              
+            # Verifica se non contiene righe e se non ha colonne definite
+            if df.shape[0] == 0 and df.shape[1] == 0:
+                print(f"{name} non ha righe ne colonne definite")
                 return False
                 
             return True
@@ -835,16 +835,25 @@ class DataFrameTools:
             # Crea il DataFrame con i nuovi header
             df = pd.DataFrame(data_rows[1:], columns=unique_headers)
 
-            # Rimuove le colonne completamente vuote
-            df = df.dropna(axis=1, how='all')
+            # Verifico se il df è privo di valori (eccetto l'intetazione)
+            if df.empty and len(df.columns) > 0:
+                print("DataFrame vuoto ma con intestazioni")
+                # Elimina colonne con nome vuoto oppure che iniziano con "_"
+                df = df.loc[:, [c for c in df.columns if c and not str(c).startswith('_')]]
+                
+                return df     
+                      
+            else:
+                # Rimuove le colonne completamente vuote
+                df = df.dropna(axis=1, how='all')
+                
+                # Rimuove le colonne dove tutti i valori sono stringhe vuote
+                df = df.loc[:, ~(df == '').all()]
+                
+                # Reset dell'indice
+                df = df.reset_index(drop=True)
             
-            # Rimuove le colonne dove tutti i valori sono stringhe vuote
-            df = df.loc[:, ~(df == '').all()]
-            
-            # Reset dell'indice
-            df = df.reset_index(drop=True)
-         
-            return df
+                return df
 
         except Exception as e:
             print(f"Errore durante la pulizia dei dati: {str(e)}")
@@ -1026,6 +1035,13 @@ class DataFrameTools:
         required_cols = [col1, col2, col3, col4]
         if not all(col in df.columns for col in required_cols):
             raise ValueError("Una o più colonne specificate non esistono nel DataFrame")
+        
+        # Verifico se il df ha la struttura ma non contiene dati
+        if df.empty and len(df.columns) > 0:
+            # ritorno un df vuoto con la nuova colonna aggiunta
+            df_copy = df.copy()
+            df_copy[new_column_name] = pd.Series(dtype=str)
+            return df_copy
 
         def create_concatenated_value(row):
             if (row[col3].strip(' \t\n\r') != ""):
@@ -1042,6 +1058,7 @@ class DataFrameTools:
         
         df_copy = df.copy()
         df_copy[new_column_name] = df_copy.apply(create_concatenated_value, axis=1)
+
         return df_copy    
     
     @staticmethod
