@@ -283,6 +283,7 @@ class RegularExpressionsTools:
 
                     # 4. Costruisce la colonna FL_RE con le espressioni regolari
                     def create_regex(fl_value):
+                        
                         if pd.isna(fl_value) or not isinstance(fl_value, str):
                             print(f"Attenzione: Valore non valido nella colonna esaminata: {fl_value}")
                             return ""
@@ -295,8 +296,10 @@ class RegularExpressionsTools:
                         
                         # Sostituisci ogni codice con la corrispondente espressione regolare
                         for key in ordered_keys:
-                            fl_regex = fl_regex.replace(key, rules_dict[key])
-                            
+                            fl_regex = fl_regex.replace(key, rules_dict[key])  
+
+                        print(f"Valore originale: {fl_value} -> Espressione regolare: {fl_regex}")
+
                         # print(f"fl_value: {fl_value}; fl_regex: {fl_regex}")
                         return fl_regex
                     
