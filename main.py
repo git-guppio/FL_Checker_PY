@@ -6,15 +6,17 @@ import sys
 #from tabnanny import check
 #from turtle import Turtle
 import pandas as pd
+import numpy as np
 import re
 import DF_Tools
 import File_tools
 import RE_tools
-from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
+from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout,
                            QHBoxLayout, QWidget, QTextEdit, QListWidget, QLabel, QMessageBox,
-                           QDialog, QRadioButton, QButtonGroup, QDialogButtonBox, QListWidgetItem, QStyle, QMenu, QAction)
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QCursor
+                           QDialog, QRadioButton, QButtonGroup, QDialogButtonBox, QListWidgetItem, QStyle, QMenu, QAction,
+                           QFileDialog, QFormLayout, QLineEdit)
+from PyQt5.QtGui import QCursor, QRegExpValidator
+from PyQt5.QtCore import Qt, QRegExp
 import SAP_Connection
 import SAP_Transactions
 import DF_Tools
@@ -70,6 +72,9 @@ class MainWindow(QMainWindow):
         self.df_regex = pd.DataFrame()
         # df contenente il risultato della verifica delle espressioni regolari sulla lista delle FL
         self.df_result = pd.DataFrame()
+        self.df_excel = pd.DataFrame()
+        # Flag per indicare se i dati sono stati caricati da file Excel
+        self.data_from_excel = False
 
 
     def init_ui(self):
@@ -115,28 +120,53 @@ class MainWindow(QMainWindow):
         
         # Layout per i bottoni
         button_layout = QHBoxLayout()
-        
+
+        # Stile comune per i bottoni con icone emoji
+        button_style = """
+            QPushButton {
+                font-size: 14px;
+                padding: 4px 10px;
+            }
+        """
+
         # Bottone Pulisci
-        self.clear_button = QPushButton('Pulisci Finestre')
+        self.clear_button = QPushButton('🧹 Pulisci')
+        self.clear_button.setStyleSheet(button_style)
         self.clear_button.clicked.connect(self.clear_windows)
         button_layout.addWidget(self.clear_button)
-        
+
+        # Bottone Apri Excel
+        self.open_excel_button = QPushButton('📂 Apri Excel')
+        self.open_excel_button.setStyleSheet(button_style)
+        self.open_excel_button.clicked.connect(self.open_excel_file)
+        button_layout.addWidget(self.open_excel_button)
+
         # Bottone Estrai
-        self.extract_button = QPushButton('Verifica Dati')
+        self.extract_button = QPushButton('✅ Verifica')
+        self.extract_button.setStyleSheet(button_style)
         self.extract_button.clicked.connect(self.extract_data)
         button_layout.addWidget(self.extract_button)
-        
+
         # Bottone Upload
-        self.upload_button = QPushButton('Upload Dati')
+        self.upload_button = QPushButton('📤 Upload')
+        self.upload_button.setStyleSheet(button_style)
         self.upload_button.clicked.connect(self.upload_data)
         self.upload_button.setEnabled(False)  # Disabilitato finché non implementato
         button_layout.addWidget(self.upload_button)
 
+        # Bottone Crea file Sedi Tecniche
+        self.create_st_button = QPushButton('🏭 Sedi Tecniche')
+        self.create_st_button.setStyleSheet(button_style)
+        self.create_st_button.clicked.connect(self.create_sedi_tecniche_file)
+        self.create_st_button.setEnabled(False)  # Abilitato dopo la verifica dei dati
+        button_layout.addWidget(self.create_st_button)
+
         # Bottone Configura
-        self.config_button = QPushButton('Configura')
+        self.config_button = QPushButton('⚙️ Configura')
+        self.config_button.setStyleSheet(button_style)
         self.config_button.clicked.connect(self.config)
-        button_layout.addWidget(self.config_button)        
-        
+        button_layout.addWidget(self.config_button)
+
         # Aggiungi il layout dei bottoni al layout principale
         main_layout.addLayout(button_layout)
     
@@ -242,10 +272,27 @@ class MainWindow(QMainWindow):
             raise Exception(f"Errore durante la stampa dei risultati: {str(e)}")      
 
     def clear_windows(self):
+        # Reset delle aree visive
         self.clipboard_area.clear()
         self.log_list.clear()
+        # Reset dello stato dei pulsanti
         self.extract_button.setEnabled(True)
         self.upload_button.setEnabled(False)
+        self.create_st_button.setEnabled(False)
+        # Reset dei DataFrame
+        self.df_FL = pd.DataFrame()
+        self.df_regex = pd.DataFrame()
+        self.df_result = pd.DataFrame()
+        self.df_excel = pd.DataFrame()
+        # Reset dei flag e del dizionario file generati
+        self.data_from_excel = False
+        self.FileGenerated = {
+            "Total_files": 0,
+            "ZPMR_CONTROL_FL2": {"generated": False, "path": constants.file_ZPMR_FL_2_UpLoad},
+            "ZPMR_CONTROL_FLn": {"generated": False, "path": constants.file_ZPMR_FL_n_UpLoad},
+            "ZPMR_CTRL_ASS": {"generated": False, "path": constants.file_ZPMR_CTRL_ASS_UpLoad},
+            "ZPM4R_GL_T_FL": {"generated": False, "path": constants.file_ZPMR_TECH_OBJ_UpLoad}
+        }
         self.log_message("Finestre pulite")
 
     def validate_clipboard_data(self, data:list) -> Tuple[bool, Optional[pd.DataFrame]]:
@@ -471,7 +518,42 @@ class MainWindow(QMainWindow):
                         append_unique(parent_mancanti, potenziale_genitore)
  
         return parent_mancanti
-    
+
+    def check_livello3_solo_A0(self, df: pd.DataFrame) -> bool:
+        """
+        Verifica se la colonna 'Livello_3' del DataFrame contiene esclusivamente il valore 'A0',
+        escludendo le stringhe vuote e i valori nulli.
+
+        Parameters:
+            df (pd.DataFrame): DataFrame contenente la colonna 'Livello_3'
+
+        Returns:
+            bool: True se tutti i valori non nulli/vuoti sono 'A0', False altrimenti
+        """
+        if 'Livello_3' not in df.columns:
+            self.log_message("La colonna 'Livello_3' non esiste nel DataFrame", 'error')
+            return False
+
+        # Filtra escludendo valori nulli e stringhe vuote
+        valori = df['Livello_3'].dropna()
+        valori = valori[valori.astype(str).str.strip() != '']
+
+        if valori.empty:
+            self.log_message("La colonna 'Livello_3' non contiene valori validi", 'warning')
+            return False
+
+        # Verifica che tutti i valori rimanenti siano 'A0'
+        solo_A0 = (valori.astype(str).str.strip() == 'A0').all()
+
+        if not solo_A0:
+            valori_diversi = valori[valori.astype(str).str.strip() != 'A0'].unique()
+            self.log_message(
+                f"Livello_3 contiene valori diversi da 'A0': {', '.join(str(v) for v in valori_diversi)}",
+                'warning'
+            )
+
+        return solo_A0
+
     def check_duplicati(self) -> Tuple[bool, Optional[pd.DataFrame]]:
         """
         Verifica la presenza di duplicati nella colonna FL e restituisce un DataFrame filtrato.
@@ -540,7 +622,7 @@ class MainWindow(QMainWindow):
             regex_dict = {
                 'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
                 'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
-            }            
+            }
 
         elif tech_code == 'W':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
@@ -552,35 +634,36 @@ class MainWindow(QMainWindow):
             }             
 
         elif tech_code == 'S':
-            # Apri la finestra di dialogo per selezionare il tipo di inverter
-            self.log_message("Tecnologia Solare rilevata: selezione tipo inverter...", 'info')
-            dialog = InverterSelectionDialog(self)
-            if dialog.exec_() == QDialog.Accepted:
-                inverter_type = dialog.get_selected_inverter_type()
-                self.log_message(f"Tipo di inverter selezionato: {inverter_type}", 'success')
-                
-                # Creo una lista con i file delle guideLine da utilizzare per la tecnologia solare
-                # con il tipo di inverter specifico
-                File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
-                
-                # Aggiungi il file specifico per il tipo di inverter selezionato
-                if inverter_type == "Central Inverter":
-                    File_guideLine_list.append(constants.file_FL_Solar_CentralInv)
-                elif inverter_type == "String Inverter":
-                    File_guideLine_list.append(constants.file_FL_Solar_StringInv)
-                elif inverter_type == "Inverter Module":
-                    File_guideLine_list.append(constants.file_FL_Solar_InvModule)
-                # Definisco il dizionario di regex                    
-                regex_dict = {
-                    'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
-                    'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
-                } 
-
+            # Creo una lista con i file delle guideLine da utilizzare come base per la tecnologia solare
+            File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
+            # Definisco il dizionario di regex                    
+            regex_dict = {
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZZ',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-9Z']
+            }            
+            # Verifico se la lista contiene solo elementi con Livello_3 uguale ad 0A
+            # se è vero allora non è necessatio selezionare la tecnologia inverter
+            if not(self.check_livello3_solo_0A(df)):
+                # Apri la finestra di dialogo per selezionare il tipo di inverter
+                self.log_message("Selezione il tipo inverter...", 'info')
+                dialog = InverterSelectionDialog(self)
+                if dialog.exec_() == QDialog.Accepted:
+                    inverter_type = dialog.get_selected_inverter_type()
+                    self.log_message(f"Tipo di inverter selezionato: {inverter_type}", 'success')                    
+                    # Aggiungi il file specifico per il tipo di inverter selezionato
+                    if inverter_type == "Central Inverter":
+                        File_guideLine_list.append(constants.file_FL_Solar_CentralInv)
+                    elif inverter_type == "String Inverter":
+                        File_guideLine_list.append(constants.file_FL_Solar_StringInv)
+                    elif inverter_type == "Inverter Module":
+                        File_guideLine_list.append(constants.file_FL_Solar_InvModule)
+                else:
+                    # L'utente ha annullato la selezione dell'inverter
+                    self.log_message("Selezione tipo inverter annullata", 'warning')
+                    self.extract_button.setEnabled(True)
+                    return False
             else:
-                # L'utente ha annullato la selezione dell'inverter
-                self.log_message("Selezione tipo inverter annullata", 'warning')
-                self.extract_button.setEnabled(True)
-                return False
+                self.log_message("La lista contiene solo elementi di sottostazione...", 'info')
             
         elif tech_code == 'H':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
@@ -641,6 +724,42 @@ class MainWindow(QMainWindow):
         else:
             self.log_message("Check: Guide Line", 'success')
             return True
+        
+    def check_livello3_solo_0A(self, df: pd.DataFrame) -> bool:
+        """
+        Verifica se la colonna 'Livello_3' del DataFrame contiene esclusivamente il valore '0A',
+        escludendo le stringhe vuote e i valori nulli.
+
+        Parameters:
+            df (pd.DataFrame): DataFrame contenente la colonna 'Livello_3'
+
+        Returns:
+            bool: True se tutti i valori non nulli/vuoti sono '0A', False altrimenti
+        """
+        if 'Livello_3' not in df.columns:
+            self.log_message("La colonna 'Livello_3' non esiste nel DataFrame", 'error')
+            return False
+
+        # Filtra escludendo valori nulli e stringhe vuote
+        valori = df['Livello_3'].dropna()
+        valori = valori[valori.astype(str).str.strip() != '']
+
+        # if valori.empty:
+        #     self.log_message("La colonna 'Livello_3' non contiene valori validi", 'warning')
+        #     return False
+
+        # Verifica che tutti i valori rimanenti siano '0A'
+        solo_0A = (valori.astype(str).str.strip() == '0A').all()
+
+        # if not solo_0A:
+        #     valori_diversi = valori[valori.astype(str).str.strip() != '0A'].unique()
+        #     self.log_message(
+        #         f"Livello_3 contiene valori diversi da '0A': {', '.join(str(v) for v in valori_diversi)}",
+        #         'warning'
+        #     )
+
+        return solo_0A
+        
 
     # ----------------------------------------------------
     # Routine associata al tasto <Estrai Dati>
@@ -1263,12 +1382,200 @@ class MainWindow(QMainWindow):
 
         # ----------------------------------------------------
         # Verifica completata - ripristino il tasto di estrazione dei dati
-        # ---------------------------------------------------- 
+        # ----------------------------------------------------
         self.extract_button.setEnabled(True)
+        # Abilita il tasto Sedi Tecniche solo se i dati provengono da Excel e ci sono FL validate
+        if not self.df_FL.empty and self.data_from_excel:
+            self.create_st_button.setEnabled(True)
+
+    def open_excel_file(self):
+        """Apre un file Excel (.xls/.xlsx) e carica il contenuto della colonna 'FL' nella text area"""
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Apri file Excel",
+            self.current_dir,
+            "File Excel (*.xlsx *.xls)"
+        )
+        if not file_path:
+            return
+
+        try:
+            # Legge il file Excel
+            if file_path.lower().endswith('.xls'):
+                self.df_excel = pd.read_excel(file_path, engine='xlrd')
+            else:
+                self.df_excel = pd.read_excel(file_path, engine='openpyxl')
+
+            # Fix encoding: corregge caratteri UTF-8 letti erroneamente come Latin-1
+            def fix_encoding(val):
+                if not isinstance(val, str):
+                    return val
+                try:
+                    return val.encode('latin-1').decode('utf-8')
+                except (UnicodeEncodeError, UnicodeDecodeError):
+                    return val
+
+            for col in self.df_excel.select_dtypes(include=['object']).columns:
+                self.df_excel[col] = self.df_excel[col].apply(fix_encoding)
+
+            # Verifica che la colonna 'FL' esista
+            if 'FL' not in self.df_excel.columns:
+                self.log_message("Il file Excel non contiene la colonna 'FL'", 'error')
+                QMessageBox.warning(self, "Errore", "Il file Excel selezionato non contiene la colonna 'FL'.")
+                return
+
+            # Estrae i valori della colonna FL e li carica nella text area
+            fl_values = self.df_excel['FL'].dropna().astype(str).tolist()
+            if not fl_values:
+                self.log_message("La colonna 'FL' nel file Excel è vuota", 'warning')
+                return
+
+            # Inserisce i dati nella text area (una FL per riga)
+            self.clipboard_area.setPlainText("\n".join(fl_values))
+            self.data_from_excel = True
+            self.log_message(f"Caricate {len(fl_values)} FL dal file Excel", 'success')
+
+        except ImportError as e:
+            self.log_message(f"Libreria mancante per leggere il file: {str(e)}", 'error')
+            QMessageBox.warning(self, "Errore", f"Libreria mancante: {str(e)}\nInstallare con: pip install xlrd")
+        except Exception as e:
+            self.log_message(f"Errore nell'apertura del file Excel: {str(e)}", 'error')
+            QMessageBox.warning(self, "Errore", f"Impossibile leggere il file Excel:\n{str(e)}")
+
+    def create_sedi_tecniche_file(self):
+        """Crea un file CSV per l'upload delle sedi tecniche in SAP a partire dalle FL validate"""
+        if self.df_FL.empty:
+            self.log_message("Nessuna FL validata disponibile per creare il file sedi tecniche", 'warning')
+            return
+
+        try:
+            # Intestazione completa per il file sedi tecniche
+            header_cols = [
+                "TPLNR", "PLTXT", "TPLKZ", "FLTYP", "EQART", "BRGEW", "GEWEI", "GROES",
+                "INVNR", "DATAB", "ANSWT", "WAERS", "ANSDT", "HERST", "HERLD", "TYPBZ",
+                "BAUJJ", "BAUMM", "MAPAR", "SERGE", "SWERK", "STORT", "BEBER", "MSGRP",
+                "ABCKZ", "EQFNR", "BUKRS", "KOSTL", "RBNR", "ANLNR", "ANLUN", "PROID",
+                "IWERK", "INGRP", "GEWRK", "WERGW", "TPLMA", "POSNR", "SUBMT", "IEQUI",
+                "EINZL", "NAME1", "SORT1", "STREET", "HOUSE_NUM1", "POST_CODE1", "CITY1",
+                "COUNTRY", "REGION", "TIME_ZONE", "TEL_NUMBER", "MOB_NUMBER", "FAX_NUMBER",
+                "SMTP_ADDR", "PARVW", "PARNR", "TEL_NUMBER_OLD", "MOB_NUMBER_OLD",
+                "FAX_NUMBER_OLD", "ZZITO_CAP_NOM", "ZZITO_CAP_PART", "PARNR_OLD",
+                "SMTP_ADDR_OLD", "PARVW_OLD", "LONGITUDE", "LATITUDE", "ALTITUDE",
+                "Z_ABCKZ", "TRPNR", "ADRNRI"
+            ]
+
+            # Crea il DataFrame con la struttura richiesta
+            df_st = pd.DataFrame(columns=header_cols)
+
+            # Popola la colonna TPLNR con le FL validate
+            # Verifichiamo l'esistenza in modo esplicito
+            if 'FL' in self.df_excel.columns:
+                df_st['TPLNR']  = self.df_excel['FL'].str.upper()
+            else:
+                raise ValueError("Colonna 'FL' non trovata nel DataFrame.")
+            
+            # Popola la colonna PLTXT con le Descriptions
+            if 'Descriptions' in self.df_excel.columns:
+                df_st['PLTXT']  = self.df_excel['Descriptions']
+            else:
+                raise ValueError("Colonna 'Descriptions' non trovata nel DataFrame.")
+            
+            # Ricavo il codice della tecnologia
+            try:
+                unique_values = df_st['TPLNR'].str[2:3].unique()
+                # 2. Se c'è esattamente un solo valore distinto, lo assegni
+                if len(unique_values) == 1:
+                    technology = unique_values[0]
+                else:
+                    # Gestione caso con più valori diversi (es. alcune 'E', alcune 'A')
+                    raise ValueError("Valore non valido per il codice tecnologia - Valori multipli.")
+     
+                # Verifico se il codice tecnologia è contenuto nella tabella PlantSection.csv e ricavo il corrispondente PlantSectionCode
+                file_PlantSection = constants.file_PlantSection
+                PlantSectionCode = self.file_utils.trova_valore(file_PlantSection, 
+                            valore_da_cercare=technology, 
+                            colonna_da_cercare="Code", 
+                            colonna_da_restituire="PlantSectionCode")
+                
+                if PlantSectionCode is None:
+                    raise ValueError("Valore non presente in tabella PlantSection.csv.")
+                else:
+                    df_st['FLTYP'] = technology.upper()
+
+            except Exception:
+                raise ValueError("Valore non valido per il codice tecnologia.")
+            
+            # Attribuisco il valore Plant section
+            try:
+                df_st['BEBER'] = str(PlantSectionCode)
+            except Exception:
+                raise ValueError("Errore nell'attribuzione del codice Plant Section.")
+
+            # Ricavo codice country
+            try:
+                df_st['COUNTRY'] = df_st['TPLNR'].str[0:2].str.upper()
+            except Exception:
+                raise ValueError("Valore non valido per il codice country.")
+            
+            # Ricavo il codice struttura
+            try:
+                # 1. Calcoliamo la base: "Z-R" + il terzo carattere (indice 2)
+                base_string = "Z-R" + df_st['TPLNR'].str[2:3]
+
+                # 2. Contiamo le occorrenze del carattere "-" per ogni riga
+                dash_count = df_st['TPLNR'].str.count("-")
+
+                # 3. Definiamo il suffisso ("M" se <= 1, "S" se > 1)
+                # Usiamo np.where per una logica condizionale veloce su intere colonne
+                suffix = np.where(dash_count <= 1, "M", "S")
+
+                # 4. Uniamo tutto nella nuova colonna
+                df_st['TPLKZ'] = base_string + suffix
+
+            except Exception:
+                raise ValueError("Valore non valido per il codice struttura.")
+
+            # Ricavo il codice parent
+            # Per ricavare il codice parent, rimuoviamo l'ultimo segmento dopo l'ultimo "-" se esiste
+            try:
+                df_st['TPLMA'] = df_st['TPLNR'].apply(lambda x: x.rsplit('-', 1)[0] if '-' in x else '')
+            except Exception:
+                raise ValueError("Valore non valido per il codice parent.")
+
+            # Apre il dialog per la raccolta dei dati comuni delle sedi tecniche
+            dialog = SediTecnicheDataDialog(self)
+            if dialog.exec_() != QDialog.Accepted:
+                self.log_message("Creazione file sedi tecniche annullata dall'utente", 'warning')
+                return
+
+            # Popola le colonne del DataFrame con i valori inseriti dall'utente
+            user_values = dialog.get_values()
+            for col_name, value in user_values.items():
+                df_st[col_name] = value
+
+            # Chiede all'utente dove salvare il file
+            file_path, _ = QFileDialog.getSaveFileName(
+                self,
+                "Salva file Sedi Tecniche",
+                os.path.join(constants.path_file_UpLoad, "Sedi_Tecniche_UpLoad.csv"),
+                "File CSV (*.csv)"
+            )
+            if not file_path:
+                return            
+
+            # Salva il file CSV con separatore ;
+            df_st.to_csv(file_path, index=False, sep=';')
+
+            self.log_message(f"File sedi tecniche creato: {os.path.basename(file_path)} ({len(df_st)} righe)", 'success')
+
+        except Exception as e:
+            self.log_message(f"Errore nella creazione del file sedi tecniche: {str(e)}", 'error')
+            QMessageBox.warning(self, "Errore", f"Impossibile creare il file:\n{str(e)}")
+            return
 
     def config_button(self):
         self.config_window = ConfigWindow(self)
-        self.config_window.show()   
+        self.config_window.show()
 
     def config(self):
         """Apre la finestra di configurazione"""
@@ -1382,6 +1689,103 @@ class MainWindow(QMainWindow):
                 self.log_message("Aggiornamento annullato dall'utente.", 'warning')
                 print("Aggiornamento annullato dall'utente.")
                 return
+
+# Classe per la raccolta dati sedi tecniche
+class SediTecnicheDataDialog(QDialog):
+    """Dialog per la raccolta dei dati comuni delle sedi tecniche per l'upload in SAP."""
+
+    # Definizione dei campi: (nome_colonna, etichetta, placeholder, regex_pattern, max_length)
+    FIELD_DEFINITIONS = [
+        ("SWERK",     "Maintenance plant",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
+        ("STORT",     "Location",                "00",                 r"^\d{2}$",              2),
+        ("ABCKZ",     "Property",                "P",                  r"^[PIpi]$",           1),
+        ("BUKRS",     "Company code",            "IT0H",               r"^[A-Za-z0-9]{4}$",    4),
+        ("KOSTL",     "Cost center",             "IT0HBS0007",         r"^[A-Za-z0-9]{10}$",  10),
+        ("RBNR",      "Catalog profile",         "FL00000E",           r"^[A-Za-z0-9]{8}$",    8),
+        ("IWERK",     "Planning plant",          "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
+        ("INGRP",     "Planning group",          "IE0",                r"^[A-Za-z0-9]{3}$",    3),
+        ("GEWRK",     "Main work center",        "I_MAINT",            r"^[A-Za-z0-9_]{7}$",   7),
+        ("WERGW",     "Plant work center",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
+        ("LONGITUDE", "Geolocation longitude",   "-74,80993571",       r"^-?\d+,\d+$",        20),
+        ("LATITUDE",  "Geolocation latitude",    "10,571545650408375", r"^-?\d+,\d+$",        25),
+    ]
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Dati Sedi Tecniche")
+        self.resize(500, 500)
+
+        layout = QVBoxLayout(self)
+
+        # Intestazione
+        header = QLabel("Inserisci i dati comuni per le sedi tecniche:")
+        header.setStyleSheet("font-weight: bold; font-size: 13px; margin-bottom: 8px;")
+        layout.addWidget(header)
+
+        # Form con i campi
+        form_layout = QFormLayout()
+        form_layout.setLabelAlignment(Qt.AlignRight)
+        self.fields = {}
+
+        for col_name, label, placeholder, pattern, max_len in self.FIELD_DEFINITIONS:
+            line_edit = QLineEdit()
+            line_edit.setPlaceholderText(placeholder)
+            line_edit.setMaxLength(max_len)
+            # Validator basato su regex
+            validator = QRegExpValidator(QRegExp(pattern))
+            line_edit.setValidator(validator)
+            # Connette il segnale per aggiornare lo stato del tasto OK
+            line_edit.textChanged.connect(self._update_ok_button)
+            form_layout.addRow(f"{label} ({col_name}):", line_edit)
+            self.fields[col_name] = line_edit
+
+        layout.addLayout(form_layout)
+        layout.addStretch()
+
+        # Pulsanti OK e Annulla
+        button_layout = QHBoxLayout()
+        self.ok_button = QPushButton("OK")
+        self.ok_button.setEnabled(False)
+        self.ok_button.clicked.connect(self.accept)
+        self.ok_button.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50; color: white;
+                font-weight: bold; padding: 8px; border-radius: 4px;
+            }
+            QPushButton:hover { background-color: #45a049; }
+            QPushButton:disabled { background-color: #cccccc; color: #666666; }
+        """)
+
+        self.cancel_button = QPushButton("Annulla")
+        self.cancel_button.clicked.connect(self.reject)
+        self.cancel_button.setStyleSheet("""
+            QPushButton {
+                background-color: #f44336; color: white;
+                font-weight: bold; padding: 8px; border-radius: 4px;
+            }
+            QPushButton:hover { background-color: #da190b; }
+        """)
+
+        button_layout.addStretch()
+        button_layout.addWidget(self.ok_button)
+        button_layout.addWidget(self.cancel_button)
+        layout.addLayout(button_layout)
+
+    def _update_ok_button(self):
+        """Abilita il tasto OK solo se tutti i campi sono validi e non vuoti."""
+        all_valid = True
+        for col_name, _, _, _, _ in self.FIELD_DEFINITIONS:
+            line_edit = self.fields[col_name]
+            text = line_edit.text().strip()
+            if not text or not line_edit.hasAcceptableInput():
+                all_valid = False
+                break
+        self.ok_button.setEnabled(all_valid)
+
+    def get_values(self) -> dict:
+        """Restituisce un dizionario {nome_colonna: valore} con i dati inseriti."""
+        return {col: edit.text().strip().upper() for col, edit in self.fields.items()}
+
 
 # Classe per gestire la selezione del tipo di inverter
 class InverterSelectionDialog(QDialog):

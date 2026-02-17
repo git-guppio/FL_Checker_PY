@@ -48,6 +48,7 @@ file_Country = os.path.join(A_ScriptDir, "Config", "country.csv")
 file_Tech = os.path.join(A_ScriptDir, "Config", "Technology.csv")
 file_Rules = os.path.join(A_ScriptDir, "Config", "Rules.csv")
 file_Mask = os.path.join(A_ScriptDir, "Config", "Mask_FL.csv")
+file_PlantSection = os.path.join(A_ScriptDir, "Config", "PlantSection.csv")
 
 # ----------------------------------------------------
 # Definizione dei percorsi dei file Guideline per il controllo delle FL

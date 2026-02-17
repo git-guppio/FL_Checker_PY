@@ -707,7 +707,7 @@ class DataFrameTools:
     @staticmethod
     def get_last_char(df, colonna):
         """
-        Restituisce i primi due caratteri di una colonna contenente dati univoci
+        Restituisce il terzo carattere (l'ultimo) della colonna contenente dati univoci
         
         Args:
             df: DataFrame da verificare
