@@ -1442,6 +1442,61 @@ class MainWindow(QMainWindow):
             self.log_message(f"Errore nell'apertura del file Excel: {str(e)}", 'error')
             QMessageBox.warning(self, "Errore", f"Impossibile leggere il file Excel:\n{str(e)}")
 
+    def _ricava_campo(self, df_st: pd.DataFrame, campo: str) -> Tuple[bool, Optional[pd.Series]]:
+        """
+        Ricava il valore di un campo specifico per ogni sede tecnica in df_st['TPLNR']
+        effettuando il matching con le espressioni regolari in self.df_regex.
+
+        Per ogni FL:
+          - calcola la lunghezza (numero di '-' + 1)
+          - filtra df_regex per FL_Lunghezza corrispondente
+          - verifica le regex del sottoinsieme: deve matchare esattamente 1
+          - se 0 o >1 match → aggiunge alla lista degli errori
+
+        Returns:
+            (True, pd.Series con i valori del campo) se tutte le FL hanno un match univoco
+            (False, None) se ci sono errori, dopo aver mostrato il messaggio all'utente
+        """
+        if self.df_regex.empty:
+            self.log_message(f"Impossibile ricavare {campo}: df_regex non disponibile", 'error')
+            QMessageBox.warning(self, "Errore", f"Le espressioni regolari per il campo '{campo}' non sono disponibili.\nEseguire prima la verifica dei dati.")
+            return False, None
+
+        rbnr_values = []
+        errori = []
+
+        if campo == 'RBNR':
+            intestazione_campo = "Catalog Profile"
+        elif campo == 'EQART':
+            intestazione_campo = "Tech.Obj.SAP CODE"
+
+        for tplnr in df_st['TPLNR']:
+            lunghezza = tplnr.count('-') + 1
+            subset = self.df_regex[self.df_regex['FL_Lunghezza'] == lunghezza]
+
+            match_rows = []
+            for _, row in subset.iterrows():
+                if re.fullmatch(row['FL_RE'], tplnr):
+                    match_rows.append(row)
+
+            if len(match_rows) == 0:
+                errori.append(f"  • {tplnr}  → nessuna regex corrispondente (lunghezza {lunghezza})")
+                rbnr_values.append(None)
+            elif len(match_rows) > 1:
+                regex_list = ', '.join(r['FL_RE'] for r in match_rows)
+                errori.append(f"  • {tplnr}  → {len(match_rows)} regex corrispondenti: {regex_list}")
+                rbnr_values.append(None)
+            else:
+                rbnr_values.append(match_rows[0][intestazione_campo])
+
+        if errori:
+            msg = f"Impossibile ricavare {campo} per le seguenti sedi tecniche:\n\n" + "\n".join(errori)
+            self.log_message(f"Errore {campo}: {len(errori)} sedi tecniche non risolte", 'error')
+            QMessageBox.warning(self, f"Errore - {campo} non determinabile", msg)
+            return False, None
+
+        return True, pd.Series(rbnr_values, index=df_st.index)
+
     def create_sedi_tecniche_file(self):
         """Crea un file CSV per l'upload delle sedi tecniche in SAP a partire dalle FL validate"""
         if self.df_FL.empty:
@@ -1552,6 +1607,18 @@ class MainWindow(QMainWindow):
             user_values = dialog.get_values()
             for col_name, value in user_values.items():
                 df_st[col_name] = value
+
+            # Ricava RBNR (Catalog Profile) tramite matching con le espressioni regolari
+            success, rbnr_series = self._ricava_campo(df_st, campo='RBNR')
+            if not success:
+                return
+            df_st['RBNR'] = rbnr_series
+
+            # Ricava EQART (Equipment Type) tramite matching con le espressioni regolari
+            success, eqart_series = self._ricava_campo(df_st, campo='EQART')
+            if not success:
+                return
+            df_st['EQART'] = eqart_series
 
             # Chiede all'utente dove salvare il file
             file_path, _ = QFileDialog.getSaveFileName(
@@ -1701,10 +1768,9 @@ class SediTecnicheDataDialog(QDialog):
         ("ABCKZ",     "Property",                "P",                  r"^[PIpi]$",           1),
         ("BUKRS",     "Company code",            "IT0H",               r"^[A-Za-z0-9]{4}$",    4),
         ("KOSTL",     "Cost center",             "IT0HBS0007",         r"^[A-Za-z0-9]{10}$",  10),
-        ("RBNR",      "Catalog profile",         "FL00000E",           r"^[A-Za-z0-9]{8}$",    8),
         ("IWERK",     "Planning plant",          "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
         ("INGRP",     "Planning group",          "IE0",                r"^[A-Za-z0-9]{3}$",    3),
-        ("GEWRK",     "Main work center",        "I_MAINT",            r"^[A-Za-z0-9_]{7}$",   7),
+        ("GEWRK",     "Main work center",        "I_MAINT",            r"^[A-Za-z0-9_]{2,8}$",   8), # maggiore di 2 e minore di 8
         ("WERGW",     "Plant work center",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
         ("LONGITUDE", "Geolocation longitude",   "-74,80993571",       r"^-?\d+,\d+$",        20),
         ("LATITUDE",  "Geolocation latitude",    "10,571545650408375", r"^-?\d+,\d+$",        25),
