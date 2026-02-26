@@ -1498,7 +1498,7 @@ class MainWindow(QMainWindow):
         return True, pd.Series(rbnr_values, index=df_st.index)
 
     def create_sedi_tecniche_file(self):
-        """Crea un file CSV per l'upload delle sedi tecniche in SAP a partire dalle FL validate"""
+        """Crea un file TSV per l'upload delle sedi tecniche in SAP a partire dalle FL validate"""
         if self.df_FL.empty:
             self.log_message("Nessuna FL validata disponibile per creare il file sedi tecniche", 'warning')
             return
@@ -1624,14 +1624,14 @@ class MainWindow(QMainWindow):
             file_path, _ = QFileDialog.getSaveFileName(
                 self,
                 "Salva file Sedi Tecniche",
-                os.path.join(constants.path_file_UpLoad, "Sedi_Tecniche_UpLoad.csv"),
-                "File CSV (*.csv)"
+                os.path.join(constants.path_file_UpLoad, "Sedi_Tecniche_UpLoad.txt"),
+                "File TSV (*.txt);;File CSV (*.csv)"
             )
             if not file_path:
                 return            
 
-            # Salva il file CSV con separatore ;
-            df_st.to_csv(file_path, index=False, sep=';')
+            # Salva il file TSV con separatore ;
+            df_st.to_csv(file_path, index=False, sep='\t', encoding='utf-8-sig')
 
             self.log_message(f"File sedi tecniche creato: {os.path.basename(file_path)} ({len(df_st)} righe)", 'success')
 
