@@ -1423,6 +1423,32 @@ class MainWindow(QMainWindow):
                 self.log_message("Il file Excel non contiene la colonna 'FL'", 'error')
                 QMessageBox.warning(self, "Errore", "Il file Excel selezionato non contiene la colonna 'FL'.")
                 return
+            
+            ## Ordino i dati in base alla struttura gerarchica per consentire il corretto caricamento in SAP
+            # --- LOGICA DI ORDINAMENTO ---
+            
+            # 1. Verifichiamo la presenza di dati
+            if not self.df_excel['FL'].notna().any():
+                self.log_message("La colonna 'FL' nel file Excel è vuota", 'warning')
+                return
+            # Se sono presenti dati allora procediamo
+            self.log_message("Ordinamento dei dati in base alla gerarchia FL...", 'info')
+            
+            # 2. Creiamo la chiave temporanea (tupla di segmenti)
+            # Usiamo la tupla perché Pandas la confronta elemento per elemento:
+            # ['A'] < ['A', 'B'] -> Rispetta la gerarchia Padre-Figlio
+            self.df_excel['temp_sort'] = self.df_excel['FL'].str.split('-').apply(tuple)
+            
+            # 3. Ordiniamo in modo stabile
+            # 'kind=stable' mantiene l'ordine originale tra i "fratelli"
+            self.df_excel = self.df_excel.sort_values(by='temp_sort', kind='stable')
+
+            # 4. Rimuoviamo la colonna di supporto
+            self.df_excel = self.df_excel.drop(columns='temp_sort')
+
+            # 5. Opzionale: Reset dell'indice
+            self.df_excel = self.df_excel.reset_index(drop=True)            
+
 
             # Estrae i valori della colonna FL e li carica nella text area
             fl_values = self.df_excel['FL'].dropna().astype(str).tolist()

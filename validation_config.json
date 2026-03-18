@@ -1,11 +1,11 @@
 {
     "Check_validazione": true,
-    "Check_univoci": true,
+    "Check_univoci": false,
     "Check_duplicati": true,
-    "Check_country": true,
+    "Check_country": false,
     "Check_tecnologia": true,
     "Check_mask": true,
-    "Check_parent": true,
+    "Check_parent": false,
     "Check_lineeGuida": true,
     "Check_TabGlobaliSAP": true
 }

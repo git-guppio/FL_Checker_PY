@@ -44,9 +44,10 @@ Clipboard input → Generic mask validation → DataFrame creation (parse FL lev
 - **Technology codes:** `S` (Solar), `W` (Wind), `E` (Battery/BESS), `K` (CAS), `H` (Hydro)
 - **Solar inverter types:** Central Inverter, String Inverter, Inverter Module — each has its own guideline CSV
 - **Error pattern:** Methods return `(bool_success, DataFrame|None)` tuples
-- **Guideline CSVs** in `Config/` define per-technology regex rules; `Rules.csv` defines general FL validation rules
+- **Config CSVs:** `Rules.csv` (general FL masks), `Mask_FL.csv` (technology-specific masks), `Country.csv`, `Technology.csv`, `PlantSection.csv` (lookup tables); guideline CSVs (`*_GuideLine.csv`, `*_SubStation_Guideline.csv`) define per-technology regex rules
 - **Upload CSVs** are written to `FileUpLoad/` with semicolon-delimited format
+- **Empty SAP table templates** are defined as string constants in `Config/constants.py` (`empty_tab_ZPMR_CONTROL_FL*`); used to detect when SAP extractions return no rows
 
 ### Dependencies
 
-Python 3.13, pandas 2.2.3, PyQt5 5.15.11, pywin32 (win32com, win32clipboard), pyinstaller 6.1.2.
+Python 3.13, pandas 2.2.3, PyQt5 5.15.11, pywin32 (win32com, win32clipboard), openpyxl 3.1.5 (Excel import), pyinstaller 6.12.0.
