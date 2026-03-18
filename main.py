@@ -52,8 +52,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("FL Validator")
         self.setGeometry(100, 100, 1000, 600)
         self.init_ui()
-        # Carica la configurazione all'avvio
+        # Carica la configurazione all'avvio e applica al modulo constants
         self.validation_config = load_config_from_file()
+        for key, value in self.validation_config.items():
+            if hasattr(constants, key):
+                setattr(constants, key, value)
         # Ottiene il percorso della directory del file Python corrente
         self.current_dir = os.path.dirname(os.path.abspath(__file__))
         # Definisco un dizionario da utilizzare per memorizzare i file di aggiornamento creati
@@ -805,6 +808,8 @@ class MainWindow(QMainWindow):
         # ----------------------------------------------------
         # Validazione dati con maschera generica
         # ----------------------------------------------------        
+        df = pd.DataFrame({'FL': data})
+
         if constants.Check_validazione:
             # Verifico che i dati incollati rispettino la maschera generica
             check_results["Check_validazione"], df =  self.validate_clipboard_data(data)
@@ -814,7 +819,7 @@ class MainWindow(QMainWindow):
 
         # ----------------------------------------------------
         # Creo un DF con i dati ottenuti dalla validazione
-        # ----------------------------------------------------                    
+        # ----------------------------------------------------
 
         if not self.create_dataframe(df):
             return
