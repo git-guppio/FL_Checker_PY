@@ -232,6 +232,7 @@ class MainWindow(QMainWindow):
         
         self.log_list.addItem(item)
         self.log_list.scrollToBottom()
+        QApplication.processEvents()
 
 
     """ 
