@@ -1,8 +1,8 @@
 {
     "Check_validazione": true,
-    "Check_univoci": false,
+    "Check_univoci": true,
     "Check_duplicati": true,
-    "Check_country": false,
+    "Check_country": true,
     "Check_tecnologia": true,
     "Check_mask": true,
     "Check_parent": false,

@@ -1206,8 +1206,15 @@ class MainWindow(QMainWindow):
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CONTROL_FL2_lev_6", 'error')  
 
             # verifico la presenza degli elementi della tabella df_ZPMR_CTRL_ASS
-            risultato_ZPMR_CTRL_ASS, error = self.df_utils.trova_differenze(self.df_FL, df_ZPMR_CTRL_ASS, 'Check', 'Check')
-            # Verifica del risultato
+            # NOTA BENE: La tabella CTRL_ASS contiene solo valori per fl di lunghezza > 3
+            # prima di procedere filtro il df self.df_FL per considerare solo le fl con lunghezza maggiore di 3
+            df_FL_lung_gt_3 = self.df_FL[self.df_FL['FL_Lunghezza'] > 3]
+            if df_FL_lung_gt_3.empty:
+                risultato_ZPMR_CTRL_ASS = None
+                error = None
+            else:
+                risultato_ZPMR_CTRL_ASS, error = self.df_utils.trova_differenze(df_FL_lung_gt_3, df_ZPMR_CTRL_ASS, 'Check', 'Check')
+                # Verifica del risultato
             if ((error is None) and (risultato_ZPMR_CTRL_ASS is not None)):
                 self.log_risultato_differenze("risultato_ZPMR_CTRL_ASS", risultato_ZPMR_CTRL_ASS)
             elif (error is not None):
@@ -1215,7 +1222,14 @@ class MainWindow(QMainWindow):
                 self.log_message("Errore nella creazione della lista: risultato_ZPMR_CTRL_ASS", 'error')              
 
             # verifico la presenza degli elementi della tabella df_ZPM4R_GL_T_FL
-            risultato_ZPM4R_GL_T_FL, error = self.df_utils.trova_differenze(self.df_FL, df_ZPM4R_GL_T_FL, 'Check', 'Check')
+            # NOTA BENE: La tabella ZPM4R_GL_T_FL contiene solo valori per fl di lunghezza > 2
+            # prima di procedere filtro il df self.df_FL per considerare solo le fl con lunghezza maggiore di 2
+            df_FL_lung_gt_2 = self.df_FL[self.df_FL['FL_Lunghezza'] > 2]
+            if df_FL_lung_gt_2.empty:
+                risultato_ZPM4R_GL_T_FL = None
+                error = None
+            else:            
+                risultato_ZPM4R_GL_T_FL, error = self.df_utils.trova_differenze(self.df_FL, df_ZPM4R_GL_T_FL, 'Check', 'Check')
             # Verifica del risultato
             if ((error is None) and (risultato_ZPM4R_GL_T_FL is not None)):
                 self.log_risultato_differenze("risultato_ZPM4R_GL_T_FL", risultato_ZPM4R_GL_T_FL)

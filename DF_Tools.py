@@ -987,8 +987,8 @@ class DataFrameTools:
             raise ValueError("Una o più colonne specificate non esistono nel DataFrame")
 
         def create_concatenated_value(row):
-            # Verifica che col4 non sia nullo
-            if (str(row[col3]).strip(' \t\n\r') == ""):
+            # Verifica che col4 non sia nullo (in precedenza col3)
+            if (str(row[col4]).strip(' \t\n\r') == ""):
                 return None
             # add_concatenated_column(df, "Livello_6", "Livello_5", "Livello_4",  "Livello_3", "FL_Lunghezza")
             #                               col1        col2         col3           col4        col5
@@ -998,9 +998,13 @@ class DataFrameTools:
             elif (row[col2].strip(' \t\n\r') != ""): # se è presente il 5 livello allora concateno 5-4-3-Lunghezza
                 result = f"{str(row[col2].strip(' \t\n\r'))}{separator}{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
                 return result
-            elif (row[col3].strip(' \t\n\r') != ""):
+            elif (row[col3].strip(' \t\n\r') != ""): # se è presente il 4 livello allora concateno 4-3-Lunghezza
                 result = f"{str(row[col3].strip(' \t\n\r'))}{separator}{str(str(row[col4]).strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
                 return result
+            # modifica per inserire anche il terzo livello
+            elif (row[col4].strip(' \t\n\r') != ""): # se è presente il 3 livello allora concateno 3-Lunghezza
+                result = f"{str(row[col4].strip(' \t\n\r'))}{separator}{str(str(row[col5]).strip(' \t\n\r'))}"
+                return result            
             else:
                 return None                 
         

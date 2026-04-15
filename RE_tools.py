@@ -336,7 +336,7 @@ class RegularExpressionsTools:
                 combined_df = combined_df.drop_duplicates(subset=['FL_RE'], keep='first')
 
             # Crea la colonna ['Check'] per la costruzione delle tabelle di aggiornamento ZPMR_CTRL_ASS e ZPM4R_GL_T_FL
-            # per valori di lunghezza > 3
+            # per valori di lunghezza >= 3
             if (DataFrameTools.Add_Column_Check_ZPMR(combined_df)):
                 # Applica la funzione a ogni valore della colonna FL
                 print(f"Creo colonna 'Check_RE' con espressioni regolari a partire dalla colonna 'Check'")
@@ -639,8 +639,8 @@ class RegularExpressionsTools:
                 # Imposto i valori in base al numero di parti
                 if ((fl_length >= 3) and (fl_length <= 6)):
                     new_row['VALUE'] = code_parts[0]
-                    new_row['SUB_VALUE'] = "" if fl_length == 3 else code_parts[1]
-                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]                
+                    new_row['SUB_VALUE'] = "" if fl_length <= 3 else code_parts[1]
+                    new_row['SUB_VALUE2'] = "" if fl_length <= 4 else code_parts[2]                
                     
                     # Imposto i valori fissi
                     new_row['TPLKZ'] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"
@@ -827,8 +827,8 @@ class RegularExpressionsTools:
                 # Imposto i valori in base al numero di parti
                 if ((fl_length >= 3) and (fl_length <= 6)):
                     new_row['VALUE'] = code_parts[0]
-                    new_row['SUB_VALUE'] = "" if fl_length == 3 else code_parts[1]
-                    new_row['SUB_VALUE2'] = "" if fl_length == 4 else code_parts[2]
+                    new_row['SUB_VALUE'] = "" if fl_length <= 3 else code_parts[1]
+                    new_row['SUB_VALUE2'] = "" if fl_length <= 4 else code_parts[2]
                     
                     # Imposto i valori fissi
                     new_row['TPLKZ'] = "Z-RLS" if technology == "H" else "Z-R" + technology + "S"

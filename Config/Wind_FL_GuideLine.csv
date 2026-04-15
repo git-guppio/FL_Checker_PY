@@ -33,86 +33,133 @@ kkW-yyyy-xx-CL;Underground Cables and Overhead Power Lines;0000;16;1650;;FL_POWL
 kkW-yyyy-xx-CE;Energy Meters;0000;16;1681;;FL_OTHER;FL00000W
 kkW-yyyy-xx-T1;String Transformer ;0000;16;1650;;FL_TR_UNIT;FL00000W
 kkW-yyyy-xx-GG;Grounding grid;0000;16;1650;;FL_OTHER;FL00000W
-kkW-yyyy-xx-nn;Wind Turbine Generator XX;0000;16;1641;;FL_WTG;FL00000W
-kkW-yyyy-xx-nn-MV;MV Section of the WTG;0000;16;1650;;FL_WTG_MV;FL00000W
-kkW-yyyy-xx-nn-MV-CB;Capacitor Battery;0000;16;1650;;FL_WTG_MV;FL00000W
-kkW-yyyy-xx-nn-CE;Energy Meters;0000;16;1681;;FL_AUT&CON;FL00000W
-kkW-yyyy-xx-nn-TA;MV/LV Transformer of the WTG;0000;16;1640;;FL_TR_UNIT;FL00000W
-kkW-yyyy-xx-nn-TA-ES;Electronic & signals;0000;16;1640;;FL_TRACOMP;FL00000W
-kkW-yyyy-xx-nn-TA-MM;Mechanical Parts;0000;16;1640;;FL_TRACOMP;FL00000W
-kkW-yyyy-xx-nn-TA-SP;Power Section and auxiliaries;0000;16;1640;;FL_TRACOMP;FL00000W
-kkW-yyyy-xx-nn-OC;Civil Works WTG;0000;16;1610;;FL_INFRAST;FL00000W
-kkW-yyyy-xx-nn-DP;Protection and Safety Devices;0000;16;1650;;FL_INFRAST;FL00000W
-kkW-yyyy-xx-nn-DP-DL;Descenders, climb assist  and Life Lines;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-FF;Fire Protection System;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-BQ;Obstacles Aviation Lights;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-LE;Emergency Lights;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-AF;Intruder Alarm System;0000;16;1650;;FL_SECSYST;FL00000W
-kkW-yyyy-xx-nn-DP-EM;Emergency stops;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-ED;Enviromental detection;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-DP-LP;Lightning protection;0000;16;1650;;FL_SAFSYST;FL00000W
-kkW-yyyy-xx-nn-TO;Tower;0000;16;1642;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-TO-SP;Tower Main Structure;0000;16;1642;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-TO-SC;Ladder;0000;16;1642;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-TO-AS;Elevator;0000;16;1642;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-NC;Nacelle;0000;16;1641;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-NC-SP;Chassis;0000;16;1641;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-NC-RI;Covering;0000;16;1641;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-NC-MA;Hoists and Winches;0000;16;1641;;FL_TOW&NAC;FL00000W
-kkW-yyyy-xx-nn-RT;Rotor;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-RT-PA;Blades;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-RT-MO;Hub and Nose Cone;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-RT-GR;Grease system;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-RT-BB;Blade bearing;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-RT-HG;Hydr. Sys Actuation TIP;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-RT-TI;Actuation TIP;0000;16;1640;;FL_ROT&BLA;FL00000W
-kkW-yyyy-xx-nn-PS;Pitch System;0000;16;1640;;FL_PITCHSY;FL00000W
-kkW-yyyy-xx-nn-PS-ES;Electrical. Pitch system;0000;16;1640;;FL_PITCHSY;FL00000W
-kkW-yyyy-xx-nn-PS-PO;Position Pitch system;0000;16;1640;;FL_PITCHSY;FL00000W
-kkW-yyyy-xx-nn-PS-HG;Hydr. Sys. Pitch System;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-HG;Hydraulic System;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-HG-ES;Electronic & Signals;0000;16;1650;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-HG-PU;Patch cords & unions;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-AL;Main Shaft;0000;16;1640;;FL_MASHAFT;FL00000W
-kkW-yyyy-xx-nn-AL-MB;Main bearings;0000;16;1640;;FL_MASHAFT;FL00000W
-kkW-yyyy-xx-nn-AL-GR;Grease system;0000;16;1640;;FL_MASHAFT;FL00000W
-kkW-yyyy-xx-nn-ML;Gearbox;0000;16;1640;;FL_GEARBOX;FL00000W
-kkW-yyyy-xx-nn-ML-RF;Gearbox Cooling System;0000;16;1640;;FL_GEARBOX;FL00000W
-kkW-yyyy-xx-nn-ML-MM;Gearbox Mechanical Parts;0000;16;1640;;FL_GEARBOX;FL00000W
-kkW-yyyy-xx-nn-ML-ES;Electronic & Signals;0000;16;1640;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-GV;High Speed Shaft;0000;16;1640;;FL_COU&BRA;FL00000W
-kkW-yyyy-xx-nn-FR;Brake System;0000;16;1650;;FL_COU&BRA;FL00000W
-kkW-yyyy-xx-nn-FR-HG;Hydr. Sys. Mechanical Brake;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-FR-BP;Break pads;0000;16;1650;;FL_COU&BRA;FL00000W
-kkW-yyyy-xx-nn-FR-FS;Frame system;0000;16;1650;;FL_COU&BRA;FL00000W
-kkW-yyyy-xx-nn-SI;Yaw System;0000;16;1640;;FL_YAWSYST;FL00000W
-kkW-yyyy-xx-nn-SI-HG;Hydr. Sys. Yaw Brake;0000;16;1650;;FL_HYDRSYS;FL00000W
-kkW-yyyy-xx-nn-SI-RI;Yaw Gears;0000;16;1640;;FL_YAWSYST;FL00000W
-kkW-yyyy-xx-nn-SI-FE;Yaw Brakes;0000;16;1640;;FL_YAWSYST;FL00000W
-kkW-yyyy-xx-nn-SI-ME;Yaw Electric Motors;0000;16;1640;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-SI-GR;Grease system;0000;16;1640;;FL_YAWSYST;FL00000W
-kkW-yyyy-xx-nn-GE;Generator;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-RF;Generator Cooling System;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-CU;Generator Bearings;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-GS;Slip Ring Set;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-CP;Power Control Devices;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-ES;Electronic & Signals;0000;16;1640;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-GE-MM;Generator Mechanical Parts;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-GE-GR;Grease system;0000;16;1640;;FL_GENERAT;FL00000W
-kkW-yyyy-xx-nn-CF;Frequency Converters;0000;16;1650;;FL_FREQCON;FL00000W
-kkW-yyyy-xx-nn-CF-RF;Frequency Converter Cooling System;0000;16;1650;;FL_FREQCON;FL00000W
-kkW-yyyy-xx-nn-CF-ES;Electronic & Signals;0000;16;1650;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-CF-SP;Power Section and auxiliaries;0000;16;1650;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-CF-VD;Voltage Dips;0000;16;1650;;FL_FREQCON;FL00000W
-kkW-yyyy-xx-nn-QB;Ground Controller;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QB-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QB-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-QN;Top Controller;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QN-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QN-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-QN-MS;Monitoring systems;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QM;Hub Controller;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QM-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
-kkW-yyyy-xx-nn-QM-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-CV;Power & Signal Cables;0000;16;1650;;FL_ELESYST;FL00000W
-kkW-yyyy-xx-nn-ST;WTG SCADA System;0000;16;1681;;FL_AUT&CON;FL00000W
+kkW-yyyy-xx-kn;Wind Turbine Generator XX;0000;16;1641;;FL_WTG;FL00000W
+kkW-yyyy-xx-kn-MV;MV Section of the WTG;0000;16;1650;;FL_WTG_MV;FL00000W
+kkW-yyyy-xx-kn-MV-CB;Capacitor Battery;0000;16;1650;;FL_WTG_MV;FL00000W
+kkW-yyyy-xx-kn-CE;Energy Meters;0000;16;1681;;FL_AUT&CON;FL00000W
+kkW-yyyy-xx-kn-TA;MV/LV Transformer of the WTG;0000;16;1640;;FL_TR_UNIT;FL00000W
+kkW-yyyy-xx-kn-TA-ES;Electronic & signals;0000;16;1640;;FL_TRACOMP;FL00000W
+kkW-yyyy-xx-kn-TA-MM;Mechanical Parts;0000;16;1640;;FL_TRACOMP;FL00000W
+kkW-yyyy-xx-kn-TA-SP;Power Section and auxiliaries;0000;16;1640;;FL_TRACOMP;FL00000W
+kkW-yyyy-xx-kn-OC;Civil Works WTG;0000;16;1610;;FL_INFRAST;FL00000W
+kkW-yyyy-xx-kn-DP;Protection and Safety Devices;0000;16;1650;;FL_INFRAST;FL00000W
+kkW-yyyy-xx-kn-DP-DL;Descenders, climb assist  and Life Lines;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-FF;Fire Protection System;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-BQ;Obstacles Aviation Lights;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-LE;Emergency Lights;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-AF;Intruder Alarm System;0000;16;1650;;FL_SECSYST;FL00000W
+kkW-yyyy-xx-kn-DP-EM;Emergency stops;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-ED;Enviromental detection;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-DP-LP;Lightning protection;0000;16;1650;;FL_SAFSYST;FL00000W
+kkW-yyyy-xx-kn-TO;Tower;0000;16;1642;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-TO-SP;Tower Main Structure;0000;16;1642;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-TO-SC;Ladder;0000;16;1642;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-TO-AS;Elevator;0000;16;1642;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-NC;Nacelle;0000;16;1641;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-NC-SP;Chassis;0000;16;1641;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-NC-RI;Covering;0000;16;1641;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-NC-MA;Hoists and Winches;0000;16;1641;;FL_TOW&NAC;FL00000W
+kkW-yyyy-xx-kn-RT;Rotor;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-RT-PA;Blades;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-RT-MO;Hub and Nose Cone;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-RT-GR;Grease system;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-RT-BB;Blade bearing;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-RT-HG;Hydr. Sys Actuation TIP;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-RT-TI;Actuation TIP;0000;16;1640;;FL_ROT&BLA;FL00000W
+kkW-yyyy-xx-kn-PS;Pitch System;0000;16;1640;;FL_PITCHSY;FL00000W
+kkW-yyyy-xx-kn-PS-ES;Electrical. Pitch system;0000;16;1640;;FL_PITCHSY;FL00000W
+kkW-yyyy-xx-kn-PS-PO;Position Pitch system;0000;16;1640;;FL_PITCHSY;FL00000W
+kkW-yyyy-xx-kn-PS-HG;Hydr. Sys. Pitch System;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-HG;Hydraulic System;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-HG-ES;Electronic & Signals;0000;16;1650;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-HG-PU;Patch cords & unions;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-AL;Main Shaft;0000;16;1640;;FL_MASHAFT;FL00000W
+kkW-yyyy-xx-kn-AL-MB;Main bearings;0000;16;1640;;FL_MASHAFT;FL00000W
+kkW-yyyy-xx-kn-AL-GR;Grease system;0000;16;1640;;FL_MASHAFT;FL00000W
+kkW-yyyy-xx-kn-ML;Gearbox;0000;16;1640;;FL_GEARBOX;FL00000W
+kkW-yyyy-xx-kn-ML-RF;Gearbox Cooling System;0000;16;1640;;FL_GEARBOX;FL00000W
+kkW-yyyy-xx-kn-ML-MM;Gearbox Mechanical Parts;0000;16;1640;;FL_GEARBOX;FL00000W
+kkW-yyyy-xx-kn-ML-ES;Electronic & Signals;0000;16;1640;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-GV;High Speed Shaft;0000;16;1640;;FL_COU&BRA;FL00000W
+kkW-yyyy-xx-kn-FR;Brake System;0000;16;1650;;FL_COU&BRA;FL00000W
+kkW-yyyy-xx-kn-FR-HG;Hydr. Sys. Mechanical Brake;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-FR-BP;Break pads;0000;16;1650;;FL_COU&BRA;FL00000W
+kkW-yyyy-xx-kn-FR-FS;Frame system;0000;16;1650;;FL_COU&BRA;FL00000W
+kkW-yyyy-xx-kn-SI;Yaw System;0000;16;1640;;FL_YAWSYST;FL00000W
+kkW-yyyy-xx-kn-SI-HG;Hydr. Sys. Yaw Brake;0000;16;1650;;FL_HYDRSYS;FL00000W
+kkW-yyyy-xx-kn-SI-RI;Yaw Gears;0000;16;1640;;FL_YAWSYST;FL00000W
+kkW-yyyy-xx-kn-SI-FE;Yaw Brakes;0000;16;1640;;FL_YAWSYST;FL00000W
+kkW-yyyy-xx-kn-SI-ME;Yaw Electric Motors;0000;16;1640;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-SI-GR;Grease system;0000;16;1640;;FL_YAWSYST;FL00000W
+kkW-yyyy-xx-kn-GE;Generator;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-RF;Generator Cooling System;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-CU;Generator Bearings;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-GS;Slip Ring Set;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-CP;Power Control Devices;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-ES;Electronic & Signals;0000;16;1640;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-GE-MM;Generator Mechanical Parts;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-GE-GR;Grease system;0000;16;1640;;FL_GENERAT;FL00000W
+kkW-yyyy-xx-kn-CF;Frequency Converters;0000;16;1650;;FL_FREQCON;FL00000W
+kkW-yyyy-xx-kn-CF-RF;Frequency Converter Cooling System;0000;16;1650;;FL_FREQCON;FL00000W
+kkW-yyyy-xx-kn-CF-ES;Electronic & Signals;0000;16;1650;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-CF-SP;Power Section and auxiliaries;0000;16;1650;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-CF-VD;Voltage Dips;0000;16;1650;;FL_FREQCON;FL00000W
+kkW-yyyy-xx-kn-QB;Ground Controller;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QB-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QB-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-QN;Top Controller;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QN-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QN-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-QN-MS;Monitoring systems;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QM;Hub Controller;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QM-ES;Electronic & Signals;0000;16;1681;;FL_CONTROL;FL00000W
+kkW-yyyy-xx-kn-QM-SP;Power Section and auxiliaries;0000;16;1681;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-CV;Power & Signal Cables;0000;16;1650;;FL_ELESYST;FL00000W
+kkW-yyyy-xx-kn-ST;WTG SCADA System;0000;16;1681;;FL_AUT&CON;FL00000W
+kkW-yyyy-nL;Liftra - Self Hoisting Crane;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-AR;Electrical control cabinet;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-QE;Electrical power supply panel/cabinet;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-LW;Light Weight Crane;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-LW-FS;Fixed Structure;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-LW-HO;Hoist / Paranco;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO;Container;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-SF;Steel flooring;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-WL;Walls;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-BW;Brackets on walls;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-RA;Rails;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-MW;Main wagon;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-GS;Gen set;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-WA;Winch assembly;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-BC;Battery container panel;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-SH;Sheaves;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-HB;Hoist block;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-PB;Permanent Ballast System (PBS);0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-PF;Pins and fasteners;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-GE;Generator / Winch Assembly;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-AR;Cooling Fans;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-CO-UP;UPS;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC;Main Crane;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-OD;Outer Drum;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-BA;Battery arm panel;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-AB;Arm Base;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-AB-01;Base GE 1.5 ;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-AB-02;Base xxxxxxx;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-AB-nn;Base yyyyyyy;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-CA;Crane Arm;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-HK;Hook;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-DS;Drum Sheave Belt;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-SH;Sheaves;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-SI;Yaw System;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-MC-PF;Pins and fasteners;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY;Hydraulic and Pneumatic components;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-FJ;Flexible hoses and junctions;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-TJ;Threaded/clamped joints;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HP;Hydraulic pumps;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HV;Hydraulic valves;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HF;Hydraulic Filters;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HC;Hydraulic cylinders;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HC-MC;Main Cylinder / Boom Cylinder;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-HY-HC-RC;Raise Cylinder;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-OC;Civil works;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-OC-LA;Steps/Ladders/Catwalks/Guards;0000;71;0000;;FL_LIFTRA;FL00000W
+kkW-yyyy-nL-WR;Wire rope;0000;71;0000;;FL_LIFTRA;FL00000W
