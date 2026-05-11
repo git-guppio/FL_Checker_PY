@@ -802,6 +802,7 @@ class DataFrameTools:
 
             # Divide in righe
             lines = data.strip().split('\n')
+            lines = lines[1:]  # rimuove la prima riga
             
             # Filtra le righe, escludendo quelle che contengono solo trattini
             clean_lines = []
