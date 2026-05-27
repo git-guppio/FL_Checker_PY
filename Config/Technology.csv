@@ -2,7 +2,8 @@ Code;Description
 S;Solar
 W;Wind
 B;Bio
-G;Geo
+U;Geo_Teleriscaldamento
+R;Geo_Reti
 H;Hydro
 J;Hydrogen
 E;Bess

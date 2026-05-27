@@ -69,14 +69,14 @@ kkS-yyyy-pp-TC-SM-WE;Multipurpose weather sensor;0000;18;1880;SCA;FL_METSENS;FL0
 kkS-yyyy-pp-TC-SM-BI;Back Irradiance;0000;18;1880;;FL_METSENS;FL00000S
 kkS-yyyy-pp-Tn;CT_nn_LV/MV Transformer_n;0000;18;1842;TRF;FL_TRANSF;FL00000S
 kkS-yyyy-pp-Tn-PT;Transformer protective system;0000;18;1842;TAM;FL_TRACOMP;FL00000S
-kkS-yyyy-pp-Px;CT_<ID_FIELD>_LV/AC StrInv Panel_<ID_PANEL>;0000;18;1841;;FL_SINVPAN;FL00000S
-kkS-yyyy-pp-Px-nn;CT_<ID_FIELD>_INV_<ID_PANEL>.<ID_INV>;0000;18;1841;QUA;FL_INVERT;FL00000S
-kkS-yyyy-pp-Px-nn-DS;Disconnect Switches;0000;18;1840;SDC;FL_INVCOMP;FL00000S
-kkS-yyyy-pp-Px-nn-MP;DC MPPT control system;0000;18;1841;;FL_INVCOMP;FL00000S
-kkS-yyyy-pp-Px-nn-GI;DC Ground Impedence system;0000;18;1841;;FL_INVCOMP;FL00000S
-kkS-yyyy-pp-Px-nn-GC;AC Convertion group;0000;18;1841;;FL_INVCOMP;FL00000S
-kkS-yyyy-pp-Px-nn-IP;AC Interface Protection System;0000;18;1841;;FL_INVCOMP;FL00000S
-kkS-yyyy-pp-Px-nn-MS;Panel Fixed Metal Structure;0000;18;1860;STS;FL_SUPSTRU;FL00000S
-kkS-yyyy-pp-Px-nn-01;PV Strings;0000;18;1841;;FL_STRING;FL00000S
-kkS-yyyy-pp-Px-nn-TT;Tracker System;0000;18;1850;;FL_TRACKER;FL00000S
-kkS-yyyy-pp-Px-0k;AC Switch;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm;CT_<ID_FIELD>_LV/AC StrInv Panel_<ID_PANEL>;0000;18;1841;;FL_SINVPAN;FL00000S
+kkS-yyyy-pp-Pm-nn;CT_<ID_FIELD>_INV_<ID_PANEL>.<ID_INV>;0000;18;1841;QUA;FL_INVERT;FL00000S
+kkS-yyyy-pp-Pm-nn-DS;Disconnect Switches;0000;18;1840;SDC;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm-nn-MP;DC MPPT control system;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm-nn-GI;DC Ground Impedence system;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm-nn-GC;AC Convertion group;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm-nn-IP;AC Interface Protection System;0000;18;1841;;FL_INVCOMP;FL00000S
+kkS-yyyy-pp-Pm-nn-MS;Panel Fixed Metal Structure;0000;18;1860;STS;FL_SUPSTRU;FL00000S
+kkS-yyyy-pp-Pm-nn-01;PV Strings;0000;18;1841;;FL_STRING;FL00000S
+kkS-yyyy-pp-Pm-nn-TT;Tracker System;0000;18;1850;;FL_TRACKER;FL00000S
+kkS-yyyy-pp-Pm-0k;AC Switch;0000;18;1841;;FL_INVCOMP;FL00000S

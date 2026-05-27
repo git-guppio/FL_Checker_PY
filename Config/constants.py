@@ -64,6 +64,9 @@ file_FL_Solar_StringInv = os.path.join(A_ScriptDir, "Config", "Solar_FL_StringIn
 file_FL_Solar_InvModule = os.path.join(A_ScriptDir, "Config", "Solar_FL_InvModule_GuideLine.csv")
 file_FL_Hydro = os.path.join(A_ScriptDir, "Config", "Hydro_FL_GuideLine.csv")
 file_FL_C_SubStation = os.path.join(A_ScriptDir, "Config", "Cas_FL_SubStation_Guideline.csv")
+file_FL_Geo_Reti = os.path.join(A_ScriptDir, "Config", "Geo_FL_Reti_GuideLine.csv")
+file_FL_Geo_Teleriscaldamento = os.path.join(A_ScriptDir, "Config", "Geo_FL_Teleriscaldamento_GuideLine.csv")
+
 
 # ----------------------------------------------------
 # Definizione del percorsi dei file per l'upload

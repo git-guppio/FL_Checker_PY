@@ -609,8 +609,30 @@ class MainWindow(QMainWindow):
         """
         df = pd.DataFrame()
         df = self.df_FL.copy()
+        
+    ### Tecnologia GEO ###
+        # Può contenere codice tecnologia U oppure R
+        # Li considero in modo differente per non aumentare la complessità nella parte di generazione dei file di aggiornamento delle tabelle globali.
+        if tech_code == 'U':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_Geo_Teleriscaldamento]
+            # Definisco il dizionario di regex            
+            regex_dict = {# queste parti non vengono in realtà utilizzate ma sono mantenute per uniformità con le altre tecnologie
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00']
+            }
+        
+        elif tech_code == 'R':
+            # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
+            File_guideLine_list = [constants.file_FL_Geo_Reti]
+            # Definisco il dizionario di regex            
+            regex_dict = {# queste parti non vengono in realtà utilizzate ma sono mantenute per uniformità con le altre tecnologie
+                'SubStation': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0A'],
+                'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00']
+            }                     
 
-        if tech_code == 'K':
+    ### Tecnologia CAS ###
+        elif tech_code == 'K':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_C_SubStation]
             # Definisco il dizionario di regex
@@ -619,6 +641,7 @@ class MainWindow(QMainWindow):
                 'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
             }       
 
+    ### Tecnologia BESS ###
         elif tech_code == 'E':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_B_SubStation, constants.file_FL_Bess]
@@ -628,6 +651,8 @@ class MainWindow(QMainWindow):
                 'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-0E',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-WE',r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-ZE']
             }
 
+        
+    ### Tecnologia WIND ###
         elif tech_code == 'W':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_W_SubStation, constants.file_FL_Wind]
@@ -637,6 +662,8 @@ class MainWindow(QMainWindow):
                 'Common': [r'^[a-zA-Z]{3}-[a-zA-Z0-9]{4}-00']
             }             
 
+        
+    ### Tecnologia SOLARE ###
         elif tech_code == 'S':
             # Creo una lista con i file delle guideLine da utilizzare come base per la tecnologia solare
             File_guideLine_list = [constants.file_FL_S_SubStation, constants.file_FL_Solar_Common]
@@ -669,6 +696,8 @@ class MainWindow(QMainWindow):
             else:
                 self.log_message("La lista contiene solo elementi di sottostazione...", 'info')
             
+        
+    ### Tecnologia HYDRO ###
         elif tech_code == 'H':
             # Creo una lista con i file delle guideLine da utilizzare per la tecnologia
             File_guideLine_list = [constants.file_FL_Hydro]
@@ -806,24 +835,43 @@ class MainWindow(QMainWindow):
             self.log_message(f"Dati presenti: {len(data)} righe", 'info')
             
         
+        # Creazione DataFrame con i dati incollati, con una colonna unica 'FL' contenente tutte le informazioni
+        df = pd.DataFrame({'FL': data})
+
         # ----------------------------------------------------
         # Validazione dati con maschera generica
         # ----------------------------------------------------        
-        df = pd.DataFrame({'FL': data})
 
         if constants.Check_validazione:
             # Verifico che i dati incollati rispettino la maschera generica
             check_results["Check_validazione"], df =  self.validate_clipboard_data(data)
             if not check_results["Check_validazione"]:
                 self.log_message("Errore: Nessun dato valido da processare", 'error')
-                return
+                return     
 
         # ----------------------------------------------------
-        # Creo un DF con i dati ottenuti dalla validazione
+        # Creo il DF self.df_FL con i dati ottenuti dalla validazione
         # ----------------------------------------------------
 
         if not self.create_dataframe(df):
             return
+
+        # ----------------------------------------------------
+        # Verifico univocità codice tecnologia
+        # ----------------------------------------------------        
+
+        # Verifica se tutte le FL hanno lo stesso codice tecnologia (terzo carattere del primo segmento)
+        unique_values_tech = self.df_FL['Livello_1'].str[2].nunique()  # restituisce il numero di valori unici in una colonna.
+        if unique_values_tech > 1:  # più di un valore unico riscontrato
+            # Ci sono valori diversi
+            different_values_tech = self.df_FL['Livello_1'].str[2].unique()
+            different_values_tech_str = "\n".join([str(val) for val in different_values_tech])
+            
+            self.log_message(f"Errore: Trovati {unique_values_tech} valori diversi di tecnologia.\nValori diversi:\n{different_values_tech_str}", 'error')
+            return
+        else:
+            # Tutti i valori sono uguali (univoci)
+            self.log_message("Check: Tutti i valori di tecnologia sono uguali", 'success')        
 
         # ----------------------------------------------------
         # Verifico che i dati della prima e seconda colonna siano univoci
@@ -900,6 +948,7 @@ class MainWindow(QMainWindow):
             if (tech_code == None):
                 self.log_message("Errore: Valore tecnologia code non trovato", 'error')
                 return
+
             description_techno = self.file_utils.trova_valore(file_tech, 
                                         valore_da_cercare=tech_code, 
                                         colonna_da_cercare="Code", 
@@ -1807,19 +1856,19 @@ class MainWindow(QMainWindow):
 class SediTecnicheDataDialog(QDialog):
     """Dialog per la raccolta dei dati comuni delle sedi tecniche per l'upload in SAP."""
 
-    # Definizione dei campi: (nome_colonna, etichetta, placeholder, regex_pattern, max_length)
+    # Definizione dei campi: (nome_colonna, etichetta, placeholder, regex_pattern, max_length, optional)
     FIELD_DEFINITIONS = [
-        ("SWERK",     "Maintenance plant",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
-        ("STORT",     "Location",                "00",                 r"^\d{2}$",              2),
-        ("ABCKZ",     "Property",                "P",                  r"^[PIpi]$",           1),
-        ("BUKRS",     "Company code",            "IT0H",               r"^[A-Za-z0-9]{4}$",    4),
-        ("KOSTL",     "Cost center",             "IT0HBS0007",         r"^[A-Za-z0-9]{10}$",  10),
-        ("IWERK",     "Planning plant",          "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
-        ("INGRP",     "Planning group",          "IE0",                r"^[A-Za-z0-9]{3}$",    3),
-        ("GEWRK",     "Main work center",        "I_MAINT",            r"^[A-Za-z0-9_]{2,8}$",   8), # maggiore di 2 e minore di 8
-        ("WERGW",     "Plant work center",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4),
-        ("LONGITUDE", "Geolocation longitude",   "-74,80993571",       r"^-?\d+,\d+$",        20),
-        ("LATITUDE",  "Geolocation latitude",    "10,571545650408375", r"^-?\d+,\d+$",        25),
+        ("SWERK",     "Maintenance plant",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4,  False),
+        ("STORT",     "Location",                "00",                 r"^\d{2}$",              2,  False),
+        ("ABCKZ",     "Property",                "P",                  r"^[PIpi]$",             1,  False),
+        ("BUKRS",     "Company code",            "IT0H",               r"^[A-Za-z0-9]{4}$",    4,  False),
+        ("KOSTL",     "Cost center",             "IT0HBS0007",         r"^[A-Za-z0-9]{10}$",  10,  False),
+        ("IWERK",     "Planning plant",          "ITEY",               r"^[A-Za-z0-9]{4}$",    4,  False),
+        ("INGRP",     "Planning group",          "IE0",                r"^[A-Za-z0-9]{3}$",    3,  False),
+        ("GEWRK",     "Main work center",        "I_MAINT",            r"^[A-Za-z0-9_]{2,8}$", 8,  False), # maggiore di 2 e minore di 8
+        ("WERGW",     "Plant work center",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4,  False),
+        ("LONGITUDE", "Geolocation longitude",   "-74,80993571",       r"^-?\d+,\d+$",        20,  True),
+        ("LATITUDE",  "Geolocation latitude",    "10,571545650408375", r"^-?\d+,\d+$",        25,  True),
     ]
 
     def __init__(self, parent=None):
@@ -1839,7 +1888,7 @@ class SediTecnicheDataDialog(QDialog):
         form_layout.setLabelAlignment(Qt.AlignRight)
         self.fields = {}
 
-        for col_name, label, placeholder, pattern, max_len in self.FIELD_DEFINITIONS:
+        for col_name, label, placeholder, pattern, max_len, optional in self.FIELD_DEFINITIONS:
             line_edit = QLineEdit()
             line_edit.setPlaceholderText(placeholder)
             line_edit.setMaxLength(max_len)
@@ -1848,7 +1897,8 @@ class SediTecnicheDataDialog(QDialog):
             line_edit.setValidator(validator)
             # Connette il segnale per aggiornare lo stato del tasto OK
             line_edit.textChanged.connect(self._update_ok_button)
-            form_layout.addRow(f"{label} ({col_name}):", line_edit)
+            prefix = "" if optional else "* "
+            form_layout.addRow(f"{prefix}{label} ({col_name}):", line_edit)
             self.fields[col_name] = line_edit
 
         layout.addLayout(form_layout)
@@ -1884,14 +1934,20 @@ class SediTecnicheDataDialog(QDialog):
         layout.addLayout(button_layout)
 
     def _update_ok_button(self):
-        """Abilita il tasto OK solo se tutti i campi sono validi e non vuoti."""
+        """Abilita il tasto OK solo se tutti i campi obbligatori sono validi e non vuoti.
+        I campi opzionali vengono validati solo se compilati."""
         all_valid = True
-        for col_name, _, _, _, _ in self.FIELD_DEFINITIONS:
+        for col_name, _, _, _, _, optional in self.FIELD_DEFINITIONS:
             line_edit = self.fields[col_name]
             text = line_edit.text().strip()
-            if not text or not line_edit.hasAcceptableInput():
-                all_valid = False
-                break
+            if optional:
+                if text and not line_edit.hasAcceptableInput():
+                    all_valid = False
+                    break
+            else:
+                if not text or not line_edit.hasAcceptableInput():
+                    all_valid = False
+                    break
         self.ok_button.setEnabled(all_valid)
 
     def get_values(self) -> dict:

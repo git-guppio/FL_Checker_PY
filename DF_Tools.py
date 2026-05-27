@@ -803,6 +803,8 @@ class DataFrameTools:
             # Divide in righe
             lines = data.strip().split('\n')
             lines = lines[1:]  # rimuove la prima riga
+            # Questa modifica si è resa necessaria a seguito di errori nell'estrazione delle tabelle da R4Q
+            # L'intestazione della tabella è diversa rispetto a quelle estratte in R4P
             
             # Filtra le righe, escludendo quelle che contengono solo trattini
             clean_lines = []
