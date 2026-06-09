@@ -45,16 +45,17 @@ kkE-yyyy-xA-Sx-TR;Ausiliary Transformer;0000;51;5150;;FL_TRANSF;FL00000E
 kkE-yyyy-xA-Sx-IT;Circuit Breaker;0000;51;5150;;FL_AUXSYST;FL00000E
 kkE-yyyy-xA-Sx-EP;External Power Supply;0000;51;5150;;FL_AUXSYST;FL00000E
 kkE-yyyy-xA-Sx-ME;Auxiliary Meters;0000;51;5150;;FL_AUXSYST;FL00000E
-kkE-yyyy-xA-N0;BESS Control System;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-SC;BESS SCADA;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-SW;Switch-router;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-CC;Control Card;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-HM;HMI;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-CM;Communication cable;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-PL;Centralized Safety PLC;0000;51;5190;;FL_AUT&CON;FL00000E
-kkE-yyyy-xA-N0-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
-kkE-yyyy-xA-N0-FD;Fire Detection;0000;51;5190;;FL_SAFSYST;FL00000E
-kkE-yyyy-xA-N0-FS;Fire fighing (sprinkler & agent storage);0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-xA-CS;BESS Control System;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-SC;BESS SCADA;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-SW;Switch-router;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-CC;Control Card;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-HM;HMI;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-CM;Communication cable;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-PL;Centralized Safety PLC;0000;51;5190;;FL_AUT&CON;FL00000E
+kkE-yyyy-xA-CS-HV;HVAC;0000;51;5150;;FL_AUXSYST;FL00000E
+kkE-yyyy-xA-CS-FD;Fire Detection;0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-xA-CS-FS;Fire fighing (sprinkler & agent storage);0000;51;5190;;FL_SAFSYST;FL00000E
+kkE-yyyy-xA-CE;BESS auxiliary feeder n Energy Meters;0000;51;5180;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE;Feeder_n;;;;;;FL00000E
 kkE-yyyy-xE-CE;Feeder_n BESS Energy Meters;0000;51;5180;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE-MV;MV Section;0000;51;5140;;FL_MVSECT;FL00000E
@@ -100,7 +101,7 @@ kkE-yyyy-xE-nn-Px-PS;External Power supply;0000;51;5180;;FL_PCSCOMP;FL00000E
 kkE-yyyy-xE-nn-Px-RC;Remote communication ;0000;51;5180;;FL_PCSCOMP;FL00000E
 kkE-yyyy-xE-nn-Px-LC;Liquid Cooling System;0000;51;5180;;FL_PCSCOMP;FL00000E
 kkE-yyyy-xE-nn-Cn;Battery Container & Ancillary system;0000;51;5150;;FL_BATCONT;FL00000E
-kkE-yyyy-xE-nn-Cn-Rn;Battery Racks nn;0000;51;5180;;FL_BAT;FL00000E
+kkE-yyyy-xE-nn-Cn-Bn;Battery Bank Bn;0000;51;5180;;FL_BAT;FL00000E
 kkE-yyyy-xE-nn-Cn-BS;Battery Management System (BMS);0000;51;5180;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE-nn-Cn-CB;Battery Control Box;0000;51;5180;;FL_AUT&CON;FL00000E
 kkE-yyyy-xE-nn-Cn-BC;Battery Combiner;0000;51;5180;;FL_BAT;FL00000E
