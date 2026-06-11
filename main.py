@@ -1087,8 +1087,10 @@ class MainWindow(QMainWindow):
                         if df_ZPMR_CONTROL_FL1_pivot.empty and len(df_ZPMR_CONTROL_FL1_pivot.columns) == 0:
                             print(f"Attenzione: il pivot del df_ZPMR_CONTROL_FL1 ha prodotto un DataFrame vuoto. Creo un DataFrame con le sole colonne necessarie.", 'warning')
                             df_ZPMR_CONTROL_FL1_pivot = pd.DataFrame(columns=["Livello_","Livello_1","Livello_2"])
+                        # Garantisco la presenza di tutte le colonne livello, anche se assenti nei dati SAP
+                        df_ZPMR_CONTROL_FL1_pivot, error = self.df_utils.ensure_columns(df_ZPMR_CONTROL_FL1_pivot, ["Livello_1", "Livello_2"])
                     except Exception as e:
-                        print(f"Errore: {e}")            
+                        print(f"Errore: {e}")
                     # Stampa anteprima del dataframe
                     print("---- Stampa df: df_ZPMR_CONTROL_FL1_pivot ----")
                     print(df_ZPMR_CONTROL_FL1_pivot)
@@ -1122,8 +1124,10 @@ class MainWindow(QMainWindow):
                         if df_ZPMR_CONTROL_FL2_pivot.empty and len(df_ZPMR_CONTROL_FL2_pivot.columns) == 0:
                             print(f"Attenzione: il pivot del df_ZPMR_CONTROL_FL1 ha prodotto un DataFrame vuoto. Creo un DataFrame con le sole colonne necessarie.", 'warning')
                             df_ZPMR_CONTROL_FL2_pivot = pd.DataFrame(columns=["Livello_3","Livello_4","Livello_5","Livello_6"])
+                        # Garantisco la presenza di tutte le colonne livello, anche se assenti nei dati SAP
+                        df_ZPMR_CONTROL_FL2_pivot, error = self.df_utils.ensure_columns(df_ZPMR_CONTROL_FL2_pivot, ["Livello_3", "Livello_4", "Livello_5", "Livello_6"])
                     except Exception as e:
-                        print(f"Errore: {e}")            
+                        print(f"Errore: {e}")
                     # Stampa anteprima del dataframe
                     print("---- Stampa df: df_ZPMR_CONTROL_FL2_pivot ----")
                     print(df_ZPMR_CONTROL_FL2_pivot)

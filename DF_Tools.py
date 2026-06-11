@@ -702,7 +702,33 @@ class DataFrameTools:
         except Exception as e:
             # Cattura eventuali altri errori non previsti
             raise Exception(f"Errore durante l'elaborazione del dataframe: {str(e)}")
-    
+
+
+    @staticmethod
+    @error_logger(logger=logger)
+    def ensure_columns(df, columns):
+        """
+        Garantisce che tutte le colonne indicate esistano nel dataframe,
+        aggiungendo come vuote (NaN) quelle mancanti.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            Il dataframe di input
+        columns : list
+            Elenco dei nomi di colonna che devono essere presenti
+
+        Returns:
+        --------
+        pandas.DataFrame
+            Copia del dataframe con tutte le colonne richieste presenti
+        """
+        df = df.copy()
+        for col in columns:
+            if col not in df.columns:
+                df[col] = pd.NA
+        return df
+
 
     @staticmethod
     def get_last_char(df, colonna):
