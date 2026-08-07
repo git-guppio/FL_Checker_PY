@@ -97,9 +97,17 @@ class MainWindow(QMainWindow):
         left_panel.addWidget(left_label)
         
         self.clipboard_area = QTextEdit()
-        self.clipboard_area.setPlaceholderText("Incolla qui i dati (Ctrl+V)")
-        left_panel.addWidget(self.clipboard_area)
+        self.clipboard_area.setPlaceholderText("Incolla qui i dati (Ctrl+V)\n"
+                                               "Ogni riga deve contenere una FL valida secondo le maschere definite.\n"
+                                               "------------------------------\n"
+                                               "Oppure carica da file Excel\n"
+                                               "Il file deve contenere:\n"
+                                               "- una colonna con intestazione 'FL' contenente le FL da verificare.\n"
+                                               "- una colonna con intestazione 'Descriptions' contenente le descrizioni delle FL.\n"
+                                               "------------------------------\n")
         
+        left_panel.addWidget(self.clipboard_area)
+
         # Aggiungi il layout sinistro al layout orizzontale
         content_layout.addLayout(left_panel)
         
@@ -1480,13 +1488,15 @@ class MainWindow(QMainWindow):
                 self.df_excel = pd.read_excel(file_path, engine='openpyxl')
 
             # Fix encoding: corregge caratteri UTF-8 letti erroneamente come Latin-1
+            # e rimuove spazi superflui iniziali/finali (es. FL incollate con spazi)
             def fix_encoding(val):
                 if not isinstance(val, str):
                     return val
                 try:
-                    return val.encode('latin-1').decode('utf-8')
+                    val = val.encode('latin-1').decode('utf-8')
                 except (UnicodeEncodeError, UnicodeDecodeError):
-                    return val
+                    pass
+                return val.strip()
 
             for col in self.df_excel.select_dtypes(include=['object']).columns:
                 self.df_excel[col] = self.df_excel[col].apply(fix_encoding)
