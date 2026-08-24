@@ -19,6 +19,7 @@ from PyQt5.QtGui import QCursor, QRegExpValidator
 from PyQt5.QtCore import Qt, QRegExp
 import SAP_Connection
 import SAP_Transactions
+import SAP_Find_Field_Value
 import DF_Tools
 import Config.constants as constants
 from RE_tools import RegularExpressionsTools
@@ -1637,7 +1638,36 @@ class MainWindow(QMainWindow):
                 df_st['TPLNR']  = self.df_excel['FL'].str.upper()
             else:
                 raise ValueError("Colonna 'FL' non trovata nel DataFrame.")
-            
+
+            # ----------------------------------------------------
+            # Verifico che tutte le sedi tecniche abbiano lo stesso primo e secondo livello
+            # (stesso controllo eseguito in extract_data, a partire dalla riga 889, per garantire
+            # che le sedi tecniche in elenco siano omogenee prima di proseguire)
+            # ----------------------------------------------------
+            tplnr_split = df_st['TPLNR'].str.split('-', expand=True)
+
+            unique_values_lev1 = tplnr_split[0].nunique()
+            if unique_values_lev1 > 1:
+                different_values_lev1 = tplnr_split[0].unique()
+                different_values_str_lev1 = "\n".join([str(val) for val in different_values_lev1])
+                msg = f"Trovati {unique_values_lev1} valori diversi nel primo livello delle sedi tecniche.\nValori diversi:\n{different_values_str_lev1}"
+                self.log_message(f"Errore: {msg}", 'error')
+                QMessageBox.warning(self, "Errore", msg)
+                return
+
+            if tplnr_split.shape[1] > 1:
+                livello_2 = tplnr_split[1].dropna()
+                unique_values_lev2 = livello_2.nunique()
+                if unique_values_lev2 > 1:
+                    different_values_lev2 = livello_2.unique()
+                    different_values_str_lev2 = "\n".join([str(val) for val in different_values_lev2])
+                    msg = f"Trovati {unique_values_lev2} valori diversi nel secondo livello delle sedi tecniche.\nValori diversi:\n{different_values_str_lev2}"
+                    self.log_message(f"Errore: {msg}", 'error')
+                    QMessageBox.warning(self, "Errore", msg)
+                    return
+
+            self.log_message("Check: Tutti i valori di primo e secondo livello delle sedi tecniche sono uguali", 'success')
+
             # Popola la colonna PLTXT con le Descriptions
             if 'Descriptions' in self.df_excel.columns:
                 df_st['PLTXT']  = self.df_excel['Descriptions']
@@ -1707,7 +1737,9 @@ class MainWindow(QMainWindow):
                 raise ValueError("Valore non valido per il codice parent.")
 
             # Apre il dialog per la raccolta dei dati comuni delle sedi tecniche
-            dialog = SediTecnicheDataDialog(self)
+            # (il campo STORT viene adattato in base alla country delle FL)
+            country_code = df_st['COUNTRY'].iloc[0] if not df_st['COUNTRY'].empty else None
+            dialog = SediTecnicheDataDialog(self, country_code=country_code)
             if dialog.exec_() != QDialog.Accepted:
                 self.log_message("Creazione file sedi tecniche annullata dall'utente", 'warning')
                 return
@@ -1867,11 +1899,72 @@ class MainWindow(QMainWindow):
                 return
 
 # Classe per la raccolta dati sedi tecniche
+class RilevaDatiDialog(QDialog):
+    """Dialog per l'inserimento della sede tecnica da cui rilevare i valori dei campi in SAP."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Rileva dati da sede tecnica")
+        self.resize(420, 160)
+
+        layout = QVBoxLayout(self)
+
+        label = QLabel("Rileva i valori da sede tecnica esistente (inserire almeno 2 livelli):")
+        label.setWordWrap(True)
+        label.setStyleSheet("font-weight: bold; font-size: 13px; margin-bottom: 8px;")
+        layout.addWidget(label)
+
+        self.tplnr_edit = QLineEdit()
+        self.tplnr_edit.setPlaceholderText("Es. ESH-BCNA")
+        self.tplnr_edit.textChanged.connect(self._update_ok_button)
+        layout.addWidget(self.tplnr_edit)
+
+        layout.addStretch()
+
+        # Pulsanti OK e Annulla
+        button_layout = QHBoxLayout()
+        self.ok_button = QPushButton("OK")
+        self.ok_button.setEnabled(False)
+        self.ok_button.clicked.connect(self.accept)
+        self.ok_button.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50; color: white;
+                font-weight: bold; padding: 8px; border-radius: 4px;
+            }
+            QPushButton:hover { background-color: #45a049; }
+            QPushButton:disabled { background-color: #cccccc; color: #666666; }
+        """)
+
+        self.cancel_button = QPushButton("Annulla")
+        self.cancel_button.clicked.connect(self.reject)
+        self.cancel_button.setStyleSheet("""
+            QPushButton {
+                background-color: #f44336; color: white;
+                font-weight: bold; padding: 8px; border-radius: 4px;
+            }
+            QPushButton:hover { background-color: #da190b; }
+        """)
+
+        button_layout.addStretch()
+        button_layout.addWidget(self.ok_button)
+        button_layout.addWidget(self.cancel_button)
+        layout.addLayout(button_layout)
+
+    def _update_ok_button(self):
+        """Abilita il tasto OK solo se la sede tecnica inserita contiene almeno 2 livelli."""
+        levelli = [lvl for lvl in self.tplnr_edit.text().strip().split("-") if lvl]
+        self.ok_button.setEnabled(len(levelli) >= 2)
+
+    def get_tplnr(self) -> str:
+        """Restituisce il codice della sede tecnica inserita."""
+        return self.tplnr_edit.text().strip().upper()
+
+
 class SediTecnicheDataDialog(QDialog):
     """Dialog per la raccolta dei dati comuni delle sedi tecniche per l'upload in SAP."""
 
     # Definizione dei campi: (nome_colonna, etichetta, placeholder, regex_pattern, max_length, optional)
-    FIELD_DEFINITIONS = [
+    BASE_FIELD_DEFINITIONS = [
         ("SWERK",     "Maintenance plant",       "ITEY",               r"^[A-Za-z0-9]{4}$",    4,  False),
         ("STORT",     "Location",                "00",                 r"^\d{2}$",              2,  False),
         ("ABCKZ",     "Property",                "P",                  r"^[PIpi]$",             1,  False),
@@ -1885,10 +1978,20 @@ class SediTecnicheDataDialog(QDialog):
         ("LATITUDE",  "Geolocation latitude",    "10,571545650408375", r"^-?\d+,\d+$",        25,  True),
     ]
 
-    def __init__(self, parent=None):
+    # Definizione del campo STORT alternativa per le FL con Country = ES
+    STORT_DEFINITION_ES = ("STORT", "Location", "CH BARCENA", r"^[A-Za-z0-9 -_]{10}$", 10, False)
+
+    def __init__(self, parent=None, country_code: str = None):
         super().__init__(parent)
         self.setWindowTitle("Dati Sedi Tecniche")
         self.resize(500, 500)
+
+        # Costruisce la definizione dei campi, adattando STORT in base alla country delle FL
+        self.FIELD_DEFINITIONS = [
+            self.STORT_DEFINITION_ES if (country_code == "ES" and col_name == "STORT") else
+            (col_name, label, placeholder, pattern, max_len, optional)
+            for col_name, label, placeholder, pattern, max_len, optional in self.BASE_FIELD_DEFINITIONS
+        ]
 
         layout = QVBoxLayout(self)
 
@@ -1916,6 +2019,19 @@ class SediTecnicheDataDialog(QDialog):
             self.fields[col_name] = line_edit
 
         layout.addLayout(form_layout)
+
+        # Pulsante per rilevare i valori dei campi da una sede tecnica esistente in SAP
+        self.rileva_dati_button = QPushButton("Rileva dati")
+        self.rileva_dati_button.clicked.connect(self._rileva_dati)
+        self.rileva_dati_button.setStyleSheet("""
+            QPushButton {
+                background-color: #2196F3; color: white;
+                font-weight: bold; padding: 8px; border-radius: 4px;
+            }
+            QPushButton:hover { background-color: #1976D2; }
+        """)
+        layout.addWidget(self.rileva_dati_button)
+
         layout.addStretch()
 
         # Pulsanti OK e Annulla
@@ -1967,6 +2083,34 @@ class SediTecnicheDataDialog(QDialog):
     def get_values(self) -> dict:
         """Restituisce un dizionario {nome_colonna: valore} con i dati inseriti."""
         return {col: edit.text().strip().upper() for col, edit in self.fields.items()}
+
+    def _rileva_dati(self):
+        """Apre la finestra per l'inserimento della sede tecnica e popola i campi con i valori
+        letti da SAP tramite lo script SAP_Find_Field_Value.rileva_dati_sede_tecnica."""
+        dialog = RilevaDatiDialog(self)
+        if dialog.exec_() != QDialog.Accepted:
+            return
+
+        tplnr = dialog.get_tplnr()
+
+        try:
+            with SAP_Connection.SAPGuiConnection() as sap:
+                if not sap.is_connected():
+                    QMessageBox.warning(self, "Errore", "Connessione SAP NON attiva.")
+                    return
+                session = sap.get_session()
+                valori = SAP_Find_Field_Value.rileva_dati_sede_tecnica(session, tplnr)
+        except Exception as e:
+            QMessageBox.warning(self, "Errore", f"Errore durante la lettura dei dati da SAP:\n{str(e)}")
+            return
+
+        if not valori:
+            QMessageBox.warning(self, "Errore", f"Impossibile rilevare i dati dalla sede tecnica '{tplnr}'.")
+            return
+
+        for col_name, valore in valori.items():
+            if col_name in self.fields and valore:
+                self.fields[col_name].setText(valore)
 
 
 # Classe per gestire la selezione del tipo di inverter
